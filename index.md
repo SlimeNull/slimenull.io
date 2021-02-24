@@ -1,5 +1,6 @@
 # 嗨! 这里是 Null 的博客!
 
+<link rel="stylesheet" href="style/style.css"/>
 <div id="blogs">
     <hr/>
     <div>
