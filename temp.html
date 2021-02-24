@@ -1,7 +1,3 @@
-# 嗨! 这里是 Null 的博客!
-
-<link rel="stylesheet" href="style/style.css"/>
-
 <div id="blogs">
     <hr/>
     <div>
@@ -55,29 +51,3 @@
         </a>
     </div>
 </div>
-
-<script>
-    function CreateBlogLinkBlock(title, description, url){
-        let wholeBlockElement = document.createElement("div");
-        let linkElement = document.createElement("a");
-        let titleElement = document.createElement("h2");
-        let descElement = document.createElement("div");
-        linkElement.setAttribute("href", url);
-        titleElement.innerText = title;
-        descElement.innerText = description;
-
-        linkElement.appendChild(titleElement);
-        linkElement.appendChild(descElement);
-        wholeBlockElement.appendChild(linkElement);
-        
-        return wholeBlockElement;
-    }
-    var blogReq = new XMLHttpRequest();
-    if (blogReq) {
-        blogReq.onload = function(e) {
-            
-        }
-        blogReq.open("get", "/blogs/info.json", true)
-    }
-</script>
-
