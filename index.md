@@ -1,23 +1,5 @@
 # 嗨! 这里是 Null 的博客!
 
-<style>
-    #blogs div{
-        margin: 30px;
-        border-radius: 15px;
-        background-color: #1b1b1b;
-        border: solid 2px #000000;
-    }
-    #blogs a{
-        text-decoration: none;
-    }
-    #blogs h2{
-        margin: 10px 0;
-    }
-    #blogs p{
-        margin: 0;
-        
-    }
-</style>
 <div id="blogs">
     <hr/>
     <div>
