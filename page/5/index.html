@@ -1,1400 +1,1089 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1'>
-  <meta charset="utf-8">
-  <!-- SEO相关 -->
-  
-    
-      
-        <meta name="robots" content="noindex,follow">
-      
-    
-  
-  <!-- 渲染优化 -->
-  <meta http-equiv='x-dns-prefetch-control' content='on' />
-  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <meta name="renderer" content="webkit">
-  <meta name="force-rendering" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-  <meta name="HandheldFriendly" content="True" >
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  <link rel="preload" href="/css/first.css" as="style">
-  
-
-  <!-- 页面元数据 -->
-  
-  <title>SlimeNull&#39;s Blog</title>
-  
-
-  
-
-  <!-- feed -->
-  
-
-  <!-- import meta -->
-  
-
-  <!-- link -->
-  
-
-  <!-- import link -->
-  
-
-  
-    
-<link rel="stylesheet" href="/css/first.css">
-
-  
-
-  
-  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
-  
-
-  <script id="loadcss"></script>
-
-  
-<script>
-if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
-    document.write(
-	'<style>'+
-		'html{'+
-			'overflow-x: hidden !important;'+
-			'overflow-y: hidden !important;'+
-		'}'+
-		'.kill-ie{'+
-			'text-align:center;'+
-			'height: 100%;'+
-			'margin-top: 15%;'+
-			'margin-bottom: 5500%;'+
-		'}'+
-	'</style>'+
-    '<div class="kill-ie">'+
-        '<h1><b>抱歉，您的浏览器无法访问本站</b></h1>'+
-        '<h3>微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>'+
-        '继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</h3><br/>'+
-        '<a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/WindowsForBusiness/End-of-IE-support"><strong>了解详情 ></strong></a>'+
-    '</div>');
-</script>
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
 
 
-<noscript>
-	<style>
-		html{
-			overflow-x: hidden !important;
-			overflow-y: hidden !important;
-		}
-		.kill-noscript{
-			text-align:center;
-			height: 100%;
-			margin-top: 15%;
-			margin-bottom: 5500%;
-		}
-	</style>
-    <div class="kill-noscript">
-        <h1><b>抱歉，您的浏览器无法访问本站</b></h1>
-        <h3>本页面需要浏览器支持（启用）JavaScript</h3><br/>
-        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
-    </div>
-</noscript>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;example.com&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Muse&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
+<meta name="description" content="Newbie... Learning...">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SlimeNull&#39;s Blog">
+<meta property="og:url" content="http://example.com/page/5/index.html">
+<meta property="og:site_name" content="SlimeNull&#39;s Blog">
+<meta property="og:description" content="Newbie... Learning...">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="SlimeNull">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/page/5/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:true,&quot;isPost&quot;:false,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:&quot;&quot;,&quot;permalink&quot;:&quot;&quot;,&quot;path&quot;:&quot;page&#x2F;5&#x2F;index.html&quot;,&quot;title&quot;:&quot;&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>SlimeNull's Blog</title><script src="/js/config.js"></script>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 </head>
 
-  <body>
-    
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
-<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
-  <div class='container'>
-  <div id='wrapper'>
-    <div class='nav-sub'>
-      <p class="title"></p>
-      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
-        <li><a id="s-comment" class="fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
-        
-          <li><a id="s-toc" class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
-        
-      </ul>
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
     </div>
-		<div class="nav-main">
-      
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">SlimeNull's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">For the better opensource world!</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
         
-        <a class="title flat-box" target="_self" href='/'>
-          
-            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
-          
-          
-          
-        </a>
-      
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
 
-			<div class='menu navigation'>
-				<ul class='nav-list-h m-pc'>
-          
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/
-                  
-                  
-                  
-                    id="home"
-                  >
-                  <i class='fas fa-rss fa-fw'></i>博客
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
-                  
-                  
-                  
-                    id="categories"
-                  >
-                  <i class='fas fa-folder-open fa-fw'></i>分类
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
-                  
-                  
-                  
-                    id="tags"
-                  >
-                  <i class='fas fa-tags fa-fw'></i>标签
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
-                  
-                  
-                  
-                    id="archives"
-                  >
-                  <i class='fas fa-archive fa-fw'></i>归档
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
-                  
-                  
-                  
-                    id="friends"
-                  >
-                  <i class='fas fa-link fa-fw'></i>友链
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
-                  
-                  
-                  
-                    id="about"
-                  >
-                  <i class='fas fa-info-circle fa-fw'></i>关于
-                </a>
-                
-              </li>
-            
-          
-          
-				</ul>
-			</div>
+  <aside class="sidebar">
 
-      <div class="m_search">
-        <form name="searchform" class="form u-search-form">
-          <i class="icon fas fa-search fa-fw"></i>
-          <input type="text" class="input u-search-input" placeholder="Search..." />
-        </form>
-      </div>
-
-			<ul class='switcher nav-list-h m-phone'>
-				
-					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
-				
-				<li>
-          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
-          <ul class="menu-phone list-v navigation white-box">
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/
-                  
-                  
-                  
-                    id="home"
-                  >
-                  <i class='fas fa-rss fa-fw'></i>博客
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
-                  
-                  
-                  
-                    id="categories"
-                  >
-                  <i class='fas fa-folder-open fa-fw'></i>分类
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
-                  
-                  
-                  
-                    id="tags"
-                  >
-                  <i class='fas fa-tags fa-fw'></i>标签
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
-                  
-                  
-                  
-                    id="archives"
-                  >
-                  <i class='fas fa-archive fa-fw'></i>归档
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
-                  
-                  
-                  
-                    id="friends"
-                  >
-                  <i class='fas fa-link fa-fw'></i>友链
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
-                  
-                  
-                  
-                    id="about"
-                  >
-                  <i class='fas fa-info-circle fa-fw'></i>关于
-                </a>
-                
-              </li>
-            
-          
-            
-          </ul>
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
         </li>
-			</ul>
-		</div>
-	</div>
-  </div>
-</header>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
 
-    <div id="l_body">
-      <div id="l_cover">
-  
-    
-        <div id="full" class='cover-wrapper  dock' style="display: none;">
-          
-            <div class='cover-bg lazyload placeholder' data-bg="https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture"></div>
-          
-          <div class='cover-body'>
-  <div class='top'>
-    
-    
-      <p class="title">Volantis</p>
-    
-    
-  </div>
-  <div class='bottom'>
-    <div class='menu navigation'>
-      <div class='list-h'>
-        
-          
-            <a href="/v4/getting-started/"
-              
-              
-              id="v4getting-started">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f5c3.svg'><p>文档</p>
-            </a>
-          
-            <a href="/faqs/"
-              
-              
-              id="faqs">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f516.svg'><p>帮助</p>
-            </a>
-          
-            <a href="/examples/"
-              
-              
-              id="examples">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f396.svg'><p>示例</p>
-            </a>
-          
-            <a href="/contributors/"
-              
-              
-              id="contributors">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f389.svg'><p>社区</p>
-            </a>
-          
-            <a href="/archives/"
-              
-              
-              id="archives">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg'><p>博客</p>
-            </a>
-          
-            <a target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/"
-              
-              
-              id="https:githubcomvolantis-xhexo-theme-volantis">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f9ec.svg'><p>源码</p>
-            </a>
-          
-        
-      </div>
-    </div>
-  </div>
-</div>
-
-          <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
         </div>
-    
-  
-  </div>
+        <!--/noindex-->
 
-      <div id="safearea">
-        <div class="body-wrapper" id="pjax-container">
-          
-
-<div class='l_main'>
-  
-  <section class="post-list">
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/11/202012172339/">
-        [Linux] Ubuntu 新手引导 - 中文输入法配置
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        选择输入法框架：
-Linux中，有多个输入法框架可供使用，在 Ubuntu 中，默认预装了 ibus 这款输入法引擎，常用的中文输入法引擎有两种，ibus 与 fcitx。两者都还彳亍，懒得下载的话，就直接用ibus吧。
-配置使用的输入法框架：打开终端，执行 ‘im-config’，在弹出的窗口中，选择ok，yes，然后选择 ibus，于是，你就成功使用了ibus框架。同理，选择 fcitx...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-05-11</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/11/202012172339/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">SlimeNull</p>
+  <div class="site-description" itemprop="description">Newbie... Learning...</div>
 </div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/11/202012130011/">
-        [0] Windows 与 Linux 通用装机方法
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        步骤概述：
-准备安装介质
-
-从你喜欢的渠道下载ISO镜像
-
-将ISO写入到安装介质
-步骤：1. 准备安装介质旧时的安装介质指光盘，但现在，一般的，安装介质都指U盘。你需要准备一个U盘，这个U盘的数据将被完全擦除然后写入安装程序，所以，推荐使用空闲U盘，并且空间大小推荐8G左右，不要小于4G，可以大于8G(只不过有些浪费空间就是了)
-
-Windows10的镜像一般为4G左右，写入到U盘后大于4...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-05-11</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/11/202012130011/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/11/202012091223/">
-        [Linux] Kali Linux 新手引导 - Xfce 桌面时间配置
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        关于我的Kali系统：
-操作系统：Linux NullKali 5.9.0-kali2-amd64 #1 SMP Debian 5.9.6-1kali1 (2020-11-11) x86_64 GNU/Linux桌面环境：Xfce Desktop Environment Version 4.14, destributed by Debian
-
-打开时间配置：
-位于固定’任务栏’的右侧， 右击...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-05-11</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/11/202012091223/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/11/202012122333/">
-        [0] 如何进入启动配置 (BIOS/UEFI配置)
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        
-
-电脑启动时，需要读取最基本的配置，然后才进入系统，这个配置就是 启动配置 。旧时的启动配置即BIOS配置，但如今UEFI即将取代BIOS配置，我们应该使用 启动配置 这个名称，否则就可能闹出将UEFI称为BIOS的尴尬场面。
-这个启动配置，是可以被我们调整的，在启动配置页面，我们可以调整风扇转速，系统时间，设备电压，以及其他更高深的东西，不过最常用的，还是引导优先级。因为一个电脑，可以有...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-05-11</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/11/202012122333/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/11/202012071650/">
-        [Linux] Kali Linux 新手引导 - 区域与语言配置
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        关于我的Kali系统：
-操作系统：Linux NullKali 5.9.0-kali2-amd64 #1 SMP Debian 5.9.6-1kali1 (2020-11-11) x86_64 GNU/Linux桌面环境：Xfce Desktop Environment Version 4.14, destributed by Debian
-
-配置区域12tzselect# 在Shell中执...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-05-11</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/11/202012071650/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/11/202012072035/">
-        [Linux] Kali Linux 新手引导 - 配置中文输入法
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        关于我的Kali系统：
-操作系统：Linux NullKali 5.9.0-kali2-amd64 #1 SMP Debian 5.9.6-1kali1 (2020-11-11) x86_64 GNU/Linux桌面环境：Xfce Desktop Environment Version 4.14, destributed by Debian
-
-安装输入法框架Fcitx12sudo apt i...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-05-11</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/11/202012072035/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/11/202012081954/">
-        [Linux] Kali Linux 记录 - 死锁, 依赖 'Unable to install new version of ...libpng12.so.0 no such file or directory'
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        概述:
-在使用apt或dpkg安装deb包时， 出现了no such file or directory的错误要点:
-在dpkg时是否指定了错误的路径
-包对于系统来说是否过旧我的解决过程:
-
-
-我遇到的问题属于要点中的后者， libpng12对于我的系统来说太旧了。
-具体情况是这样的， 我在使用apt安装一些软件时， 发现， 一直报依赖问题， 让我执行‘apt –fix-broken ins...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-05-11</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/11/202012081954/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/11/202011200332/">
-        [Win32] Windows APi 函数后缀 (A, W, ExA, ExW) 的含义
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        
-资料来自网络, 在此整理到一起
-
-
-A表示使用ANSI编码作为标准输入与输出流的文本编码
-W表示使用Unicode作为编码
-Ex表示拓展, 标注了Ex的winapi函数会比没有标Ex的函数多一些参数什么的, 可以说拓展了一些功能
-ExA 与 ExW 就是 A,W与Ex的结合了
-
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-05-11</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/11/202011200332/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/11/202011152159/">
-        [C#] 在控制台绘图
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        原理: 通过Graphics进行绘图
-获取控制台的窗口句柄 12[DllImport(&quot;kernel32.dll&quot;)]static extern IntPtr GetConsoleWindow();
-获取Graphics对象 1Graphics g = Graphics.FromHwnd(GetConsoleWindow());
-于是乎, 你就可以通过获取的Graphic...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-05-11</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/11/202011152159/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/11/202010291141/">
-        [C#] 运算包含数学表达式的字符串
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        关于:
-原理讲解
-代码示例
-完整程序源码下载适用于:
-实例代码适用于: .NET Framework &amp; .NET Core
-算法通用. 只要你能够找到与算法对应的实现方式.将要实现:
-分析表达式
-实现所有的通用运算符
-实现三元运算符
-支持嵌套的括号原理:
-使用”状态机”算法分析表达式
-根据运算符优先级, 不断尝试运算, 最终得到结果详解:
-第一步, 我们需要将运算表达式分成一个个节...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-05-11</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/11/202010291141/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-      <br>
-      <div class="prev-next">
-        
-          <a class="prev" rel="prev" href="/page/4/">
-            <section class="post prev white-box shadow" >
-              <i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;Previous&nbsp;
-            </section>
-          </a>
-        
-        <p class="current">
-          5 / 8
-        </p>
-        
-          <a class="next" rel="next" href="/page/6/">
-            <section class="post next white-box shadow">
-              &nbsp;Next&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i>
-            </section>
-          </a>
-        
-      </div>
-    
-  
-
-
-</div>
-<aside class='l_side'>
-  
-  
-    
-    
-
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">70</span>
+          <span class="site-state-item-name">posts</span>
         </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">SlimeNull's Blog</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
       </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">tags</span>
       </div>
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
+  </nav>
+</div>
 
 
-    <div class='content'>
-      <a href="/tags/C-%E7%AC%94%E8%AE%B0/" style="font-size: 14px; color: #999">C# 笔记</a> <a href="/tags/C-%E7%B1%BB%E5%BA%93/" style="font-size: 14px; color: #999">C# 类库</a>
+
+        </div>
+      </div>
     </div>
-  </section>
+  </aside>
+  <div class="sidebar-dimmer"></div>
 
 
-  
+    </header>
 
-  
-
-
-</aside>
-
-
-
-		  
-		  <!--此文件用来存放一些不方便取值的变量-->
-<!--思路大概是将值藏到重加载的区域内-->
-
-<script>
-  window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
-  pdata.commentPath="";
-  pdata.commentPlaceholder="";
-  // header 这里无论是否开启pjax都需要
-  var l_header=document.getElementById("l_header");
-  
-  l_header.classList.add("show");
-  
-  
-    // cover
-    var cover_wrapper=document.querySelector('.cover-wrapper');
     
-    cover_wrapper.id="none";
-    cover_wrapper.style.display="none";
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner index posts-expand">
+
     
+
+
+<div class="post-block">
   
-</script>
-
-        </div>
-        
   
-  <footer class="footer clearfix">
-    <br><br>
-    
-      
-        <div class="aplayer-container">
-          
 
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202012130011/">
 
-        </div>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="SlimeNull">
+      <meta itemprop="description" content="Newbie... Learning...">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SlimeNull's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/11/202012130011/" class="post-title-link" itemprop="url">[0] Windows 与 Linux 通用装机方法</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
       
-    
-      
-        <br>
-        <div class="social-wrapper">
-          
-            
-          
-            
-          
-            
-          
-        </div>
-      
-    
-      
-        <div><p>Blog content follows the <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+
+      <time title="Created: 2021-05-11 10:26:01 / Modified: 11:47:25" itemprop="dateCreated datePublished" datetime="2021-05-11T10:26:01+08:00">2021-05-11</time>
+    </span>
+
+  
 </div>
-      
-    
-      
-        
-          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
-</div>
-        
-      
-    
-      
-        Use
-        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1" target="_blank" class="codename">Volantis</a>
-        as theme
-      
-    
-      
-        <div class='copyright'>
-        <p><a href="/">Copyright © 2017-2020 XXX</a></p>
 
         </div>
-      
+      </header>
+
     
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h5 id="步骤概述："><a href="#步骤概述：" class="headerlink" title="步骤概述："></a>步骤概述：</h5><ol>
+<li><p>准备安装介质</p>
+</li>
+<li><p>从你喜欢的渠道下载ISO镜像</p>
+</li>
+<li><p>将ISO写入到安装介质</p>
+<h3 id="步骤："><a href="#步骤：" class="headerlink" title="步骤："></a>步骤：</h3><h5 id="1-准备安装介质"><a href="#1-准备安装介质" class="headerlink" title="1. 准备安装介质"></a>1. 准备安装介质</h5><p>旧时的安装介质指光盘，但现在，一般的，安装介质都指U盘。你需要准备一个U盘，这个U盘的数据将被完全擦除然后写入安装程序，所以，推荐使用空闲U盘，并且空间大小推荐8G左右，不要小于4G，可以大于8G(只不过有些浪费空间就是了)</p>
+<blockquote>
+<p>Windows10的镜像一般为4G左右，写入到U盘后大于4G<br>Linux镜像一般较小，大多4G以下，但是Kali Linux的镜像要大于4G<br>这就是为什么推荐8G U盘</p>
+</blockquote>
+</li>
+</ol>
+<h5 id="2-从你喜欢的渠道下载ISO镜像"><a href="#2-从你喜欢的渠道下载ISO镜像" class="headerlink" title="2. 从你喜欢的渠道下载ISO镜像"></a>2. 从你喜欢的渠道下载ISO镜像</h5><p>   如果你希望你安装的系统是干净的，那么，你需要使用正确的渠道来下载系统镜像。</p>
+<ul>
+<li><p>安装 Windows 系统：</p>
+<ul>
+<li>如果你有激活密钥或可以使用数字激活，建议你去 <strong><a target="_blank" rel="noopener" href="https://next.itellyou.cn/">Next, I tell you</a></strong> 下载镜像，你需要登录(这不会花费太长时间)，它也是支持QQ登录的，当然，如果你不想注册账户，也可以去旧的网站 <strong><a target="_blank" rel="noopener" href="https://next.itellyou.cn/">MSDN I tell you</a></strong> ， 但在旧的网站，你无法下载Windows10的最新版本 <em>2004</em></li>
+<li>如果你没有激活密钥, 你可以选择购买 Windows 激活码, 在 <a target="_blank" rel="noopener" href="https://www.microsoft.com/">Microsoft 商城</a> 或 <a target="_blank" rel="noopener" href="https://search.jd.com/Search?keyword=Windows%E6%BF%80%E6%B4%BB%E7%A0%81">京东</a>, <a target="_blank" rel="noopener" href="https://www.taobao.com/">淘宝</a> 等电子商城中可以购买到, 购买后, 按照上面的步骤, 下载 Windows 系统镜像. 或者你可以先进行上面的步骤, 在提到的网站中下载镜像, 然后试用 Windows. 如果你想要使用系统激活工具, 一定要知道, 这是不合法的, 并且激活工具常常伴随着病毒, 这些病毒很难被处理掉. <del>360或许可以搞定它们</del>. 如果你想要使用盗版软件(不需要你为其支付费用), 请参阅文章尾 <em>硬盘安装</em> </li>
+</ul>
+</li>
+<li><p>安装 Linux 系统：</p>
+<ul>
+<li>不用讲了，Linux 的大部分发行版都是免费且开源，直接在官方网站即可下载到。<a target="_blank" rel="noopener" href="https://ubuntu.com/">Ubuntu</a>， <a target="_blank" rel="noopener" href="https://www.debian.org/">Debian</a>，<a target="_blank" rel="noopener" href="https://www.deepin.org/">Deepin</a>，<a target="_blank" rel="noopener" href="https://www.kali.org/">Kali</a>，<a target="_blank" rel="noopener" href="https://www.archlinux.org/">Arch</a>，<a target="_blank" rel="noopener" href="https://www.centos.org/">CentOS</a>，<a target="_blank" rel="noopener" href="https://linuxmint.com/">Mint</a>，<a target="_blank" rel="noopener" href="https://www.redhat.com/">Red Hat</a><blockquote>
+<p>提示：I tell you网站内的ed2k是一个特殊的下载地址，可视作p2p下载链接，推荐使用<a target="_blank" rel="noopener" href="https://dl.xunlei.com/">迅雷</a>(别的软件可能对非技术人员不友好)<br>注意，大多数国内流行的ISO或GHO镜像下载网站都是<strong>包含捆绑软件</strong>的<strong>非官方原装系统</strong>！如果你要使用纯净系统，切记要仔细选择！</p>
+</blockquote>
+<h5 id="3-将ISO写入到介质"><a href="#3-将ISO写入到介质" class="headerlink" title="3. 将ISO写入到介质"></a>3. 将ISO写入到介质</h5>写入到介质可不单单是将ISO作为压缩包打开并内容拷贝到U盘，这样是错误的操作！但是不必担心，同样，它也不是什么复杂的操作</li>
+</ul>
+</li>
+<li><p>在 Windows 系统中，你需要一个小工具来制作安装介质，它就是<a target="_blank" rel="noopener" href="http://rufus.ie/">Rufus</a>！， 一个仅有不到5MB的小工具，并且能够自动帮你检测可能缺失的内容！<a target="_blank" rel="noopener" href="http://rufus.ie/">Rufus</a>的使用也非常简便，只需要选择设备，选择ISO镜像，点击开始即可(我是指, 其他配置内容默认不需要更改)。<a target="_blank" rel="noopener" href="http://rufus.ie/">进入Rufus官网</a>，<a target="_blank" rel="noopener" href="https://github.com/pbatard/rufus/releases/download/v3.13/rufus-3.13p.exe">下载Rufus 3.13便携版</a></p>
+</li>
+<li><p>在Linux中，我们只需要借助一个‘dd’指令即可将ISO镜像写入到U盘，用法是：</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dd <span class="keyword">if</span>=‘输入文件’ of=‘输出设备’</span><br><span class="line"><span class="comment"># 使用lsblk指令可以查看自己当前的接入的存储设备</span></span><br><span class="line"><span class="comment"># dd指令示例使用示例： dd if=&#x27;/home/username/ubuntu20.04lts.iso&#x27; of=&#x27;/dev/sda&#x27;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>在这里不得不提到一个问题，就是在 Linux 中使用 dd 指令写入 Windows 镜像到U盘，会出现无法安装的问题，但是使用 Rufus 写入就没问题。（可能是格式问题）</p>
+</blockquote>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>示例图像</th>
+<th>简介</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="https://img-blog.csdnimg.cn/20201212211500172.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="Rufus界面图像"></td>
+<td>Rufus 的界面非常简洁, 仅有必要的选项，无任何附加功能，无论小白还是大神，都很适合使用</td>
+</tr>
+<tr>
+<td><img src="https://img-blog.csdnimg.cn/20201212212942916.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></td>
+<td>这是Ubuntu系统中，dd指令的帮助手册，不过对于只需要将ISO写入到U盘的我们，不需要看那么多内容，只需要知道if和of参数即可</td>
+</tr>
+</tbody></table>
+<h5 id="4-开始安装"><a href="#4-开始安装" class="headerlink" title="4. 开始安装"></a>4. 开始安装</h5><p>待写入完毕，安装准备已经完全就绪了！那么，下一步就是安装步骤了！</p>
+<ol>
+<li>关闭计算机</li>
+<li>插入准备好的安装介质，启动计算机</li>
+<li>从U盘启动（有两种方式）：<ol>
+<li>第一种：按下 <em>选择引导</em> 的按键，它可能是 F12，但不同主板有不同的按键，Dell电脑的按键即是 F12。</li>
+<li>第二种：按下进入 <em>启动配置</em> 的按键 ，在 <em>启动配置</em> 中调整引导顺序至USB设备最顶级，重启电脑即可进入安装界面 </li>
+</ol>
+  <em>若有疑问，可参阅这篇文章： <a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_46555380/article/details/111085730">进入BIOS/UEFI配置页面</a></em></li>
+<li>成功从U盘启动后，就已经进入到系统安装界面了。接下来，按照安装程序的提示进行即可。一般的，Linux系统的可定制性要比Windows高很多，而Windows的安装就简单了很多。</li>
+<li>享受新系统！</li>
+</ol>
+<p><br/><br/></p>
+<h4 id="硬盘安装："><a href="#硬盘安装：" class="headerlink" title="硬盘安装："></a>硬盘安装：</h4><ul>
+<li>某些ISO镜像，例如国内较为流行的镜像下载网站提供的ISO，将其中的内容直接解压到某处，启动 setup.exe 即可安装，这种安装方式被称为 <em>硬盘安装</em> ，并且一般的，这种安装方式都是一键傻瓜式安装，中途完全不需要用户进行任何干涉。</li>
+<li>下面列举一些国内的非官方镜像下载源：<blockquote>
+<p><a target="_blank" rel="noopener" href="http://www.deepinghost.com/">深度技术</a>， <a target="_blank" rel="noopener" href="http://www.ylmfeng.com/">雨林木风</a>，<a target="_blank" rel="noopener" href="http://www.luobojiayuanxt.com/">萝卜家园</a>，<a target="_blank" rel="noopener" href="http://www.dngs.co/">电脑公司</a>，<a target="_blank" rel="noopener" href="http://www.xitongzhijia.net/">系统之家</a>，<a target="_blank" rel="noopener" href="http://www.winfanqie.com/">番茄花园</a><br><font color="#EE6666"><strong>注意，你几乎无法在国内流行镜像下载站获取原版镜像！这些都是包含捆绑的非原版镜像！并且极有可能侵犯了微软(Microsoft)的版权，在使用之前，慎重考虑！</strong></font></p>
+</blockquote>
+</li>
+<li>在下载到支持硬盘安装的ISO镜像后，使用任意压缩包管理软件(例如<a target="_blank" rel="noopener" href="https://www.7-zip.org/">7zip</a>)打开，解压其中的内容到任意文件夹，但要求不可以在你要安装系统的分区，例如你要将系统安装到C盘，那就不可以将ISO文件解压到C盘。</li>
+<li>解压后，双击 setup.exe 按照自己的需要配置一下，如果看不懂，就直接点下一步，然后傻瓜式系统安装就开始了，解压来你需要做的就是等待安装了（喝杯Java提提神？</li>
+<li>安装完成后，享受新系统吧！（记得将所有捆绑的东西全部卸载</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202012122333/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="SlimeNull">
+      <meta itemprop="description" content="Newbie... Learning...">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SlimeNull's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/11/202012122333/" class="post-title-link" itemprop="url">[0] 如何进入启动配置 (BIOS/UEFI配置)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-05-11 10:23:41 / Modified: 11:47:29" itemprop="dateCreated datePublished" datetime="2021-05-11T10:23:41+08:00">2021-05-11</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<ul>
+<li>电脑启动时，需要读取最基本的配置，然后才进入系统，这个配置就是 <em>启动配置</em> 。旧时的启动配置即BIOS配置，但如今UEFI即将取代BIOS配置，我们应该使用 <em>启动配置</em> 这个名称，否则就可能闹出将UEFI称为BIOS的尴尬场面。</li>
+<li>这个启动配置，是可以被我们调整的，在启动配置页面，我们可以调整风扇转速，系统时间，设备电压，以及其他更高深的东西，不过最常用的，还是<strong>引导优先级</strong>。因为一个电脑，可以有多个操作系统，引导优先级则是控制启动系统的配置项。</li>
+<li>不同的主板，是有不同的进入按键的，例如Dell电脑，是<kbd>F2</kbd>进入启动配置。</li>
+</ul>
+</blockquote>
+<p>那么， 下一步就是在网上查找你的设备对应的按键了, 搜索近似于 ‘设备名 BIOS/UEFI 按键’ 的内容以尝试检索出你所需要的按键。下面的步骤以 <kbd>F2</kbd>作为示例。</p>
+<ol>
+<li>按下开机键后，狂按<kbd>F2</kbd>, 直到进入配置页面。（它可能是纯英文界面</li>
+<li>如果是国内主板，或者说支持多语言的配置页，你可以尝试找下 ‘Language’ 配置以调整显示语言</li>
+</ol>
+<p>启动时，还有一些其他的按键，例如 <em>Windows启动高级选项</em> 的按键是<kbd>F8</kbd>，Dell电脑的引导选择的快捷键是<kbd>F12</kbd>, 如果你只是希望在本次进入系统时从其他设备进入，使用<kbd>F12</kbd>更简便些。当然，即便是这个，在不同主板中也是不同的，例如我那个台式机就是<kbd>F11</kbd>。</p>
+<p>对于想要通过介质安装系统的朋友呢，在开机时狂按<kbd>F12</kbd>进入引导选择页面，选择带有USB字样的选项并按<kbd>Enter</kbd>即可进入安装程序。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202012091223/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="SlimeNull">
+      <meta itemprop="description" content="Newbie... Learning...">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SlimeNull's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/11/202012091223/" class="post-title-link" itemprop="url">[Linux] Kali Linux 新手引导 - Xfce 桌面时间配置</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-05-11 10:23:41 / Modified: 11:47:43" itemprop="dateCreated datePublished" datetime="2021-05-11T10:23:41+08:00">2021-05-11</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h4 id="关于我的Kali系统："><a href="#关于我的Kali系统：" class="headerlink" title="关于我的Kali系统："></a>关于我的Kali系统：</h4><blockquote>
+<p>操作系统：Linux NullKali 5.9.0-kali2-amd64 #1 SMP Debian 5.9.6-1kali1 (2020-11-11) x86_64 GNU/Linux<br>桌面环境：Xfce Desktop Environment Version 4.14, destributed by Debian</p>
+</blockquote>
+<h2 id="打开时间配置："><a href="#打开时间配置：" class="headerlink" title="打开时间配置："></a>打开时间配置：</h2><ul>
+<li>位于固定’任务栏’的右侧， 右击时间，选择Properties(属性)<table>
+<tr>
+<td>
+<img src="https://img-blog.csdnimg.cn/20201209115256539.png" title="时间"/>
+<img src="https://img-blog.csdnimg.cn/2020120911532581.png"/>
+</td>
+</tr>
+</table></li>
+</ul>
+<h2 id="进行调整："><a href="#进行调整：" class="headerlink" title="进行调整："></a>进行调整：</h2><p><img src="https://img-blog.csdnimg.cn/20201209115711659.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="界面"></p>
+<h2 id="亦见："><a href="#亦见：" class="headerlink" title="亦见："></a>亦见：</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_46555380/article/details/110821855">Kali Linux 新手引导 - 区域与语言配置</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202012071650/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="SlimeNull">
+      <meta itemprop="description" content="Newbie... Learning...">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SlimeNull's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/11/202012071650/" class="post-title-link" itemprop="url">[Linux] Kali Linux 新手引导 - 区域与语言配置</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-05-11 10:19:27 / Modified: 11:48:03" itemprop="dateCreated datePublished" datetime="2021-05-11T10:19:27+08:00">2021-05-11</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h4 id="关于我的Kali系统："><a href="#关于我的Kali系统：" class="headerlink" title="关于我的Kali系统："></a>关于我的Kali系统：</h4><blockquote>
+<p>操作系统：Linux NullKali 5.9.0-kali2-amd64 #1 SMP Debian 5.9.6-1kali1 (2020-11-11) x86_64 GNU/Linux<br>桌面环境：Xfce Desktop Environment Version 4.14, destributed by Debian</p>
+</blockquote>
+<h2 id="配置区域"><a href="#配置区域" class="headerlink" title="配置区域"></a>配置区域</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tzselect</span><br><span class="line"><span class="meta">#</span><span class="bash"> 在Shell中执行即可， 内容来自网络</span></span><br></pre></td></tr></table></figure>
+<h2 id="配置语言"><a href="#配置语言" class="headerlink" title="配置语言"></a>配置语言</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg-reconfigure locales</span><br><span class="line"><span class="meta">#</span><span class="bash"> 配置完后记得重启(reboot)</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 这条指令的意思应该是调整语言并安装相关包</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 配置完语言后，在登录页面的右上角可以快捷切换语言</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202012072035/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="SlimeNull">
+      <meta itemprop="description" content="Newbie... Learning...">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SlimeNull's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/11/202012072035/" class="post-title-link" itemprop="url">[Linux] Kali Linux 新手引导 - 配置中文输入法</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-05-11 10:19:27 / Modified: 11:47:59" itemprop="dateCreated datePublished" datetime="2021-05-11T10:19:27+08:00">2021-05-11</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h4 id="关于我的Kali系统："><a href="#关于我的Kali系统：" class="headerlink" title="关于我的Kali系统："></a>关于我的Kali系统：</h4><blockquote>
+<p>操作系统：Linux NullKali 5.9.0-kali2-amd64 #1 SMP Debian 5.9.6-1kali1 (2020-11-11) x86_64 GNU/Linux<br>桌面环境：Xfce Desktop Environment Version 4.14, destributed by Debian</p>
+</blockquote>
+<h2 id="安装输入法框架Fcitx"><a href="#安装输入法框架Fcitx" class="headerlink" title="安装输入法框架Fcitx"></a>安装输入法框架Fcitx</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install fcitx</span><br><span class="line"><span class="meta">#</span><span class="bash"> 这里推荐的是Fcitx， kali默认是装了fcitx的， 如果没有安装， 就执行上边的指令安装吧</span></span><br></pre></td></tr></table></figure>
+<h2 id="安装好用的输入法"><a href="#安装好用的输入法" class="headerlink" title="安装好用的输入法"></a>安装好用的输入法</h2><p>访问 ‘搜狗输入法 for Linux’ 官网并下载deb包。<a target="_blank" rel="noopener" href="https://pinyin.sogou.com/linux/">点此处跳转</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i sogoupinyin_版本号_amd64.deb</span><br><span class="line"><span class="meta">#</span><span class="bash"> 若出现依赖问题， 则执行指令以尝试修复: sudo apt -f install</span></span><br></pre></td></tr></table></figure>
+<h2 id="配置输入法"><a href="#配置输入法" class="headerlink" title="配置输入法"></a>配置输入法</h2><ol>
+<li>启动 Fcitx Configuration ， 点击左下角加号以添加输入法， 取消勾选‘Only Show Current Language’， 找到sogoupinyiin （没错， 不是sougou而是sogou）<img src="https://img-blog.csdnimg.cn/20201207180141330.png"/></li>
+<li>现在， 一切就绪， 你可以使用输入法了。 默认的输入法切换快捷键是 ‘Ctrl + Space’ ， 可在Fcitx Configuration的Global Config中调整。切换至‘搜狗拼音’时， 在屏幕上会出现在搜狗拼音的语言栏， 如下：<img src="https://img-blog.csdnimg.cn/20201207180555556.png"/></li>
+<li>此时， 你可以正常使用输入法。若有其他问题， 可继续阅读下面的内容。<table>
+<tr>
+<td>
+<span><font color="#888">下图即配置好的Fcitx</font></span>
+<img src="https://img-blog.csdnimg.cn/20201207180031275.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70"/>
+</td>
+</tr>
+</table></li>
+</ol>
+<h2 id="玄学问题："><a href="#玄学问题：" class="headerlink" title="玄学问题："></a>玄学问题：</h2><ol>
+<li><h6 id="Fcitx-Configuration-启动后，-窗口中没有任何内容（正常情况下应该有一个Keyboard-语言）"><a href="#Fcitx-Configuration-启动后，-窗口中没有任何内容（正常情况下应该有一个Keyboard-语言）" class="headerlink" title="Fcitx Configuration 启动后， 窗口中没有任何内容（正常情况下应该有一个Keyboard - 语言）"></a>Fcitx Configuration 启动后， 窗口中没有任何内容（正常情况下应该有一个Keyboard - 语言）</h6><blockquote>
+<p>尝试重启， 重新安装Fcitx， 更换区域与语言（参阅：<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_46555380/article/details/110821855">Kali Linux 新手引导 - 区域与语言配置</a>）</p>
+</blockquote>
+</li>
+<li><h6 id="在Fcitx-Configuration-中添加输入法时，-无法找到sogoupinyin"><a href="#在Fcitx-Configuration-中添加输入法时，-无法找到sogoupinyin" class="headerlink" title="在Fcitx Configuration 中添加输入法时， 无法找到sogoupinyin"></a>在Fcitx Configuration 中添加输入法时， 无法找到sogoupinyin</h6><blockquote>
+<p>检查输入法是否正确安装了， 尝试执行apt update， apt upgrade， apt -f install</p>
+</blockquote>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202012081954/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="SlimeNull">
+      <meta itemprop="description" content="Newbie... Learning...">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SlimeNull's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/11/202012081954/" class="post-title-link" itemprop="url">[Linux] Kali Linux 记录 - 死锁, 依赖 'Unable to install new version of ...libpng12.so.0 no such file or directory'</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-05-11 10:19:27 / Modified: 11:47:50" itemprop="dateCreated datePublished" datetime="2021-05-11T10:19:27+08:00">2021-05-11</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="概述"><a href="#概述" class="headerlink" title="概述:"></a>概述:</h2><ol start="0">
+<li>在使用apt或dpkg安装deb包时， 出现了no such file or directory的错误<h2 id="要点"><a href="#要点" class="headerlink" title="要点:"></a>要点:</h2></li>
+<li>在dpkg时是否指定了错误的路径</li>
+<li>包对于系统来说是否过旧<h2 id="我的解决过程"><a href="#我的解决过程" class="headerlink" title="我的解决过程:"></a>我的解决过程:</h2></li>
+</ol>
+<ul>
+<li>我遇到的问题属于要点中的后者， libpng12对于我的系统来说太旧了。<blockquote>
+<p>具体情况是这样的， 我在使用apt安装一些软件时， 发现， 一直报依赖问题， 让我执行‘apt –fix-broken install’(即‘apt -f install’)， 但当我执行时， 它尝试安装的libpng12-0始终装不上(都快把孩子急哭了qaq)！ 从报错信息上看， libpng12-0似乎是libpng12.so.0的新版本， 在安装时总是提示no such file or directory。</p>
+</blockquote>
+</li>
+</ul>
+<ol start="0">
+<li><p>首先， 我在网上搜索了一波， 但是依照国内IT圈子转载满天飞的尿性， 我还是以失败告终 —— 找了几十篇文章也没看到有用的</p>
+</li>
+<li><p>后来我发现， 如果我不处理这个错误， 我不能进行任何apt install， upgrade， remove操作！ 我慌了， 于是我尝试执行apt remove libpng12.so.0， 但是提示它被libwebkitgtk什么的一个我不认识的东西包所依赖， 然后， 不能移除。。。</p>
+</li>
+<li><p>然后我又尝试移除这个依赖于libpng的libwebkitgtk的什么包， 然后我发现它又被sunloginclient(应该是向日葵远程控制软件客户端)所依赖，，， 移除失败，，，</p>
+</li>
+<li><p>于是我尝试移除sunloginclient这个包（反正我目前不大用得到向日葵）， 但是，，，正如我前面所说的， 虽然sunloginclient不被什么包所依赖， 但是因为我们libpng12-0的依赖问题没解决， 所以，，， 移除失败。。。</p>
+</li>
+<li><p>于是， 我似乎陷入了一个逻辑问题， 想要处理这个依赖问题， 我就得移除掉旧的libpng12.so.0， 想要移除它我就得移除sunloginclient然后最后移除它， 而只有我处理完依赖问题后， 才能够使用apt来进行安装与移除操作！</p>
+<table align="center"><tr><td>绝了</td></tr><tr><td><img align="center" width="100" height="100" src="https://i0.hdslb.com/bfs/emote/35d62c496d1e4ea9e091243fa812866f5fecc101.png@112w_112h.png"/></td></tr></table></li>
+<li><p>查资料， 查资料， 查资料， 经过一段时间的周旋， 我顿悟了， 很快啊， 我打开终端， 用dpkg把sunloginclient给移除了， 然后顺理成章的把libwebkitgtk， libpng12.so.0给移除了</p>
+</li>
+</ol>
+<blockquote>
+<p>完美解决</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202011200332/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="SlimeNull">
+      <meta itemprop="description" content="Newbie... Learning...">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SlimeNull's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/11/202011200332/" class="post-title-link" itemprop="url">[Win32] Windows APi 函数后缀 (A, W, ExA, ExW) 的含义</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-05-11 10:18:23 / Modified: 11:48:07" itemprop="dateCreated datePublished" datetime="2021-05-11T10:18:23+08:00">2021-05-11</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>资料来自网络, 在此整理到一起</p>
+</blockquote>
+<ul>
+<li>A表示使用ANSI编码作为标准输入与输出流的文本编码</li>
+<li>W表示使用Unicode作为编码</li>
+<li>Ex表示拓展, 标注了Ex的winapi函数会比没有标Ex的函数多一些参数什么的, 可以说拓展了一些功能</li>
+<li>ExA 与 ExW 就是 A,W与Ex的结合了</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202011152159/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="SlimeNull">
+      <meta itemprop="description" content="Newbie... Learning...">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SlimeNull's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/11/202011152159/" class="post-title-link" itemprop="url">[C#] 在控制台绘图</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-05-11 10:17:32 / Modified: 11:48:11" itemprop="dateCreated datePublished" datetime="2021-05-11T10:17:32+08:00">2021-05-11</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h4 id="原理-通过Graphics进行绘图"><a href="#原理-通过Graphics进行绘图" class="headerlink" title="原理: 通过Graphics进行绘图"></a>原理: 通过Graphics进行绘图</h4><ol>
+<li>获取控制台的窗口句柄 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="meta">DllImport(<span class="meta-string">&quot;kernel32.dll&quot;</span>)</span>]</span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">extern</span> IntPtr <span class="title">GetConsoleWindow</span>(<span class="params"></span>)</span>;</span><br></pre></td></tr></table></figure></li>
+<li>获取Graphics对象 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Graphics g = Graphics.FromHwnd(GetConsoleWindow());</span><br></pre></td></tr></table></figure>
+于是乎, 你就可以通过获取的Graphics对象随便进行绘图了!</li>
+</ol>
+<blockquote>
+<p>但是, 注意, 当控制条刷新的时候, 比如Console.Clear(), 或者控制台光标经过绘图区域, 绘制的内容就会失效, 这时你需要重新绘制. (如果有控制台刷新的事件就好了)</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202010291141/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="SlimeNull">
+      <meta itemprop="description" content="Newbie... Learning...">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SlimeNull's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/11/202010291141/" class="post-title-link" itemprop="url">[C#] 运算包含数学表达式的字符串</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-05-11 10:16:29 / Modified: 11:48:16" itemprop="dateCreated datePublished" datetime="2021-05-11T10:16:29+08:00">2021-05-11</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="关于"><a href="#关于" class="headerlink" title="关于:"></a>关于:</h2><ol start="0">
+<li><h6 id="原理讲解"><a href="#原理讲解" class="headerlink" title="原理讲解"></a>原理讲解</h6></li>
+<li>代码示例</li>
+<li>完整程序源码下载<h2 id="适用于"><a href="#适用于" class="headerlink" title="适用于:"></a>适用于:</h2></li>
+<li>实例代码适用于: .NET Framework &amp; .NET Core</li>
+<li>算法通用. 只要你能够找到与算法对应的实现方式.<h2 id="将要实现"><a href="#将要实现" class="headerlink" title="将要实现:"></a>将要实现:</h2></li>
+<li>分析表达式</li>
+<li>实现所有的通用运算符</li>
+<li>实现三元运算符</li>
+<li>支持嵌套的括号<h2 id="原理"><a href="#原理" class="headerlink" title="原理:"></a>原理:</h2></li>
+<li>使用”状态机”算法分析表达式</li>
+<li>根据运算符优先级, 不断尝试运算, 最终得到结果<h2 id="详解"><a href="#详解" class="headerlink" title="详解:"></a>详解:</h2></li>
+<li>第一步, 我们需要将运算表达式分成一个个节点(token), 这个节点可能是一个数字, 可能是一个运算符, 至于表达式里的括号, 我们会使用递归来进行运算. 我们使用下面的class来表示这个token.<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">enum</span> CalcTokenType</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 规定枚举所对应的int为2的倍数是为了后面方便识别</span></span><br><span class="line">    None = <span class="number">0</span>, Number = <span class="number">1</span>, Operator = <span class="number">2</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">enum</span> CalcOperator</span><br><span class="line">&#123;</span><br><span class="line">    None,</span><br><span class="line">    Add = <span class="number">1</span>,       <span class="comment">// +</span></span><br><span class="line">    Sub = <span class="number">2</span>,       <span class="comment">// -</span></span><br><span class="line">    Mul = <span class="number">4</span>,       <span class="comment">// *</span></span><br><span class="line">    Div = <span class="number">8</span>,       <span class="comment">// /</span></span><br><span class="line">    Mod = <span class="number">16</span>,      <span class="comment">// %</span></span><br><span class="line">    Pow = <span class="number">32</span>,      <span class="comment">// **</span></span><br><span class="line">    Lss = <span class="number">64</span>,      <span class="comment">// &lt;</span></span><br><span class="line">    Gtr = <span class="number">128</span>,     <span class="comment">// &gt;</span></span><br><span class="line">    Leq = <span class="number">256</span>,     <span class="comment">// &lt;=</span></span><br><span class="line">    Geq = <span class="number">512</span>,     <span class="comment">// &gt;=</span></span><br><span class="line">    Equ = <span class="number">1024</span>,    <span class="comment">// =</span></span><br><span class="line">    Neq = <span class="number">2048</span>,    <span class="comment">// !=</span></span><br><span class="line">    Not = <span class="number">4096</span>,    <span class="comment">// !</span></span><br><span class="line">    And = <span class="number">8192</span>,    <span class="comment">// &amp;</span></span><br><span class="line">    Or = <span class="number">16384</span>,    <span class="comment">// |</span></span><br><span class="line">    If = <span class="number">32768</span>,    <span class="comment">// 三元表达式中的 &#x27;?&#x27; 符号</span></span><br><span class="line">    Witch = <span class="number">65536</span>  <span class="comment">// 三元表达式中的 &#x27;:&#x27; 符号</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title">CalcToken</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">CalcToken</span>(<span class="params">CalcTokenType type, <span class="built_in">object</span> content</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">this</span>.Type = type;</span><br><span class="line">        <span class="keyword">this</span>.Content = content;</span><br><span class="line">    &#125;</span><br><span class="line">    CalcTokenType Type;</span><br><span class="line">    <span class="built_in">object</span> Content;</span><br><span class="line">    <span class="comment">// Content, 当Type是None时, 值应该是null</span></span><br><span class="line">    <span class="comment">// 当Type是Number时, 值应该是double</span></span><br><span class="line">    <span class="comment">// 当Type是Operator时, 值应该是CalcOperator枚举变量</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>继续, 那么, 先是如何分析一个简单的表达式, 例如下面的:<blockquote>
+<p>11+1</p>
+</blockquote>
+</li>
+<li>分析这个表达式, 我们首先定义一些字符串常量, 如下:</li>
+</ol>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">char</span>[] OperatorChars = <span class="string">&quot;+-*/&lt;&gt;!=&amp;|?:&quot;</span>.ToArray();  <span class="comment">// 表示操作符的字符</span></span><br><span class="line"><span class="built_in">char</span>[] NumberChars = <span class="string">&quot;0123456789.&quot;</span>.ToArray();     <span class="comment">// 表示数字的字符</span></span><br><span class="line"><span class="built_in">char</span>[] EmptyChars = <span class="string">&quot; \t&quot;</span>.ToArray();          <span class="comment">// 表示空字符</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>我们将逐字符对其分析(有限状态机): 使用List&lt;CalcToken&gt; tokens来保存分析出的token<blockquote>
+<ol>
+<li>当开始时, 我们取到一个字符’1’, 现在我们还不是在分析任何类型, 但是经过定义的字符集常量的Contains判断, 我们发现它是属于数字的, 那么我们知道, 现在我们正在分析数字.</li>
+<li>存储下来这个字符’1’, 用什么, 你应该知道吧? 要么是List<char>, 要么是StringBuilder. 并且, 记录下我们现在的状态, 我们分析到了数字</li>
+<li>到分析到第二个数字时, 我们当前的状态是正在分析数字, 那么在这个状态下, 如果我们又取到一个数字, 那么我们需要存储下这个数字, 并且当前状态不变, 如果我们取到一个操作符字符, 那么代表现在这个数字结束了, 使用double.Parse将已保存的字符串(一个或多个由数字字符组成的), 转换为double类型, 然后存储下这个token, 并且清空存储的字符, 将当前取到的字符存进去, 然后改变当前状态到”正在分析操作符”.</li>
+<li>我们的表达式是”11+1”, 第二个字符是一个数字字符, 也就是说, 我们应存下这个字符, 且状态不变. 于是, 我们已经存储下了两个字符{‘1’, ‘1’}, 当前状态是数字</li>
+<li>到第三个字符了, 我们发现它不是一个数字字符, 而是一个操作符字符, 于是, 将已保存的字符串转换为double, 并添加到tokens, 当前状态是:正在分析操作符</li>
+<li>到第四个字符, 它又不是一个操作符字符了, 它现在是一个数字, 所以, 将已存储的操作符字符保存</li>
+<li>到最后, 分析结束, 但临时存储的部分还有一个字符’1’, 将其转换为double, 然后存储到tokens, 于是, 我们成功完成了对表达式的分词, 至此, 基本原理已经讲清, 尝试理解下面的函数</li>
+</ol>
+</blockquote>
+</li>
+</ol>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 下面是分词核心, 这里面包含对括号的分析</span></span><br><span class="line"><span class="comment">// bool inner表示这个函数是否是被另一个分词函数调用的, 也就是说是否在递归状态, 如果是, 则表示在分析一个括号内的表达式, 碰到&#x27;)&#x27;的时候立即return;</span></span><br><span class="line"><span class="function"><span class="built_in">bool</span> <span class="title">TryParseCalcTokens</span>(<span class="params"><span class="keyword">ref</span> <span class="built_in">char</span>[] source, <span class="keyword">ref</span> <span class="built_in">int</span> offset, <span class="keyword">out</span> List&lt;CalcToken&gt; result, <span class="built_in">bool</span> inner = <span class="literal">false</span>, <span class="built_in">int</span> level = <span class="number">0</span></span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    result = <span class="keyword">new</span> List&lt;CalcToken&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (; offset &lt; source.Length; offset++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (EmptyChars.Contains(source[offset]))</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (source[offset] == <span class="string">&#x27;(&#x27;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            offset++;</span><br><span class="line">            <span class="keyword">if</span> (TryParseCalcTokens(<span class="keyword">ref</span> source, <span class="keyword">ref</span> offset, <span class="keyword">out</span> List&lt;CalcToken&gt; newrst, <span class="literal">true</span>, level + <span class="number">1</span>))</span><br><span class="line">            &#123;</span><br><span class="line">                result.Add(<span class="keyword">new</span> CalcToken(CalcTokenType.Expression, newrst));</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                errors.Add(<span class="string">$&quot;Error when parsing inner expression. Level:<span class="subst">&#123;level&#125;</span>;&quot;</span>);</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (source[offset] == <span class="string">&#x27;)&#x27;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (TryParseToken(<span class="keyword">ref</span> source, <span class="keyword">ref</span> offset, <span class="keyword">out</span> CalcToken newcctk))</span><br><span class="line">            &#123;</span><br><span class="line">                result.Add(newcctk);   <span class="comment">// 这里是将分析好的token添加到tokens</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                errors.Add(<span class="string">$&quot;Error when parsing expression token. Level:<span class="subst">&#123;level&#125;</span>;&quot;</span>);</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>开始运算表达式: (最简单的方法)<blockquote>
+<p>遍历我们的tokens, 第一次遍历, 查找优先级最高的操作符并运算结果, 第二次遍历查找优先级略次的操作符并运算结果, 如此往复, 查找完所有的表达式</p>
+</blockquote>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 下面是运算核心</span></span><br><span class="line"><span class="function"><span class="built_in">bool</span> <span class="title">TryCalculateTokens</span>(<span class="params"><span class="keyword">ref</span> List&lt;CalcToken&gt; source, <span class="keyword">out</span> <span class="built_in">double</span> result, <span class="keyword">out</span> List&lt;<span class="built_in">string</span>&gt; errors</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    errors = <span class="keyword">new</span> List&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">    result = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; source.Count; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (source[i].Type == CalcTokenType.Operator &amp;&amp; CheckOperator(CalcOperator.Mul | CalcOperator.Div | CalcOperator.Mod | CalcOperator.Pow, (CalcOperator)source[i].Content) &amp;&amp; CheckType(<span class="keyword">ref</span> source, CalcTokenType.Number | CalcTokenType.Expression, i, <span class="number">-1</span>) &amp;&amp; CheckType(<span class="keyword">ref</span> source, CalcTokenType.Number | CalcTokenType.Expression, i, <span class="number">1</span>))</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (TryGetTokenValue(<span class="keyword">ref</span> errors, source[i - <span class="number">1</span>], <span class="keyword">out</span> <span class="built_in">double</span> leftnum) &amp;&amp; TryGetTokenValue(<span class="keyword">ref</span> errors, source[i + <span class="number">1</span>], <span class="keyword">out</span> <span class="built_in">double</span> rightnum))</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">double</span> tmpnum = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">switch</span> ((CalcOperator)source[i].Content)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">case</span> CalcOperator.Mul:</span><br><span class="line">                        tmpnum = leftnum * rightnum;</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    <span class="keyword">case</span> CalcOperator.Div:</span><br><span class="line">                        tmpnum = leftnum / rightnum;</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    <span class="keyword">case</span> CalcOperator.Mod:</span><br><span class="line">                        tmpnum = leftnum % rightnum;</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    <span class="keyword">case</span> CalcOperator.Pow:</span><br><span class="line">                        tmpnum = Math.Pow(leftnum, rightnum);</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    <span class="literal">default</span>:</span><br><span class="line">                        <span class="keyword">throw</span> <span class="keyword">new</span> Exception();</span><br><span class="line">                &#125;</span><br><span class="line">                source[i - <span class="number">1</span>] = <span class="keyword">new</span> CalcToken(CalcTokenType.Number, tmpnum);</span><br><span class="line">                source.RemoveRange(i, <span class="number">2</span>);</span><br><span class="line">                i--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                errors.Add(<span class="string">$&quot;Cannot get the value of token when calculate &#x27;<span class="subst">&#123;source[i].Content&#125;</span>&#x27;;&quot;</span>);</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;    <span class="comment">// * / % **</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; source.Count; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (source[i].Type == CalcTokenType.Operator &amp;&amp; CheckOperator(CalcOperator.Add | CalcOperator.Sub, (CalcOperator)source[i].Content) &amp;&amp; CheckType(<span class="keyword">ref</span> source, CalcTokenType.Number | CalcTokenType.Expression, i, <span class="number">1</span>))</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (CheckType(<span class="keyword">ref</span> source, CalcTokenType.Number | CalcTokenType.Expression, i, <span class="number">-1</span>))</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (TryGetTokenValue(<span class="keyword">ref</span> errors, source[i - <span class="number">1</span>], <span class="keyword">out</span> <span class="built_in">double</span> leftnum) &amp;&amp; TryGetTokenValue(<span class="keyword">ref</span> errors, source[i + <span class="number">1</span>], <span class="keyword">out</span> <span class="built_in">double</span> rightnum))</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="built_in">double</span> tmpnum = <span class="number">0</span>;</span><br><span class="line">                    <span class="keyword">switch</span> ((CalcOperator)source[i].Content)</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="keyword">case</span> CalcOperator.Add:</span><br><span class="line">                            tmpnum = leftnum + rightnum;</span><br><span class="line">                            <span class="keyword">break</span>;</span><br><span class="line">                        <span class="keyword">case</span> CalcOperator.Sub:</span><br><span class="line">                            tmpnum = leftnum - rightnum;</span><br><span class="line">                            <span class="keyword">break</span>;</span><br><span class="line">                        <span class="literal">default</span>:</span><br><span class="line">                            <span class="keyword">throw</span> <span class="keyword">new</span> Exception();</span><br><span class="line">                    &#125;</span><br><span class="line">                    source[i - <span class="number">1</span>] = <span class="keyword">new</span> CalcToken(CalcTokenType.Number, tmpnum);</span><br><span class="line">                    source.RemoveRange(i, <span class="number">2</span>);</span><br><span class="line">                    i--;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                &#123;</span><br><span class="line">                    errors.Add(<span class="string">$&quot;Cannot get the value of token when calculate &#x27;<span class="subst">&#123;source[i].Content&#125;</span>&#x27;;&quot;</span>);</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (TryGetTokenValue(<span class="keyword">ref</span> errors, source[i + <span class="number">1</span>], <span class="keyword">out</span> <span class="built_in">double</span> rightnum))</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="built_in">double</span> tmpnum = <span class="number">0</span>;</span><br><span class="line">                    <span class="keyword">switch</span> ((CalcOperator)source[i].Content)</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="keyword">case</span> CalcOperator.Add:</span><br><span class="line">                            tmpnum = rightnum;</span><br><span class="line">                            <span class="keyword">break</span>;</span><br><span class="line">                        <span class="keyword">case</span> CalcOperator.Sub:</span><br><span class="line">                            tmpnum = <span class="number">0</span> - rightnum;</span><br><span class="line">                            <span class="keyword">break</span>;</span><br><span class="line">                        <span class="literal">default</span>:</span><br><span class="line">                            <span class="keyword">throw</span> <span class="keyword">new</span> Exception();</span><br><span class="line">                    &#125;</span><br><span class="line">                    source[i] = <span class="keyword">new</span> CalcToken(CalcTokenType.Number, tmpnum);</span><br><span class="line">                    source.RemoveRange(i + <span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                &#123;</span><br><span class="line">                    errors.Add(<span class="string">$&quot;Cannot get the value of token when calculate &#x27;<span class="subst">&#123;source[i].Content&#125;</span>&#x27;;&quot;</span>);</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;    <span class="comment">// + -</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; source.Count; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (source[i].Type == CalcTokenType.Operator &amp;&amp; CheckOperator(CalcOperator.Gtr | CalcOperator.Lss | CalcOperator.Geq | CalcOperator.Leq, (CalcOperator)source[i].Content) &amp;&amp; CheckType(<span class="keyword">ref</span> source, CalcTokenType.Number | CalcTokenType.Expression, i, <span class="number">-1</span>) &amp;&amp; CheckType(<span class="keyword">ref</span> source, CalcTokenType.Number | CalcTokenType.Expression, i, <span class="number">1</span>))</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (TryGetTokenValue(<span class="keyword">ref</span> errors, source[i - <span class="number">1</span>], <span class="keyword">out</span> <span class="built_in">double</span> leftnum) &amp;&amp; TryGetTokenValue(<span class="keyword">ref</span> errors, source[i + <span class="number">1</span>], <span class="keyword">out</span> <span class="built_in">double</span> rightnum))</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">double</span> tmpnum = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">switch</span> ((CalcOperator)source[i].Content)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">case</span> CalcOperator.Gtr:</span><br><span class="line">                        tmpnum = leftnum &gt; rightnum ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    <span class="keyword">case</span> CalcOperator.Lss:</span><br><span class="line">                        tmpnum = leftnum &lt; rightnum ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    <span class="keyword">case</span> CalcOperator.Geq:</span><br><span class="line">                        tmpnum = leftnum &gt;= rightnum ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    <span class="keyword">case</span> CalcOperator.Leq:</span><br><span class="line">                        tmpnum = leftnum &lt;= rightnum ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    <span class="literal">default</span>:</span><br><span class="line">                        <span class="keyword">throw</span> <span class="keyword">new</span> Exception();</span><br><span class="line">                &#125;</span><br><span class="line">                source[i - <span class="number">1</span>] = <span class="keyword">new</span> CalcToken(CalcTokenType.Number, tmpnum);</span><br><span class="line">                source.RemoveRange(i, <span class="number">2</span>);</span><br><span class="line">                i--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                errors.Add(<span class="string">$&quot;Cannot get the value of token when calculate &#x27;<span class="subst">&#123;source[i].Content&#125;</span>&#x27;;&quot;</span>);</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;    <span class="comment">// &gt; &lt; &gt;= &lt;=</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; source.Count; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (source[i].Type == CalcTokenType.Operator &amp;&amp; CheckOperator(CalcOperator.Equ | CalcOperator.Neq, (CalcOperator)source[i].Content) &amp;&amp; CheckType(<span class="keyword">ref</span> source, CalcTokenType.Number | CalcTokenType.Expression, i, <span class="number">-1</span>) &amp;&amp; CheckType(<span class="keyword">ref</span> source, CalcTokenType.Number | CalcTokenType.Expression, i, <span class="number">1</span>))</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (TryGetTokenValue(<span class="keyword">ref</span> errors, source[i - <span class="number">1</span>], <span class="keyword">out</span> <span class="built_in">double</span> leftnum) &amp;&amp; TryGetTokenValue(<span class="keyword">ref</span> errors, source[i + <span class="number">1</span>], <span class="keyword">out</span> <span class="built_in">double</span> rightnum))</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">double</span> tmpnum = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">switch</span> ((CalcOperator)source[i].Content)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">case</span> CalcOperator.Equ:</span><br><span class="line">                        tmpnum = leftnum == rightnum ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    <span class="keyword">case</span> CalcOperator.Neq:</span><br><span class="line">                        tmpnum = leftnum != rightnum ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    <span class="literal">default</span>:</span><br><span class="line">                        <span class="keyword">throw</span> <span class="keyword">new</span> Exception();</span><br><span class="line">                &#125;</span><br><span class="line">                source[i - <span class="number">1</span>] = <span class="keyword">new</span> CalcToken(CalcTokenType.Number, tmpnum);</span><br><span class="line">                source.RemoveRange(i, <span class="number">2</span>);</span><br><span class="line">                i--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                errors.Add(<span class="string">$&quot;Cannot get the value of token when calculate &#x27;<span class="subst">&#123;source[i].Content&#125;</span>&#x27;;&quot;</span>);</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;    <span class="comment">// == !=</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; source.Count; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (source[i].Type == CalcTokenType.Operator &amp;&amp; CheckOperator(CalcOperator.Add | CalcOperator.Or, (CalcOperator)source[i].Content) &amp;&amp; CheckType(<span class="keyword">ref</span> source, CalcTokenType.Number | CalcTokenType.Expression, i, <span class="number">-1</span>) &amp;&amp; CheckType(<span class="keyword">ref</span> source, CalcTokenType.Number | CalcTokenType.Expression, i, <span class="number">1</span>))</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (TryGetTokenValue(<span class="keyword">ref</span> errors, source[i - <span class="number">1</span>], <span class="keyword">out</span> <span class="built_in">double</span> leftnum) &amp;&amp; TryGetTokenValue(<span class="keyword">ref</span> errors, source[i + <span class="number">1</span>], <span class="keyword">out</span> <span class="built_in">double</span> rightnum))</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">double</span> tmpnum = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">switch</span> ((CalcOperator)source[i].Content)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">case</span> CalcOperator.Add:</span><br><span class="line">                        tmpnum = leftnum != <span class="number">0</span> &amp;&amp; rightnum != <span class="number">0</span> ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    <span class="keyword">case</span> CalcOperator.Or:</span><br><span class="line">                        tmpnum = leftnum != <span class="number">0</span> || rightnum != <span class="number">0</span> ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    <span class="literal">default</span>:</span><br><span class="line">                        <span class="keyword">throw</span> <span class="keyword">new</span> Exception();</span><br><span class="line">                &#125;</span><br><span class="line">                source[i - <span class="number">1</span>] = <span class="keyword">new</span> CalcToken(CalcTokenType.Number, tmpnum);</span><br><span class="line">                source.RemoveRange(i, <span class="number">2</span>);</span><br><span class="line">                i--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                errors.Add(<span class="string">$&quot;Cannot get the value of token when calculate &#x27;<span class="subst">&#123;source[i].Content&#125;</span>&#x27;;&quot;</span>);</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;    <span class="comment">// &amp; |</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; source.Count; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (source[i].Type == CalcTokenType.Operator &amp;&amp; CheckOperator(CalcOperator.If, (CalcOperator)source[i].Content) &amp;&amp; CheckType(<span class="keyword">ref</span> source, CalcTokenType.Number | CalcTokenType.Expression, i, <span class="number">-1</span>) &amp;&amp; CheckType(<span class="keyword">ref</span> source, CalcTokenType.Number | CalcTokenType.Expression, i, <span class="number">1</span>) &amp;&amp; CheckType(<span class="keyword">ref</span> source, CalcTokenType.Operator, i, <span class="number">2</span>) &amp;&amp; CheckType(<span class="keyword">ref</span> source, CalcTokenType.Number | CalcTokenType.Expression, i, <span class="number">3</span>) &amp;&amp; CheckOperator(CalcOperator.Witch, (CalcOperator)source[i + <span class="number">2</span>].Content))</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (TryGetTokenValue(<span class="keyword">ref</span> errors, source[i - <span class="number">1</span>], <span class="keyword">out</span> <span class="built_in">double</span> basic))</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">double</span> tmpnum = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">if</span> (basic != <span class="number">0</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">if</span> (TryGetTokenValue(<span class="keyword">ref</span> errors, source[i + <span class="number">1</span>], <span class="keyword">out</span> <span class="built_in">double</span> leftnum))</span><br><span class="line">                    &#123;</span><br><span class="line">                        tmpnum = leftnum;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">else</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        errors.Add(<span class="string">$&quot;Cannot get the value of token when calculate &#x27;<span class="subst">&#123;source[i].Content&#125;</span>&#x27;;&quot;</span>);</span><br><span class="line">                        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">if</span> (TryGetTokenValue(<span class="keyword">ref</span> errors, source[i + <span class="number">3</span>], <span class="keyword">out</span> <span class="built_in">double</span> rightnum))</span><br><span class="line">                    &#123;</span><br><span class="line">                        tmpnum = rightnum;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">else</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        errors.Add(<span class="string">$&quot;Cannot get the value of token when calculate &#x27;<span class="subst">&#123;source[i].Content&#125;</span>&#x27;;&quot;</span>);</span><br><span class="line">                        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                source[i - <span class="number">1</span>] = <span class="keyword">new</span> CalcToken(CalcTokenType.Number, tmpnum);</span><br><span class="line">                source.RemoveRange(i, <span class="number">4</span>);</span><br><span class="line">                i--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                errors.Add(<span class="string">$&quot;Cannot get the value of token when calculate &#x27;<span class="subst">&#123;source[i].Content&#125;</span>&#x27;;&quot;</span>);</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;    <span class="comment">// 三元表达式</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (source.Count == <span class="number">1</span> &amp;&amp; source[<span class="number">0</span>].Type == CalcTokenType.Number)</span><br><span class="line">    &#123;</span><br><span class="line">        result = (<span class="built_in">double</span>)source[<span class="number">0</span>].Content;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        errors.Add(<span class="string">$&quot;Final result after calculate is not a single number. &#x27;<span class="subst">&#123;<span class="built_in">string</span>.Join(<span class="string">&quot; &quot;</span>, source)&#125;</span>&#x27;;&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ol>
+<p><br /><br /><br /><br /><br /><br /><br /></p>
+<ul>
+<li>完整源代码:<a target="_blank" rel="noopener" href="https://github.com/SlimeNull/CalculatorPlus">Github仓库</a><br>最新版本已经使用了逆波兰表达式</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202010282352/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="SlimeNull">
+      <meta itemprop="description" content="Newbie... Learning...">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SlimeNull's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/11/202010282352/" class="post-title-link" itemprop="url">[C#] 使用 CHO.Json 操作 Json 数据</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-05-11 10:09:39 / Modified: 11:48:19" itemprop="dateCreated datePublished" datetime="2021-05-11T10:09:39+08:00">2021-05-11</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="CHO-Json："><a href="#CHO-Json：" class="headerlink" title="CHO.Json："></a>CHO.Json：</h2><ol>
+<li>现在，CHO.Json已经成为了一个强大的Json解析库，速度很快。</li>
+<li>支持弱类型操作, JsonData实现了所有Json数据类型的基本操作, 支持像 Python 那样的操作方式</li>
+<li>支持强类型操作, JsonData可以直接通过 ‘Get类型’ 方法来获取对应数据类型数据并进行操作</li>
+<li>支持序列化， 反序列化， 一次分析多个Json数据：<ol>
+<li>序列化和反序列化则是所有库都有的功能</li>
+<li>一次性序列化多个Json数据则是，允许一段文本中含有多个Json根数据，它可以用于解决TCP套接字的粘包问题</li>
+</ol>
+</li>
+<li>CHO.Json 拥有教快的分析速度，能够完全与Json.Net与Text.Json匹敌，并且它的加载速度时三者中最快的。<br><img src="https://img-blog.csdnimg.cn/20201231000802877.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="实验数据：CHO.Json的速度优势"></li>
+</ol>
+<p><strong>这是它与Newtonsoft.Json的差别:</strong></p>
+<ul>
+<li>CHO.Json少了许多冗余的功能, 例如将图片序列化为字符串, 因此CHO.Json可能要比Newtonsoft.Json轻量许多。</li>
+<li>CHO.Json的源代码比Newtonsoft.Json更适合初学者阅读, 在看懂它的代码后, 你会了解到有限状态机以及反射</li>
+<li>CHO.Json仅使用一个C#源文件, 这是因为它的源代码仅有1.5k行左右, 这其中还包含类型转换等片段</li>
+</ul>
+<p><strong>更详细的介绍：</strong></p>
+<ol>
+<li><p>首先， 在 CHO.Json 中, 包含一个 JsonData 类, 它可以用来表示任何 Json 数据, 通过 JsonData 类的静态方法, 可以从字符串或字符数组中分析出 Json 数据并存储到 JsonData 实例中, 或者将 JsonData 实例转化为 Json 字符串.</p>
+</li>
+<li><p>JsonData 是你最常用的类, 有一个 DataType 属性指定了这个实例所表示的 Json 数据类型, 例如String, Boolean, Integer, 通过 ‘Get类型’ 方法可以直接获取对应数据, 例如: GetString() 方法返回这个Json实例中所包含的字符串信息. 但如果你对一个包含了非字符串信息的 JsonData 实例使用这个方法, 则会抛出异常.</p>
+</li>
+<li><p>在最新版本的 CHO.Json 中, Serializie(序列化)和Deserialize(反序列化)用于直接转换字符串和指定的数据. 但在旧版, 则是转换 JsonData. 新版中, 推荐的方法是使用 JsonData 的静态方法: Parse, Create, ConvertToInstance, ConvertToText.</p>
+</li>
+<li><p>如果一个字符串里包含多个Json数据, 但并没有分隔符, 例如在TCP套接字中传输的多个Json文本, 你可以通过JsonData的静态方法 ParseStream 来分析它们.</p>
+</li>
+<li><p>JsonData 的 Content 属性是 JsonData 包含的数据原型, 如果是Array, 则它的类型是List&lt;JsonData&gt;, 如果是Object, 则它的类型是 Dictionary&lt;JsonData, JsonData&gt;</p>
+<p><img src="https://img-blog.csdnimg.cn/20201231002914420.png" alt="在这里插入图片描述"></p>
+</li>
+</ol>
+<h2 id="下面是使用CHO-Json的例子"><a href="#下面是使用CHO-Json的例子" class="headerlink" title="下面是使用CHO.Json的例子:"></a>下面是使用CHO.Json的例子:</h2><p><img src="https://img-blog.csdnimg.cn/20201231002450466.png" alt="使用套接字发送经过CHO.Json转换过的信息"></p>
+<p>项目完整源代码: <a target="_blank" rel="noopener" href="https://github.com/SlimeNull/CHO.Json">Github仓库</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
+<script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">SlimeNull</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
   </footer>
 
-
-        <a id="s-top" class="fas fa-arrow-up fa-fw" href="javascript:void(0)"></a>
-      </div>
-    </div>
-    <div>
-      <script>
-/************这个文件存放不需要重载的全局变量和全局函数*********/
-window.volantis={};
-window.volantis.loadcss=document.getElementById("loadcss");
-/******************** Pjax ********************************/
-function VPjax(){
-	this.list=[] // 存放回调函数
-	this.start=()=>{
-	  for(var i=0;i<this.list.length;i++){
-		this.list[i].run();
-	  }
-	}
-	this.push=(fn,name)=>{
-		var f=new PjaxItem(fn,name);
-		this.list.push(f);
-	}
-	// 构造一个可以run的对象
-	function PjaxItem(fn,name){
-		// 函数名称
-		this.name = name || fn.name
-		// run方法
-		this.run=()=>{
-			fn()
-		}
-	}
-}
-volantis.pjax={}
-volantis.pjax.method={
-	complete: new VPjax(),
-	error: new VPjax(),
-	send: new VPjax()
-}
-volantis.pjax={
-	...volantis.pjax,
-	push: volantis.pjax.method.complete.push,
-	error: volantis.pjax.method.error.push,
-	send: volantis.pjax.method.send.push
-}
-/********************脚本懒加载函数********************************/
-// 已经加入了setTimeout
-function loadScript(src, cb) {
-	setTimeout(function() {
-		var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
-		var script = document.createElement('script');
-		script.setAttribute('type','text/javascript');
-		if (cb) script.onload = cb;
-		script.setAttribute('src', src);
-		HEAD.appendChild(script);
-	});
-}
-//https://github.com/filamentgroup/loadCSS
-var loadCSS = function( href, before, media, attributes ){
-	var doc = window.document;
-	var ss = doc.createElement( "link" );
-	var ref;
-	if( before ){
-		ref = before;
-	}
-	else {
-		var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
-		ref = refs[ refs.length - 1];
-	}
-	var sheets = doc.styleSheets;
-	if( attributes ){
-		for( var attributeName in attributes ){
-			if( attributes.hasOwnProperty( attributeName ) ){
-				ss.setAttribute( attributeName, attributes[attributeName] );
-			}
-		}
-	}
-	ss.rel = "stylesheet";
-	ss.href = href;
-	ss.media = "only x";
-	function ready( cb ){
-		if( doc.body ){
-			return cb();
-		}
-		setTimeout(function(){
-			ready( cb );
-		});
-	}
-	ready( function(){
-		ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
-	});
-	var onloadcssdefined = function( cb ){
-		var resolvedHref = ss.href;
-		var i = sheets.length;
-		while( i-- ){
-			if( sheets[ i ].href === resolvedHref ){
-				return cb();
-			}
-		}
-		setTimeout(function() {
-			onloadcssdefined( cb );
-		});
-	};
-	function loadCB(){
-		if( ss.addEventListener ){
-			ss.removeEventListener( "load", loadCB );
-		}
-		ss.media = media || "all";
-	}
-	if( ss.addEventListener ){
-		ss.addEventListener( "load", loadCB);
-	}
-	ss.onloadcssdefined = onloadcssdefined;
-	onloadcssdefined( loadCB );
-	return ss;
-};
-</script>
-<script>
   
-  loadCSS("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css", window.volantis.loadcss);
-  
-  
-  
-  
-</script>
-<!-- required -->
-
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
-
-<script>
-  function pjax_fancybox() {
-    $(".md .gallery").find("img").each(function () { //渲染 fancybox
-      var element = document.createElement("a"); // a 标签
-      $(element).attr("class", "fancybox");
-      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
-      $(element).attr("href", $(this).attr("src"));
-      if ($(this).attr("data-original")) {
-        $(element).attr("href", $(this).attr("data-original"));
-      }
-      $(element).attr("data-fancybox", "images");
-      var caption = "";   // 描述信息
-      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
-        $(element).attr('data-caption', $(this).attr('alt'));
-        caption = $(this).attr('alt');
-      }
-      var div = document.createElement("div");
-      $(div).addClass("fancybox");
-      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
-      var span = document.createElement("span");
-      $(span).addClass("image-caption");
-      $(span).text(caption); // 加描述
-      $(this).after(span);  // 再套一层描述
-      $(this).wrap(element);  // 最后套 a 标签
-    })
-    $(".md .gallery").find("img").fancybox({
-      selector: '[data-fancybox="images"]',
-      hash: false,
-      loop: false,
-      closeClick: true,
-      helpers: {
-        overlay: {closeClick: true}
-      },
-      buttons: [
-        "zoom",
-        "close"
-      ]
-    });
-  };
-  function SCload_fancybox() {
-    if ($(".md .gallery").find("img").length == 0) return;
-    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
-    loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
-  };
-  $(function () {
-    SCload_fancybox();
-  });
-  function Pjax_SCload_fancybox(){
-	if (typeof $.fancybox == "undefined") {
-	 SCload_fancybox();
-    } else {
-	 pjax_fancybox();
-    }
-  }
-  volantis.pjax.push(Pjax_SCload_fancybox)
-  volantis.pjax.send(()=>{
-      if (typeof $.fancybox != "undefined") {
-        $.fancybox.close();    // 关闭弹窗
-      }
-  },'fancybox')
-</script>
-
-
-<!-- internal -->
-
-
-
-
-<script>
-  function loadIssuesJS() {
-    if ($(".md").find(".issues-api").length == 0) return;
-	
-	  loadScript('/js/issues.js');
-	
-  };
-  $(function () {
-    loadIssuesJS();
-  });
-  volantis.pjax.push(()=>{
-	if (typeof IssuesAPI == "undefined") {
-	  loadIssuesJS();
-	}
-  },"IssuesJS")
-</script>
-
-
-
-  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
-<script>
-  // https://www.npmjs.com/package/vanilla-lazyload
-  // Set the options globally
-  // to make LazyLoad self-initialize
-  window.lazyLoadOptions = {
-    elements_selector: ".lazyload",
-    threshold: 0
-  };
-  // Listen to the initialization event
-  // and get the instance of LazyLoad
-  window.addEventListener(
-    "LazyLoad::Initialized",
-    function (event) {
-      window.lazyLoadInstance = event.detail.instance;
-    },
-    false
-  );
-  document.addEventListener('DOMContentLoaded', function () {
-    lazyLoadInstance.update();
-  });
-  document.addEventListener('pjax:complete', function () {
-    lazyLoadInstance.update();
-  });
-</script>
-
-
-
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
   
-
-<script>
-  window.FPConfig = {
-	delay: 0,
-	ignoreKeywords: [],
-	maxRPS: 5,
-	hoverDelay: 25
-  };
-</script>
-<script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
-
-
-
-
-
 
 
 
@@ -1402,565 +1091,10 @@ var loadCSS = function( href, before, media, attributes ){
 
 
   
-  
-<script src="/js/valine.js"></script>
 
 
-<script>
-  function emoji(path, idx, ext) {
-    return path + "/" + path + "-" + idx + "." + ext;
-  }
-  var emojiMaps = {};
-  for (var i = 1; i <= 54; i++) {
-    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
-  }
-  for (var i = 1; i <= 101; i++) {
-    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
-  }
-  for (var i = 1; i <= 116; i++) {
-    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
-  }
-  for (var i = 1; i <= 125; i++) {
-    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
-  }
-  for (var i = 1; i <= 4; i++) {
-    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
-  }
-  function pjax_valine() {
-    if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
-    let path = pdata.commentPath;
-    if (path.length == 0) {
-      let defaultPath = '';
-      path = defaultPath || decodeURI(window.location.pathname);
-    }
-    var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":false}, {
-      el: '#valine_container',
-      path: path,
-      placeholder: pagePlaceholder,
-      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
-      emojiMaps: emojiMaps,
-    }))
-  }
-  $(function () {
-    pjax_valine();
-  });
-  volantis.pjax.push(pjax_valine);
-</script>
 
 
 
-
-
-
-  
-<script src="/js/app.js"></script>
-
-
-
-<!-- optional -->
-
-  <script>
-const SearchServiceimagePath="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/img/";
-const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
-
-$('.input.u-search-input').one('focus',function(){
-	
-		loadScript('/js/search/hexo.js',setSearchService);
-	
-})
-
-function listenSearch(){
-  
-    customSearch = new HexoSearch({
-      imagePath: SearchServiceimagePath
-    });
-  
-}
-function setSearchService() {
-	listenSearch();
-	
-}
-</script>
-
-
-
-
-
-
-
-
-
-
-
-  <script defer>
-
-  const LCCounter = {
-    app_id: 'u9j57bwJod4EDmXWdxrwuqQT-MdYXbMMI',
-    app_key: 'jfHtEKVE24j0IVCGHbvuFClp',
-    custom_api_server: '',
-
-    // 查询存储的记录
-    getRecord(Counter, url, title) {
-      return new Promise(function (resolve, reject) {
-        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
-          .then(resp => resp.json())
-          .then(({results, code, error}) => {
-            if (code === 401) {
-              throw error;
-            }
-            if (results && results.length > 0) {
-              var record = results[0];
-              resolve(record);
-            } else {
-              Counter('post', '/classes/Counter', {url, title: title, times: 0})
-                .then(resp => resp.json())
-                .then((record, error) => {
-                  if (error) {
-                    throw error;
-                  }
-                  resolve(record);
-                }).catch(error => {
-                console.error('Failed to create', error);
-                reject(error);
-              });
-            }
-          }).catch((error) => {
-          console.error('LeanCloud Counter Error:', error);
-          reject(error);
-        });
-      })
-    },
-
-    // 发起自增请求
-    increment(Counter, incrArr) {
-      return new Promise(function (resolve, reject) {
-        Counter('post', '/batch', {
-          "requests": incrArr
-        }).then((res) => {
-          res = res.json();
-          if (res.error) {
-            throw res.error;
-          }
-          resolve(res);
-        }).catch((error) => {
-          console.error('Failed to save visitor count', error);
-          reject(error);
-        });
-      });
-    },
-
-    // 构建自增请求体
-    buildIncrement(objectId) {
-      return {
-        "method": "PUT",
-        "path": `/1.1/classes/Counter/${ objectId }`,
-        "body": {
-          "times": {
-            '__op': 'Increment',
-            'amount': 1
-          }
-        }
-      }
-    },
-
-    // 校验是否为有效的 UV
-    validUV() {
-      var key = 'LeanCloudUVTimestamp';
-      var flag = localStorage.getItem(key);
-      if (flag) {
-        // 距离标记小于 24 小时则不计为 UV
-        if (new Date().getTime() - parseInt(flag) <= 86400000) {
-          return false;
-        }
-      }
-      localStorage.setItem(key, new Date().getTime().toString());
-      return true;
-    },
-
-    addCount(Counter) {
-      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
-      enableIncr = true;
-      var getterArr = [];
-      var incrArr = [];
-      // 请求 PV 并自增
-      var pvCtn = document.querySelector('#lc-sv');
-      if (pvCtn || enableIncr) {
-        var pvGetter = this.getRecord(Counter, 'http://example.com' + '/#lc-sv', 'Visits').then((record) => {
-          incrArr.push(this.buildIncrement(record.objectId))
-          var eles = document.querySelectorAll('#lc-sv #number');
-          if (eles.length > 0) {
-            eles.forEach((el,index,array)=>{
-              el.innerText = record.times + 1;
-              if (pvCtn) {
-                pvCtn.style.display = 'inline';
-              }
-            })
-          }
-        });
-        getterArr.push(pvGetter);
-      }
-
-      // 请求 UV 并自增
-      var uvCtn = document.querySelector('#lc-uv');
-      if (uvCtn || enableIncr) {
-        var uvGetter = this.getRecord(Counter, 'http://example.com' + '/#lc-uv', 'Visitors').then((record) => {
-          var vuv = this.validUV();
-          vuv && incrArr.push(this.buildIncrement(record.objectId))
-          var eles = document.querySelectorAll('#lc-uv #number');
-          if (eles.length > 0) {
-            eles.forEach((el,index,array)=>{
-              el.innerText = record.times + (vuv ? 1 : 0);
-              if (uvCtn) {
-                uvCtn.style.display = 'inline';
-              }
-            })
-          }
-        });
-        getterArr.push(uvGetter);
-      }
-
-      // 请求文章的浏览数，如果是当前页面就自增
-      var allPV = document.querySelectorAll('#lc-pv');
-      if (allPV.length > 0 || enableIncr) {
-        for (i = 0; i < allPV.length; i++) {
-          let pv = allPV[i];
-          let title = pv.getAttribute('data-title');
-          var url = 'http://example.com' + pv.getAttribute('data-path');
-          if (url) {
-            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
-              // 是当前页面就自增
-              let curPath = window.location.pathname;
-              if (curPath.includes('index.html')) {
-                curPath = curPath.substring(0, curPath.lastIndexOf('index.html'));
-              }
-              if (pv.getAttribute('data-path') == curPath) {
-                incrArr.push(this.buildIncrement(record.objectId));
-              }
-              if (pv) {
-                var ele = pv.querySelector('#lc-pv #number');
-                if (ele) {
-                  if (pv.getAttribute('data-path') == curPath) {
-                    ele.innerText = (record.times || 0) + 1;
-                  } else {
-                    ele.innerText = record.times || 0;
-                  }
-                  pv.style.display = 'inline';
-                }
-              }
-            });
-            getterArr.push(viewGetter);
-          }
-        }
-      }
-
-      // 如果启动计数自增，批量发起自增请求
-      if (enableIncr) {
-        Promise.all(getterArr).then(() => {
-          incrArr.length > 0 && this.increment(Counter, incrArr);
-        })
-      }
-
-    },
-
-
-    fetchData(api_server) {
-      var Counter = (method, url, data) => {
-        return fetch(`${ api_server }/1.1${ url }`, {
-          method,
-          headers: {
-            'X-LC-Id': this.app_id,
-            'X-LC-Key': this.app_key,
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data)
-        });
-      };
-      this.addCount(Counter);
-    },
-
-    refreshCounter() {
-      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
-      if (api_server) {
-        this.fetchData(api_server);
-      } else {
-        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
-          .then(resp => resp.json())
-          .then(({api_server}) => {
-            this.fetchData('https://' + api_server);
-          });
-      }
-    }
-
-  };
-
-  LCCounter.refreshCounter();
-
-  document.addEventListener('pjax:complete', function () {
-    LCCounter.refreshCounter();
-  });
-</script>
-
-
-
-
-  <script>
-const rootElement = document.documentElement;
-const darkModeStorageKey = "user-color-scheme";
-const rootElementDarkModeAttributeName = "data-user-color-scheme";
-
-const setLS = (k, v) => {
-    localStorage.setItem(k, v);
-};
-
-const removeLS = (k) => {
-    localStorage.removeItem(k);
-};
-
-const getLS = (k) => {
-    return localStorage.getItem(k);
-};
-
-const getModeFromCSSMediaQuery = () => {
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
-};
-
-const resetRootDarkModeAttributeAndLS = () => {
-  rootElement.removeAttribute(rootElementDarkModeAttributeName);
-  removeLS(darkModeStorageKey);
-};
-
-const validColorModeKeys = {
-  dark: true,
-  light: true,
-};
-
-const applyCustomDarkModeSettings = (mode) => {
-  const currentSetting = mode || getLS(darkModeStorageKey);
-
-  if (currentSetting === getModeFromCSSMediaQuery()) {
-    resetRootDarkModeAttributeAndLS();
-  } else if (validColorModeKeys[currentSetting]) {
-    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
-  } else {
-    resetRootDarkModeAttributeAndLS();
-  }
-};
-
-const invertDarkModeObj = {
-  dark: "light",
-  light: "dark",
-};
-
-/**
- * get target mode
- */
-const toggleCustomDarkMode = () => {
-  let currentSetting = getLS(darkModeStorageKey);
-
-  if (validColorModeKeys[currentSetting]) {
-    currentSetting = invertDarkModeObj[currentSetting];
-  } else if (currentSetting === null) {
-    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
-  } else {
-    return;
-  }
-  setLS(darkModeStorageKey, currentSetting);
-  return currentSetting;
-};
-
-/**
- * bind click event for toggle button
- */
-var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
-function bindToggleButton() {
-    btn.on('click',(e) => {
-      const mode = toggleCustomDarkMode();
-      applyCustomDarkModeSettings(mode);
-    });
-}
-
-applyCustomDarkModeSettings();
-document.addEventListener("DOMContentLoaded", bindToggleButton);
-volantis.pjax.push(bindToggleButton);
-volantis.pjax.send(()=>{
-	btn.unbind('click');
-},'toggle-mode-btn-unbind');
-</script>
-
-
-
-
-
-
-
-
-<script>
-function listennSidebarTOC() {
-  const navItems = document.querySelectorAll(".toc li");
-  if (!navItems.length) return;
-  const sections = [...navItems].map((element) => {
-    const link = element.querySelector(".toc-link");
-    const target = document.getElementById(
-      decodeURI(link.getAttribute("href")).replace("#", "")
-    );
-    link.addEventListener("click", (event) => {
-      event.preventDefault();
-      window.scrollTo({
-		top: target.offsetTop + 100,
-		
-		behavior: "smooth"
-		
-	  });
-    });
-    return target;
-  });
-
-  function activateNavByIndex(target) {
-    if (target.classList.contains("active-current")) return;
-
-    document.querySelectorAll(".toc .active").forEach((element) => {
-      element.classList.remove("active", "active-current");
-    });
-    target.classList.add("active", "active-current");
-    let parent = target.parentNode;
-    while (!parent.matches(".toc")) {
-      if (parent.matches("li")) parent.classList.add("active");
-      parent = parent.parentNode;
-    }
-  }
-
-  function findIndex(entries) {
-    let index = 0;
-    let entry = entries[index];
-    if (entry.boundingClientRect.top > 0) {
-      index = sections.indexOf(entry.target);
-      return index === 0 ? 0 : index - 1;
-    }
-    for (; index < entries.length; index++) {
-      if (entries[index].boundingClientRect.top <= 0) {
-        entry = entries[index];
-      } else {
-        return sections.indexOf(entry.target);
-      }
-    }
-    return sections.indexOf(entry.target);
-  }
-
-  function createIntersectionObserver(marginTop) {
-    marginTop = Math.floor(marginTop + 10000);
-    let intersectionObserver = new IntersectionObserver(
-      (entries, observe) => {
-        let scrollHeight = document.documentElement.scrollHeight + 100;
-        if (scrollHeight > marginTop) {
-          observe.disconnect();
-          createIntersectionObserver(scrollHeight);
-          return;
-        }
-        let index = findIndex(entries);
-        activateNavByIndex(navItems[index]);
-      },
-      {
-        rootMargin: marginTop + "px 0px -100% 0px",
-        threshold: 0,
-      }
-    );
-    sections.forEach((element) => {
-      element && intersectionObserver.observe(element);
-    });
-  }
-  createIntersectionObserver(document.documentElement.scrollHeight);
-}
-
-document.addEventListener("DOMContentLoaded", listennSidebarTOC);
-document.addEventListener("pjax:success", listennSidebarTOC);
-</script>
-
-<!-- more -->
-
- 
-	   
-	    
-
-
-<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
-
-
-<script>
-    var pjax;
-    document.addEventListener('DOMContentLoaded', function () {
-      pjax = new Pjax({
-        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
-        selectors: [
-          "title",
-          
-          "#pjax-container",
-          "#pjax-header-nav-list"
-        ],
-        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
-        timeout: 5000
-      });
-    });
-
-    document.addEventListener('pjax:send', function (e) {
-      //window.stop(); // 相当于点击了浏览器的停止按钮
-
-      try {
-        var currentUrl = window.location.pathname;
-        var targetUrl = e.triggerElement.href;
-        var banUrl = [""];
-        if (banUrl[0] != "") {
-          banUrl.forEach(item => {
-            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
-              window.location.href = targetUrl;
-            }
-          });
-        }
-      } catch (error) {}
-
-      window.subData = null; // 移除标题（用于一二级导航栏切换处）
-
-      volantis.$switcher.removeClass('active'); // 关闭移动端激活的搜索框
-      volantis.$header.removeClass('z_search-open'); // 关闭移动端激活的搜索框
-      volantis.$wrapper.removeClass('sub'); // 跳转页面时关闭二级导航
-
-      // 解绑事件 避免重复监听
-      volantis.$topBtn.unbind('click');
-      $('.menu a').unbind('click');
-      $(window).unbind('resize');
-      $(window).unbind('scroll');
-      $(document).unbind('scroll');
-      $(document).unbind('click');
-      $('body').unbind('click');
-	  // 使用 volantis.pjax.send 方法传入pjax:send回调函数 参见layout/_partial/scripts/global.ejs
-	  volantis.pjax.method.send.start();
-    });
-
-    document.addEventListener('pjax:complete', function () {
-      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
-      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
-      $('script[data-pjax], .pjax-reload script').each(function () {
-        $(this).parent().append($(this).remove());
-      });
-      try{
-		// 使用 volantis.pjax.push 方法传入重载函数 参见layout/_partial/scripts/global.ejs
-		volantis.pjax.method.complete.start();
-      } catch (e) {
-        console.log(e);
-      }
-    });
-
-    document.addEventListener('pjax:error', function (e) {
-	  // 使用 volantis.pjax.error 方法传入pjax:error回调函数 参见layout/_partial/scripts/global.ejs
-	  volantis.pjax.method.error.start();
-      window.location.href = e.triggerElement.href;
-    });
-</script>
- 
-	  
-    </div>
-  </body>
+</body>
 </html>

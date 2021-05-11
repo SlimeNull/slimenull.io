@@ -1,1392 +1,980 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1'>
-  <meta charset="utf-8">
-  <!-- SEO相关 -->
-  
-    
-      
-        <meta name="robots" content="noindex,follow">
-      
-    
-  
-  <!-- 渲染优化 -->
-  <meta http-equiv='x-dns-prefetch-control' content='on' />
-  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <meta name="renderer" content="webkit">
-  <meta name="force-rendering" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-  <meta name="HandheldFriendly" content="True" >
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  <link rel="preload" href="/css/first.css" as="style">
-  
-
-  <!-- 页面元数据 -->
-  
-  <title>SlimeNull&#39;s Blog</title>
-  
-
-  
-
-  <!-- feed -->
-  
-
-  <!-- import meta -->
-  
-
-  <!-- link -->
-  
-
-  <!-- import link -->
-  
-
-  
-    
-<link rel="stylesheet" href="/css/first.css">
-
-  
-
-  
-  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
-  
-
-  <script id="loadcss"></script>
-
-  
-<script>
-if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
-    document.write(
-	'<style>'+
-		'html{'+
-			'overflow-x: hidden !important;'+
-			'overflow-y: hidden !important;'+
-		'}'+
-		'.kill-ie{'+
-			'text-align:center;'+
-			'height: 100%;'+
-			'margin-top: 15%;'+
-			'margin-bottom: 5500%;'+
-		'}'+
-	'</style>'+
-    '<div class="kill-ie">'+
-        '<h1><b>抱歉，您的浏览器无法访问本站</b></h1>'+
-        '<h3>微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>'+
-        '继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</h3><br/>'+
-        '<a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/WindowsForBusiness/End-of-IE-support"><strong>了解详情 ></strong></a>'+
-    '</div>');
-</script>
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
 
 
-<noscript>
-	<style>
-		html{
-			overflow-x: hidden !important;
-			overflow-y: hidden !important;
-		}
-		.kill-noscript{
-			text-align:center;
-			height: 100%;
-			margin-top: 15%;
-			margin-bottom: 5500%;
-		}
-	</style>
-    <div class="kill-noscript">
-        <h1><b>抱歉，您的浏览器无法访问本站</b></h1>
-        <h3>本页面需要浏览器支持（启用）JavaScript</h3><br/>
-        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
-    </div>
-</noscript>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;example.com&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Muse&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
+<meta name="description" content="Newbie... Learning...">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SlimeNull&#39;s Blog">
+<meta property="og:url" content="http://example.com/page/3/index.html">
+<meta property="og:site_name" content="SlimeNull&#39;s Blog">
+<meta property="og:description" content="Newbie... Learning...">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="SlimeNull">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/page/3/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:true,&quot;isPost&quot;:false,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:&quot;&quot;,&quot;permalink&quot;:&quot;&quot;,&quot;path&quot;:&quot;page&#x2F;3&#x2F;index.html&quot;,&quot;title&quot;:&quot;&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>SlimeNull's Blog</title><script src="/js/config.js"></script>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 </head>
 
-  <body>
-    
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
-<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
-  <div class='container'>
-  <div id='wrapper'>
-    <div class='nav-sub'>
-      <p class="title"></p>
-      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
-        <li><a id="s-comment" class="fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
-        
-          <li><a id="s-toc" class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
-        
-      </ul>
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
     </div>
-		<div class="nav-main">
-      
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">SlimeNull's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">For the better opensource world!</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
         
-        <a class="title flat-box" target="_self" href='/'>
-          
-            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
-          
-          
-          
-        </a>
-      
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
 
-			<div class='menu navigation'>
-				<ul class='nav-list-h m-pc'>
-          
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/
-                  
-                  
-                  
-                    id="home"
-                  >
-                  <i class='fas fa-rss fa-fw'></i>博客
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
-                  
-                  
-                  
-                    id="categories"
-                  >
-                  <i class='fas fa-folder-open fa-fw'></i>分类
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
-                  
-                  
-                  
-                    id="tags"
-                  >
-                  <i class='fas fa-tags fa-fw'></i>标签
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
-                  
-                  
-                  
-                    id="archives"
-                  >
-                  <i class='fas fa-archive fa-fw'></i>归档
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
-                  
-                  
-                  
-                    id="friends"
-                  >
-                  <i class='fas fa-link fa-fw'></i>友链
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
-                  
-                  
-                  
-                    id="about"
-                  >
-                  <i class='fas fa-info-circle fa-fw'></i>关于
-                </a>
-                
-              </li>
-            
-          
-          
-				</ul>
-			</div>
+  <aside class="sidebar">
 
-      <div class="m_search">
-        <form name="searchform" class="form u-search-form">
-          <i class="icon fas fa-search fa-fw"></i>
-          <input type="text" class="input u-search-input" placeholder="Search..." />
-        </form>
-      </div>
-
-			<ul class='switcher nav-list-h m-phone'>
-				
-					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
-				
-				<li>
-          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
-          <ul class="menu-phone list-v navigation white-box">
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/
-                  
-                  
-                  
-                    id="home"
-                  >
-                  <i class='fas fa-rss fa-fw'></i>博客
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
-                  
-                  
-                  
-                    id="categories"
-                  >
-                  <i class='fas fa-folder-open fa-fw'></i>分类
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
-                  
-                  
-                  
-                    id="tags"
-                  >
-                  <i class='fas fa-tags fa-fw'></i>标签
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
-                  
-                  
-                  
-                    id="archives"
-                  >
-                  <i class='fas fa-archive fa-fw'></i>归档
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
-                  
-                  
-                  
-                    id="friends"
-                  >
-                  <i class='fas fa-link fa-fw'></i>友链
-                </a>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
-                  
-                  
-                  
-                    id="about"
-                  >
-                  <i class='fas fa-info-circle fa-fw'></i>关于
-                </a>
-                
-              </li>
-            
-          
-            
-          </ul>
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
         </li>
-			</ul>
-		</div>
-	</div>
-  </div>
-</header>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
 
-    <div id="l_body">
-      <div id="l_cover">
-  
-    
-        <div id="full" class='cover-wrapper  dock' style="display: none;">
-          
-            <div class='cover-bg lazyload placeholder' data-bg="https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture"></div>
-          
-          <div class='cover-body'>
-  <div class='top'>
-    
-    
-      <p class="title">Volantis</p>
-    
-    
-  </div>
-  <div class='bottom'>
-    <div class='menu navigation'>
-      <div class='list-h'>
-        
-          
-            <a href="/v4/getting-started/"
-              
-              
-              id="v4getting-started">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f5c3.svg'><p>文档</p>
-            </a>
-          
-            <a href="/faqs/"
-              
-              
-              id="faqs">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f516.svg'><p>帮助</p>
-            </a>
-          
-            <a href="/examples/"
-              
-              
-              id="examples">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f396.svg'><p>示例</p>
-            </a>
-          
-            <a href="/contributors/"
-              
-              
-              id="contributors">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f389.svg'><p>社区</p>
-            </a>
-          
-            <a href="/archives/"
-              
-              
-              id="archives">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg'><p>博客</p>
-            </a>
-          
-            <a target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/"
-              
-              
-              id="https:githubcomvolantis-xhexo-theme-volantis">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f9ec.svg'><p>源码</p>
-            </a>
-          
-        
-      </div>
-    </div>
-  </div>
-</div>
-
-          <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
         </div>
-    
-  
-  </div>
+        <!--/noindex-->
 
-      <div id="safearea">
-        <div class="body-wrapper" id="pjax-container">
-          
-
-<div class='l_main'>
-  
-  <section class="post-list">
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/11/202102151607/">
-        [.NET] WPF DoubleAnimation 动画, 一篇文章悟透!
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        完全理解 DoubleAnimation! 仅需这一篇文章.
-介绍首先, DoubleAnimation可以用来创建一些简单的动画, 这些动画仅限于使用Double值的属性, 例如控件的位置, 尺寸, 缩放, 旋转, 或者透明度变化等.一个DoubleAnimation实例, 应该至少指定3个值:
-
-From (值从哪里开始), To (值到哪里结束), Duration (值的变化经过多少...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-05-11</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/11/202102151607/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">SlimeNull</p>
+  <div class="site-description" itemprop="description">Newbie... Learning...</div>
 </div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/11/202102190707/">
-        [C#] Range 函数, 方便快捷
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        使用:在 nuget 包管理器中安装 NullLib.Range
-源码:这么多重载, 完全够用了~, 返回值是 IEnumerable&lt;T&gt;其中, Range函数是简单的循环, RangeEx加入了检测, 不会造成死循环, 且精度非常准确
-12345678910111213141516171819202122232425262728293031323334353637383940...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-05-11</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/11/202102190707/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/11/202102151126/">
-        [.NET] WPF XAML 原理, 节点与实例, 以及一些重要的零碎知识点.
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        当你查资料时, 看到那些眼花缭乱的 xaml 代码, 让人瞬间没有了学习的欲望… 先试着寻找下其中的规律吧.
-节点与实例:首先看看上面的文章, 从我们最常接触的 Button 入手吧. Button 是可以用 CS 代码来进行实例化, 然后放置在窗口中的, 而其它的元素, 例如根节点 Window, 都是可以通过 CS 代码进行实例化.
-可以推测出, 在 xaml 中, 一个个的节点, 例如...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-05-11</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/11/202102151126/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/11/202102090304/">
-        [C#] WinForm 与 WPF 获取命令行参数
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        推荐方法:1. Environment.GetCommandLineArgs();12using System;Environment.GetCommandLineArgs();   // 返回 string[]
-注意, 与控制台程序入口处的string[] args相比较, 这个函数返回的结果是完整的命令行, 也就是包含程序自身路径. 例如我一个没有传递任何参数的程序:所以注意区分哦.
-其...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-05-11</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/11/202102090304/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/11/202102090805/">
-        [C#/C/C++] GetShortPathName详解, 长路径转换为短路径
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        说点骚话:转换需要用到 Windows API (废话)
-官方文档: GetShortPathNameW function (fineapi.h) - Win32 apps | Microsoft docs  (纯英文, 没有中文版本.)
-引用命名空间:1using System.Runtime.InteropServices;
-关键代码:
-C#12345678910111213141516...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-05-11</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/11/202102090805/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/11/202102111042/">
-        [C#] 音乐播放 3 种方式 Demo 与 MCI 音乐播放器封装类.
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        淦!首先代码是不完整的, 我还是没能成功设置音量, 除此之外, 别的倒是挺顺利的, 当前实现的功能如下:
-
-播放 暂停 还原 停止 获取进度 获取长度 设置进度 获取播放状态
-
-内容:
-本项目的仓库在: SlimeNull/AudioTest, 在这里下载哦, 别忘了还原 nuget 包, 因为用了 NAudio 库.
-
-&gt; 音乐播放 Demo:
-先放图吧:
-
-首先左上角是打开文件的,...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-05-11</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/11/202102111042/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/11/202102150157/">
-        [C#/VB.NET] C# 与 VB.NET 的类库跨语言引用.
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        例如你有一个程序, 是 VB.NET 写的, 你希望在里面引用 C# 的代码, 那么, 该如何操作呢?
-准备材料:
-一个 C# 或 VB.NET 项目, 我们以一个测试项目(WinForm)开始
-
-与该项目语言不同的, 但是是基于 .NET 的类代码片. 代码地址: 一个类实现控件拖拽移动 
-
-
-分布演示:1. &gt; 创建类库项目:创建一个与我们准备的类库语言相同的类库, 并将代码拷贝到...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-05-11</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/11/202102150157/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/11/202102060124/">
-        [踩坑记录] C# 源代码被误删, 通过反编译之前编译好的文件来拯救这一切, 三款反编译工具对比
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        事件:首先, 语言是C#, 然后我把代码给删了… 但是在删之前, 我编译过一次, 所以… 我就想着使用反编译工具来搞了.
-我知道的反编译工具, dnSply, ILSpy, dotPeek
-dnSpy是ILSpy的一个分支(dnSpy is a .NET assembly editor, decompiler, and debugger forked from ILSpy)
-dotPeek ...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-05-11</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/11/202102060124/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/11/202102040605/">
-        [干货] 杜绝广告, 让你的电脑变的更加干净舒适
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        从根部治理, 拒绝流氓软件:广告弹窗啊, 无非是用了流氓软件. 所以说, 少用流氓软件, 至于哪些是流氓软件, 杀毒软件我从来没用过(只用Windows Defender). 至于其它的, 能少用国内的就少用(忠告), 毕竟某些厂商的尿性, 咱都懂.
-然后, 就是捆绑, 这个很简单, 其实原因就是你使用了所谓的”高速下载器”, 而那些”高速下载器”在你电脑上安装了一堆你不需要的软件, 而避免...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-05-11</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/11/202102040605/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/11/202102060026/">
-        [踩坑记录] 某功能在C#7.3中不可用,请使用 8.0 或更高的语言版本 (通用解决方案)
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        问题:正如标题描述, 是某个语法在低版本中不受支持, 只需要升级到高版本即可.
-步骤:&gt; 第一种 :
-
-使用快捷键 Alt + Enter 或点击黄色的的提示调出快速操作 
-选择 将该项目升级为 C# 语言版本 “8.0”
-如果没有这一选项, 继续看第二种.
-
-
-
-&gt; 第二种 :
-
-打开项目所在目录并打开项目文件. 
-在 PropertyGroup 节点下添加 LangVersi...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-05-11</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/11/202102060026/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-      <br>
-      <div class="prev-next">
-        
-          <a class="prev" rel="prev" href="/page/2/">
-            <section class="post prev white-box shadow" >
-              <i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;Previous&nbsp;
-            </section>
-          </a>
-        
-        <p class="current">
-          3 / 8
-        </p>
-        
-          <a class="next" rel="next" href="/page/4/">
-            <section class="post next white-box shadow">
-              &nbsp;Next&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i>
-            </section>
-          </a>
-        
-      </div>
-    
-  
-
-
-</div>
-<aside class='l_side'>
-  
-  
-    
-    
-
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">70</span>
+          <span class="site-state-item-name">posts</span>
         </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">SlimeNull's Blog</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
       </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">tags</span>
       </div>
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
+  </nav>
+</div>
 
 
-    <div class='content'>
-      <a href="/tags/C-%E7%AC%94%E8%AE%B0/" style="font-size: 14px; color: #999">C# 笔记</a> <a href="/tags/C-%E7%B1%BB%E5%BA%93/" style="font-size: 14px; color: #999">C# 类库</a>
+
+        </div>
+      </div>
     </div>
-  </section>
+  </aside>
+  <div class="sidebar-dimmer"></div>
 
 
-  
+    </header>
 
-  
-
-
-</aside>
-
-
-
-		  
-		  <!--此文件用来存放一些不方便取值的变量-->
-<!--思路大概是将值藏到重加载的区域内-->
-
-<script>
-  window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
-  pdata.commentPath="";
-  pdata.commentPlaceholder="";
-  // header 这里无论是否开启pjax都需要
-  var l_header=document.getElementById("l_header");
-  
-  l_header.classList.add("show");
-  
-  
-    // cover
-    var cover_wrapper=document.querySelector('.cover-wrapper');
     
-    cover_wrapper.id="none";
-    cover_wrapper.style.display="none";
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner index posts-expand">
+
     
+
+
+<div class="post-block">
   
-</script>
-
-        </div>
-        
   
-  <footer class="footer clearfix">
-    <br><br>
-    
-      
-        <div class="aplayer-container">
-          
 
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202102190707/">
 
-        </div>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="SlimeNull">
+      <meta itemprop="description" content="Newbie... Learning...">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SlimeNull's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/11/202102190707/" class="post-title-link" itemprop="url">[C#] Range 函数, 方便快捷</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
       
-    
-      
-        <br>
-        <div class="social-wrapper">
-          
-            
-          
-            
-          
-            
-          
-        </div>
-      
-    
-      
-        <div><p>Blog content follows the <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+
+      <time title="Created: 2021-05-11 11:02:06 / Modified: 11:44:22" itemprop="dateCreated datePublished" datetime="2021-05-11T11:02:06+08:00">2021-05-11</time>
+    </span>
+
+  
 </div>
-      
-    
-      
-        
-          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
-</div>
-        
-      
-    
-      
-        Use
-        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1" target="_blank" class="codename">Volantis</a>
-        as theme
-      
-    
-      
-        <div class='copyright'>
-        <p><a href="/">Copyright © 2017-2020 XXX</a></p>
 
         </div>
-      
+      </header>
+
     
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="使用"><a href="#使用" class="headerlink" title="使用:"></a>使用:</h3><p>在 nuget 包管理器中安装 NullLib.Range</p>
+<h3 id="源码"><a href="#源码" class="headerlink" title="源码:"></a>源码:</h3><p>这么多重载, 完全够用了~, 返回值是 IEnumerable&lt;T&gt;<br>其中, Range函数是简单的循环, RangeEx加入了检测, 不会造成死循环, 且精度非常准确</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">NullLib.Range</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">NRange</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> IEnumerable&lt;<span class="built_in">int</span>&gt; <span class="title">Range</span>(<span class="params"><span class="built_in">int</span> stop</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; stop; i++)</span><br><span class="line">                <span class="keyword">yield</span> <span class="keyword">return</span> i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> IEnumerable&lt;<span class="built_in">int</span>&gt; <span class="title">Range</span>(<span class="params"><span class="built_in">int</span> start, <span class="built_in">int</span> stop</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="built_in">int</span> i = start; i &lt; stop; i++)</span><br><span class="line">                <span class="keyword">yield</span> <span class="keyword">return</span> i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> IEnumerable&lt;<span class="built_in">int</span>&gt; <span class="title">Range</span>(<span class="params"><span class="built_in">int</span> start, <span class="built_in">int</span> stop, <span class="built_in">int</span> step</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="built_in">int</span> i = start; i &lt; stop; i += step)</span><br><span class="line">                <span class="keyword">yield</span> <span class="keyword">return</span> i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> IEnumerable&lt;<span class="built_in">float</span>&gt; <span class="title">Range</span>(<span class="params"><span class="built_in">float</span> stop</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; stop; i++)</span><br><span class="line">                <span class="keyword">yield</span> <span class="keyword">return</span> i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> IEnumerable&lt;<span class="built_in">float</span>&gt; <span class="title">Range</span>(<span class="params"><span class="built_in">float</span> start, <span class="built_in">float</span> stop</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="built_in">float</span> i = start; i &lt; stop; i++)</span><br><span class="line">                <span class="keyword">yield</span> <span class="keyword">return</span> i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> IEnumerable&lt;<span class="built_in">float</span>&gt; <span class="title">Range</span>(<span class="params"><span class="built_in">float</span> start, <span class="built_in">float</span> stop, <span class="built_in">float</span> step</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="built_in">float</span> i = start; i &lt; stop; i += step)</span><br><span class="line">                <span class="keyword">yield</span> <span class="keyword">return</span> i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> IEnumerable&lt;<span class="built_in">double</span>&gt; <span class="title">Range</span>(<span class="params"><span class="built_in">double</span> stop</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; stop; i++)</span><br><span class="line">                <span class="keyword">yield</span> <span class="keyword">return</span> i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> IEnumerable&lt;<span class="built_in">double</span>&gt; <span class="title">Range</span>(<span class="params"><span class="built_in">double</span> start, <span class="built_in">double</span> stop</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="built_in">double</span> i = start; i &lt; stop; i++)</span><br><span class="line">                <span class="keyword">yield</span> <span class="keyword">return</span> i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> IEnumerable&lt;<span class="built_in">double</span>&gt; <span class="title">Range</span>(<span class="params"><span class="built_in">double</span> start, <span class="built_in">double</span> stop, <span class="built_in">double</span> step</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="built_in">double</span> i = start; i &lt; stop; i += step)</span><br><span class="line">                <span class="keyword">yield</span> <span class="keyword">return</span> i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> IEnumerable&lt;<span class="built_in">int</span>&gt; <span class="title">RangeEx</span>(<span class="params"><span class="built_in">int</span> stop</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">int</span> start = <span class="number">0</span>, step = <span class="number">1</span>, current = start;</span><br><span class="line">            step = step &lt; <span class="number">0</span> ? -step : step;</span><br><span class="line">            <span class="keyword">if</span> (start &lt; stop)</span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; current &lt; stop; i++, current = step * i + start)</span><br><span class="line">                    <span class="keyword">yield</span> <span class="keyword">return</span> current;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; current &gt; stop; i--, current = step * i + start)</span><br><span class="line">                    <span class="keyword">yield</span> <span class="keyword">return</span> current;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> IEnumerable&lt;<span class="built_in">int</span>&gt; <span class="title">RangeEx</span>(<span class="params"><span class="built_in">int</span> start, <span class="built_in">int</span> stop</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">int</span> step = <span class="number">1</span>, current = start;</span><br><span class="line">            step = step &lt; <span class="number">0</span> ? -step : step;</span><br><span class="line">            <span class="keyword">if</span> (start &lt; stop)</span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; current &lt; stop; i++, current = step * i + start)</span><br><span class="line">                    <span class="keyword">yield</span> <span class="keyword">return</span> current;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; current &gt; stop; i--, current = step * i + start)</span><br><span class="line">                    <span class="keyword">yield</span> <span class="keyword">return</span> current;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> IEnumerable&lt;<span class="built_in">int</span>&gt; <span class="title">RangeEx</span>(<span class="params"><span class="built_in">int</span> start, <span class="built_in">int</span> stop, <span class="built_in">int</span> step</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">int</span> current = start;</span><br><span class="line">            step = step &lt; <span class="number">0</span> ? -step : step;</span><br><span class="line">            <span class="keyword">if</span> (start &lt; stop)</span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; current &lt; stop; i++, current = step * i + start)</span><br><span class="line">                    <span class="keyword">yield</span> <span class="keyword">return</span> current;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; current &gt; stop; i--, current = step * i + start)</span><br><span class="line">                    <span class="keyword">yield</span> <span class="keyword">return</span> current;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> IEnumerable&lt;<span class="built_in">float</span>&gt; <span class="title">RangeEx</span>(<span class="params"><span class="built_in">float</span> stop</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">float</span> start = <span class="number">0</span>, step = <span class="number">1</span>, current = start;</span><br><span class="line">            step = step &lt; <span class="number">0</span> ? -step : step;</span><br><span class="line">            <span class="keyword">if</span> (start &lt; stop)</span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; current &lt; stop; i++, current = step * i + start)</span><br><span class="line">                    <span class="keyword">yield</span> <span class="keyword">return</span> current;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; current &gt; stop; i--, current = step * i + start)</span><br><span class="line">                    <span class="keyword">yield</span> <span class="keyword">return</span> current;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> IEnumerable&lt;<span class="built_in">float</span>&gt; <span class="title">RangeEx</span>(<span class="params"><span class="built_in">float</span> start, <span class="built_in">float</span> stop</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">float</span> step = <span class="number">1</span>, current = start;</span><br><span class="line">            step = step &lt; <span class="number">0</span> ? -step : step;</span><br><span class="line">            <span class="keyword">if</span> (start &lt; stop)</span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; current &lt; stop; i++, current = step * i + start)</span><br><span class="line">                    <span class="keyword">yield</span> <span class="keyword">return</span> current;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; current &gt; stop; i--, current = step * i + start)</span><br><span class="line">                    <span class="keyword">yield</span> <span class="keyword">return</span> current;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> IEnumerable&lt;<span class="built_in">float</span>&gt; <span class="title">RangeEx</span>(<span class="params"><span class="built_in">float</span> start, <span class="built_in">float</span> stop, <span class="built_in">float</span> step</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">float</span> current = start;</span><br><span class="line">            step = step &lt; <span class="number">0</span> ? -step : step;</span><br><span class="line">            <span class="keyword">if</span> (start &lt; stop)</span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; current &lt; stop; i++, current = step * i + start)</span><br><span class="line">                    <span class="keyword">yield</span> <span class="keyword">return</span> current;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; current &gt; stop; i--, current = step * i + start)</span><br><span class="line">                    <span class="keyword">yield</span> <span class="keyword">return</span> current;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> IEnumerable&lt;<span class="built_in">double</span>&gt; <span class="title">RangeEx</span>(<span class="params"><span class="built_in">double</span> stop</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">double</span> start = <span class="number">0</span>, step = <span class="number">1</span>, current = start;</span><br><span class="line">            step = step &lt; <span class="number">0</span> ? -step : step;</span><br><span class="line">            <span class="keyword">if</span> (start &lt; stop)</span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; current &lt; stop; i++, current = step * i + start)</span><br><span class="line">                    <span class="keyword">yield</span> <span class="keyword">return</span> current;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; current &gt; stop; i--, current = step * i + start)</span><br><span class="line">                    <span class="keyword">yield</span> <span class="keyword">return</span> current;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> IEnumerable&lt;<span class="built_in">double</span>&gt; <span class="title">RangeEx</span>(<span class="params"><span class="built_in">double</span> start, <span class="built_in">double</span> stop</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">double</span> step = <span class="number">1</span>, current = start;</span><br><span class="line">            step = step &lt; <span class="number">0</span> ? -step : step;</span><br><span class="line">            <span class="keyword">if</span> (start &lt; stop)</span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; current &lt; stop; i++, current = step * i + start)</span><br><span class="line">                    <span class="keyword">yield</span> <span class="keyword">return</span> current;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; current &gt; stop; i--, current = step * i + start)</span><br><span class="line">                    <span class="keyword">yield</span> <span class="keyword">return</span> current;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> IEnumerable&lt;<span class="built_in">double</span>&gt; <span class="title">RangeEx</span>(<span class="params"><span class="built_in">double</span> start, <span class="built_in">double</span> stop, <span class="built_in">double</span> step</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">double</span> current = start;</span><br><span class="line">            step = step &lt; <span class="number">0</span> ? -step : step;</span><br><span class="line">            <span class="keyword">if</span> (start &lt; stop)</span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; current &lt; stop; i++, current = step * i + start)</span><br><span class="line">                    <span class="keyword">yield</span> <span class="keyword">return</span> current;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; current &gt; stop; i--, current = step * i + start)</span><br><span class="line">                    <span class="keyword">yield</span> <span class="keyword">return</span> current;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202102151126/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="SlimeNull">
+      <meta itemprop="description" content="Newbie... Learning...">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SlimeNull's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/11/202102151126/" class="post-title-link" itemprop="url">[.NET] WPF XAML 原理, 节点与实例, 以及一些重要的零碎知识点.</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-05-11 11:00:18 / Modified: 11:44:47" itemprop="dateCreated datePublished" datetime="2021-05-11T11:00:18+08:00">2021-05-11</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>当你查资料时, 看到那些眼花缭乱的 xaml 代码, 让人瞬间没有了学习的欲望… 先试着寻找下其中的规律吧.</p>
+<h2 id="节点与实例"><a href="#节点与实例" class="headerlink" title="节点与实例:"></a>节点与实例:</h2><p><img src="https://img-blog.csdnimg.cn/20210215061732521.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70"><br>首先看看上面的文章, 从我们最常接触的 Button 入手吧. Button 是可以用 CS 代码来进行实例化, 然后放置在窗口中的, 而其它的元素, 例如根节点 Window, 都是可以通过 CS 代码进行实例化.</p>
+<p>可以推测出, 在 xaml 中, 一个个的节点, 例如 Button, Label, 其实就是等同于声明一个对应类型的实例.</p>
+<p>那么如何在 CS 代码中访问这个实例呢? 很简单, 为这个实例指定一个名称(Name), 就如上面的图片中为 Label 指定 Name 那样. 然后就可以在 CS 代码中访问了<br><img src="https://img-blog.csdnimg.cn/20210215062326997.png"></p>
+<h2 id="实例的属性"><a href="#实例的属性" class="headerlink" title="实例的属性:"></a>实例的属性:</h2><p>如果要设置一个 Label 的 Content, 在 xaml 代码中, 该如何设置? 最常用的肯定是下面这个:<br><img src="https://img-blog.csdnimg.cn/20210215062553167.png"><br>xaml 还支持一种, 就是这样:<br><img src="https://img-blog.csdnimg.cn/20210215062744751.png"><br>其实 TextBox 的 Text 属性也是可以这么设置的:<br><img src="https://img-blog.csdnimg.cn/20210215062905536.png"><br>大概猜出了吧? xaml中, 一堆标签之间的值可以设置为对应实例的特定属性设置值. 例如 Label 就是设置Content, TextBox 就是 设置 TextBox.</p>
+<p>其实, 还有另外一种, 你肯定见过啦, Grid.RowDefinitions 就是这么用的.<br><img src="https://img-blog.csdnimg.cn/20210215063244895.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70"><br>你可能会想到, Label 和 TextBox 这类普通的控件, 是否也支持呢?<br><img src="https://img-blog.csdnimg.cn/20210215063437536.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70"></p>
+<blockquote>
+<p>哈哈, 很有趣吧, 所以说, 以后看到什么 xaml 代码, 对应的 CS 代码也能猜出来一些, 毕竟如果是控件, 也无非是设置属性以及添加成员了, 噢, 下面就是添加成员咯.</p>
+</blockquote>
+<h2 id="声明控件成员"><a href="#声明控件成员" class="headerlink" title="声明控件成员:"></a>声明控件成员:</h2><p><img src="https://img-blog.csdnimg.cn/20210215064400870.png"><br>如果一个控件可以有子成员, 就可以像上面那样声明, 当然, 这个也肯定经常用, 只是可能没注意过罢了.</p>
+<h2 id="自定义类型实例"><a href="#自定义类型实例" class="headerlink" title="自定义类型实例:"></a>自定义类型实例:</h2><p>少年, 学过数据绑定吗? 数据绑定的上下文如何声明的, 应该还记得吧. 我之前就像一个憨憨一样, 去用 CS 代码来指定 DataContext. (文章末有关于数据绑定的<a href="#end_wpfdatabinding">文章推荐</a>)<br><img src="https://img-blog.csdnimg.cn/20210215065018565.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70"><br>但是,,, 刚刚我们说过, 想 Button, Label 这样的 UI 组件, 其实在声明后, 其实就是一个个的实例, 我们刚刚进行的指定上下文操作, 也是创建一个 TestModel 实例, 然后指定给这个窗口的 DataContext 属性.</p>
+<p>如何指定属性, 我们知道, 那如何在 xaml 中创建我们自己定义的类型实例呢? 下面是一个示例:<br><img src="https://img-blog.csdnimg.cn/20210215065718402.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70"><br>你悟了吗? 通过这个, 我们就可以在 xaml 中声明实例了… 当然, 肯定有小聪明在想, “我试试在 xaml 里面声明一个浮点数试试?”<br><img src="https://img-blog.csdnimg.cn/20210215070612804.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70"><br>没错, 那个憨憨就是我, 亲自尝试了一下, 不过也不算是没有收获, 至少我们可以知道, 这些实例的声明, 肯定是在特定的情况下才是可以的. 例如这个 Grid 子元素, 你必须指定一个 UIElement, 这跟 CS 代码里的一模一样hhh</p>
+<p>所以 xaml 跟 CS 还是相关联的哈哈哈, 我一开始还觉得 xaml 跟 CS 的关联不是很大呢.</p>
+<h2 id="查看窗体完整代码"><a href="#查看窗体完整代码" class="headerlink" title="查看窗体完整代码:"></a>查看窗体完整代码:</h2><p>如果你用过 WinForm, 肯定会经常接触这个, 当指定了控件的某些事件, 而这个函数又不存在的时候肯定需要自己调整代码的:<br><img src="https://img-blog.csdnimg.cn/2021021507141041.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70"><br>WinForm 的窗体完整代码就在这里了, 一到WPF, 就令人窒息了, 因为没有直接显示这个文件.</p>
+<p>不过, 你还是可以通过这样的方式去查看的:<br><img src="https://img-blog.csdnimg.cn/20210215071805683.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70"><br>然后, 欢呼吧, 虽然一般很少动这个文件(你也没办法动, 自动生成会覆盖你的改动), 但是看这个东西, 肯定对学习 WPF 有帮助的.<br><img src="https://img-blog.csdnimg.cn/20210215071852423.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/202102150720390.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70"><br><span id="windowclass"></span></p>
+<h2 id="窗体类型"><a href="#窗体类型" class="headerlink" title="窗体类型:"></a>窗体类型:</h2><p>其实这里只是指 xaml 中, Window 节点的 x:Class 属性, 我们知道, WPF 会有一些自动生成的代码, 这些代码中声明了这个窗体, 而这个生成的代码中窗体的命名空间和类名, 就是通过 xaml 文档中的 x:Class 属性指定的.</p>
+<p>例如我指定 x:Class=”MvvmTest.View.MainWindow”, 那么完整代码中就是这样的:<br><img src="https://img-blog.csdnimg.cn/20210215175526504.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70"><br>所以说, 如果要改变这个窗体的命名空间, 你需要指定 x:Class 属性, 以及指定 xaml.cs 文件的命名空间.</p>
+<p>例如, 你将一个窗体从项目的根目录移动到了项目的View文件夹, 此时, 规范的做法应该是同时将这个窗体的命名空间添加上一个View.</p>
+<p><br/><br/><br/><br/><br/></p>
+<p>看的这么开心, 赶快关注诺尔吧qwq, 别忘了点个赞噢~</p>
+<br/>
+
+<p>推荐文章:<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_46555380/article/details/113765554">[C#] MCI 详解与封装类, MCI 播放音乐, 获取播放状态, 获取音频长度, 进度调整</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_46555380/article/details/113813182">[.NET] WPF 数据绑定与 MVVM 模型</a><span id="end_wpfdatabinding"></span></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202102090304/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="SlimeNull">
+      <meta itemprop="description" content="Newbie... Learning...">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SlimeNull's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/11/202102090304/" class="post-title-link" itemprop="url">[C#] WinForm 与 WPF 获取命令行参数</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-05-11 10:54:31 / Modified: 11:46:05" itemprop="dateCreated datePublished" datetime="2021-05-11T10:54:31+08:00">2021-05-11</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="推荐方法"><a href="#推荐方法" class="headerlink" title="推荐方法:"></a>推荐方法:</h3><h4 id="1-Environment-GetCommandLineArgs"><a href="#1-Environment-GetCommandLineArgs" class="headerlink" title="1. Environment.GetCommandLineArgs();"></a>1. Environment.GetCommandLineArgs();</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line">Environment.GetCommandLineArgs();   <span class="comment">// 返回 string[]</span></span><br></pre></td></tr></table></figure>
+<p>注意, 与控制台程序入口处的string[] args相比较, 这个函数返回的结果是完整的命令行, 也就是包含程序自身路径. 例如我一个没有传递任何参数的程序:<br><img src="https://img-blog.csdnimg.cn/20210209030243165.png"><br>所以注意区分哦.</p>
+<h4 id=""><a href="#" class="headerlink" title=""></a></h4><h3 id="其他"><a href="#其他" class="headerlink" title="其他:"></a>其他:</h3><ul>
+<li>WinForm<br>  在 Program.cs 的 Main 入口参数处添加 string[] args, 然后你可以更改窗体的构造函数, 使其能够接收这个args.</li>
+<li>WPF<br>  暂时不知道.</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202102090805/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="SlimeNull">
+      <meta itemprop="description" content="Newbie... Learning...">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SlimeNull's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/11/202102090805/" class="post-title-link" itemprop="url">[C#/C/C++] GetShortPathName详解, 长路径转换为短路径</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-05-11 10:54:31 / Modified: 11:46:00" itemprop="dateCreated datePublished" datetime="2021-05-11T10:54:31+08:00">2021-05-11</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="说点骚话"><a href="#说点骚话" class="headerlink" title="说点骚话:"></a>说点骚话:</h2><p>转换需要用到 Windows API (废话)</p>
+<p>官方文档: <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-getshortpathnamew">GetShortPathNameW function (fineapi.h) - Win32 apps | Microsoft docs</a>  (纯英文, 没有中文版本.)</p>
+<h2 id="引用命名空间"><a href="#引用命名空间" class="headerlink" title="引用命名空间:"></a>引用命名空间:</h2><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System.Runtime.InteropServices;</span><br></pre></td></tr></table></figure>
+<h2 id="关键代码"><a href="#关键代码" class="headerlink" title="关键代码:"></a>关键代码:</h2><ul>
+<li>C#<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">[<span class="meta">DllImport(<span class="meta-string">&quot;kernel32.dll&quot;</span>, EntryPoint = <span class="meta-string">&quot;GetShortPathNameW&quot;</span>, CharSet = CharSet.Unicode)</span>]</span><br><span class="line"><span class="function"><span class="keyword">extern</span> <span class="keyword">static</span> <span class="built_in">short</span> <span class="title">GetShortPath</span>(<span class="params"><span class="built_in">string</span> longPath, <span class="built_in">string</span> buffer, <span class="built_in">int</span> bufferSize</span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取转换所需要的缓冲区大小</span></span><br><span class="line"><span class="function"><span class="built_in">bool</span> <span class="title">TryGetConvertBufferSize</span>(<span class="params"><span class="built_in">string</span> longPath, <span class="keyword">out</span> <span class="built_in">short</span> size</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    size = GetShortPath(longPath, <span class="literal">null</span>, <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">return</span> size != <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 进行转换</span></span><br><span class="line"><span class="function"><span class="built_in">bool</span> <span class="title">TryGetShortPath</span>(<span class="params"><span class="built_in">string</span> longPath, <span class="keyword">out</span> <span class="built_in">string</span> shortPath, <span class="built_in">int</span> bufferSize = <span class="number">256</span></span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">string</span> resultBuffer = <span class="keyword">new</span> <span class="built_in">string</span>(<span class="string">&#x27;\0&#x27;</span>, bufferSize);               <span class="comment">// 256 大概合适, 根据需求调整吧</span></span><br><span class="line">    <span class="built_in">short</span> rstLen = GetShortPath(longPath, resultBuffer, bufferSize);</span><br><span class="line">    <span class="keyword">if</span> (rstLen != <span class="number">0</span> &amp;&amp; rstLen != bufferSize)</span><br><span class="line">    &#123;</span><br><span class="line">        shortPath = resultBuffer.TrimEnd(<span class="string">&#x27;\0&#x27;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        shortPath = <span class="literal">null</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>C++<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">long</span>     length = <span class="number">0</span>;</span><br><span class="line">    TCHAR*   buffer = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 初次通过传递NULL和0来获取所需空间</span></span><br><span class="line"></span><br><span class="line">    length = GetShortPathName(lpszPath, <span class="literal">NULL</span>, <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">if</span> (length == <span class="number">0</span>) ErrorExit(TEXT(<span class="string">&quot;GetShortPathName&quot;</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 动态分配准确的内存</span></span><br><span class="line"></span><br><span class="line">    buffer = <span class="keyword">new</span> TCHAR[length];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 现在, 使用同一个长路径来简单调用函数吧</span></span><br><span class="line"></span><br><span class="line">    length = GetShortPathName(lpszPath, buffer, length);</span><br><span class="line">    <span class="keyword">if</span> (length == <span class="number">0</span>) ErrorExit(TEXT(<span class="string">&quot;GetShortPathName&quot;</span>));</span><br><span class="line"></span><br><span class="line">    _tprintf(TEXT(<span class="string">&quot;long name = %s shortname = %s&quot;</span>), lpszPath, buffer);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">delete</span> [] buffer;</span><br></pre></td></tr></table></figure>
+<h2 id="更多说明"><a href="#更多说明" class="headerlink" title="更多说明:"></a>更多说明:</h2><h4 id="内容-1"><a href="#内容-1" class="headerlink" title="内容 1:"></a>内容 1:</h4>如果设置了 buffer, 与 bufferSize, 函数会尝试转换长路径到短路径, 如果返回的数字与 bufferSize 一致, 则表示缓冲区(buffer)太小.</li>
+</ul>
+<p>如果 buffer 被设为 null, bufferSize 被设为 0, 则返回值将返回所需要的缓冲区大小.</p>
+<p>无论如何, 如果返回值是 0, 则表示函数由于某些原因, 未能成功执行.</p>
+<p>获取更多的错误信息, 请调用 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror">CallLastError</a></p>
+<p><strong>原文:</strong></p>
+<blockquote>
+<p>If the function succeeds, the return value is the length, in TCHARs, of the string that is copied to lpszShortPath, not including the terminating null character.<br>&nbsp;<br>If the lpszShortPath buffer is too small to contain the path, the return value is the size of the buffer, in TCHARs, that is required to hold the path and the terminating null character.<br>&nbsp;<br>If the function fails for any other reason, the return value is zero. To get extended error information, call <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror">GetLastError</a>.</p>
+</blockquote>
+<h4 id="内容-2"><a href="#内容-2" class="headerlink" title="内容 2:"></a>内容 2:</h4><p>在这个函数(GetShortPathName)的 ANSI 版本中, 路径长度被限制在 MAX_PATH(260) 个字符. 要拓展这个限制到 23767 宽字符(wide character), 请调用这个函数的 Unicode 版本, 并且在路径的首部加上 “\\?\“. 更多信息, 请查阅 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows/desktop/FileIO/naming-a-file">文件, 路径, 以及命名空间的命名</a><br><strong>原文:</strong></p>
+<blockquote>
+<p>In the ANSI version of this function, the name is limited to MAX_PATH characters. To extend this limit to 32,767 wide characters, call the Unicode version of the function and prepend “\?&quot; to the path. For more information, see Naming Files, Paths, and Namespaces.</p>
+</blockquote>
+<h4 id="内容-3"><a href="#内容-3" class="headerlink" title="内容 3:"></a>内容 3:</h4><p>关于 Windows API 函数的 Unicode 版本和 ANSI 版本的区别, 可参阅: <a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_46555380/article/details/109834245">Windows API 函数后缀的作用</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202102111042/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="SlimeNull">
+      <meta itemprop="description" content="Newbie... Learning...">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SlimeNull's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/11/202102111042/" class="post-title-link" itemprop="url">[C#] 音乐播放 3 种方式 Demo 与 MCI 音乐播放器封装类.</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-05-11 10:54:31 / Modified: 11:45:53" itemprop="dateCreated datePublished" datetime="2021-05-11T10:54:31+08:00">2021-05-11</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="淦"><a href="#淦" class="headerlink" title="淦!"></a>淦!</h2><p>首先代码是不完整的, 我还是没能成功设置音量, 除此之外, 别的倒是挺顺利的, 当前实现的功能如下:</p>
+<blockquote>
+<p>播放 暂停 还原 停止 获取进度 获取长度 设置进度 获取播放状态</p>
+</blockquote>
+<h2 id="内容"><a href="#内容" class="headerlink" title="内容:"></a>内容:</h2><ul>
+<li>本项目的仓库在: <a id="download_link" target="_blank" rel="noopener" href="https://github.com/SlimeNull/AudioTest">SlimeNull/AudioTest</a>, 在这里下载哦, 别忘了还原 nuget 包, 因为用了 NAudio 库.</li>
+</ul>
+<h4 id="gt-音乐播放-Demo"><a href="#gt-音乐播放-Demo" class="headerlink" title="&gt; 音乐播放 Demo:"></a>&gt; 音乐播放 Demo:</h4><ul>
+<li><p>先放图吧:<br><img src="https://img-blog.csdnimg.cn/20210211102257257.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70"></p>
+<blockquote>
+<p>首先左上角是打开文件的, 然后 PlayType 是播放方式, 我现在让它支持 3 种, 一种是SoundPlayer, 然后是 MCI, 然后是 NAudio 库.<br>&nbsp;<br>实现了播放, 暂停, 停止, 移除, 进度调整到开头, 进度调整(就那个track bar), 同步播放(如果点了这个, UI线程会阻塞的哦), 获取音乐长度, 获取播放状态, 获取播放位置, 重复播放.<br>&nbsp;<br>不同的功能对不同的播放种类支持性不同, 所以, 如果你按下了按钮, 没反应, 也没报错, 那就是它不支持这个功能(也就是代码里没有写)’</p>
+</blockquote>
+<p> 下载代码, 请看前面的链接.<a href="#download_link">↑跳转↑</a></p>
+</li>
+</ul>
+<h4 id="gt-MCI-播放器封装"><a href="#gt-MCI-播放器封装" class="headerlink" title="&gt; MCI 播放器封装:"></a>&gt; MCI 播放器封装:</h4><ul>
+<li>上边的窗体程序就体现了封装类所实现的所有功能喔, 所以试试吧, 你也可以直接粘贴下面的代码, 但是cs文件的名称, 如果可以的话, 我希望你命名为 “Null.MciPlayer” <sub>(没错就是我的名字</sub>  <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.IO;</span><br><span class="line"><span class="keyword">using</span> System.Runtime.InteropServices;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Null.MciPlayer</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">MciPlayer</span> : <span class="title">IDisposable</span></span><br><span class="line">    &#123;</span><br><span class="line">        [<span class="meta">DllImport(<span class="meta-string">&quot;kernel32.dll&quot;</span>, EntryPoint = <span class="meta-string">&quot;GetShortPathNameW&quot;</span>, CharSet = CharSet.Unicode)</span>]</span><br><span class="line">        <span class="function"><span class="keyword">extern</span> <span class="keyword">static</span> <span class="built_in">short</span> <span class="title">GetShortPath</span>(<span class="params"><span class="built_in">string</span> longPath, <span class="built_in">string</span> buffer, <span class="built_in">int</span> bufferSize</span>)</span>;</span><br><span class="line">        [<span class="meta">DllImport(<span class="meta-string">&quot;winmm.dll&quot;</span>, EntryPoint = <span class="meta-string">&quot;mciSendString&quot;</span>, CharSet = CharSet.Unicode)</span>]</span><br><span class="line">        <span class="function"><span class="keyword">extern</span> <span class="keyword">static</span> <span class="built_in">int</span> <span class="title">MciSendString</span>(<span class="params"><span class="built_in">string</span> command, <span class="built_in">string</span> buffer, <span class="built_in">int</span> bufferSize, IntPtr callback</span>)</span>;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="built_in">bool</span> <span class="title">TryGetShortPath</span>(<span class="params"><span class="built_in">string</span> longPath, <span class="keyword">out</span> <span class="built_in">string</span> shortPath</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            shortPath = <span class="literal">null</span>;</span><br><span class="line">            <span class="built_in">short</span> reqLen = GetShortPath(longPath, <span class="literal">null</span>, <span class="number">0</span>);   <span class="comment">// 指定 null与0, 则返回需要的长度</span></span><br><span class="line">            <span class="keyword">if</span> (reqLen == <span class="number">0</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">            shortPath = <span class="keyword">new</span> <span class="built_in">string</span>(<span class="string">&#x27;\0&#x27;</span>, reqLen);   <span class="comment">// 声明缓冲</span></span><br><span class="line"></span><br><span class="line">            <span class="built_in">short</span> rstLen = GetShortPath(longPath, shortPath, reqLen);   <span class="comment">// 转换</span></span><br><span class="line">            <span class="keyword">if</span> (rstLen == <span class="number">0</span> || rstLen == reqLen)</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">            shortPath = shortPath.TrimEnd(<span class="string">&#x27;\0&#x27;</span>);</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">private</span> <span class="built_in">string</span> longpath;</span><br><span class="line">        <span class="keyword">private</span> <span class="built_in">string</span> shortName;</span><br><span class="line">        <span class="keyword">private</span> <span class="built_in">string</span> aliasName;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">MciPlayer</span>(<span class="params"></span>)</span> &#123; &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">MciPlayer</span>(<span class="params"><span class="built_in">string</span> path</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (!File.Exists(path))</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> FileNotFoundException(<span class="string">&quot;File not exist.&quot;</span>, path);</span><br><span class="line"></span><br><span class="line">            longpath = path;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">MciSendStringWithCheck</span>(<span class="params"><span class="built_in">string</span> command, <span class="built_in">string</span> buffer, <span class="built_in">int</span> bufferSize, IntPtr callback</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">int</span> err = MciSendString(command, buffer, bufferSize, callback);</span><br><span class="line">            <span class="keyword">if</span> (err != <span class="number">0</span>)</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> MciException(err);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="built_in">string</span> <span class="title">StatusInfo</span>(<span class="params"><span class="built_in">string</span> info</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">string</span> buffer = <span class="keyword">new</span> <span class="built_in">string</span>(<span class="string">&#x27;\0&#x27;</span>, <span class="number">32</span>);</span><br><span class="line">            MciSendStringWithCheck(<span class="string">$&quot;status <span class="subst">&#123;aliasName&#125;</span> <span class="subst">&#123;info&#125;</span>&quot;</span>, buffer, <span class="number">32</span>, IntPtr.Zero);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> buffer.TrimEnd(<span class="string">&#x27;\0&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">string</span> DevicePath &#123; <span class="keyword">get</span> =&gt; longpath; &#125;</span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">string</span> DeviceShortPath &#123; <span class="keyword">get</span> =&gt; shortName; &#125;</span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">string</span> AliasName &#123; <span class="keyword">get</span> =&gt; aliasName; &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="built_in">bool</span> <span class="title">SetDevicePath</span>(<span class="params"><span class="built_in">string</span> longpath</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (aliasName != <span class="literal">null</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">this</span>.longpath = longpath;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Open</span>(<span class="params"></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (!TryGetShortPath(longpath, <span class="keyword">out</span> shortName))</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">&quot;Get short path faield when initializing.&quot;</span>);</span><br><span class="line"></span><br><span class="line">            aliasName = <span class="string">$&quot;nmci<span class="subst">&#123;DateTime.Now.Ticks&#125;</span>&quot;</span>;</span><br><span class="line">            MciSendStringWithCheck(<span class="string">$&quot;open <span class="subst">&#123;shortName&#125;</span> alias <span class="subst">&#123;aliasName&#125;</span>&quot;</span>, <span class="literal">null</span>, <span class="number">0</span>, IntPtr.Zero);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Close</span>(<span class="params"></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            MciSendStringWithCheck(<span class="string">$&quot;close <span class="subst">&#123;aliasName&#125;</span>&quot;</span>, <span class="literal">null</span>, <span class="number">0</span>, IntPtr.Zero);</span><br><span class="line"></span><br><span class="line">            aliasName = <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Play</span>(<span class="params"></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            MciSendStringWithCheck(<span class="string">$&quot;play <span class="subst">&#123;aliasName&#125;</span>&quot;</span>, <span class="literal">null</span>, <span class="number">0</span>, IntPtr.Zero);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Resume</span>(<span class="params"></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            MciSendStringWithCheck(<span class="string">$&quot;resume <span class="subst">&#123;aliasName&#125;</span>&quot;</span>, <span class="literal">null</span>, <span class="number">0</span>, IntPtr.Zero);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Pause</span>(<span class="params"></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            MciSendStringWithCheck(<span class="string">$&quot;pause <span class="subst">&#123;aliasName&#125;</span>&quot;</span>, <span class="literal">null</span>, <span class="number">0</span>, IntPtr.Zero);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Stop</span>(<span class="params"></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            MciSendStringWithCheck(<span class="string">$&quot;stop <span class="subst">&#123;aliasName&#125;</span>&quot;</span>, <span class="literal">null</span>, <span class="number">0</span>, IntPtr.Zero);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="built_in">int</span> <span class="title">GetPosition</span>(<span class="params"></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">int</span>.Parse(StatusInfo(<span class="string">&quot;position&quot;</span>));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="built_in">int</span> <span class="title">GetLength</span>(<span class="params"></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">int</span>.Parse(StatusInfo(<span class="string">&quot;length&quot;</span>));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> PlaybackState <span class="title">GetState</span>(<span class="params"></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">switch</span> (StatusInfo(<span class="string">&quot;mode&quot;</span>).ToLower())</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&quot;playing&quot;</span>:</span><br><span class="line">                    <span class="keyword">return</span> PlaybackState.Playing;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&quot;paused&quot;</span>:</span><br><span class="line">                    <span class="keyword">return</span> PlaybackState.Paused;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&quot;stopped&quot;</span>:</span><br><span class="line">                    <span class="keyword">return</span> PlaybackState.Stopped;</span><br><span class="line">                <span class="literal">default</span>:</span><br><span class="line">                    <span class="keyword">return</span> PlaybackState.Invalid;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">PlayWait</span>(<span class="params"></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            MciSendStringWithCheck(<span class="string">$&quot;play <span class="subst">&#123;aliasName&#125;</span> wait&quot;</span>, <span class="literal">null</span>, <span class="number">0</span>, IntPtr.Zero);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">PlayRepeat</span>(<span class="params"></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            MciSendStringWithCheck(<span class="string">$&quot;play <span class="subst">&#123;aliasName&#125;</span> repeat&quot;</span>, <span class="literal">null</span>, <span class="number">0</span>, IntPtr.Zero);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Seek</span>(<span class="params"><span class="built_in">int</span> position</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            MciSendStringWithCheck(<span class="string">$&quot;seek <span class="subst">&#123;aliasName&#125;</span> to <span class="subst">&#123;position&#125;</span>&quot;</span>, <span class="literal">null</span>, <span class="number">0</span>, IntPtr.Zero);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">SeekToStart</span>(<span class="params"></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            MciSendStringWithCheck(<span class="string">$&quot;seek <span class="subst">&#123;aliasName&#125;</span> to start&quot;</span>, <span class="literal">null</span>, <span class="number">0</span>, IntPtr.Zero);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">SetSeekMode</span>(<span class="params"><span class="built_in">bool</span> fExact</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            MciSendStringWithCheck(<span class="string">$&quot;set <span class="subst">&#123;aliasName&#125;</span> seek exactly <span class="subst">&#123;(fExact ? <span class="string">&quot;on&quot;</span> : <span class="string">&quot;off&quot;</span>)&#125;</span>&quot;</span>, <span class="literal">null</span>, <span class="number">0</span>, IntPtr.Zero);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Dispose</span>(<span class="params"></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (aliasName != <span class="literal">null</span>)</span><br><span class="line">                Close();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">enum</span> PlaybackState</span><br><span class="line">    &#123;</span><br><span class="line">        Stopped,</span><br><span class="line">        Playing,</span><br><span class="line">        Paused,</span><br><span class="line"></span><br><span class="line">        Invalid = <span class="number">-1</span>,</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">MciException</span> : <span class="title">Exception</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">private</span> MciError err;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">int</span> ErrorId &#123; <span class="keyword">get</span> =&gt; (<span class="built_in">int</span>)err; &#125;</span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">string</span> ErrorName &#123; <span class="keyword">get</span> =&gt; err.ToString(); &#125;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">override</span> <span class="built_in">string</span> Message &#123; <span class="keyword">get</span> =&gt; ErrorName; &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">MciException</span>(<span class="params"></span>)</span> &#123; &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">MciException</span>(<span class="params"><span class="built_in">int</span> errorId</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (Enum.IsDefined(<span class="keyword">typeof</span>(MciError), errorId))</span><br><span class="line">                err = (MciError)errorId;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> ArgumentOutOfRangeException(<span class="string">&quot;不是正确的错误ID&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">MciException</span>(<span class="params"><span class="built_in">string</span> errorName</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (!Enum.TryParse&lt;MciError&gt;(errorName, <span class="keyword">out</span> err))</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> ArgumentOutOfRangeException(<span class="string">&quot;不是正确的错误ID&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">enum</span> MciError</span><br><span class="line">        &#123;</span><br><span class="line">            MCIERR_NO_ERROR = <span class="number">0</span>,</span><br><span class="line"></span><br><span class="line">            MCIERR_INVALID_DEVICE_ID = <span class="number">257</span>,</span><br><span class="line">            MCIERR_UNRECOGNIZED_KEYWORD = <span class="number">259</span>,</span><br><span class="line">            MCIERR_UNRECOGNIZED_COMMAND = <span class="number">261</span>,</span><br><span class="line">            MCIERR_HARDWARE = <span class="number">262</span>,</span><br><span class="line">            MCIERR_INVALID_DEVICE_NAME = <span class="number">263</span>,</span><br><span class="line">            MCIERR_OUT_OF_MEMORY = <span class="number">264</span>,</span><br><span class="line">            MCIERR_DEVICE_OPEN = <span class="number">265</span>,</span><br><span class="line">            MCIERR_CANNOT_LOAD_DRIVER = <span class="number">266</span>,</span><br><span class="line">            MCIERR_MISSING_COMMAND_STRING = <span class="number">267</span>,</span><br><span class="line">            MCIERR_PARAM_OVERFLOW = <span class="number">268</span>,</span><br><span class="line">            MCIERR_MISSING_STRING_ARGUMENT = <span class="number">269</span>,</span><br><span class="line">            MCIERR_BAD_INTEGER = <span class="number">270</span>,</span><br><span class="line">            MCIERR_PARSER_INTERNAL = <span class="number">271</span>,</span><br><span class="line">            MCIERR_DRIVER_INTERNAL = <span class="number">272</span>,</span><br><span class="line">            MCIERR_MISSING_PARAMETER = <span class="number">273</span>,</span><br><span class="line">            MCIERR_UNSUPPORTED_FUNCTION = <span class="number">274</span>,</span><br><span class="line">            MCIERR_FILE_NOT_FOUND = <span class="number">275</span>,</span><br><span class="line">            MCIERR_DEVICE_NOT_READY = <span class="number">276</span>,</span><br><span class="line">            MCIERR_INTERNAL = <span class="number">277</span>,</span><br><span class="line">            MCIERR_DRIVER = <span class="number">278</span>,</span><br><span class="line">            MCIERR_CANNOT_USE_ALL = <span class="number">279</span>,</span><br><span class="line">            MCIERR_MULTIPLE = <span class="number">280</span>,</span><br><span class="line">            MCIERR_EXTENSION_NOT_FOUND = <span class="number">281</span>,</span><br><span class="line">            MCIERR_OUTOFRANGE = <span class="number">282</span>,</span><br><span class="line">            MCIERR_FLAGS_NOT_COMPATIBLE = <span class="number">284</span>,</span><br><span class="line">            MCIERR_FILE_NOT_SAVED = <span class="number">286</span>,</span><br><span class="line">            MCIERR_DEVICE_TYPE_REQUIRED = <span class="number">287</span>,</span><br><span class="line">            MCIERR_DEVICE_LOCKED = <span class="number">288</span>,</span><br><span class="line">            MCIERR_DUPLICATE_ALIAS = <span class="number">289</span>,</span><br><span class="line">            MCIERR_BAD_CONSTANT = <span class="number">290</span>,</span><br><span class="line">            MCIERR_MUST_USE_SHAREABLE = <span class="number">291</span>,</span><br><span class="line">            MCIERR_MISSING_DEVICE_NAME = <span class="number">292</span>,</span><br><span class="line">            MCIERR_BAD_TIME_FORMAT = <span class="number">293</span>,</span><br><span class="line">            MCIERR_NO_CLOSING_QUOTE = <span class="number">294</span>,</span><br><span class="line">            MCIERR_DUPLICATE_FLAGS = <span class="number">295</span>,</span><br><span class="line">            MCIERR_INVALID_FILE = <span class="number">296</span>,</span><br><span class="line">            MCIERR_NULL_PARAMETER_BLOCK = <span class="number">297</span>,</span><br><span class="line">            MCIERR_UNNAMED_RESOURCE = <span class="number">298</span>,</span><br><span class="line">            MCIERR_NEW_REQUIRES_ALIAS = <span class="number">299</span>,</span><br><span class="line">            MCIERR_NOTIFY_ON_AUTO_OPEN = <span class="number">300</span>,</span><br><span class="line">            MCIERR_NO_ELEMENT_ALLOWED = <span class="number">301</span>,</span><br><span class="line">            MCIERR_NONAPPLICABLE_FUNCTION = <span class="number">302</span>,</span><br><span class="line">            MCIERR_ILLEGAL_FOR_AUTO_OPEN = <span class="number">303</span>,</span><br><span class="line">            MCIERR_FILENAME_REQUIRED = <span class="number">304</span>,</span><br><span class="line">            MCIERR_EXTRA_CHARACTERS = <span class="number">305</span>,</span><br><span class="line">            MCIERR_DEVICE_NOT_INSTALLED = <span class="number">306</span>,</span><br><span class="line">            MCIERR_GET_CD = <span class="number">307</span>,</span><br><span class="line">            MCIERR_SET_CD = <span class="number">308</span>,</span><br><span class="line">            MCIERR_SET_DRIVE = <span class="number">309</span>,</span><br><span class="line">            MCIERR_DEVICE_LENGTH = <span class="number">310</span>,</span><br><span class="line">            MCIERR_DEVICE_ORD_LENGTH = <span class="number">311</span>,</span><br><span class="line">            MCIERR_NO_INTEGER = <span class="number">312</span>,</span><br><span class="line"></span><br><span class="line">            MCIERR_WAVE_OUTPUTSINUSE = <span class="number">320</span>,</span><br><span class="line">            MCIERR_WAVE_SETOUTPUTINUSE = <span class="number">321</span>,</span><br><span class="line">            MCIERR_WAVE_INPUTSINUSE = <span class="number">322</span>,</span><br><span class="line">            MCIERR_WAVE_SETINPUTINUSE = <span class="number">323</span>,</span><br><span class="line">            MCIERR_WAVE_OUTPUTUNSPECIFIED = <span class="number">324</span>,</span><br><span class="line">            MCIERR_WAVE_INPUTUNSPECIFIED = <span class="number">325</span>,</span><br><span class="line">            MCIERR_WAVE_OUTPUTSUNSUITABLE = <span class="number">326</span>,</span><br><span class="line">            MCIERR_WAVE_SETOUTPUTUNSUITABLE = <span class="number">327</span>,</span><br><span class="line">            MCIERR_WAVE_INPUTSUNSUITABLE = <span class="number">328</span>,</span><br><span class="line">            MCIERR_WAVE_SETINPUTUNSUITABLE = <span class="number">329</span>,</span><br><span class="line"></span><br><span class="line">            MCIERR_SEQ_DIV_INCOMPATIBLE = <span class="number">336</span>,</span><br><span class="line">            MCIERR_SEQ_PORT_INUSE = <span class="number">337</span>,</span><br><span class="line">            MCIERR_SEQ_PORT_NONEXISTENT = <span class="number">338</span>,</span><br><span class="line">            MCIERR_SEQ_PORT_MAPNODEVICE = <span class="number">339</span>,</span><br><span class="line">            MCIERR_SEQ_PORT_MISCERROR = <span class="number">340</span>,</span><br><span class="line">            MCIERR_SEQ_TIMER = <span class="number">341</span>,</span><br><span class="line">            MCIERR_SEQ_PORTUNSPECIFIED = <span class="number">342</span>,</span><br><span class="line">            MCIERR_SEQ_NOMIDIPRESENT = <span class="number">343</span>,</span><br><span class="line"></span><br><span class="line">            MCIERR_NO_WINDOW = <span class="number">346</span>,</span><br><span class="line">            MCIERR_CREATEWINDOW = <span class="number">347</span>,</span><br><span class="line">            MCIERR_FILE_READ = <span class="number">348</span>,</span><br><span class="line">            MCIERR_FILE_WRITE = <span class="number">349</span>,</span><br><span class="line">            MCIERR_NO_IDENTITY = <span class="number">350</span>,</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><br/><br/><br/><br/><br/><br>如果有什么建议或者这个类有可改进的地方, 欢迎留言哦~  n(*≧▽≦*)n</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202102150157/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="SlimeNull">
+      <meta itemprop="description" content="Newbie... Learning...">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SlimeNull's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/11/202102150157/" class="post-title-link" itemprop="url">[C#/VB.NET] C# 与 VB.NET 的类库跨语言引用.</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-05-11 10:54:31 / Modified: 11:44:51" itemprop="dateCreated datePublished" datetime="2021-05-11T10:54:31+08:00">2021-05-11</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>例如你有一个程序, 是 VB.NET 写的, 你希望在里面引用 C# 的代码, 那么, 该如何操作呢?</p>
+<h2 id="准备材料"><a href="#准备材料" class="headerlink" title="准备材料:"></a>准备材料:</h2><ol>
+<li><p>一个 C# 或 VB.NET 项目, 我们以一个测试项目(WinForm)开始<br><img src="https://img-blog.csdnimg.cn/20210215012757638.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70"></p>
+</li>
+<li><p>与该项目语言不同的, 但是是基于 .NET 的类代码片. 代码地址: <a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_46555380/article/details/107148840">一个类实现控件拖拽移动</a><br> <img src="https://img-blog.csdnimg.cn/20210215012826547.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70"></p>
+</li>
+</ol>
+<h2 id="分布演示"><a href="#分布演示" class="headerlink" title="分布演示:"></a>分布演示:</h2><h4 id="1-gt-创建类库项目"><a href="#1-gt-创建类库项目" class="headerlink" title="1. &gt; 创建类库项目:"></a>1. &gt; 创建类库项目:</h4><p>创建一个与我们准备的类库语言相同的类库, 并将代码拷贝到其中:<br><img src="https://img-blog.csdnimg.cn/20210215013356542.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70"></p>
+<h4 id="2-gt-添加项目引用"><a href="#2-gt-添加项目引用" class="headerlink" title="2. &gt; 添加项目引用:"></a>2. &gt; 添加项目引用:</h4><p>在刚刚准备好的 WinForm 项目中, 添加对类库项目的引用.<br><img src="https://img-blog.csdnimg.cn/20210215013532277.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70"><img src="https://img-blog.csdnimg.cn/20210215013627662.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70"></p>
+<h4 id="3-gt-开始使用"><a href="#3-gt-开始使用" class="headerlink" title="3. &gt; 开始使用:"></a>3. &gt; 开始使用:</h4><p>现在, 你就可以直接使用类库中的类了.<br><img src="https://img-blog.csdnimg.cn/20210215014935805.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70"></p>
+<h4 id="gt-使用效果"><a href="#gt-使用效果" class="headerlink" title="&gt; 使用效果:"></a>&gt; 使用效果:</h4><p><img src="https://img-blog.csdnimg.cn/img_convert/5fd315dfb8b8e8c224db58c96f7797f5.gif#pic_center"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202102060124/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="SlimeNull">
+      <meta itemprop="description" content="Newbie... Learning...">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SlimeNull's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/11/202102060124/" class="post-title-link" itemprop="url">[踩坑记录] C# 源代码被误删, 通过反编译之前编译好的文件来拯救这一切, 三款反编译工具对比</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-05-11 10:45:17 / Modified: 11:46:10" itemprop="dateCreated datePublished" datetime="2021-05-11T10:45:17+08:00">2021-05-11</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="事件"><a href="#事件" class="headerlink" title="事件:"></a>事件:</h2><p>首先, 语言是C#, 然后我把代码给删了… 但是在删之前, 我编译过一次, 所以… 我就想着使用反编译工具来搞了.</p>
+<p>我知道的反编译工具, dnSply, ILSpy, dotPeek</p>
+<p>dnSpy是ILSpy的一个分支(dnSpy is a .NET assembly editor, decompiler, and debugger forked from ILSpy)</p>
+<p>dotPeek 是 JetBrains 的反编译工具, 在这之前我还没使用过.</p>
+<h2 id="开始吧"><a href="#开始吧" class="headerlink" title="开始吧:"></a>开始吧:</h2><h5 id="gt-首先-是-dnSpy-上场"><a href="#gt-首先-是-dnSpy-上场" class="headerlink" title="&gt; 首先, 是 dnSpy 上场:"></a>&gt; 首先, 是 dnSpy 上场:</h5><p><img src="https://img-blog.csdnimg.cn/20210206003510436.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70"><br>乍一看, 没啥问题, 但是, 会有很多毛病哦~ 一一道来吧:</p>
+<ol>
+<li>dnSpy 的反编译结果, 似乎不会吧字段和方法放在一起, 我也没找到它反编译的字段定义跑哪去了…</li>
+<li>会有一大堆奇怪代码, 跟我们想要的源代码完全不一致, 即便导出为项目, 也会有无数个错误</li>
+<li>总之, dnSpy是个反编译的好工具, 但还不能够完全获取源代码…</li>
+</ol>
+<p>总之先导出一下吧, 选中你的项目, 然后程序左上角, 文件(File) -&gt; 导出为项目(Export to project)<br><img src="https://img-blog.csdnimg.cn/20210206011738335.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70"></p>
+<p>然后就是… 惨不忍睹… 左下角的错误数量 99+ 了已经, 完全没有纠错的必要.<br><img src="https://img-blog.csdnimg.cn/20210206011653138.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70"></p>
+<h5 id="gt-然后-就是-ILSpy-上场了"><a href="#gt-然后-就是-ILSpy-上场了" class="headerlink" title="&gt; 然后, 就是 ILSpy 上场了:"></a>&gt; 然后, 就是 ILSpy 上场了:</h5><p><img src="https://img-blog.csdnimg.cn/20210206010849149.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70"><br>嗯好吧, 我承认 ILSpy 没有 dnSpy 好看, 但这可不是决定实力的第一要素.</p>
+<ol>
+<li>你看到了, 枚举, 字段, 方法, 一切都井然有序</li>
+<li>仔细看看, 中间的那个 switch 语句, 瞧瞧! 这不是 C#8 的新语法嘛! (我当初没有使用这个语法哦)</li>
+<li>完全没有任何奇怪的变量名</li>
+</ol>
+<p>那么我们尝试导出项目吧! 在左侧选中项目, 右击, 选择 Save Code 以导出项目<br><img src="https://img-blog.csdnimg.cn/20210206011243537.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70"><br>感动世界!!! 没有任何错误! 非常非常非常完美~<br><img src="https://img-blog.csdnimg.cn/20210206011344812.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70"></p>
+<h5 id="gt-再试试-dotPeak"><a href="#gt-再试试-dotPeak" class="headerlink" title="&gt; 再试试 dotPeak:"></a>&gt; 再试试 dotPeak:</h5><p><img src="https://img-blog.csdnimg.cn/2021020602061066.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70"></p>
+<p>哦豁, 看样子, 也不错啊.</p>
+<ol>
+<li>dotPeek 没有像 ILSpy 那样将 switch 还原为 C#8 的语法, 而是使用的旧的语法</li>
+<li>没有奇怪的变量名, 奇怪的语法</li>
+<li>出现了我没有写过的东西, 标签</li>
+</ol>
+<p>导出项目咯, 直接右击项目, 然后 Export to Project<br><img src="https://img-blog.csdnimg.cn/2021020602081143.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70"><br>唔, 一开始就与众不同呢… 跟普通的项目完全不一样, 少了一些文件夹…<br><img src="https://img-blog.csdnimg.cn/20210206021027247.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70"><br>嘛, 总之先试着打开吧.<br>果然在VS里面一眼就能看出错误了!<br><img src="https://img-blog.csdnimg.cn/20210206021524681.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70"><br>它居然在本地方法的前头中加了static… 好吧好吧, 我知道它们本质上是静态的, 但你这么弄, 我可就不能编译了呀. (假设我很懒, 懒到连这仅有的一个错误也不愿意改)</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结:"></a>总结:</h2><p>如果说我平常使用, 我肯定会用 dnSpy (颜值高), 毕竟平常还是很少改源代码甚至导出为项目滴, 如果是像这次的特殊情况, 我就会用 ILSpy, 很强大的有木有? 至于 dotPeek, 打入冷宫了, 而且加载速度慢的一批,,, 等它启动完, 黄花菜都凉了.</p>
+<p>也算是大成功了, 所以,,, 如果想要通过反编译来挽回删掉的文件, 那么请使用 ILSpy 吧! 经过这一次使用, 我也是爱上 ILSpy了, 毕竟一开始我没报有这么大希望.</p>
+<p><br/><br/><br/><br/><br/><br>如果你觉得有什么改进的, 或者有什么下期文章的建议, 评论区见ovo</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202102040605/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="SlimeNull">
+      <meta itemprop="description" content="Newbie... Learning...">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SlimeNull's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/11/202102040605/" class="post-title-link" itemprop="url">[干货] 杜绝广告, 让你的电脑变的更加干净舒适</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-05-11 10:43:40 / Modified: 11:46:22" itemprop="dateCreated datePublished" datetime="2021-05-11T10:43:40+08:00">2021-05-11</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="从根部治理-拒绝流氓软件"><a href="#从根部治理-拒绝流氓软件" class="headerlink" title="从根部治理, 拒绝流氓软件:"></a>从根部治理, 拒绝流氓软件:</h3><p>广告弹窗啊, 无非是用了流氓软件. 所以说, 少用流氓软件, 至于哪些是流氓软件, 杀毒软件我从来没用过(只用Windows Defender). 至于其它的, 能少用国内的就少用(忠告), 毕竟某些厂商的尿性, 咱都懂.<br><img src="https://img-blog.csdnimg.cn/20210204033616149.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="流氓软件"></p>
+<p>然后, 就是捆绑, 这个很简单, 其实原因就是你使用了所谓的”高速下载器”, 而那些”高速下载器”在你电脑上安装了一堆你不需要的软件, 而避免方式就是, 永远不使用高速下载, 只选择本地下载或者地名+运营商的下载按钮. 例如, 上海电信下载.<br><img src="https://img-blog.csdnimg.cn/20210204033644914.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="捆绑安装"><br>还有就是, XXX下载站, XXX软件园, 这些地方少去, 下载软件还是去官方网站比较好.</p>
+<p>然后就是流氓软件了, 国内最大的流氓, 莫过于杀毒软件了, 所以, 把你的360, 电脑管家, 金山毒霸, 鲁大师全部卸载了吧. 如果是火绒倒是可以留着, 这不算是流氓, 不过意义也不大就是了.</p>
+<p>然后就是其它的流氓, WinRAR, Flash player, WPS之类的, WinRAR和Flash Player建议直接卸载, WPS看可以通过控制面板的”卸载或更改”来关掉广告, 这个随便一搜索就能找到.</p>
+<h3 id="替代品"><a href="#替代品" class="headerlink" title="替代品:"></a>替代品:</h3><p>既然说了不使用流氓软件, 肯定就还有推荐的软件的.</p>
+<p>杀毒软件, 一般是不需要的, 除非你天天浏览奇怪的网站… 但即便那样, Windows Defender 也够用.</p>
+<p>输入法. 不要用搜狗输入法! 不要用搜狗输入法! 不要用搜狗输入法! 这东西广告多的一批… 我跟你讲噢, windows是有自带的中文输入法的, 连日文以及其他语言也有… 所以完全没必要安装多余的输入法.<br>在 设置 -&gt; 时间和语言 -&gt; 语言 中添加中文, 然后点击中文, 点击选项, 在下面的键盘那里, 添加一个键盘, 微软拼音, 如果已经有了就不需要添加. 语言和键盘添加完毕后, 就可以通过 Win + 空格 键来切换语言, 哦对了, 如果你有一个 英文语言, 会好很多噢.<br>Ctrl + Shift 是切换同一个语言内的不同键盘(输入法), Win + 空格 是直接切换语言, 这个要知道.</p>
+<p>压缩包管理软件, 不使用WinRAR, 也不使用好压什么的软件, 你可以使用7zip, Bandzip, 或者360压缩的国际版.</p>
+<p>浏览器, 不要使用360的任何一款浏览器,,, 因为它本身就有内置广告… 还有很多浏览器打的什么双核的幌子, 其实双核就是Chromium核+IE核, 现在IE核心已经没啥乱用了. 所以, 老老实实用系统自带的Edge, 如果你是Win7, 就去搜索Edge, 然后去官网下载. 或者, 你也可以用 Chrome, Firefox, 不过据我所知, 新Edge跟Chrome是一个核心的, 并且Edge优化了内存占用, 更推荐Edge.</p>
+<p>然后是即时通讯软件, 不推荐使用QQ, 因为这玩意儿也有弹窗广告, 并且是关不掉的, 推荐使用TIM, 不用担心, TIM是QQ的办公版本, 与QQ的数据是同步的, 而且更为简洁方便, 所以, 非常推荐哦, 搜索TIM就能找到官网了</p>
+<p>然后就是,,, 娱乐? 腾讯视频, 爱奇艺, 优酷, 这些软件我是不用的, 并且也不推荐使用. 我看视频消遣一向是哔哩哔哩(网页, 且无任何视频广告, 没错, 没有视频广告!)</p>
+<p>音乐的话, 我是用的网易云音乐, 没发现什么流氓行为.</p>
+<p>然后是办公软件, 如果你是使用的WPS, 推荐你更换为Office, 只要你电脑是整机购买的, 大多都是带有Office的, Office比WPS流畅很多呢. 如果你用习惯了WPS, 不愿更换, 并且忍受不了它的广告弹窗, 通过控制面板, 然后点卸载WPS(其实是”更改或卸载”), 里面是可以配置广告弹窗的</p>
+<h3 id="如果遇到广告弹窗"><a href="#如果遇到广告弹窗" class="headerlink" title="如果遇到广告弹窗?"></a>如果遇到广告弹窗?</h3><p>这里呢, 再安利一个软件, 叫做Process Explorer, 里面有个功能, 可以通过窗口来查找进程, 操作非常的简单, 你呢, 在网上稍微搜索一下使用教程, 就彳亍, 通过它, 你可以很轻易的找到这个广告的主程序. 最后, 看看你是否认识他, 如果认识,,, 就想办法禁用掉广告, 网上会有一些方法的, 我也提两个吧.</p>
+<ol>
+<li>先把后缀改为txt, 然后你就可以作为文本编辑它了, 打开它, 清空所有内容, 保存, 然后改为原来的后缀.</li>
+<li>找到 uninstall.exe 类似的程序, 直接卸载完事儿.</li>
+</ol>
+<h3 id="保养措施"><a href="#保养措施" class="headerlink" title="保养措施:"></a>保养措施:</h3><p>在安装了一个软件后, 千万千万要检查它是否开机自动启动, 保证开机启动的都是你想要启动的程序.</p>
+<h3 id="最后"><a href="#最后" class="headerlink" title="最后:"></a>最后:</h3><p>我个人已经很久没见过弹窗广告了 (笑, 大概就是上面的那些经验了, 精髓就是, 绝对不使用流氓软件, 尽量避免使用国内软件.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202102060026/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="SlimeNull">
+      <meta itemprop="description" content="Newbie... Learning...">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SlimeNull's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/11/202102060026/" class="post-title-link" itemprop="url">[踩坑记录] 某功能在C#7.3中不可用,请使用 8.0 或更高的语言版本 (通用解决方案)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-05-11 10:43:40 / Modified: 11:46:18" itemprop="dateCreated datePublished" datetime="2021-05-11T10:43:40+08:00">2021-05-11</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="问题"><a href="#问题" class="headerlink" title="问题:"></a>问题:</h2><p>正如标题描述, 是某个语法在低版本中不受支持, 只需要升级到高版本即可.</p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤:"></a>步骤:</h2><p><strong>&gt; 第一种 :</strong></p>
+<ol>
+<li>使用快捷键 Alt + Enter 或点击黄色的的提示调出快速操作<br> <img src="https://img-blog.csdnimg.cn/20200917143210762.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzcwMzMwNQ==,size_16,color_FFFFFF,t_70#pic_center"></li>
+<li>选择 将该项目升级为 C# 语言版本 “8.0”<blockquote>
+<p>如果没有这一选项, 继续看第二种.</p>
+</blockquote>
+</li>
+</ol>
+<p><strong>&gt; 第二种 :</strong></p>
+<ol>
+<li>打开项目所在目录并打开项目文件.<br> <img src="https://img-blog.csdnimg.cn/20210206001925422.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70"></li>
+<li>在 PropertyGroup 节点下添加 LangVersion, 如图:<br> <img src="https://img-blog.csdnimg.cn/20210206002242856.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70"><blockquote>
+<p>第二种其实就是通过更改 csproj 文件内容来置顶所使用的语言版本, 某些时候可能在这个文件中没有 LangVerison 节点, 就导致了快速操作中没有 “升级项目版本” 的选项, 这时就需要手动改文件了</p>
+</blockquote>
+</li>
+</ol>
+<p><br/><br/><br/><br/><br>如果没能解决你的问题, 麻烦在下面评论下, 这样我可以搜寻更多答案以修改这边文章.<br>如果解决了, 就点个赞吧 (卑微ovo)</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202102030656/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="SlimeNull">
+      <meta itemprop="description" content="Newbie... Learning...">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SlimeNull's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/11/202102030656/" class="post-title-link" itemprop="url">[C#] 单文件编译 - 编译时嵌入dll</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-05-11 10:41:46 / Modified: 11:46:36" itemprop="dateCreated datePublished" datetime="2021-05-11T10:41:46+08:00">2021-05-11</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="1-打开-NuGet-包管理器"><a href="#1-打开-NuGet-包管理器" class="headerlink" title="1.打开 NuGet 包管理器"></a>1.打开 NuGet 包管理器</h3><p>位于 工具 -&gt; NuGet 包管理器 -&gt; 管理解决方案的 NuGet 程序包<br><img src="https://img-blog.csdnimg.cn/20210203064653427.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="打开NuGet包管理器"></p>
+<h3 id="2-安装"><a href="#2-安装" class="headerlink" title="2. 安装"></a>2. 安装</h3><p>搜索 Costura.Fody 并将其安装到你的项目<br><img src="https://img-blog.csdnimg.cn/20210203065115536.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="安装Costura.Fody"></p>
+<h3 id="3-起飞"><a href="#3-起飞" class="headerlink" title="3. 起飞"></a>3. 起飞</h3><p>然后, 进行编译, 你就会发现! 所有的dll全部被打包进exe中啦~~~<br><img src="https://img-blog.csdnimg.cn/20210203065438794.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="但文件发布"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
+<script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">SlimeNull</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
   </footer>
 
-
-        <a id="s-top" class="fas fa-arrow-up fa-fw" href="javascript:void(0)"></a>
-      </div>
-    </div>
-    <div>
-      <script>
-/************这个文件存放不需要重载的全局变量和全局函数*********/
-window.volantis={};
-window.volantis.loadcss=document.getElementById("loadcss");
-/******************** Pjax ********************************/
-function VPjax(){
-	this.list=[] // 存放回调函数
-	this.start=()=>{
-	  for(var i=0;i<this.list.length;i++){
-		this.list[i].run();
-	  }
-	}
-	this.push=(fn,name)=>{
-		var f=new PjaxItem(fn,name);
-		this.list.push(f);
-	}
-	// 构造一个可以run的对象
-	function PjaxItem(fn,name){
-		// 函数名称
-		this.name = name || fn.name
-		// run方法
-		this.run=()=>{
-			fn()
-		}
-	}
-}
-volantis.pjax={}
-volantis.pjax.method={
-	complete: new VPjax(),
-	error: new VPjax(),
-	send: new VPjax()
-}
-volantis.pjax={
-	...volantis.pjax,
-	push: volantis.pjax.method.complete.push,
-	error: volantis.pjax.method.error.push,
-	send: volantis.pjax.method.send.push
-}
-/********************脚本懒加载函数********************************/
-// 已经加入了setTimeout
-function loadScript(src, cb) {
-	setTimeout(function() {
-		var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
-		var script = document.createElement('script');
-		script.setAttribute('type','text/javascript');
-		if (cb) script.onload = cb;
-		script.setAttribute('src', src);
-		HEAD.appendChild(script);
-	});
-}
-//https://github.com/filamentgroup/loadCSS
-var loadCSS = function( href, before, media, attributes ){
-	var doc = window.document;
-	var ss = doc.createElement( "link" );
-	var ref;
-	if( before ){
-		ref = before;
-	}
-	else {
-		var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
-		ref = refs[ refs.length - 1];
-	}
-	var sheets = doc.styleSheets;
-	if( attributes ){
-		for( var attributeName in attributes ){
-			if( attributes.hasOwnProperty( attributeName ) ){
-				ss.setAttribute( attributeName, attributes[attributeName] );
-			}
-		}
-	}
-	ss.rel = "stylesheet";
-	ss.href = href;
-	ss.media = "only x";
-	function ready( cb ){
-		if( doc.body ){
-			return cb();
-		}
-		setTimeout(function(){
-			ready( cb );
-		});
-	}
-	ready( function(){
-		ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
-	});
-	var onloadcssdefined = function( cb ){
-		var resolvedHref = ss.href;
-		var i = sheets.length;
-		while( i-- ){
-			if( sheets[ i ].href === resolvedHref ){
-				return cb();
-			}
-		}
-		setTimeout(function() {
-			onloadcssdefined( cb );
-		});
-	};
-	function loadCB(){
-		if( ss.addEventListener ){
-			ss.removeEventListener( "load", loadCB );
-		}
-		ss.media = media || "all";
-	}
-	if( ss.addEventListener ){
-		ss.addEventListener( "load", loadCB);
-	}
-	ss.onloadcssdefined = onloadcssdefined;
-	onloadcssdefined( loadCB );
-	return ss;
-};
-</script>
-<script>
   
-  loadCSS("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css", window.volantis.loadcss);
-  
-  
-  
-  
-</script>
-<!-- required -->
-
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
-
-<script>
-  function pjax_fancybox() {
-    $(".md .gallery").find("img").each(function () { //渲染 fancybox
-      var element = document.createElement("a"); // a 标签
-      $(element).attr("class", "fancybox");
-      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
-      $(element).attr("href", $(this).attr("src"));
-      if ($(this).attr("data-original")) {
-        $(element).attr("href", $(this).attr("data-original"));
-      }
-      $(element).attr("data-fancybox", "images");
-      var caption = "";   // 描述信息
-      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
-        $(element).attr('data-caption', $(this).attr('alt'));
-        caption = $(this).attr('alt');
-      }
-      var div = document.createElement("div");
-      $(div).addClass("fancybox");
-      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
-      var span = document.createElement("span");
-      $(span).addClass("image-caption");
-      $(span).text(caption); // 加描述
-      $(this).after(span);  // 再套一层描述
-      $(this).wrap(element);  // 最后套 a 标签
-    })
-    $(".md .gallery").find("img").fancybox({
-      selector: '[data-fancybox="images"]',
-      hash: false,
-      loop: false,
-      closeClick: true,
-      helpers: {
-        overlay: {closeClick: true}
-      },
-      buttons: [
-        "zoom",
-        "close"
-      ]
-    });
-  };
-  function SCload_fancybox() {
-    if ($(".md .gallery").find("img").length == 0) return;
-    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
-    loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
-  };
-  $(function () {
-    SCload_fancybox();
-  });
-  function Pjax_SCload_fancybox(){
-	if (typeof $.fancybox == "undefined") {
-	 SCload_fancybox();
-    } else {
-	 pjax_fancybox();
-    }
-  }
-  volantis.pjax.push(Pjax_SCload_fancybox)
-  volantis.pjax.send(()=>{
-      if (typeof $.fancybox != "undefined") {
-        $.fancybox.close();    // 关闭弹窗
-      }
-  },'fancybox')
-</script>
-
-
-<!-- internal -->
-
-
-
-
-<script>
-  function loadIssuesJS() {
-    if ($(".md").find(".issues-api").length == 0) return;
-	
-	  loadScript('/js/issues.js');
-	
-  };
-  $(function () {
-    loadIssuesJS();
-  });
-  volantis.pjax.push(()=>{
-	if (typeof IssuesAPI == "undefined") {
-	  loadIssuesJS();
-	}
-  },"IssuesJS")
-</script>
-
-
-
-  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
-<script>
-  // https://www.npmjs.com/package/vanilla-lazyload
-  // Set the options globally
-  // to make LazyLoad self-initialize
-  window.lazyLoadOptions = {
-    elements_selector: ".lazyload",
-    threshold: 0
-  };
-  // Listen to the initialization event
-  // and get the instance of LazyLoad
-  window.addEventListener(
-    "LazyLoad::Initialized",
-    function (event) {
-      window.lazyLoadInstance = event.detail.instance;
-    },
-    false
-  );
-  document.addEventListener('DOMContentLoaded', function () {
-    lazyLoadInstance.update();
-  });
-  document.addEventListener('pjax:complete', function () {
-    lazyLoadInstance.update();
-  });
-</script>
-
-
-
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
   
-
-<script>
-  window.FPConfig = {
-	delay: 0,
-	ignoreKeywords: [],
-	maxRPS: 5,
-	hoverDelay: 25
-  };
-</script>
-<script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
-
-
-
-
-
 
 
 
@@ -1394,565 +982,10 @@ var loadCSS = function( href, before, media, attributes ){
 
 
   
-  
-<script src="/js/valine.js"></script>
 
 
-<script>
-  function emoji(path, idx, ext) {
-    return path + "/" + path + "-" + idx + "." + ext;
-  }
-  var emojiMaps = {};
-  for (var i = 1; i <= 54; i++) {
-    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
-  }
-  for (var i = 1; i <= 101; i++) {
-    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
-  }
-  for (var i = 1; i <= 116; i++) {
-    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
-  }
-  for (var i = 1; i <= 125; i++) {
-    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
-  }
-  for (var i = 1; i <= 4; i++) {
-    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
-  }
-  function pjax_valine() {
-    if(!document.querySelectorAll("#valine_container")[0])return;
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
-    let path = pdata.commentPath;
-    if (path.length == 0) {
-      let defaultPath = '';
-      path = defaultPath || decodeURI(window.location.pathname);
-    }
-    var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":null,"appKey":null,"meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":false}, {
-      el: '#valine_container',
-      path: path,
-      placeholder: pagePlaceholder,
-      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
-      emojiMaps: emojiMaps,
-    }))
-  }
-  $(function () {
-    pjax_valine();
-  });
-  volantis.pjax.push(pjax_valine);
-</script>
 
 
 
-
-
-
-  
-<script src="/js/app.js"></script>
-
-
-
-<!-- optional -->
-
-  <script>
-const SearchServiceimagePath="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/img/";
-const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
-
-$('.input.u-search-input').one('focus',function(){
-	
-		loadScript('/js/search/hexo.js',setSearchService);
-	
-})
-
-function listenSearch(){
-  
-    customSearch = new HexoSearch({
-      imagePath: SearchServiceimagePath
-    });
-  
-}
-function setSearchService() {
-	listenSearch();
-	
-}
-</script>
-
-
-
-
-
-
-
-
-
-
-
-  <script defer>
-
-  const LCCounter = {
-    app_id: 'u9j57bwJod4EDmXWdxrwuqQT-MdYXbMMI',
-    app_key: 'jfHtEKVE24j0IVCGHbvuFClp',
-    custom_api_server: '',
-
-    // 查询存储的记录
-    getRecord(Counter, url, title) {
-      return new Promise(function (resolve, reject) {
-        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
-          .then(resp => resp.json())
-          .then(({results, code, error}) => {
-            if (code === 401) {
-              throw error;
-            }
-            if (results && results.length > 0) {
-              var record = results[0];
-              resolve(record);
-            } else {
-              Counter('post', '/classes/Counter', {url, title: title, times: 0})
-                .then(resp => resp.json())
-                .then((record, error) => {
-                  if (error) {
-                    throw error;
-                  }
-                  resolve(record);
-                }).catch(error => {
-                console.error('Failed to create', error);
-                reject(error);
-              });
-            }
-          }).catch((error) => {
-          console.error('LeanCloud Counter Error:', error);
-          reject(error);
-        });
-      })
-    },
-
-    // 发起自增请求
-    increment(Counter, incrArr) {
-      return new Promise(function (resolve, reject) {
-        Counter('post', '/batch', {
-          "requests": incrArr
-        }).then((res) => {
-          res = res.json();
-          if (res.error) {
-            throw res.error;
-          }
-          resolve(res);
-        }).catch((error) => {
-          console.error('Failed to save visitor count', error);
-          reject(error);
-        });
-      });
-    },
-
-    // 构建自增请求体
-    buildIncrement(objectId) {
-      return {
-        "method": "PUT",
-        "path": `/1.1/classes/Counter/${ objectId }`,
-        "body": {
-          "times": {
-            '__op': 'Increment',
-            'amount': 1
-          }
-        }
-      }
-    },
-
-    // 校验是否为有效的 UV
-    validUV() {
-      var key = 'LeanCloudUVTimestamp';
-      var flag = localStorage.getItem(key);
-      if (flag) {
-        // 距离标记小于 24 小时则不计为 UV
-        if (new Date().getTime() - parseInt(flag) <= 86400000) {
-          return false;
-        }
-      }
-      localStorage.setItem(key, new Date().getTime().toString());
-      return true;
-    },
-
-    addCount(Counter) {
-      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
-      enableIncr = true;
-      var getterArr = [];
-      var incrArr = [];
-      // 请求 PV 并自增
-      var pvCtn = document.querySelector('#lc-sv');
-      if (pvCtn || enableIncr) {
-        var pvGetter = this.getRecord(Counter, 'http://example.com' + '/#lc-sv', 'Visits').then((record) => {
-          incrArr.push(this.buildIncrement(record.objectId))
-          var eles = document.querySelectorAll('#lc-sv #number');
-          if (eles.length > 0) {
-            eles.forEach((el,index,array)=>{
-              el.innerText = record.times + 1;
-              if (pvCtn) {
-                pvCtn.style.display = 'inline';
-              }
-            })
-          }
-        });
-        getterArr.push(pvGetter);
-      }
-
-      // 请求 UV 并自增
-      var uvCtn = document.querySelector('#lc-uv');
-      if (uvCtn || enableIncr) {
-        var uvGetter = this.getRecord(Counter, 'http://example.com' + '/#lc-uv', 'Visitors').then((record) => {
-          var vuv = this.validUV();
-          vuv && incrArr.push(this.buildIncrement(record.objectId))
-          var eles = document.querySelectorAll('#lc-uv #number');
-          if (eles.length > 0) {
-            eles.forEach((el,index,array)=>{
-              el.innerText = record.times + (vuv ? 1 : 0);
-              if (uvCtn) {
-                uvCtn.style.display = 'inline';
-              }
-            })
-          }
-        });
-        getterArr.push(uvGetter);
-      }
-
-      // 请求文章的浏览数，如果是当前页面就自增
-      var allPV = document.querySelectorAll('#lc-pv');
-      if (allPV.length > 0 || enableIncr) {
-        for (i = 0; i < allPV.length; i++) {
-          let pv = allPV[i];
-          let title = pv.getAttribute('data-title');
-          var url = 'http://example.com' + pv.getAttribute('data-path');
-          if (url) {
-            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
-              // 是当前页面就自增
-              let curPath = window.location.pathname;
-              if (curPath.includes('index.html')) {
-                curPath = curPath.substring(0, curPath.lastIndexOf('index.html'));
-              }
-              if (pv.getAttribute('data-path') == curPath) {
-                incrArr.push(this.buildIncrement(record.objectId));
-              }
-              if (pv) {
-                var ele = pv.querySelector('#lc-pv #number');
-                if (ele) {
-                  if (pv.getAttribute('data-path') == curPath) {
-                    ele.innerText = (record.times || 0) + 1;
-                  } else {
-                    ele.innerText = record.times || 0;
-                  }
-                  pv.style.display = 'inline';
-                }
-              }
-            });
-            getterArr.push(viewGetter);
-          }
-        }
-      }
-
-      // 如果启动计数自增，批量发起自增请求
-      if (enableIncr) {
-        Promise.all(getterArr).then(() => {
-          incrArr.length > 0 && this.increment(Counter, incrArr);
-        })
-      }
-
-    },
-
-
-    fetchData(api_server) {
-      var Counter = (method, url, data) => {
-        return fetch(`${ api_server }/1.1${ url }`, {
-          method,
-          headers: {
-            'X-LC-Id': this.app_id,
-            'X-LC-Key': this.app_key,
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data)
-        });
-      };
-      this.addCount(Counter);
-    },
-
-    refreshCounter() {
-      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
-      if (api_server) {
-        this.fetchData(api_server);
-      } else {
-        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
-          .then(resp => resp.json())
-          .then(({api_server}) => {
-            this.fetchData('https://' + api_server);
-          });
-      }
-    }
-
-  };
-
-  LCCounter.refreshCounter();
-
-  document.addEventListener('pjax:complete', function () {
-    LCCounter.refreshCounter();
-  });
-</script>
-
-
-
-
-  <script>
-const rootElement = document.documentElement;
-const darkModeStorageKey = "user-color-scheme";
-const rootElementDarkModeAttributeName = "data-user-color-scheme";
-
-const setLS = (k, v) => {
-    localStorage.setItem(k, v);
-};
-
-const removeLS = (k) => {
-    localStorage.removeItem(k);
-};
-
-const getLS = (k) => {
-    return localStorage.getItem(k);
-};
-
-const getModeFromCSSMediaQuery = () => {
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
-};
-
-const resetRootDarkModeAttributeAndLS = () => {
-  rootElement.removeAttribute(rootElementDarkModeAttributeName);
-  removeLS(darkModeStorageKey);
-};
-
-const validColorModeKeys = {
-  dark: true,
-  light: true,
-};
-
-const applyCustomDarkModeSettings = (mode) => {
-  const currentSetting = mode || getLS(darkModeStorageKey);
-
-  if (currentSetting === getModeFromCSSMediaQuery()) {
-    resetRootDarkModeAttributeAndLS();
-  } else if (validColorModeKeys[currentSetting]) {
-    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
-  } else {
-    resetRootDarkModeAttributeAndLS();
-  }
-};
-
-const invertDarkModeObj = {
-  dark: "light",
-  light: "dark",
-};
-
-/**
- * get target mode
- */
-const toggleCustomDarkMode = () => {
-  let currentSetting = getLS(darkModeStorageKey);
-
-  if (validColorModeKeys[currentSetting]) {
-    currentSetting = invertDarkModeObj[currentSetting];
-  } else if (currentSetting === null) {
-    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
-  } else {
-    return;
-  }
-  setLS(darkModeStorageKey, currentSetting);
-  return currentSetting;
-};
-
-/**
- * bind click event for toggle button
- */
-var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
-function bindToggleButton() {
-    btn.on('click',(e) => {
-      const mode = toggleCustomDarkMode();
-      applyCustomDarkModeSettings(mode);
-    });
-}
-
-applyCustomDarkModeSettings();
-document.addEventListener("DOMContentLoaded", bindToggleButton);
-volantis.pjax.push(bindToggleButton);
-volantis.pjax.send(()=>{
-	btn.unbind('click');
-},'toggle-mode-btn-unbind');
-</script>
-
-
-
-
-
-
-
-
-<script>
-function listennSidebarTOC() {
-  const navItems = document.querySelectorAll(".toc li");
-  if (!navItems.length) return;
-  const sections = [...navItems].map((element) => {
-    const link = element.querySelector(".toc-link");
-    const target = document.getElementById(
-      decodeURI(link.getAttribute("href")).replace("#", "")
-    );
-    link.addEventListener("click", (event) => {
-      event.preventDefault();
-      window.scrollTo({
-		top: target.offsetTop + 100,
-		
-		behavior: "smooth"
-		
-	  });
-    });
-    return target;
-  });
-
-  function activateNavByIndex(target) {
-    if (target.classList.contains("active-current")) return;
-
-    document.querySelectorAll(".toc .active").forEach((element) => {
-      element.classList.remove("active", "active-current");
-    });
-    target.classList.add("active", "active-current");
-    let parent = target.parentNode;
-    while (!parent.matches(".toc")) {
-      if (parent.matches("li")) parent.classList.add("active");
-      parent = parent.parentNode;
-    }
-  }
-
-  function findIndex(entries) {
-    let index = 0;
-    let entry = entries[index];
-    if (entry.boundingClientRect.top > 0) {
-      index = sections.indexOf(entry.target);
-      return index === 0 ? 0 : index - 1;
-    }
-    for (; index < entries.length; index++) {
-      if (entries[index].boundingClientRect.top <= 0) {
-        entry = entries[index];
-      } else {
-        return sections.indexOf(entry.target);
-      }
-    }
-    return sections.indexOf(entry.target);
-  }
-
-  function createIntersectionObserver(marginTop) {
-    marginTop = Math.floor(marginTop + 10000);
-    let intersectionObserver = new IntersectionObserver(
-      (entries, observe) => {
-        let scrollHeight = document.documentElement.scrollHeight + 100;
-        if (scrollHeight > marginTop) {
-          observe.disconnect();
-          createIntersectionObserver(scrollHeight);
-          return;
-        }
-        let index = findIndex(entries);
-        activateNavByIndex(navItems[index]);
-      },
-      {
-        rootMargin: marginTop + "px 0px -100% 0px",
-        threshold: 0,
-      }
-    );
-    sections.forEach((element) => {
-      element && intersectionObserver.observe(element);
-    });
-  }
-  createIntersectionObserver(document.documentElement.scrollHeight);
-}
-
-document.addEventListener("DOMContentLoaded", listennSidebarTOC);
-document.addEventListener("pjax:success", listennSidebarTOC);
-</script>
-
-<!-- more -->
-
- 
-	   
-	    
-
-
-<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
-
-
-<script>
-    var pjax;
-    document.addEventListener('DOMContentLoaded', function () {
-      pjax = new Pjax({
-        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
-        selectors: [
-          "title",
-          
-          "#pjax-container",
-          "#pjax-header-nav-list"
-        ],
-        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
-        timeout: 5000
-      });
-    });
-
-    document.addEventListener('pjax:send', function (e) {
-      //window.stop(); // 相当于点击了浏览器的停止按钮
-
-      try {
-        var currentUrl = window.location.pathname;
-        var targetUrl = e.triggerElement.href;
-        var banUrl = [""];
-        if (banUrl[0] != "") {
-          banUrl.forEach(item => {
-            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
-              window.location.href = targetUrl;
-            }
-          });
-        }
-      } catch (error) {}
-
-      window.subData = null; // 移除标题（用于一二级导航栏切换处）
-
-      volantis.$switcher.removeClass('active'); // 关闭移动端激活的搜索框
-      volantis.$header.removeClass('z_search-open'); // 关闭移动端激活的搜索框
-      volantis.$wrapper.removeClass('sub'); // 跳转页面时关闭二级导航
-
-      // 解绑事件 避免重复监听
-      volantis.$topBtn.unbind('click');
-      $('.menu a').unbind('click');
-      $(window).unbind('resize');
-      $(window).unbind('scroll');
-      $(document).unbind('scroll');
-      $(document).unbind('click');
-      $('body').unbind('click');
-	  // 使用 volantis.pjax.send 方法传入pjax:send回调函数 参见layout/_partial/scripts/global.ejs
-	  volantis.pjax.method.send.start();
-    });
-
-    document.addEventListener('pjax:complete', function () {
-      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
-      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
-      $('script[data-pjax], .pjax-reload script').each(function () {
-        $(this).parent().append($(this).remove());
-      });
-      try{
-		// 使用 volantis.pjax.push 方法传入重载函数 参见layout/_partial/scripts/global.ejs
-		volantis.pjax.method.complete.start();
-      } catch (e) {
-        console.log(e);
-      }
-    });
-
-    document.addEventListener('pjax:error', function (e) {
-	  // 使用 volantis.pjax.error 方法传入pjax:error回调函数 参见layout/_partial/scripts/global.ejs
-	  volantis.pjax.method.error.start();
-      window.location.href = e.triggerElement.href;
-    });
-</script>
- 
-	  
-    </div>
-  </body>
+</body>
 </html>
