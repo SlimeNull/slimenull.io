@@ -16,23 +16,23 @@
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
 
 <script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;example.com&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;always&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
-<meta name="description" content="音波:首先是初中物理知识, 声音是物体的振动造成的, 所以从时间上看, 这个物体的位置不断变动, 下面这个图象, 就是音波了  采样:因为计算机无法存储整个音波, 只能存储音波上一个个的点, 而这一个个的点, 就是采样:  采样率:采样率就是采样的密集程度, 如果太过密集, 那么占用的存储空间就会大很多, 但如果采样率小了, 那么这些采样与原波形的形状就有所不同了.  样本大小:样本大小表示计算机">
+<meta name="description" content="关于音频的基础知识">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[0] 音频, 采样, 采样率, 样本大小, 样本编码">
 <meta property="og:url" content="http://example.com/2021/05/06/202105061954/index.html">
 <meta property="og:site_name" content="SlimeNull&#39;s Blog">
-<meta property="og:description" content="音波:首先是初中物理知识, 声音是物体的振动造成的, 所以从时间上看, 这个物体的位置不断变动, 下面这个图象, 就是音波了  采样:因为计算机无法存储整个音波, 只能存储音波上一个个的点, 而这一个个的点, 就是采样:  采样率:采样率就是采样的密集程度, 如果太过密集, 那么占用的存储空间就会大很多, 但如果采样率小了, 那么这些采样与原波形的形状就有所不同了.  样本大小:样本大小表示计算机">
+<meta property="og:description" content="关于音频的基础知识">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="c:/Users/Null/AppData/Roaming/Typora/typora-user-images/image-20210506192326369.png">
 <meta property="og:image" content="c:/Users/Null/AppData/Roaming/Typora/typora-user-images/image-20210506191916062.png">
 <meta property="og:image" content="c:/Users/Null/AppData/Roaming/Typora/typora-user-images/image-20210506193034097.png">
 <meta property="og:image" content="c:/Users/Null/AppData/Roaming/Typora/typora-user-images/image-20210506194019619.png">
 <meta property="article:published_time" content="2021-05-05T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-05-11T03:40:59.915Z">
+<meta property="article:modified_time" content="2021-05-11T10:48:18.395Z">
 <meta property="article:author" content="SlimeNull">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="c:/Users/Null/AppData/Roaming/Typora/typora-user-images/image-20210506192326369.png">
@@ -226,12 +226,13 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-05-11 11:40:59" itemprop="dateModified" datetime="2021-05-11T11:40:59+08:00">2021-05-11</time>
+        <time title="Modified: 2021-05-11 18:48:18" itemprop="dateModified" datetime="2021-05-11T18:48:18+08:00">2021-05-11</time>
       </span>
 
   
 </div>
 
+            <div class="post-description">关于音频的基础知识</div>
         </div>
       </header>
 
@@ -261,13 +262,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/05/01/202105012247/" rel="prev" title="[Web] 25行 CSS 代码实现轮播图">
-                  <i class="fa fa-chevron-left"></i> [Web] 25行 CSS 代码实现轮播图
+                <a href="/2021/05/05/202105051127/" rel="prev" title="在 Y 分钟内学会 Python">
+                  <i class="fa fa-chevron-left"></i> 在 Y 分钟内学会 Python
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/05/09/202105092349/" rel="next" title="使用 NAudio 实现音频可视化">
-                  使用 NAudio 实现音频可视化 <i class="fa fa-chevron-right"></i>
+                <a href="/2021/05/06/202105061949/" rel="next" title="[C#] NAudio 各种常见使用方式 播放 录制 转码 音频可视化">
+                  [C#] NAudio 各种常见使用方式 播放 录制 转码 音频可视化 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -295,14 +296,14 @@
   </span>
   <span class="author" itemprop="copyrightHolder">SlimeNull</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
 
     </div>
   </footer>
 
   
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   

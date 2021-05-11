@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;example.com&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;always&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
+<meta name="description" content="分析有道翻译的API, 然后用来做翻译小程序">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[项目实例] 手把手教你使用Python写一个功能非常强大的翻译程序">
+<meta property="og:url" content="http://example.com/2021/02/04/202102040502/index.html">
+<meta property="og:site_name" content="SlimeNull&#39;s Blog">
+<meta property="og:description" content="分析有道翻译的API, 然后用来做翻译小程序">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210204040516540.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210204040735158.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210204041108490.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210204041301694.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210204041441767.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210204041544186.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210204041758373.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210204042129770.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210204042414558.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210204042519905.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210204042621283.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210204042857110.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210204043152952.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210204043225607.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210204043446223.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210204050132590.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2021-02-03T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-05-11T09:47:20.617Z">
+<meta property="article:author" content="SlimeNull">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20210204040516540.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70">
+
+
+<link rel="canonical" href="http://example.com/2021/02/04/202102040502/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;http:&#x2F;&#x2F;example.com&#x2F;2021&#x2F;02&#x2F;04&#x2F;202102040502&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;02&#x2F;04&#x2F;202102040502&#x2F;&quot;,&quot;title&quot;:&quot;[项目实例] 手把手教你使用Python写一个功能非常强大的翻译程序&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>[项目实例] 手把手教你使用Python写一个功能非常强大的翻译程序 | SlimeNull's Blog</title><script src="/js/config.js"></script>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">SlimeNull's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">For the better opensource world!</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+        <li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>Sitemap</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E"><span class="nav-number">1.</span> <span class="nav-text">关于:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="nav-number">1.1.</span> <span class="nav-text">准备工作:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E6%90%9E"><span class="nav-number">1.2.</span> <span class="nav-text">开搞:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5"><span class="nav-number">1.3.</span> <span class="nav-text">下载链接:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%84%E5%91%8A"><span class="nav-number">1.4.</span> <span class="nav-text">预告:</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">SlimeNull</p>
+  <div class="site-description" itemprop="description">Newbie... Learning...</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">70</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/slimenull" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;slimenull" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:slimenull@outlook.com" title="E-Mail → mailto:slimenull@outlook.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/441842015" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;441842015" rel="noopener" target="_blank">Bilibili</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/04/202102040502/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="SlimeNull">
+      <meta itemprop="description" content="Newbie... Learning...">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SlimeNull's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          [项目实例] 手把手教你使用Python写一个功能非常强大的翻译程序
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-02-04 00:00:00" itemprop="dateCreated datePublished" datetime="2021-02-04T00:00:00+08:00">2021-02-04</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-05-11 17:47:20" itemprop="dateModified" datetime="2021-05-11T17:47:20+08:00">2021-05-11</time>
+      </span>
+
+  
+</div>
+
+            <div class="post-description">分析有道翻译的API, 然后用来做翻译小程序</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="关于"><a href="#关于" class="headerlink" title="关于:"></a>关于:</h2><p>程序是借助API的(废话), 所以在无网络时, 没办法使用. 成品下载地址在文章末.<br><img src="https://img-blog.csdnimg.cn/20210204040516540.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="成果"></p>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作:"></a>准备工作:</h3><p>导入库, request(发送请求) 和 json(解析返回数据).</p>
+<h3 id="开搞"><a href="#开搞" class="headerlink" title="开搞:"></a>开搞:</h3><p>首先, 是找到我们所需要的API, 瞧瞧这个链接: <a target="_blank" rel="noopener" href="https://ai.youdao.com/product-fanyi-text.s">有道翻译体验</a><br><img src="https://img-blog.csdnimg.cn/20210204040735158.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="有道翻译体验"><br>虽说是体验, 但是我都用了巨长一段时间却没有任何问题, 看来这个API至少短时间内不会有任何变更了~</p>
+<p>然后就是破解API的请求内容了. 打开浏览器调试, 转到网络选项卡, 然后重新翻译一下, 好的, 结果很明显, 芜湖 :-D<br><img src="https://img-blog.csdnimg.cn/20210204041108490.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="破解API"><br>post请求, 3个参数, q是翻译内容, from和to表示翻译的语言, 那么, 试着换一下语言吧.<br><img src="https://img-blog.csdnimg.cn/20210204041301694.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="中文翻译为日文"><br>哦, 我们得到了中文与日文的对应数据, zh-CHS 和 ja, 还有更多语言呢, 看看HTML节点吧<br><img src="https://img-blog.csdnimg.cn/20210204041441767.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="看看英文"><br><img src="https://img-blog.csdnimg.cn/20210204041544186.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="结果"><br>哦豁, 比想象中的要简单! 2就是to的意思, 那么, 我们能得到所有的语言对应参数值了!<br><img src="https://img-blog.csdnimg.cn/20210204041758373.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="HTML节点很清晰啊"><br>记录下来吧~</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">参数: q:翻译文本   from:从语言   to:至语言</span><br><span class="line">语言支持的值: 中文:zh-CHS, 英语:en, 日语:ja, 韩语:ko, 法语:fr, 俄语:ru, </span><br><span class="line">    西班牙语:es, 葡萄牙语:pt, 越南语:vi, 德语:de, 印尼语:id</span><br><span class="line">    阿拉伯语:ar</span><br></pre></td></tr></table></figure>
+<p>接下来, 就是对网页中, 源代码的进一步分析了, 检查”翻译”按钮的节点, 然后查看click事件监听代码.<br><img src="https://img-blog.csdnimg.cn/20210204042129770.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="检查按钮"><br><img src="https://img-blog.csdnimg.cn/20210204042414558.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="代码找到"><br><img src="https://img-blog.csdnimg.cn/20210204042519905.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="源代码"><br><img src="https://img-blog.csdnimg.cn/20210204042621283.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="返回值描述到手"><br>然后, 回到刚刚的网络选项卡, 然后重新翻译一下, 查看返回值.<br><img src="https://img-blog.csdnimg.cn/20210204042857110.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="返回值"><br>弄到 Visual Studio Code里面, 保存为json文件, 然后格式化文档.<br><img src="https://img-blog.csdnimg.cn/20210204043152952.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="格式化文档"><br><img src="https://img-blog.csdnimg.cn/20210204043225607.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="翻译结果到手"><br>但是, 不止如此, 我们再尝试翻译一些, 词, 例如 sugar, 然后看看返回值, 不出所料, 果然!<br><img src="https://img-blog.csdnimg.cn/20210204043446223.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="暗藏玄机"><br>返回值里面包含的内容不是一般的多啊, 甚至还有音标, hhh</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;returnPhrase&quot;</span>: [</span><br><span class="line">        <span class="string">&quot;sugar&quot;</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">&quot;query&quot;</span>: <span class="string">&quot;sugar\n&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;errorCode&quot;</span>: <span class="string">&quot;0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;l&quot;</span>: <span class="string">&quot;en2zh-CHS&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;tSpeakUrl&quot;</span>: <span class="string">&quot;http://openapi.youdao.com/ttsapi?q=%E7%B3%96&amp;langType=zh-CHS&amp;sign=B212B7714049BBB65257DC9D64234EA0&amp;salt=1612384414308&amp;voice=4&amp;format=mp3&amp;appKey=2423360539ba5632&amp;ttsVoiceStrict=false&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;web&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">&quot;value&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;糖&quot;</span>,</span><br><span class="line">                <span class="string">&quot;食糖&quot;</span>,</span><br><span class="line">                <span class="string">&quot;白糖&quot;</span>,</span><br><span class="line">                <span class="string">&quot;糖分&quot;</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">&quot;key&quot;</span>: <span class="string">&quot;Sugar&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">&quot;value&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;红糖&quot;</span>,</span><br><span class="line">                <span class="string">&quot;黄糖&quot;</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">&quot;key&quot;</span>: <span class="string">&quot;brown sugar&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">&quot;value&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;糖用甜菜&quot;</span>,</span><br><span class="line">                <span class="string">&quot;甜菜&quot;</span>,</span><br><span class="line">                <span class="string">&quot;糖甜菜&quot;</span>,</span><br><span class="line">                <span class="string">&quot;糖料甜菜&quot;</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">&quot;key&quot;</span>: <span class="string">&quot;Sugar beet&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">&quot;requestId&quot;</span>: <span class="string">&quot;f54b0c24-4818-4d7e-ab04-8123adec8671&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;translation&quot;</span>: [</span><br><span class="line">        <span class="string">&quot;糖&quot;</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">&quot;dict&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;url&quot;</span>: <span class="string">&quot;yddict://m.youdao.com/dict?le=eng&amp;q=sugar%0A&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;webdict&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;url&quot;</span>: <span class="string">&quot;http://m.youdao.com/dict?le=eng&amp;q=sugar%0A&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;basic&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;exam_type&quot;</span>: [</span><br><span class="line">            <span class="string">&quot;初中&quot;</span>,</span><br><span class="line">            <span class="string">&quot;高中&quot;</span>,</span><br><span class="line">            <span class="string">&quot;CET4&quot;</span>,</span><br><span class="line">            <span class="string">&quot;CET6&quot;</span>,</span><br><span class="line">            <span class="string">&quot;考研&quot;</span>,</span><br><span class="line">            <span class="string">&quot;SAT&quot;</span></span><br><span class="line">        ],</span><br><span class="line">        <span class="attr">&quot;us-phonetic&quot;</span>: <span class="string">&quot;ˈʃʊɡər&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;phonetic&quot;</span>: <span class="string">&quot;ˈʃʊɡə(r)&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;uk-phonetic&quot;</span>: <span class="string">&quot;ˈʃʊɡə(r)&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;wfs&quot;</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">&quot;wf&quot;</span>: &#123;</span><br><span class="line">                    <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;复数&quot;</span>,</span><br><span class="line">                    <span class="attr">&quot;value&quot;</span>: <span class="string">&quot;sugars&quot;</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">&quot;wf&quot;</span>: &#123;</span><br><span class="line">                    <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;过去式&quot;</span>,</span><br><span class="line">                    <span class="attr">&quot;value&quot;</span>: <span class="string">&quot;sugared&quot;</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">&quot;wf&quot;</span>: &#123;</span><br><span class="line">                    <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;过去分词&quot;</span>,</span><br><span class="line">                    <span class="attr">&quot;value&quot;</span>: <span class="string">&quot;sugared&quot;</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">&quot;wf&quot;</span>: &#123;</span><br><span class="line">                    <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;现在分词&quot;</span>,</span><br><span class="line">                    <span class="attr">&quot;value&quot;</span>: <span class="string">&quot;sugaring&quot;</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">&quot;wf&quot;</span>: &#123;</span><br><span class="line">                    <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;第三人称单数&quot;</span>,</span><br><span class="line">                    <span class="attr">&quot;value&quot;</span>: <span class="string">&quot;sugars&quot;</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        ],</span><br><span class="line">        <span class="attr">&quot;uk-speech&quot;</span>: <span class="string">&quot;http://openapi.youdao.com/ttsapi?q=sugar%0A&amp;langType=en&amp;sign=C668ACDF9C58F3D76BADC5B54F1BDEE7&amp;salt=1612384414308&amp;voice=5&amp;format=mp3&amp;appKey=2423360539ba5632&amp;ttsVoiceStrict=false&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;explains&quot;</span>: [</span><br><span class="line">            <span class="string">&quot;n. 糖；食糖；甜言蜜语&quot;</span>,</span><br><span class="line">            <span class="string">&quot;vt. 加糖于；粉饰&quot;</span>,</span><br><span class="line">            <span class="string">&quot;vi. 形成糖&quot;</span>,</span><br><span class="line">            <span class="string">&quot;n. (Sugar)人名；(英)休格&quot;</span></span><br><span class="line">        ],</span><br><span class="line">        <span class="attr">&quot;us-speech&quot;</span>: <span class="string">&quot;http://openapi.youdao.com/ttsapi?q=sugar%0A&amp;langType=en&amp;sign=C668ACDF9C58F3D76BADC5B54F1BDEE7&amp;salt=1612384414308&amp;voice=6&amp;format=mp3&amp;appKey=2423360539ba5632&amp;ttsVoiceStrict=false&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;isWord&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">&quot;speakUrl&quot;</span>: <span class="string">&quot;http://openapi.youdao.com/ttsapi?q=sugar%0A&amp;langType=en&amp;sign=C668ACDF9C58F3D76BADC5B54F1BDEE7&amp;salt=1612384414308&amp;voice=4&amp;format=mp3&amp;appKey=2423360539ba5632&amp;ttsVoiceStrict=false&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>是不是已经有些感到兴奋了呢? 现在, 开始正式Coding吧! </p>
+<p>先是以自动识别语言开始吧. 那么, 首先是最基本的导库与定义:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line">url = <span class="string">&#x27;https://aidemo.youdao.com/trans&#x27;</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">有道翻译API, 支持get与post</span></span><br><span class="line"><span class="string">参数: q:翻译文本   from:从语言   to:至语言</span></span><br><span class="line"><span class="string"> 语言支持的值: 中文:zh-CHS, 英语:en, 日语:ja, 韩语:ko, 法语:fr, 俄语:ru, </span></span><br><span class="line"><span class="string">     西班牙语:es, 葡萄牙语:pt, 越南语:vi, 德语:de, 印尼语:id</span></span><br><span class="line"><span class="string">     阿拉伯语:ar</span></span><br><span class="line"><span class="string"> 错误码: 411:过于频繁   413:访问上限   103:字符太长   410:过于频繁</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>然后是请求</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">translate</span>(<span class="params">text</span>):</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        data = &#123;<span class="string">&quot;q&quot;</span>: text, <span class="string">&quot;from&quot;</span>: <span class="string">&quot;auto&quot;</span>, <span class="string">&quot;to&quot;</span>: <span class="string">&quot;auto&quot;</span>&#125;</span><br><span class="line">        resp = requests.post(url, data)</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">    <span class="keyword">return</span> resp</span><br></pre></td></tr></table></figure>
+<p>然后是打印翻译结果:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">advancedmode = <span class="literal">False</span>      <span class="comment"># 默认状态下, 不展示所有信息, 当advancedMode为True时, 展示更多内容</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">listPrint</span>(<span class="params">obj, iden, ps = <span class="string">&#x27;&#x27;</span></span>):</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;\n&quot;</span>.join(<span class="string">&#x27; &#x27;</span> * iden + ps + <span class="built_in">str</span>(i) <span class="keyword">for</span> i <span class="keyword">in</span> obj))</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">printrst</span>(<span class="params">resp</span>):</span></span><br><span class="line">    <span class="keyword">if</span> resp <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span> <span class="keyword">and</span> resp.status_code == <span class="number">200</span>:</span><br><span class="line">        respJson = json.loads(resp.text)</span><br><span class="line">        <span class="keyword">if</span> advancedmode:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot; &lt;0&gt; Result:&quot;</span>)</span><br><span class="line">            <span class="keyword">if</span> <span class="string">&quot;translation&quot;</span> <span class="keyword">in</span> respJson:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot;       Normal:&quot;</span>)</span><br><span class="line">                listPrint(respJson[<span class="string">&quot;translation&quot;</span>], <span class="number">9</span>)</span><br><span class="line">            <span class="keyword">if</span> <span class="string">&quot;basic&quot;</span> <span class="keyword">in</span> respJson <span class="keyword">and</span> <span class="string">&quot;explains&quot;</span> <span class="keyword">in</span> respJson[<span class="string">&quot;basic&quot;</span>]:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot;       Basic:&quot;</span>)</span><br><span class="line">                listPrint(respJson[<span class="string">&quot;basic&quot;</span>][<span class="string">&quot;explains&quot;</span>], <span class="number">9</span>)</span><br><span class="line">            <span class="keyword">if</span> <span class="string">&quot;web&quot;</span> <span class="keyword">in</span> respJson:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot;       From web:&quot;</span>)</span><br><span class="line">                index = <span class="number">1</span></span><br><span class="line">                <span class="keyword">for</span> i <span class="keyword">in</span> respJson[<span class="string">&quot;web&quot;</span>]:</span><br><span class="line">                    <span class="built_in">print</span>(<span class="string">&quot;         %d. %s:&quot;</span> % (index, i[<span class="string">&quot;key&quot;</span>]))</span><br><span class="line">                    listPrint(i[<span class="string">&quot;value&quot;</span>], <span class="number">14</span>)</span><br><span class="line">                    index += <span class="number">1</span></span><br><span class="line">            <span class="comment"># print</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot; &lt;0&gt; Result:&quot;</span>)</span><br><span class="line">            listPrint(respJson[<span class="string">&quot;translation&quot;</span>], <span class="number">7</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Request error, status code: %s&quot;</span> % (resp.status_code <span class="keyword">if</span> resp != <span class="literal">None</span> <span class="keyword">else</span> <span class="string">&quot;???&quot;</span>))</span><br></pre></td></tr></table></figure>
+<p>既然都有advancedMode了, 所以得让用户有办法打开关闭它, 模拟简单的命令行吧, 如果输入的内容是以 $ 开头的, 则判定为命令, 并运行这个命令</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">runcmd</span>(<span class="params">cmd</span>):</span></span><br><span class="line">    cmdline = cmd.split(<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">    cmdname = cmdline[<span class="number">0</span>].lower()</span><br><span class="line">    <span class="keyword">if</span> cmdname == <span class="string">&#x27;$&#x27;</span>:</span><br><span class="line">        <span class="keyword">global</span> advancedmode</span><br><span class="line">        advancedmode = <span class="keyword">not</span> advancedmode</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot; &lt;$&gt; AdvancedMode: %s&quot;</span> % advancedmode)</span><br><span class="line">    <span class="keyword">elif</span> cmdname == <span class="string">&#x27;$help&#x27;</span>:</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(cmdline) == <span class="number">1</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot; &lt;$&gt; Help document, type &#x27;$help command&#x27; for more information.&quot;</span>)</span><br><span class="line">            listPrint((</span><br><span class="line">                <span class="string">&quot;$      : Switch Advanced Mode.&quot;</span>,</span><br><span class="line">                <span class="string">&quot;$help  : Display help document.&quot;</span></span><br><span class="line">                <span class="string">&quot;&quot;</span></span><br><span class="line">            ), <span class="number">7</span>)</span><br><span class="line">        <span class="keyword">elif</span> <span class="built_in">len</span>(cmdline) == <span class="number">2</span>:</span><br><span class="line">            <span class="keyword">if</span> cmdline[<span class="number">1</span>] == <span class="string">&#x27;$&#x27;</span>:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot; &lt;$&gt; Switch Advanced Mode.&quot;</span>)</span><br><span class="line">                listPrint((</span><br><span class="line">                    <span class="string">&quot;Advanced Mode: %s&quot;</span> % advancedmode,</span><br><span class="line">                    <span class="string">&quot;If advanced mode is enabled, more information will be shown. default value is disabled.&quot;</span></span><br><span class="line">                ), <span class="number">7</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot; &lt;$&gt; Help document: unknown command.&quot;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot; &lt;$&gt; Help document: unknown usage.&quot;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot; &lt;$&gt; Unknown command.&quot;</span>)   <span class="comment"># 更多指令, 你来添加吧, 例如切换语言</span></span><br></pre></td></tr></table></figure>
+<p>最后是主程序</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Null.Translator, by Null, type &#x27;$help&#x27; for help. ref: Youdao AI translation api.&quot;</span>)</span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        text = <span class="built_in">input</span>(<span class="string">&quot;\n&gt;&gt;&gt; &quot;</span>)   <span class="comment"># 模拟像Python那样的提示符, 很酷炫的有木有</span></span><br><span class="line">        <span class="keyword">if</span> text != <span class="string">&#x27;&#x27;</span>:</span><br><span class="line">            <span class="keyword">if</span> text.startswith(<span class="string">&#x27;$&#x27;</span>):</span><br><span class="line">                runcmd(text)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                resp = translate(text)</span><br><span class="line">                printrst(resp)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            exit()     <span class="comment"># 如果输入为空, 则退出, 方便退出程序. (表示懒得挪鼠标 滑稽)</span></span><br></pre></td></tr></table></figure>
+<p>(最后, 上面所有的代码片, 拼在一起, 就能运行, 懒得拼的话, 就点击下面的下载链接下载吧)</p>
+<p>再多说一句, 那个API返回的数据辣么多, 想实现什么功能自己随便实现啦~</p>
+<h3 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接:"></a>下载链接:</h3><p>CSDN站内下载: <a target="_blank" rel="noopener" href="https://download.csdn.net/download/m0_46555380/15031403">Null.Translator</a></p>
+<p><br/><br/><br/><br/></p>
+<h3 id="预告"><a href="#预告" class="headerlink" title="预告:"></a>预告:</h3><p>这可不就是一个文本转语音API嘛! 薅有道羊毛真不戳<br><img src="https://img-blog.csdnimg.cn/20210204050132590.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="哈哈"></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/02/04/202102040605/" rel="prev" title="[干货] 杜绝广告, 让你的电脑变的更加干净舒适">
+                  <i class="fa fa-chevron-left"></i> [干货] 杜绝广告, 让你的电脑变的更加干净舒适
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/02/06/202102060124/" rel="next" title="[踩坑记录] C# 源代码被误删, 通过反编译之前编译好的文件来拯救这一切, 三款反编译工具对比">
+                  [踩坑记录] C# 源代码被误删, 通过反编译之前编译好的文件来拯救这一切, 三款反编译工具对比 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+<script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">SlimeNull</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

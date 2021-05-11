@@ -337,9 +337,9 @@ NexT.utils = {
     }
   },
 
-  getScript: function(src, options = {}, legacyCondition) {
+  getScript: function(url, options = {}, legacyCondition) {
     if (typeof options === 'function') {
-      return this.getScript(src, {
+      return this.getScript(url, {
         condition: legacyCondition
       }).then(options);
     }
@@ -373,16 +373,7 @@ NexT.utils = {
         script.onload = resolve;
         script.onerror = reject;
 
-        if (typeof src === 'object') {
-          const { url, integrity } = src;
-          script.src = url;
-          if (integrity) {
-            script.integrity = integrity;
-            script.crossOrigin = 'anonymous';
-          }
-        } else {
-          script.src = src;
-        }
+        script.src = url;
         (parentNode || document.head).appendChild(script);
       }
     });

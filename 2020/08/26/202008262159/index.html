@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;example.com&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;always&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
+<meta name="description" content="其实是因为路径写错了, 在写相对路径时, 忘记带 &#39;.&#39; 就会被认为是根目录">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[踩坑记录] Image.Save 遇到 A generic error occurred in GDI+ 异常">
+<meta property="og:url" content="http://example.com/2020/08/26/202008262159/index.html">
+<meta property="og:site_name" content="SlimeNull&#39;s Blog">
+<meta property="og:description" content="其实是因为路径写错了, 在写相对路径时, 忘记带 &#39;.&#39; 就会被认为是根目录">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020082621482447.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200826215228152.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="article:published_time" content="2020-08-25T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-05-11T08:57:37.021Z">
+<meta property="article:author" content="SlimeNull">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/2020082621482447.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70#pic_center">
+
+
+<link rel="canonical" href="http://example.com/2020/08/26/202008262159/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;http:&#x2F;&#x2F;example.com&#x2F;2020&#x2F;08&#x2F;26&#x2F;202008262159&#x2F;&quot;,&quot;path&quot;:&quot;2020&#x2F;08&#x2F;26&#x2F;202008262159&#x2F;&quot;,&quot;title&quot;:&quot;[踩坑记录] Image.Save 遇到 A generic error occurred in GDI+ 异常&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>[踩坑记录] Image.Save 遇到 A generic error occurred in GDI+ 异常 | SlimeNull's Blog</title><script src="/js/config.js"></script>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">SlimeNull's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">For the better opensource world!</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+        <li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>Sitemap</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A6%81%E7%82%B9"><span class="nav-number">1.</span> <span class="nav-text">要点:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E7%9A%84%E8%A7%A3%E5%86%B3%E8%BF%87%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">我的解决过程</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">SlimeNull</p>
+  <div class="site-description" itemprop="description">Newbie... Learning...</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">70</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/slimenull" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;slimenull" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:slimenull@outlook.com" title="E-Mail → mailto:slimenull@outlook.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/441842015" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;441842015" rel="noopener" target="_blank">Bilibili</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/08/26/202008262159/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="SlimeNull">
+      <meta itemprop="description" content="Newbie... Learning...">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SlimeNull's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          [踩坑记录] Image.Save 遇到 A generic error occurred in GDI+ 异常
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-08-26 00:00:00" itemprop="dateCreated datePublished" datetime="2020-08-26T00:00:00+08:00">2020-08-26</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-05-11 16:57:37" itemprop="dateModified" datetime="2021-05-11T16:57:37+08:00">2021-05-11</time>
+      </span>
+
+  
+</div>
+
+            <div class="post-description">其实是因为路径写错了, 在写相对路径时, 忘记带 '.' 就会被认为是根目录</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="要点"><a href="#要点" class="headerlink" title="要点:"></a>要点:</h2><ol start="0">
+<li>先看自己路径是不是错了</li>
+<li>然后看自己的路径表达是不是不符合标准, 例如这样的”/ewq_00010.png”, 它指向C:\根目录下的一个文件! 而.NET中一般不允许对那里进行写操作</li>
+<li>然后, 我就是在上述内容的情况上犯了错… “/ewq_00010.png”应该是”./ewq_00010.png”, 使用这个点来表示, 它是一个相对路径<h2 id="我的解决过程"><a href="#我的解决过程" class="headerlink" title="我的解决过程"></a>我的解决过程</h2></li>
+</ol>
+<ul>
+<li>Image 保存的Path是”/ewq_00010.png”</li>
+</ul>
+<ol>
+<li>在发现这个问题后, 我首先是检查了一下, 我写的路径是否是正确的, 比如, 目录是否存在, 我使用VS的调试功能, 测试了一下, Directory.Exists(Path.GetDirectoryName(“/ewq_00010.png”)) 结果是true, 初步判断不是路径问题</li>
+<li>后来查资料, 发现可能是这个Image是FromFile生成的而报错, 但我的不是, 它完完全全是一个new出来的, 我又尝试性地指定ImageFormat.Png, 果然, 问题没有解决</li>
+<li>继续查资料, 发现有人使用FileStream解决了问题, 我也尝试, 然后失败了… 写入被拒绝, 查了查资料, 为什么FileStream写入被拒绝, 一堆乱七八糟的东西, 看都看不懂, 大概就是讲ASP.NET不能在C:\写入, 但是我又不是ASP.NET</li>
+<li>然后我尝试转个弯子, 用MemoryStream, 然后最后用File.WriteAllBytes写入试试, 最后, 我突然发现, 它提示我, 对C:/的写入被拒绝, 蛤??? 我的路径不是”/ewq_0010.png”吗??? 我脑子跟Linux联想了起来, 总不会… 单个斜杠指C:/吧?</li>
+</ol>
+<blockquote>
+<p>这个输出路径, 其实是经过我的一个PathCombine函数拼合而成的路径, 它很简单, 但也因为它的判断很简单而嗝屁了</p>
+</blockquote>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">CombinePath</span>(<span class="params"><span class="built_in">string</span> path1, <span class="built_in">string</span> path2</span>)  <span class="comment">// 简单粗暴路径拼合</span></span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (path2.Contains(<span class="string">&#x27;:&#x27;</span>))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> ArgumentException(<span class="string">&quot;第二个路径不可是绝对路径&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> path1.TrimEnd(<span class="keyword">new</span> <span class="built_in">char</span>[] &#123; <span class="string">&#x27;/&#x27;</span>, <span class="string">&#x27;\\&#x27;</span> &#125;).Replace(<span class="string">&#x27;\\&#x27;</span>, <span class="string">&#x27;/&#x27;</span>) + <span class="string">&quot;/&quot;</span> + path2.TrimStart(<span class="keyword">new</span> <span class="built_in">char</span>[] &#123; <span class="string">&#x27;/&#x27;</span>, <span class="string">&#x27;\\&#x27;</span> &#125;).Replace(<span class="string">&#x27;\\&#x27;</span>, <span class="string">&#x27;/&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>然后我把这个函数改成了这样:</li>
+</ol>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">CombinePath</span>(<span class="params"><span class="built_in">string</span> path1, <span class="built_in">string</span> path2</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (path2.Contains(<span class="string">&#x27;:&#x27;</span>))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> ArgumentException(<span class="string">&quot;第二个路径不可是绝对路径&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">string</span> result = path1.TrimEnd(<span class="keyword">new</span> <span class="built_in">char</span>[] &#123; <span class="string">&#x27;/&#x27;</span>, <span class="string">&#x27;\\&#x27;</span> &#125;).Replace(<span class="string">&#x27;\\&#x27;</span>, <span class="string">&#x27;/&#x27;</span>) + <span class="string">&quot;/&quot;</span> + path2.TrimStart(<span class="keyword">new</span> <span class="built_in">char</span>[] &#123; <span class="string">&#x27;/&#x27;</span>, <span class="string">&#x27;\\&#x27;</span> &#125;).Replace(<span class="string">&#x27;\\&#x27;</span>, <span class="string">&#x27;/&#x27;</span>);</span><br><span class="line">    <span class="keyword">if</span> (result.Contains(<span class="string">&#x27;:&#x27;</span>))     <span class="comment">// 简单粗暴判断你是否是绝对路径</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> result;   <span class="comment">// 如果是绝对路径就直接返回, 也不管他是否是对的</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;./&quot;</span> + result.Trim(<span class="string">&#x27;/&#x27;</span>);   <span class="comment">// 如果不是, 则加一个&quot;./&quot;来强调, &#x27;我这是相对路径&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li>然后… 程序成功跑起来了…</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/2020082621482447.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>最后, 这个程序是用于根据atlas图像索引表分解图像的, 如果你觉得有参考价值, 可以私信我<br><img src="https://img-blog.csdnimg.cn/20200826215228152.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/07/10/202007100311/" rel="prev" title="[C#] 一个类实现拖拽调整窗体或控件大小">
+                  <i class="fa fa-chevron-left"></i> [C#] 一个类实现拖拽调整窗体或控件大小
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/10/19/202010192116/" rel="next" title="[C#] 各种关于类型与反射的常用操作.">
+                  [C#] 各种关于类型与反射的常用操作. <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+<script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">SlimeNull</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

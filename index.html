@@ -16,8 +16,8 @@
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
 
 <script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;example.com&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;always&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
 <meta name="description" content="Newbie... Learning...">
@@ -186,7 +186,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202104181107/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202102111042/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -199,7 +199,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/11/202104181107/" class="post-title-link" itemprop="url">[C#] C# 与 Java 的一些差异</a>
+          <a href="/2021/05/11/202102111042/" class="post-title-link" itemprop="url">[C#] 音乐播放 3 种方式 Demo 与 MCI 音乐播放器封装类.</a>
         </h2>
 
         <div class="post-meta-container">
@@ -211,7 +211,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-05-11 11:24:43 / Modified: 11:41:23" itemprop="dateCreated datePublished" datetime="2021-05-11T11:24:43+08:00">2021-05-11</time>
+      <time title="Created: 2021-05-11 10:54:31 / Modified: 18:11:47" itemprop="dateCreated datePublished" datetime="2021-05-11T10:54:31+08:00">2021-05-11</time>
     </span>
 
   
@@ -224,33 +224,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>这篇文章, 可以帮助你借助 C# 的知识快速入门 Java, 并且详细介绍 C# 与 Java 的重要差异</p>
-</blockquote>
-<h2 id="1-数据类型"><a href="#1-数据类型" class="headerlink" title="1. 数据类型"></a>1. 数据类型</h2><ol>
-<li>在 C# 中, 基本的数据类型都有别名, 例如字符串 String, 可以简写为 string, Int32 可以简写为 int, 但是在 Java 中, 不存在这些. 使用字符串, 必须要首字母大写, 使用布尔值必须要用 boolean.</li>
-<li>在 C# 中, String 数据基本数据类型, 而在 Java 中, 严格来讲, 它不属于基本数据类型. Java 中的基本数据类型更像是 C# 中的值类型, 只有 int, char, boolean 这些直接存储的数据类型才是基本数据类型. <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String str = <span class="string">&quot;这是一个字符串&quot;</span>;          <span class="comment">// 正确</span></span><br></pre></td></tr></table></figure></li>
-<li>在 C# 中, int 就是 int, 它与其他复杂的数据类型例如 StringBuilder 差异并不大, 但是在 Java 中, int, char, boolean 这类基本数据类型不可以作为泛型参数来使用, 例如你不能创建一个存储 int 的 List, 如果要创建存储 int 的 List, 你需要使用 int 的包装类 Integer, 创建 ArrayList&lt;Integer&gt;.  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> v = <span class="keyword">new</span> ArrayList&lt;<span class="keyword">int</span>&gt;();        <span class="comment">// 错误</span></span><br><span class="line"><span class="keyword">var</span> v = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();    <span class="comment">// 正确</span></span><br></pre></td></tr></table></figure></li>
-<li>Java 不存在值类型, 只有基本数据类型和引用对象类型, 两者用法不同.</li>
-<li>Java 的基本数据类型不存在成员, 例如在 C# 中, int 有静态常量 MaxValue, 但是 Java 中的 int 没有, 如果要获取整数的最大值, 需要使用 int 的包装类 Integer <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> v = <span class="keyword">int</span>.MAX_VALUE;      <span class="comment">// 错误</span></span><br><span class="line"><span class="keyword">int</span> v = Integer.MAX_VALUE;  <span class="comment">// 正确</span></span><br></pre></td></tr></table></figure>
-<h2 id="2-枚举"><a href="#2-枚举" class="headerlink" title="2. 枚举"></a>2. 枚举</h2></li>
-<li>在 C# 中, 枚举是特殊的值类型, 本质是 int, 定义起来非常简单, 在 Java 中, 如果要自定义每一个枚举成员所对应的 int 值, 则定义起来非常繁琐: <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">   <span class="keyword">public</span> <span class="class"><span class="keyword">enum</span> <span class="title">ColumnAlignment</span> </span>&#123;</span><br><span class="line">    Left(<span class="number">1</span>), Right(<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">   	<span class="keyword">private</span> <span class="keyword">int</span> value;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">ColumnAlignment</span><span class="params">(<span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">       	<span class="keyword">this</span>.value = value;</span><br><span class="line">   	&#125;</span><br><span class="line">   	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">value</span><span class="params">()</span></span>&#123;</span><br><span class="line">       	<span class="keyword">return</span> <span class="keyword">this</span>.value;</span><br><span class="line">   	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="3-Linq-与-Stream"><a href="#3-Linq-与-Stream" class="headerlink" title="3. Linq 与 Stream"></a>3. Linq 与 Stream</h2></li>
-<li>在 C# 中, 对于可迭代对象的批量处理, 我们经常使用 Linq, 但是在 Java 中, 是不支持拓展函数的, 所以自然无法实现 Linq 这类方便的操作类, Stream 勉强可以作为 Linq 的替代品, 例如与 Linq 中 Select 方法对应的 Stream.map: <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// C#:</span></span><br><span class="line">List&lt;<span class="built_in">string</span>&gt; strs = <span class="keyword">new</span> <span class="built_in">int</span>[]&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">0</span>&#125;.Select(v =&gt; v.ToString()).ToList();</span><br></pre></td></tr></table></figure>
- <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Java:</span></span><br><span class="line">List&lt;String&gt; strs = Arrays.stream(<span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">0</span>&#125;).map(v -&gt; v.toString()).collect(Collectors.toList());</span><br></pre></td></tr></table></figure>
-不过在实际使用中, 由于 Java 区分 int 和 Integer, 所以会有诸多不便, 但大多都有解决方案, 所以 Java 只是会让人感到有些抓狂罢了.</li>
-</ol>
-<h2 id="4-Lambda"><a href="#4-Lambda" class="headerlink" title="4. Lambda:"></a>4. Lambda:</h2><p>匿名函数, 这绝对是最舒服的东西之一了, 在使用 Linq 的时候肯定无时无刻使用 lambda 的.</p>
-<ol>
-<li>在 C# 中, lambda 表达式的操作符是: <code>=&gt;</code>, 而 Java 中是 <code>-&gt;</code></li>
-<li>在 C# 中, lambda 可以使用委托来存储 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Action action = () =&gt;</span><br><span class="line">&#123;</span><br><span class="line">    Console.WriteLine(<span class="string">&quot;F**k you, world&quot;</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
- 在 Java 中, 需要使用接口来存储委托 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">   <span class="class"><span class="keyword">interface</span> <span class="title">Action</span></span>&#123;</span><br><span class="line">       <span class="function"><span class="keyword">void</span> <span class="title">execute</span><span class="params">()</span></span>;    <span class="comment">// 方法名随意</span></span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">Action action = () -&gt; &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;F**k you, world&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="5-泛型"><a href="#5-泛型" class="headerlink" title="5. 泛型"></a>5. 泛型</h2>这绝对是 Java 中最让人不爽的地方了.</li>
-<li>你无法创建泛型数组 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> &lt;T&gt; T[] createArray(<span class="keyword">int</span> len)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> T[len];                    <span class="comment">// 会报错, &#x27;类型参数 T 无法直接实例化&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>你无法判断一个对象是否是某个泛型类型 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> &lt;T&gt; <span class="function"><span class="keyword">boolean</span> <span class="title">isType</span><span class="params">(Object obj)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> obj <span class="keyword">instanceof</span> T;              <span class="comment">// 会报错</span></span><br><span class="line">    <span class="comment">// 同样, T.class 也是不可用的</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>你无法在使用如下重载: <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Action</span><span class="params">(List&lt;T&gt; list)</span></span>&#123;&#125;;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Action</span><span class="params">(List&lt;Integer&gt; list)</span></span>&#123;&#125;;    <span class="comment">// 会报错:两个方法具有同样的擦除</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ol>
-
+          <p>SoundPlayer, MciCommandString, NAudio 三种方式播放音频示例</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/11/202102111042/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -276,7 +258,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202104062237/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202012180116/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -289,7 +271,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/11/202104062237/" class="post-title-link" itemprop="url">[C#] 二进制, 十进制, 十六进制, 进制转换</a>
+          <a href="/2021/05/11/202012180116/" class="post-title-link" itemprop="url">[Linux] 执行但不阻塞 以‘后台‘模式启动程序或脚本</a>
         </h2>
 
         <div class="post-meta-container">
@@ -301,7 +283,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-05-11 11:22:44 / Modified: 11:41:36" itemprop="dateCreated datePublished" datetime="2021-05-11T11:22:44+08:00">2021-05-11</time>
+      <time title="Created: 2021-05-11 10:28:39 / Modified: 17:39:53" itemprop="dateCreated datePublished" datetime="2021-05-11T10:28:39+08:00">2021-05-11</time>
     </span>
 
   
@@ -314,18 +296,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h3 id="在源码中"><a href="#在源码中" class="headerlink" title="在源码中:"></a>在源码中:</h3><p>C# 中允许在代码中使用 0x 开头的十六进制数字, 以及 0b 开头的二进制数字来表示一个整数. 下面的语法是合理的.</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> a = <span class="number">123</span>;</span><br><span class="line"><span class="built_in">int</span> b = <span class="number">0xFF</span>;</span><br><span class="line"><span class="built_in">int</span> c = <span class="number">0b10010</span>;</span><br></pre></td></tr></table></figure>
-
-<h3 id="从数字转换"><a href="#从数字转换" class="headerlink" title="从数字转换"></a>从数字转换</h3><p>将一个数字转换为某进制的字符串, 有两种方式:</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一种: 使用 Convert 类. 可转换为 二进制 八进制 十进制 十六进制</span></span><br><span class="line">Convert.ToString(<span class="number">10</span>, <span class="number">2</span>);      <span class="comment">// 二进制, 返回 &quot;1010&quot;</span></span><br><span class="line">Convert.ToString(<span class="number">10</span>, <span class="number">8</span>);      <span class="comment">// 八进制, 返回 &quot;12&quot;</span></span><br><span class="line">Convert.ToString(<span class="number">10</span>, <span class="number">10</span>);     <span class="comment">// 十进制, 返回 &quot;10&quot;</span></span><br><span class="line">Convert.ToString(<span class="number">10</span>, <span class="number">16</span>);     <span class="comment">// 十六进制, 返回 &quot;a&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 第二种: 使用对象的 ToString() 方法. 只能转换为 十六进制</span></span><br><span class="line"><span class="number">10.</span>ToString(<span class="string">&quot;x&quot;</span>);             <span class="comment">// 返回 &quot;a&quot;</span></span><br><span class="line"><span class="number">10.</span>ToString(<span class="string">&quot;X&quot;</span>);             <span class="comment">// 返回 &quot;A&quot;</span></span><br><span class="line"><span class="number">10.</span>ToString(<span class="string">&quot;x2&quot;</span>);            <span class="comment">// 返回 &quot;0a&quot;</span></span><br><span class="line"><span class="number">10.</span>ToString(<span class="string">&quot;X2&quot;</span>);            <span class="comment">// 返回 &quot;0A&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 第三种: 使用 String 的静态方法 Format, 只能转换为 十六进制</span></span><br><span class="line"><span class="built_in">string</span>.Format(<span class="string">&quot;&#123;0:x&#125;&quot;</span>, <span class="number">10</span>)    <span class="comment">// 返回 &quot;a&quot;</span></span><br><span class="line"><span class="built_in">string</span>.Format(<span class="string">&quot;&#123;0:X&#125;&quot;</span>, <span class="number">10</span>)    <span class="comment">// 返回 &quot;A&quot;</span></span><br><span class="line"><span class="built_in">string</span>.Format(<span class="string">&quot;&#123;0:x2&#125;&quot;</span>, <span class="number">10</span>)   <span class="comment">// 返回 &quot;0a&quot;, 即填充至宽2</span></span><br><span class="line"><span class="built_in">string</span>.Format(<span class="string">&quot;&#123;0:X2&#125;&quot;</span>, <span class="number">10</span>)   <span class="comment">// 返回 &quot;0A&quot;, 同样填充</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="从字符串转换"><a href="#从字符串转换" class="headerlink" title="从字符串转换"></a>从字符串转换</h3><p>将字符串转换为对应的数据, 有两种方式</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一种: 使用 Convert类. 可转换 二进制 八进制 十进制 十六进制, 这里以 int 为例</span></span><br><span class="line">Convert.ToInt32(<span class="string">&quot;1010&quot;</span>, <span class="number">2</span>);   <span class="comment">// 二进制, 返回 10</span></span><br><span class="line">Convert.ToInt32(<span class="string">&quot;12&quot;</span>, <span class="number">8</span>);     <span class="comment">// 八进制, 返回 10</span></span><br><span class="line">Convert.ToInt32(<span class="string">&quot;10&quot;</span>, <span class="number">10</span>);    <span class="comment">// 十进制, 返回 10</span></span><br><span class="line">Convert.ToInt32(<span class="string">&quot;A&quot;</span>, <span class="number">16</span>);     <span class="comment">// 十六进制, 返回 10</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第二种: 使用对应数据类型的 Parse 方法, 只支持 十六进制, 这里以 int 为例</span></span><br><span class="line"><span class="built_in">int</span>.Parse(<span class="string">&quot;A&quot;</span>, NumberStyles.HexNumber);  <span class="comment">// 返回 10</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="从字符数组转换"><a href="#从字符数组转换" class="headerlink" title="从字符数组转换"></a>从字符数组转换</h3><p>最常用的就是将字符数组转换为十六进制字符串了, Linq 可以帮到我们许多</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">byte</span>[] array; <span class="comment">// 假定这个数组有值</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 第一种: 对应上面的 Convert 类静态方法, 也是个人比较推荐的</span></span><br><span class="line"><span class="built_in">string</span>.Join(<span class="literal">null</span>, array.Select(v =&gt; Convert.ToString(v, <span class="number">16</span>).PadLeft(<span class="number">2</span>, <span class="string">&#x27;0&#x27;</span>)));      <span class="comment">// 返回小写的</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 第二种: 对应格式化方法</span></span><br><span class="line"><span class="built_in">string</span>.Join(<span class="literal">null</span>, array.Select(v =&gt; v.ToString(<span class="string">&quot;X2&quot;</span>)));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 第三种: 对应 String 静态 Format 方法</span></span><br><span class="line"><span class="built_in">string</span>.Join(<span class="literal">null</span>, array.Select(v =&gt; <span class="built_in">string</span>.Format(<span class="string">&quot;&#123;0:X2&#125;&quot;</span>, v)));</span><br></pre></td></tr></table></figure>
+          <p>使用 & 连接符或者 nohup 指令</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/11/202012180116/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -351,7 +330,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202104091009/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202012122333/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -364,7 +343,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/11/202104091009/" class="post-title-link" itemprop="url">[C#] 关于 Linq 拓展函数对迭代对象进行更改不生效的问题</a>
+          <a href="/2021/05/11/202012122333/" class="post-title-link" itemprop="url">[0] 如何进入启动配置 (BIOS/UEFI配置)</a>
         </h2>
 
         <div class="post-meta-container">
@@ -376,7 +355,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-05-11 11:22:44 / Modified: 11:41:32" itemprop="dateCreated datePublished" datetime="2021-05-11T11:22:44+08:00">2021-05-11</time>
+      <time title="Created: 2021-05-11 10:23:41 / Modified: 17:35:52" itemprop="dateCreated datePublished" datetime="2021-05-11T10:23:41+08:00">2021-05-11</time>
     </span>
 
   
@@ -389,25 +368,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>偶然发现, 在使用 Linq 的 Select 方法时, 如果对被迭代对象进行更改, 那么这个更改是不会生效的</p>
-</blockquote>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义我们自己要用的类型</span></span><br><span class="line"><span class="keyword">class</span> <span class="title">QWQ</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">int</span> qwq;</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">string</span> awa;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">QWQ</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">QWQ</span>(<span class="params"><span class="built_in">int</span> qwq</span>)</span>&#123;<span class="keyword">this</span>.qwq=qwq;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 用来执行的方法</span></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">LinqExTest</span>(<span class="params"></span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    List&lt;QWQ&gt; qwqs = Enumerable.Range(<span class="number">0</span>, <span class="number">10</span>).Select(v =&gt; <span class="keyword">new</span> QWQ(v)).ToList();</span><br><span class="line">    <span class="comment">// 在迭代的同时, 对原对象进行更改:</span></span><br><span class="line">    qwqs.Select(v =&gt; v.awa = v.qwq.ToString());</span><br><span class="line">    <span class="comment">// 打印对象</span></span><br><span class="line">    Console.WriteLine(<span class="built_in">string</span>.Join(<span class="string">&quot;\n&quot;</span>, qwqs.Select(v =&gt; <span class="string">$&quot;qwq:<span class="subst">&#123;v.qwq&#125;</span>, awa:<span class="subst">&#123;v.awa&#125;</span>&quot;</span>)));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>最终执行效果是: </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">qwq:0, awa:</span><br><span class="line">qwq:1, awa:</span><br><span class="line">qwq:2, awa:</span><br><span class="line">qwq:3, awa:</span><br><span class="line">qwq:4, awa:</span><br><span class="line">qwq:5, awa:</span><br><span class="line">qwq:6, awa:</span><br><span class="line">qwq:7, awa:</span><br><span class="line">qwq:8, awa:</span><br><span class="line">qwq:9, awa:</span><br></pre></td></tr></table></figure>
-
-<p>显然, 对原对象的更改没有生效! 即便是改为通过索引来访问, 也是不彳亍:</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qwqs.Select((v, i) =&gt; qwqs[i].awa = v.qwq.ToString());</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">qwq:0, awa:</span><br><span class="line">qwq:1, awa:</span><br><span class="line">qwq:2, awa:</span><br><span class="line">qwq:3, awa:</span><br><span class="line">qwq:4, awa:</span><br><span class="line">qwq:5, awa:</span><br><span class="line">qwq:6, awa:</span><br><span class="line">qwq:7, awa:</span><br><span class="line">qwq:8, awa:</span><br><span class="line">qwq:9, awa:</span><br></pre></td></tr></table></figure>
-
-
-
-<p>但是如果将 Select 语句改为 foreach 语句, 则会成功运行:</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">foreach</span>(<span class="keyword">var</span> v <span class="keyword">in</span> qwqs)</span><br><span class="line">    v.awa = v.qwq.ToString();</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">qwq:0, awa:0</span><br><span class="line">qwq:1, awa:1</span><br><span class="line">qwq:2, awa:2</span><br><span class="line">qwq:3, awa:3</span><br><span class="line">qwq:4, awa:4</span><br><span class="line">qwq:5, awa:5</span><br><span class="line">qwq:6, awa:6</span><br><span class="line">qwq:7, awa:7</span><br><span class="line">qwq:8, awa:8</span><br><span class="line">qwq:9, awa:9</span><br></pre></td></tr></table></figure>
+          <p>一般可以用小键盘上的 del 键, 或者 F2, F12</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/11/202012122333/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -433,7 +402,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202104180238/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/09/202105092349/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -446,7 +415,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/11/202104180238/" class="post-title-link" itemprop="url">[C#] 计算 MD5 SHA1 SHA256 SHA384 SHA512 CRC32</a>
+          <a href="/2021/05/09/202105092349/" class="post-title-link" itemprop="url">使用 NAudio 实现音频可视化</a>
         </h2>
 
         <div class="post-meta-container">
@@ -456,10 +425,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-05-11 11:22:44 / Modified: 11:41:28" itemprop="dateCreated datePublished" datetime="2021-05-11T11:22:44+08:00">2021-05-11</time>
+      <time title="Created: 2021-05-09 00:00:00" itemprop="dateCreated datePublished" datetime="2021-05-09T00:00:00+08:00">2021-05-09</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-05-11 18:49:38" itemprop="dateModified" datetime="2021-05-11T18:49:38+08:00">2021-05-11</time>
+      </span>
 
   
 </div>
@@ -471,9 +446,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>直接贴代码了, 复制即可用, 源码部分来自网络.</p>
-<p>如果要计算字符串的 MD5 值, 直接 Encoding.UTF8.GetBytes() 然后就可以了</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.IO;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">NullLib.HashCalc</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">HashHelper</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">CalcMd5x32</span>(<span class="params"><span class="built_in">byte</span>[] bytValue</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> CalcMd5x32(<span class="keyword">new</span> MemoryStream(bytValue));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">CalcMd5x16</span>(<span class="params"><span class="built_in">byte</span>[] bytValue</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> CalcMd5x16(<span class="keyword">new</span> MemoryStream(bytValue));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">CalcShax1</span>(<span class="params"><span class="built_in">byte</span>[] bytValue</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> CalcShax1(<span class="keyword">new</span> MemoryStream(bytValue));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">CalcShax256</span>(<span class="params"><span class="built_in">byte</span>[] bytValue</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> CalcShax256(<span class="keyword">new</span> MemoryStream(bytValue));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">CalcShax384</span>(<span class="params"><span class="built_in">byte</span>[] bytValue</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> CalcShax384(<span class="keyword">new</span> MemoryStream(bytValue));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">CalcShax512</span>(<span class="params"><span class="built_in">byte</span>[] bytValue</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> CalcShax512(<span class="keyword">new</span> MemoryStream(bytValue));</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">CalcMd5x32</span>(<span class="params">Stream stream</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">var</span> MD5CSP = <span class="keyword">new</span> System.Security.Cryptography.MD5CryptoServiceProvider();</span><br><span class="line"></span><br><span class="line">            <span class="built_in">byte</span>[] bytHash = MD5CSP.ComputeHash(stream);</span><br><span class="line">            MD5CSP.Clear();</span><br><span class="line"></span><br><span class="line">            <span class="built_in">string</span> sHash = BytesToHex(bytHash);</span><br><span class="line">            <span class="keyword">return</span> sHash;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">CalcMd5x16</span>(<span class="params">Stream stream</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> CalcMd5x32(stream).Substring(<span class="number">8</span>, <span class="number">16</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">CalcShax1</span>(<span class="params">Stream stream</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">var</span> SHA1CSP = <span class="keyword">new</span> System.Security.Cryptography.SHA1CryptoServiceProvider();</span><br><span class="line"></span><br><span class="line">            <span class="built_in">byte</span>[] bytHash = SHA1CSP.ComputeHash(stream);</span><br><span class="line">            SHA1CSP.Clear();</span><br><span class="line"></span><br><span class="line">            <span class="built_in">string</span> sHash = BytesToHex(bytHash);</span><br><span class="line">            <span class="keyword">return</span> sHash;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">CalcShax256</span>(<span class="params">Stream stream</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">var</span> SHA256CSP = <span class="keyword">new</span> System.Security.Cryptography.SHA256CryptoServiceProvider();</span><br><span class="line"></span><br><span class="line">            <span class="built_in">byte</span>[] bytHash = SHA256CSP.ComputeHash(stream);</span><br><span class="line">            SHA256CSP.Clear();</span><br><span class="line"></span><br><span class="line">            <span class="built_in">string</span> sHash = BytesToHex(bytHash);</span><br><span class="line">            <span class="keyword">return</span> sHash;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">CalcShax384</span>(<span class="params">Stream stream</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">var</span> SHA384CSP = <span class="keyword">new</span> System.Security.Cryptography.SHA384CryptoServiceProvider();</span><br><span class="line"></span><br><span class="line">            <span class="built_in">byte</span>[] bytHash = SHA384CSP.ComputeHash(stream);</span><br><span class="line">            SHA384CSP.Clear();</span><br><span class="line"></span><br><span class="line">            <span class="built_in">string</span> sHash = BytesToHex(bytHash);</span><br><span class="line">            <span class="keyword">return</span> sHash;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">CalcShax512</span>(<span class="params">Stream stream</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">var</span> SHA512CSP = <span class="keyword">new</span> System.Security.Cryptography.SHA512CryptoServiceProvider();</span><br><span class="line"></span><br><span class="line">            <span class="built_in">byte</span>[] bytHash = SHA512CSP.ComputeHash(stream);</span><br><span class="line">            SHA512CSP.Clear();</span><br><span class="line"></span><br><span class="line">            <span class="built_in">string</span> sHash = BytesToHex(bytHash);</span><br><span class="line">            <span class="keyword">return</span> sHash;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">CalcCrcx32</span>(<span class="params">Stream stream</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            Crc32 calculator = <span class="keyword">new</span> Crc32();</span><br><span class="line">            <span class="built_in">byte</span>[] buffer = calculator.ComputeHash(stream);</span><br><span class="line">            calculator.Clear();</span><br><span class="line">            <span class="comment">//将字节数组转换成十六进制的字符串形式</span></span><br><span class="line">            <span class="built_in">string</span> sHash = BytesToHex(buffer);</span><br><span class="line">            <span class="keyword">return</span> sHash;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">BytesToHex</span>(<span class="params"><span class="built_in">byte</span>[] array</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">string</span>.Join(<span class="literal">null</span>, array.Select(v =&gt; Convert.ToString(v, <span class="number">16</span>).PadLeft(<span class="number">2</span>, <span class="string">&#x27;0&#x27;</span>)));</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 提供 CRC32 算法的实现</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">class</span> <span class="title">Crc32</span> : <span class="title">System.Security.Cryptography.HashAlgorithm</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">public</span> <span class="keyword">const</span> <span class="built_in">uint</span> DefaultPolynomial = <span class="number">0xedb88320</span>;</span><br><span class="line">            <span class="keyword">public</span> <span class="keyword">const</span> <span class="built_in">uint</span> DefaultSeed = <span class="number">0xffffffff</span>;</span><br><span class="line">            <span class="keyword">private</span> <span class="built_in">uint</span> hash;</span><br><span class="line">            <span class="keyword">private</span> <span class="built_in">uint</span> seed;</span><br><span class="line">            <span class="keyword">private</span> <span class="built_in">uint</span>[] table;</span><br><span class="line">            <span class="keyword">private</span> <span class="keyword">static</span> <span class="built_in">uint</span>[] defaultTable;</span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="title">Crc32</span>(<span class="params"></span>)</span></span><br><span class="line">            &#123;</span><br><span class="line">                table = InitializeTable(DefaultPolynomial);</span><br><span class="line">                seed = DefaultSeed;</span><br><span class="line">                Initialize();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="title">Crc32</span>(<span class="params"><span class="built_in">uint</span> polynomial, <span class="built_in">uint</span> seed</span>)</span></span><br><span class="line">            &#123;</span><br><span class="line">                table = InitializeTable(polynomial);</span><br><span class="line">                <span class="keyword">this</span>.seed = seed;</span><br><span class="line">                Initialize();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">Initialize</span>(<span class="params"></span>)</span></span><br><span class="line">            &#123;</span><br><span class="line">                hash = seed;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">HashCore</span>(<span class="params"><span class="built_in">byte</span>[] buffer, <span class="built_in">int</span> start, <span class="built_in">int</span> length</span>)</span></span><br><span class="line">            &#123;</span><br><span class="line">                hash = CalculateHash(table, hash, buffer, start, length);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="built_in">byte</span>[] <span class="title">HashFinal</span>(<span class="params"></span>)</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">byte</span>[] hashBuffer = uintToBigEndianBytes(~hash);</span><br><span class="line">                <span class="keyword">this</span>.HashValue = hashBuffer;</span><br><span class="line">                <span class="keyword">return</span> hashBuffer;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">uint</span> <span class="title">Compute</span>(<span class="params"><span class="built_in">byte</span>[] buffer</span>)</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> ~CalculateHash(InitializeTable(DefaultPolynomial), DefaultSeed, buffer, <span class="number">0</span>, buffer.Length);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">uint</span> <span class="title">Compute</span>(<span class="params"><span class="built_in">uint</span> seed, <span class="built_in">byte</span>[] buffer</span>)</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> ~CalculateHash(InitializeTable(DefaultPolynomial), seed, buffer, <span class="number">0</span>, buffer.Length);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">uint</span> <span class="title">Compute</span>(<span class="params"><span class="built_in">uint</span> polynomial, <span class="built_in">uint</span> seed, <span class="built_in">byte</span>[] buffer</span>)</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> ~CalculateHash(InitializeTable(polynomial), seed, buffer, <span class="number">0</span>, buffer.Length);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="built_in">uint</span>[] <span class="title">InitializeTable</span>(<span class="params"><span class="built_in">uint</span> polynomial</span>)</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (polynomial == DefaultPolynomial &amp;&amp; defaultTable != <span class="literal">null</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">return</span> defaultTable;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="built_in">uint</span>[] createTable = <span class="keyword">new</span> <span class="built_in">uint</span>[<span class="number">256</span>];</span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; <span class="number">256</span>; i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="built_in">uint</span> entry = (<span class="built_in">uint</span>)i;</span><br><span class="line">                    <span class="keyword">for</span> (<span class="built_in">int</span> j = <span class="number">0</span>; j &lt; <span class="number">8</span>; j++)</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="keyword">if</span> ((entry &amp; <span class="number">1</span>) == <span class="number">1</span>)</span><br><span class="line">                            entry = (entry &gt;&gt; <span class="number">1</span>) ^ polynomial;</span><br><span class="line">                        <span class="keyword">else</span></span><br><span class="line">                            entry = entry &gt;&gt; <span class="number">1</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                    createTable[i] = entry;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (polynomial == DefaultPolynomial)</span><br><span class="line">                &#123;</span><br><span class="line">                    defaultTable = createTable;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> createTable;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="built_in">uint</span> <span class="title">CalculateHash</span>(<span class="params"><span class="built_in">uint</span>[] table, <span class="built_in">uint</span> seed, <span class="built_in">byte</span>[] buffer, <span class="built_in">int</span> start, <span class="built_in">int</span> size</span>)</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">uint</span> crc = seed;</span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = start; i &lt; size; i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">unchecked</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        crc = (crc &gt;&gt; <span class="number">8</span>) ^ table[buffer[i] ^ crc &amp; <span class="number">0xff</span>];</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> crc;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="function"><span class="keyword">private</span> <span class="built_in">byte</span>[] <span class="title">uintToBigEndianBytes</span>(<span class="params"><span class="built_in">uint</span> x</span>)</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">byte</span>[] &#123; (<span class="built_in">byte</span>)((x &gt;&gt; <span class="number">24</span>) &amp; <span class="number">0xff</span>), (<span class="built_in">byte</span>)((x &gt;&gt; <span class="number">16</span>) &amp; <span class="number">0xff</span>), (<span class="built_in">byte</span>)((x &gt;&gt; <span class="number">8</span>) &amp; <span class="number">0xff</span>), (<span class="built_in">byte</span>)(x &amp; <span class="number">0xff</span>) &#125;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <p>音频可视化, 很美的有木有?</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/09/202105092349/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -499,7 +480,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202103191944/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/06/202105061949/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -512,7 +493,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/11/202103191944/" class="post-title-link" itemprop="url">[C#] WPF TextBox 在 PreviewDragEnter 中指定 Effect 且指定 Handled 为 true, 仍然无法正常实现拖拽操作.</a>
+          <a href="/2021/05/06/202105061949/" class="post-title-link" itemprop="url">[C#] NAudio 各种常见使用方式 播放 录制 转码 音频可视化</a>
         </h2>
 
         <div class="post-meta-container">
@@ -522,10 +503,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-05-11 11:21:32 / Modified: 11:41:53" itemprop="dateCreated datePublished" datetime="2021-05-11T11:21:32+08:00">2021-05-11</time>
+      <time title="Created: 2021-05-06 00:00:00" itemprop="dateCreated datePublished" datetime="2021-05-06T00:00:00+08:00">2021-05-06</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-05-11 18:48:02" itemprop="dateModified" datetime="2021-05-11T18:48:02+08:00">2021-05-11</time>
+      </span>
 
   
 </div>
@@ -537,25 +524,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>在开始之前, 请先阅读这篇文章: <a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_46555380/article/details/115014131">[C#] WPF Preview 事件与普通事件的区别</a></p>
-<p>我们知道, 某些控件会对事件进行处理, 导致部分事件我们无法正常使用, 对于 TextBox, 显而易见的是关于拖拽的事件完全不能正常使用. 因而我们需要使用 Preview 事件.</p>
-<p>对于一套拖拽操作, 有以下过程:</p>
-<ol>
-<li>用户拖拽数据进入控件 (DragEnter)</li>
-<li>用户拖拽数据在控件上移动 (DragOver)</li>
-<li>用户拖拽数据在控件上松开鼠标 (Drop)</li>
-</ol>
-<p>对于一个控件, 必须指定这个控件的 AllowDrop 属性为 true, 这个控件才可以接受拖拽操作</p>
-<p>对于上述 3 个事件:</p>
-<ol>
-<li>DragEnter 中, 我们需要写的是判断拖拽的数据的类型, 并设定拖拽效果(DragDropEffects), 指定是否已经处理当前事件(Handled)</li>
-<li>DragOver 中, 与 DragEnter 中一致. 所以这两个事件, 可以通过同一个方法来进行订阅</li>
-<li>Drop 中, 应该写对数据的处理, 例如将数据添加到界面中</li>
-</ol>
-<p>注意! 在 DragEnter 和 DragOver 中, 必须指定 DragDropEffects 才表示允许拖拽. 如果不对 Effects 进行赋值, 那么 Drop 方法将不会被触发.</p>
-<hr>
-<p>相信看完上面的内容, 你已经可以解决你的问题了, 如果无法解决问题, 请在下方评论, 我会继续完善这篇文章</p>
-
+          <p>这绝对是非常清晰的, 关于 NAudio 使用方式的中文文章</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/06/202105061949/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -581,7 +558,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202103191930/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/06/202105061954/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -594,7 +571,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/11/202103191930/" class="post-title-link" itemprop="url">[C#] WPF Preview 事件与普通事件的区别.</a>
+          <a href="/2021/05/06/202105061954/" class="post-title-link" itemprop="url">[0] 音频, 采样, 采样率, 样本大小, 样本编码</a>
         </h2>
 
         <div class="post-meta-container">
@@ -604,10 +581,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-05-11 11:20:21 / Modified: 11:41:58" itemprop="dateCreated datePublished" datetime="2021-05-11T11:20:21+08:00">2021-05-11</time>
+      <time title="Created: 2021-05-06 00:00:00" itemprop="dateCreated datePublished" datetime="2021-05-06T00:00:00+08:00">2021-05-06</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-05-11 18:48:18" itemprop="dateModified" datetime="2021-05-11T18:48:18+08:00">2021-05-11</time>
+      </span>
 
   
 </div>
@@ -619,12 +602,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>很多文章都提到了冒泡事件和隧穿事件, 我是没有去测试过这两个的, 但是有一个非常非常重要的点很多人都忽略了.</p>
-<h3 id="已预处理事件的控件"><a href="#已预处理事件的控件" class="headerlink" title="已预处理事件的控件"></a>已预处理事件的控件</h3><p>在 WPF 中, 部分控件已经对某些事件进行了处理, 例如一个 Button, 它提供了 Click 事件, 而 Click 的本质是 MouseDown 和 MouseUp, 因而, Button 的 MouseDown 和 MouseUp 事件是没办法正常使用的…</p>
-<p>如果需要使用它们, 你得使用 PreviewMouseDown 和 PreviewMouseUp.</p>
-<p>同样, 有很多控件都是这样的, 例如 TextBox, 一个支持输入文本的控件, 同样还支持拖拽事件, 你可以向其中拖拽文本, 但是你不可以向其中拖拽图片, 这也是因为 TextBox 对拖拽事件进行了处理. </p>
-<p>也正因为如此, 即便你 TextBox 的 DragEnter 事件中指定了允许拖拽, 你也是不可以进行拖拽的! 因为 WPF 已经对这个事件进行处理了, 我们的逻辑不会起作用.</p>
-
+          <p>关于音频的基础知识</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/06/202105061954/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -650,7 +636,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202103191842/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/05/202105051127/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -663,7 +649,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/11/202103191842/" class="post-title-link" itemprop="url">[Python] 巧用! 局域网传输文件! 还可以这么玩!!!</a>
+          <a href="/2021/05/05/202105051127/" class="post-title-link" itemprop="url">在 Y 分钟内学会 Python</a>
         </h2>
 
         <div class="post-meta-container">
@@ -673,10 +659,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-05-11 11:19:03 / Modified: 11:42:02" itemprop="dateCreated datePublished" datetime="2021-05-11T11:19:03+08:00">2021-05-11</time>
+      <time title="Created: 2021-05-05 00:00:00" itemprop="dateCreated datePublished" datetime="2021-05-05T00:00:00+08:00">2021-05-05</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-05-11 18:46:16" itemprop="dateModified" datetime="2021-05-11T18:46:16+08:00">2021-05-11</time>
+      </span>
 
   
 </div>
@@ -688,13 +680,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>之前… 我知道了 Python 有着内置的网络库, 甚至可以直接用来原地开一个 http 服务器!</p>
-<p>最近… 频繁的需要在局域网内传输大文件… 用 U 盘当然可以, 但完全没必要,,, 太浪费了<br>也试着用 Python 的套接字来手动将文件数据发送到另一台机器, 然后另一台机器也用 Python 套接字来接收, 并直接写入到文件… 好吧我知道很麻烦没错</p>
-<p>然后… 我突然想起… Python 开那个 HTTP 服务器可不就能直接用来分享文件啊卧槽?</p>
-<p>于是…</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m http.server</span><br></pre></td></tr></table></figure>
-<p>成功了… 而且速度不赖~</p>
-
+          <p>本文是翻译文章, 没有对原文进行过多的更改</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/05/202105051127/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -720,7 +714,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202103191212/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/01/202105012247/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -733,7 +727,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/11/202103191212/" class="post-title-link" itemprop="url">[.NET] 拓展库, 开源库, nuget包收集 (长期更新)</a>
+          <a href="/2021/05/01/202105012247/" class="post-title-link" itemprop="url">[Web] 25行 CSS 代码实现轮播图</a>
         </h2>
 
         <div class="post-meta-container">
@@ -743,10 +737,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-05-11 11:19:03 / Modified: 11:42:07" itemprop="dateCreated datePublished" datetime="2021-05-11T11:19:03+08:00">2021-05-11</time>
+      <time title="Created: 2021-05-01 00:00:00" itemprop="dateCreated datePublished" datetime="2021-05-01T00:00:00+08:00">2021-05-01</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-05-11 18:45:32" itemprop="dateModified" datetime="2021-05-11T18:45:32+08:00">2021-05-11</time>
+      </span>
 
   
 </div>
@@ -758,64 +758,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><strong>如果感兴趣, 可以试试下面的库</strong></p>
-<table>
-<thead>
-<tr>
-<th>名称</th>
-<th>标签</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Newtonsoft.Json</td>
-<td>JSON分析, 文本处理</td>
-<td>非常流行的JSON操作库, 教程也能够轻松在网上找到, 速度也很不错</td>
-</tr>
-<tr>
-<td>NAudio</td>
-<td>音频处理, 录音, 播放音频</td>
-<td>流行而又强大的音频操作库, 支持音频播放, 录制, 转码, 以及音频可视化</td>
-</tr>
-<tr>
-<td>Costura.Fody</td>
-<td>程序打包</td>
-<td>仅需安装这个库, 即可直接使所有需要的程序集内嵌入你的程序, 实现单文件程序</td>
-</tr>
-<tr>
-<td>Html Agility Pack</td>
-<td>HTML解析</td>
-<td>非常方便的HTML解析库, 支持通过XPath来查找节点</td>
-</tr>
-<tr>
-<td>System.Drawing.Common</td>
-<td>图像处理</td>
-<td>你可能会发现 .NET Core 不内置 System.Drawing 程序集 ,那么安装这个吧, 这个是由微软官方发布的功能等同于 System.Drawing 的库</td>
-</tr>
-<tr>
-<td>NullLib.DynamicScanner</td>
-<td>动态输入</td>
-<td>支持你在读取用户输入时就获取用户的输入内容, 并且支持字符的过滤, 移动输入内容到任意位置等功能</td>
-</tr>
-<tr>
-<td>NullLib.ArgsParser</td>
-<td>参数分析</td>
-<td>是否厌倦了平时需要自己分析命令行参数? 试试这个, 简单而易于操作, 支持直接将命令行参数转换为实体对象, 以便于操作</td>
-</tr>
-<tr>
-<td>NullLib.CommandLine</td>
-<td>命令行工具</td>
-<td>如果你在开发一个服务端程序, 并且想要使用户能在服务端运行时可以通过输入命令行来实现特定操作, 这个是非常方便的</td>
-</tr>
-<tr>
-<td>NullLib.PhantomTank</td>
-<td>幻影坦克</td>
-<td>好耶! 是幻影坦克! 来试试用这个库来快捷生成幻影坦克图片吧!</td>
-</tr>
-</tbody></table>
-<hr>
-<p>如果你知道有意思的库, 在评论下留下它的名字, 我们一起完善这个收集.</p>
-
+          <p>不是最漂亮但是一定通用的轮播图示例</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/01/202105012247/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -841,7 +792,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202103081159/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/18/202104180238/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -854,7 +805,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/11/202103081159/" class="post-title-link" itemprop="url">[WPF] Matrix Transform, 矩阵变换. 最最最基础的原理解释.</a>
+          <a href="/2021/04/18/202104180238/" class="post-title-link" itemprop="url">[C#] 计算 MD5 SHA1 SHA256 SHA384 SHA512 CRC32</a>
         </h2>
 
         <div class="post-meta-container">
@@ -864,10 +815,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-05-11 11:16:28 / Modified: 11:42:23" itemprop="dateCreated datePublished" datetime="2021-05-11T11:16:28+08:00">2021-05-11</time>
+      <time title="Created: 2021-04-18 00:00:00" itemprop="dateCreated datePublished" datetime="2021-04-18T00:00:00+08:00">2021-04-18</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-05-11 18:43:50" itemprop="dateModified" datetime="2021-05-11T18:43:50+08:00">2021-05-11</time>
+      </span>
 
   
 </div>
@@ -879,31 +836,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="关于向量"><a href="#关于向量" class="headerlink" title="关于向量:"></a>关于向量:</h2><h3 id="1-向量的基"><a href="#1-向量的基" class="headerlink" title="1. 向量的基"></a>1. 向量的基</h3><p>在计算机科学中, 向量, Vector, 通常这么表示:<br>$$<br>\left[<br>\begin{array}{cc}<br>x\<br>y<br>\end{array}<br>\right]<br>$$<br>向量有两个 “基”, $\overline{i}$, 即 $\overrightarrow{1, 0}$, $\overline{j}$, 即 $\overrightarrow{0, 1}$</p>
-<div align="center">
-<img src="https://img-blog.csdnimg.cn/20210308085632860.png"/>
-</div>
-
-<p>向量可以看作这些基乘以一组数的结果, 即: $\overline{v} = \overline{i} \times a + \overline{j} \times b$, 例如 $[1, 3]$, 就是:<br>$$<br>\overline{i} \times 1 + \overline{j} \times 3<br> = [1, 0] \times 1 + [0, 1] \times 3<br> = [1, 0] + [0, 3]<br> = [1, 3]<br>$$</p>
-<h3 id="2-改变向量的基"><a href="#2-改变向量的基" class="headerlink" title="2. 改变向量的基"></a>2. 改变向量的基</h3><p>当改变向量的基时, 由于向量是一组数与基的乘法, 所以向量也会随之变化.</p>
-<p>例如我们设定两个基为它们顺时针旋转90°后的结果, 即: $\overline i = [0, -1], \overline j = [1, 0]$, 那么 [1, 3] 就变成了:<br>$$<br>\overline i \times 1 + \overline j \times 3<br>= [0, -1] \times 1 + [1, 0] \times 3<br>= [0, -1] + [3, 0]<br>=[3, -1]<br>$$<br>你会发现, 这个向量也随之改变了, 而且恰好是顺时针旋转90°</p>
-<h3 id="3-矩阵的乘法"><a href="#3-矩阵的乘法" class="headerlink" title="3. 矩阵的乘法:"></a>3. 矩阵的乘法:</h3><p>在计算机科学中, 向量如此表示:<br>$$<br>\left[<br>\begin{array}{c}<br>x\y<br>\end{array}<br>\right]<br>$$<br>如果是两个向量, 则是这样, 竖着的, 是一个向量:<br>$$<br>\left[<br>\begin{array}{c}<br>x_1, &amp; x_2\<br>y_1, &amp; y_2<br>\end{array}<br>\right]<br>$$<br>而, 我们刚刚进行的乘法, 其实也是矩阵乘法, 即:<br>$$<br> \left[<br> \begin{array}{c}<br> 0, &amp; -1\<br> 1, &amp; 0<br> \end{array}<br> \right]<br>  \times<br>\left[<br>\begin{array}{c}<br>1\ 3<br>\end{array}<br>\right]=<br> \left[<br> \begin{array}{c}<br> 3 \ -1<br> \end{array}<br> \right]<br>$$</p>
-<h2 id="矩阵变换"><a href="#矩阵变换" class="headerlink" title="矩阵变换"></a>矩阵变换</h2><p>在 WPF 中, 一个矩阵(Matrix)有以下属性: M11, M12, M21, M22, OffsetX, OffsetY.</p>
-<p>其中, M11, M12, M21, M22 表示缩放旋转矩阵:<br>$$<br>\left[<br>\begin{array}{c}<br>M11, &amp; M12 \<br>M21, &amp; M22<br>\end{array}<br>\right]<br>$$<br>它们的默认值是:<br>$$<br>\left[<br>\begin{array}{c}<br>1, &amp; 0 \<br>0, &amp; 1<br>\end{array}<br>\right]<br>$$<br>而进行矩阵变换, 也就是将源图形的每一个点, 与这个矩阵相乘, 最终得到另一些点, 构成一个新的图形.</p>
-<p>而与默认的这个矩阵相乘, 形状不会有任何变化.</p>
-<p>这个矩阵的 M11 和 M21 值, 可以理解为 $\overline i$, M12 和 M22 可以理解为 $\overline j$, 之前我们提到, 如果变化这两个基的值, 那么最终向量也会发生变化, 而当我们将刚刚旋转 90° 后的 $\overline i$ 和 $\overline j$ 拿出来直接代入, 也可以发现, 图形直接旋转了 90°.</p>
-<div align="center">
-<img src="https://img-blog.csdnimg.cn/20210308105727368.png"/>
-</div>
-
-<p>矩阵的基本原理就是矩阵的乘法, 但即便你不理解矩阵的乘法, 去改变 Matrix 中的两个基值, 形状也将跟随基值发生改变.</p>
-<p>而 OffsetX 和 OffsetY, 这两个指定了这两个图形的平移, OffsetX 水平偏移量, OffsetY 垂直偏移量.</p>
-<h2 id="0-参考内容"><a href="#0-参考内容" class="headerlink" title="0. 参考内容:"></a>0. 参考内容:</h2><ol>
-<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ys411472E">哔哩哔哩 3Blue1Brown 线性代数</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2015/09/matrix-multiplication.html">理解矩阵乘法 - 阮一峰的网络日志</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/ljy-endl/p/11411665.html">矩阵乘法 - endl</a></li>
-</ol>
-
+          <p>借助 System.Security.Cryptography 命名空间内的类进行计算</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/18/202104180238/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -929,7 +870,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202103092148/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/18/202104181107/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -942,7 +883,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/11/202103092148/" class="post-title-link" itemprop="url">[踩坑记录] .NET Core, Delegate.BeginInvoke, PlatformNotSupportedException</a>
+          <a href="/2021/04/18/202104181107/" class="post-title-link" itemprop="url">[C#] C# 与 Java 的一些差异, 快速了解 Java 的基础知识</a>
         </h2>
 
         <div class="post-meta-container">
@@ -952,10 +893,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-05-11 11:16:28 / Modified: 11:42:18" itemprop="dateCreated datePublished" datetime="2021-05-11T11:16:28+08:00">2021-05-11</time>
+      <time title="Created: 2021-04-18 00:00:00" itemprop="dateCreated datePublished" datetime="2021-04-18T00:00:00+08:00">2021-04-18</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-05-11 18:45:04" itemprop="dateModified" datetime="2021-05-11T18:45:04+08:00">2021-05-11</time>
+      </span>
 
   
 </div>
@@ -967,36 +914,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="概述"><a href="#概述" class="headerlink" title="概述:"></a>概述:</h2><p>.NET Core 不支持委托的 BeginInvoke 方法, 使用别的方法, 例如 Task 来替代它!</p>
-<h2 id="这件事"><a href="#这件事" class="headerlink" title="这件事:"></a>这件事:</h2><p>首先是… 报了一堆 “平台不支持的” 错误.</p>
-<div align="center">
-<img src="https://img-blog.csdnimg.cn/20210309213418546.png"/>
-</div>
-
-<p>堆栈显示也看不出来是哪里的问题, 但我看到了 Threading 这玩意儿…:</p>
-<div align="center">
-<img src="https://img-blog.csdnimg.cn/20210309213525619.png"/>
-</div>
-
-<p>最后通过 “死亡断点” 发现是这里出的问题, 这是一个异步操作的回调函数.</p>
-<div align="center">
-<img src="https://img-blog.csdnimg.cn/20210309213723524.png"/>
-</div>
-
-<p>进一步调试, 发现是这里, 这里又会 Invoke 一个事件:</p>
-<div align="center">
-<img src="https://img-blog.csdnimg.cn/20210309213924137.png"/>
-<img src="https://img-blog.csdnimg.cn/20210309214018874.png"/>
-</div>
-
-<p>好家伙, 又是一个事件… 然后我看了看订阅了这个事件的地方…</p>
-<div align="center">
-<img src="https://img-blog.csdnimg.cn/20210309214243836.png"/>
-</div>
-
-<p>乍一看,,,, 没啥毛病! 但问题确实出在这里! (我实在是太菜了)<br>最后… 我思考了下, 我在 Invoke 调用的委托里面, 整了异步的操作…… 于是我试着将 BeginInvoke 换成 Invoke, 然后…. 问题解决了!!!</p>
-<p>后来又双叒叕遇到了这个问题,,, 然后仔细搜索了下资料. 懂了. 原来 .NET Core 不支持委托的 BeginInvoke 方法. 而事件的本质就是多播委托!</p>
-
+          <p>C# 与 Java 各有长处, 通过这篇文章, 借助 C# 知识, 学习 Java</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/18/202104181107/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1033,14 +959,14 @@
   </span>
   <span class="author" itemprop="copyrightHolder">SlimeNull</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
 
     </div>
   </footer>
 
   
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   

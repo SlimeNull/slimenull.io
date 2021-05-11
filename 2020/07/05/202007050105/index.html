@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;example.com&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;always&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
+<meta name="description" content="简单的创建 DLL 并在另一个项目中引用这个类库">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[C#] 如何创建DLL并在项目中使用">
+<meta property="og:url" content="http://example.com/2020/07/05/202007050105/index.html">
+<meta property="og:site_name" content="SlimeNull&#39;s Blog">
+<meta property="og:description" content="简单的创建 DLL 并在另一个项目中引用这个类库">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020070500212889.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200705002655466.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200705003106729.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200705003205677.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200705003504505.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200705003754911.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200705004309633.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200705004359951.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200705004541827.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200705005032983.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200705005246473.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200705005450205.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2020-07-04T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-05-11T08:55:32.713Z">
+<meta property="article:author" content="SlimeNull">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/2020070500212889.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70">
+
+
+<link rel="canonical" href="http://example.com/2020/07/05/202007050105/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;http:&#x2F;&#x2F;example.com&#x2F;2020&#x2F;07&#x2F;05&#x2F;202007050105&#x2F;&quot;,&quot;path&quot;:&quot;2020&#x2F;07&#x2F;05&#x2F;202007050105&#x2F;&quot;,&quot;title&quot;:&quot;[C#] 如何创建DLL并在项目中使用&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>[C#] 如何创建DLL并在项目中使用 | SlimeNull's Blog</title><script src="/js/config.js"></script>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">SlimeNull's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">For the better opensource world!</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+        <li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>Sitemap</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F"><span class="nav-number">1.</span> <span class="nav-text">注意:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E4%BA%8EDLL"><span class="nav-number">2.</span> <span class="nav-text">关于DLL:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BADLL%E6%96%87%E4%BB%B6"><span class="nav-number">3.</span> <span class="nav-text">创建DLL文件:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E7%94%A8%E7%94%9F%E6%88%90%E7%9A%84DLL"><span class="nav-number">4.</span> <span class="nav-text">引用生成的DLL:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8DLL%E4%B8%AD%E5%8C%85%E5%90%AB%E7%9A%84%E6%88%90%E5%91%98"><span class="nav-number">5.</span> <span class="nav-text">使用DLL中包含的成员:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E5%88%B0%E6%AD%A4%E7%BB%93%E6%9D%9F"><span class="nav-number">6.</span> <span class="nav-text">文章到此结束.</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E4%BD%9C%E8%80%85"><span class="nav-number">6.0.0.1.</span> <span class="nav-text">关于作者:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%81%94%E7%B3%BB%E6%88%91"><span class="nav-number">6.0.0.2.</span> <span class="nav-text">联系我:</span></a></li></ol></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">SlimeNull</p>
+  <div class="site-description" itemprop="description">Newbie... Learning...</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">70</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/slimenull" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;slimenull" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:slimenull@outlook.com" title="E-Mail → mailto:slimenull@outlook.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/441842015" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;441842015" rel="noopener" target="_blank">Bilibili</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/07/05/202007050105/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="SlimeNull">
+      <meta itemprop="description" content="Newbie... Learning...">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SlimeNull's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          [C#] 如何创建DLL并在项目中使用
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-07-05 00:00:00" itemprop="dateCreated datePublished" datetime="2020-07-05T00:00:00+08:00">2020-07-05</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-05-11 16:55:32" itemprop="dateModified" datetime="2021-05-11T16:55:32+08:00">2021-05-11</time>
+      </span>
+
+  
+</div>
+
+            <div class="post-description">简单的创建 DLL 并在另一个项目中引用这个类库</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="注意"><a href="#注意" class="headerlink" title="注意:"></a>注意:</h2><ol start="0">
+<li>文章适合初学者, 讲的较为详细, 大佬可以绕道</li>
+<li>作者也是自学C#的, 所以有些东西可能讲的也有些不好, 请见谅<h2 id="关于DLL"><a href="#关于DLL" class="headerlink" title="关于DLL:"></a>关于DLL:</h2></li>
+<li>在C#中, DLL可以说是类库, 创建一个类库类型的项目后, 生成时生成的文件时一个DLL文件</li>
+<li>一个类库中, 包含一个或多个类, 这些类处于某个命名空间下, 当引用这个DLL文件后, using 相应的命名空间后即可直接使用类库中所包含的类</li>
+<li>一般的, 创建DLL文件为的是将自己定义的一个类, 直接制作成DLL文件以方便别人使用, 这样不需要复制代码也可以使用你定义的类.</li>
+<li>(对于不了解引用是什么的初学者, 你需要知道, 一个C#程序, 会使用不少的类库, 比如System.dll, System.Windows.Forms.dll, 但是这些.NET框架含有的类库, C#程序可以直接使用, 而不需要将DLL文件置于程序所在目录下, 项目的’引用’说明了这个程序使用了什么类库, 而且在你编程的时候, VS也会根据你引用的类库来给你代码提示)<h2 id="创建DLL文件"><a href="#创建DLL文件" class="headerlink" title="创建DLL文件:"></a>创建DLL文件:</h2></li>
+<li>创建一个 类库(.NET Framework) 项目, 如下图, 不过, 因为我已经有创建过了, 所以我就直接使用之前创建的项目了.<br><img src="https://img-blog.csdnimg.cn/2020070500212889.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="创建一个 类库(.NET Framework) 项目"></li>
+<li>创建完成后, 你就可以写代码了, 要清楚, C#的类库包含的其实就是一个个的类, 或者其他成员(不能是字段).</li>
+<li>下图, 就是我之前的项目, 注意, 这些供使用者访问的成员别忘了使用public修饰. </li>
+<li>我的这个项目, 是一个用来操作Json的类库, 之后将使用它来尝试操作DLL<br><img src="https://img-blog.csdnimg.cn/20200705002655466.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="已经写好代码的类库项目"></li>
+<li>生成项目, 并找到生成的DLL文件.<br><img src="https://img-blog.csdnimg.cn/20200705003106729.png" alt="生成成功"><br><img src="https://img-blog.csdnimg.cn/20200705003205677.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="这就是生成好的DLL文件"><h2 id="引用生成的DLL"><a href="#引用生成的DLL" class="headerlink" title="引用生成的DLL:"></a>引用生成的DLL:</h2></li>
+<li>首先, 转到另外一个项目, 我们将在这个项目中使用之前生成的DLL.<br><img src="https://img-blog.csdnimg.cn/20200705003504505.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="一个新的控制台项目"></li>
+<li>添加引用, 在解决方案管理器中右击项目, 添加, 引用,  <img src="https://img-blog.csdnimg.cn/20200705003754911.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="添加引用"></li>
+<li>添加引用, 在弹出的窗口中点击浏览, 然后在选择文件窗口中选择之前生成的DLL文件, 点击添加, 最后在引用管理器中点击确定.<br><img src="https://img-blog.csdnimg.cn/20200705004309633.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="添加引用"></li>
+<li>于是, 我们就成功的引用了之前生成的DLL文件.<br><img src="https://img-blog.csdnimg.cn/20200705004359951.png" alt="添加引用后"><h2 id="使用DLL中包含的成员"><a href="#使用DLL中包含的成员" class="headerlink" title="使用DLL中包含的成员:"></a>使用DLL中包含的成员:</h2></li>
+<li>在创建DLL时, 可以看到, 成员均处于 CHO.Json 命名空间下, 所以我们using它, 如下图, 并没有出现错误.<br><img src="https://img-blog.csdnimg.cn/20200705004541827.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="添加引用"></li>
+<li>准备一个Json文本来使程序读取.</li>
+</ol>
+<blockquote>
+<p>{<br>“姓名”: “小明”,<br>“性别”: “男”,<br>“年龄”: 16,<br>“自述”: null,<br>“是否患新冠肺炎”: false,<br>“学习的编程语言”: [“C#”, “Python”, “C”]<br>}</p>
+</blockquote>
+<ol start="2">
+<li>将其转换为字符串表达式.  (这里使用了我自己的小程序, 文章末尾会附上下载链接)<img src="https://img-blog.csdnimg.cn/20200705005032983.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="转换为字符串表达式"></li>
+<li>将代码写好.<br><img src="https://img-blog.csdnimg.cn/20200705005246473.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="使用类库中的成员"></li>
+<li>运行程序.<br><img src="https://img-blog.csdnimg.cn/20200705005450205.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="程序运行结果"></li>
+<li>可以看到, 成功使用了类库中的JsonData类,和JsonDataType枚举类型.<h2 id="文章到此结束"><a href="#文章到此结束" class="headerlink" title="文章到此结束."></a>文章到此结束.</h2></li>
+<li>将文本转换为字符串表达式的小工具 (<a target="_blank" rel="noopener" href="https://chonet.lanzous.com/i5Uveebcgle">蓝奏云下载</a>)</li>
+<li>关于我写的这个Json操作类库(<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_46555380/article/details/107094462">CSDN文章</a>)<h5 id="关于作者"><a href="#关于作者" class="headerlink" title="关于作者:"></a>关于作者:</h5></li>
+<li>一个喜欢编程但不喜欢在校学习奇怪东西的奇怪人士.</li>
+<li>性格沙雕, 但写文章的时候就莫名其妙的认真起来</li>
+<li>喜欢玩MC, 还有类似的沙盒游戏, 例如废品工程师<h5 id="联系我"><a href="#联系我" class="headerlink" title="联系我:"></a>联系我:</h5></li>
+<li>发送私信.</li>
+<li>电子邮件 : <a href="mailto:&#x63;&#x72;&#x65;&#x65;&#112;&#115;&#x6c;&#x69;&#x6d;&#101;&#64;&#102;&#111;&#120;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;">&#x63;&#x72;&#x65;&#x65;&#112;&#115;&#x6c;&#x69;&#x6d;&#101;&#64;&#102;&#111;&#120;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;</a></li>
+<li>私人QQ : 2056818509</li>
+</ol>
+<p>欢迎与我交流吖   ε=ε=ε=(~ ￣▽￣)~</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/06/27/202006270543/" rel="prev" title="[C#] 数组去重: 超高速字符串去重 (含保留原顺序的方法)">
+                  <i class="fa fa-chevron-left"></i> [C#] 数组去重: 超高速字符串去重 (含保留原顺序的方法)
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/07/06/202007060652/" rel="next" title="[C#] 鼠标拖动实现控件移动 - 一个类实现对多个控件与窗体的鼠标拖拽移动操作">
+                  [C#] 鼠标拖动实现控件移动 - 一个类实现对多个控件与窗体的鼠标拖拽移动操作 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+<script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">SlimeNull</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

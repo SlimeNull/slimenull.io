@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;example.com&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;always&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
+<meta name="description" content="在一张图片中填满字, 或者用字来构成一整张彩色图片">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[C#] 就让这张图片来揭露你的本性吧! 老绅士.">
+<meta property="og:url" content="http://example.com/2021/02/21/202102212308/index.html">
+<meta property="og:site_name" content="SlimeNull&#39;s Blog">
+<meta property="og:description" content="在一张图片中填满字, 或者用字来构成一整张彩色图片">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210212012512552.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210220205921619.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210221230415739.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2021-02-20T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-05-11T10:29:02.371Z">
+<meta property="article:author" content="SlimeNull">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20210212012512552.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70#pic_center">
+
+
+<link rel="canonical" href="http://example.com/2021/02/21/202102212308/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;http:&#x2F;&#x2F;example.com&#x2F;2021&#x2F;02&#x2F;21&#x2F;202102212308&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;02&#x2F;21&#x2F;202102212308&#x2F;&quot;,&quot;title&quot;:&quot;[C#] 就让这张图片来揭露你的本性吧! 老绅士.&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>[C#] 就让这张图片来揭露你的本性吧! 老绅士. | SlimeNull's Blog</title><script src="/js/config.js"></script>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">SlimeNull's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">For the better opensource world!</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+        <li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>Sitemap</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%A6"><span class="nav-number">1.</span> <span class="nav-text">淦!</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E6%AD%A3%E5%B8%B8%E7%9A%84"><span class="nav-number">1.0.1.</span> <span class="nav-text">1. 正常的:</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E9%9A%BE%E4%B8%80%E7%82%B9%E7%9A%84"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">2. 难一点的:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E7%AE%80%E5%8D%95%E7%82%B9%E7%9A%84"><span class="nav-number">1.0.1.2.</span> <span class="nav-text">3. 简单点的:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AE%8C%E6%95%B4%E7%9A%84%E5%86%85%E5%AE%B9%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.0.1.3.</span> <span class="nav-text">完整的内容介绍:</span></a></li></ol></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">SlimeNull</p>
+  <div class="site-description" itemprop="description">Newbie... Learning...</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">70</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/slimenull" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;slimenull" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:slimenull@outlook.com" title="E-Mail → mailto:slimenull@outlook.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/441842015" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;441842015" rel="noopener" target="_blank">Bilibili</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/21/202102212308/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="SlimeNull">
+      <meta itemprop="description" content="Newbie... Learning...">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SlimeNull's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          [C#] 就让这张图片来揭露你的本性吧! 老绅士.
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-02-21 00:00:00" itemprop="dateCreated datePublished" datetime="2021-02-21T00:00:00+08:00">2021-02-21</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-05-11 18:29:02" itemprop="dateModified" datetime="2021-05-11T18:29:02+08:00">2021-05-11</time>
+      </span>
+
+  
+</div>
+
+            <div class="post-description">在一张图片中填满字, 或者用字来构成一整张彩色图片</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p><img src="https://img-blog.csdnimg.cn/20210212012512552.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70#pic_center" alt="qwq"><br>看到上面那幅图了吗? 放大, 放大, 看到了吗? 说的就是你 .</p>
+<h2 id="淦"><a href="#淦" class="headerlink" title="淦!"></a>淦!</h2><h4 id="1-正常的"><a href="#1-正常的" class="headerlink" title="1. 正常的:"></a>1. 正常的:</h4><p>简单的, 就是最开始那张图片了, 看起来还彳亍, 对吧</p>
+<p>好吧, 这种东西, 实现起来也不难, 无非是在图片中写字. 写字你总会吧? 我直接贴 Graphics 元数据:</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">System.Drawing</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//</span></span><br><span class="line">    <span class="comment">// 摘要:</span></span><br><span class="line">    <span class="comment">//     封装一个 GDI+ 绘图图面。 此类不能被继承。</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">sealed</span> <span class="keyword">class</span> <span class="title">Graphics</span> : <span class="title">MarshalByRefObject</span>, <span class="title">IDeviceContext</span>, <span class="title">IDisposable</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//</span></span><br><span class="line">        <span class="comment">// 摘要:</span></span><br><span class="line">        <span class="comment">//     在指定位置并且用指定的 System.Drawing.Brush 和 System.Drawing.Font 对象绘制指定的文本字符串。</span></span><br><span class="line">        <span class="comment">//</span></span><br><span class="line">        <span class="comment">// 参数:</span></span><br><span class="line">        <span class="comment">//   s:</span></span><br><span class="line">        <span class="comment">//     要绘制的字符串。</span></span><br><span class="line">        <span class="comment">//</span></span><br><span class="line">        <span class="comment">//   font:</span></span><br><span class="line">        <span class="comment">//     System.Drawing.Font，它定义字符串的文本格式。</span></span><br><span class="line">        <span class="comment">//</span></span><br><span class="line">        <span class="comment">//   brush:</span></span><br><span class="line">        <span class="comment">//     System.Drawing.Brush，它确定所绘制文本的颜色和纹理。</span></span><br><span class="line">        <span class="comment">//</span></span><br><span class="line">        <span class="comment">//   point:</span></span><br><span class="line">        <span class="comment">//     System.Drawing.PointF 结构，它指定所绘制文本的左上角。</span></span><br><span class="line">        <span class="comment">//</span></span><br><span class="line">        <span class="comment">// 异常:</span></span><br><span class="line">        <span class="comment">//   T:System.ArgumentNullException:</span></span><br><span class="line">        <span class="comment">//     brush 为 null。 或 - s 为 null。</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">DrawString</span>(<span class="params"><span class="built_in">string</span> s, Font font, Brush brush, PointF point</span>)</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>懂了吧? 当然本程序可没那么简单嘿嘿! 我可是还实现了类似于蒙版的东西! (好吧也不是很难)</p>
+<h5 id="2-难一点的"><a href="#2-难一点的" class="headerlink" title="2. 难一点的:"></a>2. 难一点的:</h5><p><img src="https://img-blog.csdnimg.cn/20210220205921619.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70"><br>看出有什么区别没? 没错! 你发现, 背景变成单色, 而字变成彩色的了!!! 当然 PS 用剪切蒙版很容易实现. 那么, 用 C# 该如何实现呢?</p>
+<p>首先创建一个位图, 作为我们的临时空间, 背景是黑色, 然后用白色的笔在上面写字. 哦豁, 这不就是一张蒙版吗? </p>
+<p>我们的源图像跟这个蒙版图是一样大小的, 输出图像当然也同样大小, 然后遍历原图像的像素, 并且判断蒙版图像的颜色, 如果蒙版图像的颜色是白色, 则把这个像素拷贝到输出图像中. 于是于是! 就实现了画彩色的字! (好吧的确有点投机取巧的意味.)</p>
+<h5 id="3-简单点的"><a href="#3-简单点的" class="headerlink" title="3. 简单点的:"></a>3. 简单点的:</h5><p><img src="https://img-blog.csdnimg.cn/20210221230415739.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70"><br>哈哈哈, 每一个字, 都相当于原图的一个像素, 可不可以说是变相的字符画?</p>
+<h5 id="完整的内容介绍"><a href="#完整的内容介绍" class="headerlink" title="完整的内容介绍:"></a>完整的内容介绍:</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">Null.CharImg: 字符图像混合工具</span><br><span class="line"></span><br><span class="line">Null.CharImg [ -&#123;CharWidth | CWidth&#125; 字符占宽 ]</span><br><span class="line">             [ -&#123;CharHeight | CHeight&#125; 字符占高 ]</span><br><span class="line">             [ -&#123;MaxWidth | MWidth&#125; 最大宽度 ]</span><br><span class="line">             [ -&#123;MaxHeight | MHeight&#125; 最大高度 ]</span><br><span class="line">             [ -&#123;FontSize | FSize&#125; 字体大小 ]</span><br><span class="line">             [ -&#123;String | Str&#125; 字符串内容 ]</span><br><span class="line">             [ -&#123;CorrectRate | CRate&#125; 颜色矫正程度]</span><br><span class="line">             [ -&#123;BackgroundColor | BgColor&#125; 背景颜色 ]</span><br><span class="line">             [ -&#123;FontFamily | Font&#125; 字体 ]</span><br><span class="line">             [ /&#123;FontBold | Bold&#125; ]</span><br><span class="line">             [ /&#123;Opposite | Oppo&#125; ]</span><br><span class="line">             [ /&#123;AutoCorrect | Correct&#125;]</span><br><span class="line">             [ /&#123;AutoBackground | AutoBg&#125;]</span><br><span class="line">             [ /&#123;HighDefinition | HD&#125;]</span><br><span class="line">             -&#123;Output | Out&#125; 输出路径</span><br><span class="line">             *源文件</span><br><span class="line"></span><br><span class="line">Null.CharImg /&#123;Help | H | ?&#125; 显示本帮助内容</span><br><span class="line"></span><br><span class="line">      其中参数的概述如下:</span><br><span class="line">             字符占宽, 指图像中, 一个字符独占的宽度, 默认8</span><br><span class="line">             字符占高, 字符独占的高度, 与字符占宽决定了字符的间距, 默认16</span><br><span class="line">             最大宽度, 指输出图像中, 横向最多含多少个字符</span><br><span class="line">             最大高度, 指输出图像中, 纵向最多含多少个字符</span><br><span class="line">             字体大小, 指字体大小, 单位是像素, 默认16</span><br><span class="line">             字符串内容, 要显示在图像中的字符, 将逐个显示</span><br><span class="line">             颜色矫正程度, 指定了自动颜色矫正的程度, 值域是0~100, 默认100</span><br><span class="line">             背景颜色, 表示图像背景颜色, 使用十六进制代码表示</span><br><span class="line">             输出路径, 表示输出图像的保存路径</span><br><span class="line">             字体, 表示图像中字符所使用的字体, 默认是Sans Serif</span><br><span class="line">             FontBold, 粗体, 表示是否使用粗体</span><br><span class="line">             Opposite, 使背景与前景颜色反转</span><br><span class="line">             AutoCorrect, 自动矫正颜色</span><br><span class="line">             AutoBackground, 自动判断背景色</span><br><span class="line">             HighDefinition, 高分辨率模式</span><br><span class="line"></span><br><span class="line">      关于自动矫正颜色:</span><br><span class="line">             自动矫正颜色旨在尝试调节前景色的色彩, 以做到前景与背景结合时, 颜色</span><br><span class="line">             趋近于原图, 如果背景颜色指定了亮度较高的颜色, 例如白色, 这个功能会</span><br><span class="line">             启到很好的作用, 如果你认为颜色矫正有些严重, 可以使用 CorrectRate</span><br><span class="line">             参数来指定自动调节的力度, 尝试调节为80, 甚至更低的值来适应.</span><br><span class="line"></span><br><span class="line">      关于自动判断背景色</span><br><span class="line">             当启动该功能时, 用户设置的颜色作废, 程序会自动计算整个原图像的平均色</span><br><span class="line">             作为输出图像的背景色</span><br><span class="line"></span><br><span class="line">      关于高分辨率模式:</span><br><span class="line">             当启用高分辨率时, 图像中的一个字符不再单单是一种颜色, 而是使用彩色,</span><br><span class="line">             以使输出图像更能趋近于原图的形状与颜色, 同时Opposite也是受支持的</span><br><span class="line"></span><br><span class="line">      关于程序:</span><br><span class="line">             作者: 诺尔, Null; 擅长:摸鱼</span><br><span class="line">             Github仓库: https://github.com/SlimeNull/Null.CharImg</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果有啥感到迷惑的, 在下方留言噢~</p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/02/19/202102190707/" rel="prev" title="[C#] Range 函数, 方便快捷">
+                  <i class="fa fa-chevron-left"></i> [C#] Range 函数, 方便快捷
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/02/27/202102272140/" rel="next" title="[安利] 什么鬼? 居然还有人不会截图??? 还在用手机对着电脑屏幕拍照????? 各种截图方式大集结!">
+                  [安利] 什么鬼? 居然还有人不会截图??? 还在用手机对着电脑屏幕拍照????? 各种截图方式大集结! <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+<script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">SlimeNull</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

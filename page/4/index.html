@@ -16,8 +16,8 @@
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
 
 <script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;example.com&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;always&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
 <meta name="description" content="Newbie... Learning...">
@@ -186,7 +186,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202102040502/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/15/202102151126/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -199,7 +199,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/11/202102040502/" class="post-title-link" itemprop="url">[项目实例] 手把手教你使用Python写一个功能非常强大的翻译程序</a>
+          <a href="/2021/02/15/202102151126/" class="post-title-link" itemprop="url">[.NET] WPF XAML 原理, 节点与实例, 以及一些重要的零碎知识点.</a>
         </h2>
 
         <div class="post-meta-container">
@@ -209,10 +209,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-05-11 10:41:46 / Modified: 11:46:27" itemprop="dateCreated datePublished" datetime="2021-05-11T10:41:46+08:00">2021-05-11</time>
+      <time title="Created: 2021-02-15 00:00:00" itemprop="dateCreated datePublished" datetime="2021-02-15T00:00:00+08:00">2021-02-15</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-05-11 18:54:44" itemprop="dateModified" datetime="2021-05-11T18:54:44+08:00">2021-05-11</time>
+      </span>
 
   
 </div>
@@ -224,30 +230,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="关于"><a href="#关于" class="headerlink" title="关于:"></a>关于:</h2><p>程序是借助API的(废话), 所以在无网络时, 没办法使用. 成品下载地址在文章末.<br><img src="https://img-blog.csdnimg.cn/20210204040516540.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="成果"></p>
-<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作:"></a>准备工作:</h3><p>导入库, request(发送请求) 和 json(解析返回数据).</p>
-<h3 id="开搞"><a href="#开搞" class="headerlink" title="开搞:"></a>开搞:</h3><p>首先, 是找到我们所需要的API, 瞧瞧这个链接: <a target="_blank" rel="noopener" href="https://ai.youdao.com/product-fanyi-text.s">有道翻译体验</a><br><img src="https://img-blog.csdnimg.cn/20210204040735158.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="有道翻译体验"><br>虽说是体验, 但是我都用了巨长一段时间却没有任何问题, 看来这个API至少短时间内不会有任何变更了~</p>
-<p>然后就是破解API的请求内容了. 打开浏览器调试, 转到网络选项卡, 然后重新翻译一下, 好的, 结果很明显, 芜湖 :-D<br><img src="https://img-blog.csdnimg.cn/20210204041108490.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="破解API"><br>post请求, 3个参数, q是翻译内容, from和to表示翻译的语言, 那么, 试着换一下语言吧.<br><img src="https://img-blog.csdnimg.cn/20210204041301694.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="中文翻译为日文"><br>哦, 我们得到了中文与日文的对应数据, zh-CHS 和 ja, 还有更多语言呢, 看看HTML节点吧<br><img src="https://img-blog.csdnimg.cn/20210204041441767.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="看看英文"><br><img src="https://img-blog.csdnimg.cn/20210204041544186.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="结果"><br>哦豁, 比想象中的要简单! 2就是to的意思, 那么, 我们能得到所有的语言对应参数值了!<br><img src="https://img-blog.csdnimg.cn/20210204041758373.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="HTML节点很清晰啊"><br>记录下来吧~</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">参数: q:翻译文本   from:从语言   to:至语言</span><br><span class="line">语言支持的值: 中文:zh-CHS, 英语:en, 日语:ja, 韩语:ko, 法语:fr, 俄语:ru, </span><br><span class="line">    西班牙语:es, 葡萄牙语:pt, 越南语:vi, 德语:de, 印尼语:id</span><br><span class="line">    阿拉伯语:ar</span><br></pre></td></tr></table></figure>
-<p>接下来, 就是对网页中, 源代码的进一步分析了, 检查”翻译”按钮的节点, 然后查看click事件监听代码.<br><img src="https://img-blog.csdnimg.cn/20210204042129770.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="检查按钮"><br><img src="https://img-blog.csdnimg.cn/20210204042414558.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="代码找到"><br><img src="https://img-blog.csdnimg.cn/20210204042519905.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="源代码"><br><img src="https://img-blog.csdnimg.cn/20210204042621283.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="返回值描述到手"><br>然后, 回到刚刚的网络选项卡, 然后重新翻译一下, 查看返回值.<br><img src="https://img-blog.csdnimg.cn/20210204042857110.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="返回值"><br>弄到 Visual Studio Code里面, 保存为json文件, 然后格式化文档.<br><img src="https://img-blog.csdnimg.cn/20210204043152952.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="格式化文档"><br><img src="https://img-blog.csdnimg.cn/20210204043225607.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="翻译结果到手"><br>但是, 不止如此, 我们再尝试翻译一些, 词, 例如 sugar, 然后看看返回值, 不出所料, 果然!<br><img src="https://img-blog.csdnimg.cn/20210204043446223.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="暗藏玄机"><br>返回值里面包含的内容不是一般的多啊, 甚至还有音标, hhh</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;returnPhrase&quot;</span>: [</span><br><span class="line">        <span class="string">&quot;sugar&quot;</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">&quot;query&quot;</span>: <span class="string">&quot;sugar\n&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;errorCode&quot;</span>: <span class="string">&quot;0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;l&quot;</span>: <span class="string">&quot;en2zh-CHS&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;tSpeakUrl&quot;</span>: <span class="string">&quot;http://openapi.youdao.com/ttsapi?q=%E7%B3%96&amp;langType=zh-CHS&amp;sign=B212B7714049BBB65257DC9D64234EA0&amp;salt=1612384414308&amp;voice=4&amp;format=mp3&amp;appKey=2423360539ba5632&amp;ttsVoiceStrict=false&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;web&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">&quot;value&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;糖&quot;</span>,</span><br><span class="line">                <span class="string">&quot;食糖&quot;</span>,</span><br><span class="line">                <span class="string">&quot;白糖&quot;</span>,</span><br><span class="line">                <span class="string">&quot;糖分&quot;</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">&quot;key&quot;</span>: <span class="string">&quot;Sugar&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">&quot;value&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;红糖&quot;</span>,</span><br><span class="line">                <span class="string">&quot;黄糖&quot;</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">&quot;key&quot;</span>: <span class="string">&quot;brown sugar&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">&quot;value&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;糖用甜菜&quot;</span>,</span><br><span class="line">                <span class="string">&quot;甜菜&quot;</span>,</span><br><span class="line">                <span class="string">&quot;糖甜菜&quot;</span>,</span><br><span class="line">                <span class="string">&quot;糖料甜菜&quot;</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">&quot;key&quot;</span>: <span class="string">&quot;Sugar beet&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">&quot;requestId&quot;</span>: <span class="string">&quot;f54b0c24-4818-4d7e-ab04-8123adec8671&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;translation&quot;</span>: [</span><br><span class="line">        <span class="string">&quot;糖&quot;</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">&quot;dict&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;url&quot;</span>: <span class="string">&quot;yddict://m.youdao.com/dict?le=eng&amp;q=sugar%0A&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;webdict&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;url&quot;</span>: <span class="string">&quot;http://m.youdao.com/dict?le=eng&amp;q=sugar%0A&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;basic&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;exam_type&quot;</span>: [</span><br><span class="line">            <span class="string">&quot;初中&quot;</span>,</span><br><span class="line">            <span class="string">&quot;高中&quot;</span>,</span><br><span class="line">            <span class="string">&quot;CET4&quot;</span>,</span><br><span class="line">            <span class="string">&quot;CET6&quot;</span>,</span><br><span class="line">            <span class="string">&quot;考研&quot;</span>,</span><br><span class="line">            <span class="string">&quot;SAT&quot;</span></span><br><span class="line">        ],</span><br><span class="line">        <span class="attr">&quot;us-phonetic&quot;</span>: <span class="string">&quot;ˈʃʊɡər&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;phonetic&quot;</span>: <span class="string">&quot;ˈʃʊɡə(r)&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;uk-phonetic&quot;</span>: <span class="string">&quot;ˈʃʊɡə(r)&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;wfs&quot;</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">&quot;wf&quot;</span>: &#123;</span><br><span class="line">                    <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;复数&quot;</span>,</span><br><span class="line">                    <span class="attr">&quot;value&quot;</span>: <span class="string">&quot;sugars&quot;</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">&quot;wf&quot;</span>: &#123;</span><br><span class="line">                    <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;过去式&quot;</span>,</span><br><span class="line">                    <span class="attr">&quot;value&quot;</span>: <span class="string">&quot;sugared&quot;</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">&quot;wf&quot;</span>: &#123;</span><br><span class="line">                    <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;过去分词&quot;</span>,</span><br><span class="line">                    <span class="attr">&quot;value&quot;</span>: <span class="string">&quot;sugared&quot;</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">&quot;wf&quot;</span>: &#123;</span><br><span class="line">                    <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;现在分词&quot;</span>,</span><br><span class="line">                    <span class="attr">&quot;value&quot;</span>: <span class="string">&quot;sugaring&quot;</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">&quot;wf&quot;</span>: &#123;</span><br><span class="line">                    <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;第三人称单数&quot;</span>,</span><br><span class="line">                    <span class="attr">&quot;value&quot;</span>: <span class="string">&quot;sugars&quot;</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        ],</span><br><span class="line">        <span class="attr">&quot;uk-speech&quot;</span>: <span class="string">&quot;http://openapi.youdao.com/ttsapi?q=sugar%0A&amp;langType=en&amp;sign=C668ACDF9C58F3D76BADC5B54F1BDEE7&amp;salt=1612384414308&amp;voice=5&amp;format=mp3&amp;appKey=2423360539ba5632&amp;ttsVoiceStrict=false&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;explains&quot;</span>: [</span><br><span class="line">            <span class="string">&quot;n. 糖；食糖；甜言蜜语&quot;</span>,</span><br><span class="line">            <span class="string">&quot;vt. 加糖于；粉饰&quot;</span>,</span><br><span class="line">            <span class="string">&quot;vi. 形成糖&quot;</span>,</span><br><span class="line">            <span class="string">&quot;n. (Sugar)人名；(英)休格&quot;</span></span><br><span class="line">        ],</span><br><span class="line">        <span class="attr">&quot;us-speech&quot;</span>: <span class="string">&quot;http://openapi.youdao.com/ttsapi?q=sugar%0A&amp;langType=en&amp;sign=C668ACDF9C58F3D76BADC5B54F1BDEE7&amp;salt=1612384414308&amp;voice=6&amp;format=mp3&amp;appKey=2423360539ba5632&amp;ttsVoiceStrict=false&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;isWord&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">&quot;speakUrl&quot;</span>: <span class="string">&quot;http://openapi.youdao.com/ttsapi?q=sugar%0A&amp;langType=en&amp;sign=C668ACDF9C58F3D76BADC5B54F1BDEE7&amp;salt=1612384414308&amp;voice=4&amp;format=mp3&amp;appKey=2423360539ba5632&amp;ttsVoiceStrict=false&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>是不是已经有些感到兴奋了呢? 现在, 开始正式Coding吧! </p>
-<p>先是以自动识别语言开始吧. 那么, 首先是最基本的导库与定义:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line">url = <span class="string">&#x27;https://aidemo.youdao.com/trans&#x27;</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">有道翻译API, 支持get与post</span></span><br><span class="line"><span class="string">参数: q:翻译文本   from:从语言   to:至语言</span></span><br><span class="line"><span class="string"> 语言支持的值: 中文:zh-CHS, 英语:en, 日语:ja, 韩语:ko, 法语:fr, 俄语:ru, </span></span><br><span class="line"><span class="string">     西班牙语:es, 葡萄牙语:pt, 越南语:vi, 德语:de, 印尼语:id</span></span><br><span class="line"><span class="string">     阿拉伯语:ar</span></span><br><span class="line"><span class="string"> 错误码: 411:过于频繁   413:访问上限   103:字符太长   410:过于频繁</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
-<p>然后是请求</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">translate</span>(<span class="params">text</span>):</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        data = &#123;<span class="string">&quot;q&quot;</span>: text, <span class="string">&quot;from&quot;</span>: <span class="string">&quot;auto&quot;</span>, <span class="string">&quot;to&quot;</span>: <span class="string">&quot;auto&quot;</span>&#125;</span><br><span class="line">        resp = requests.post(url, data)</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">    <span class="keyword">return</span> resp</span><br></pre></td></tr></table></figure>
-<p>然后是打印翻译结果:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">advancedmode = <span class="literal">False</span>      <span class="comment"># 默认状态下, 不展示所有信息, 当advancedMode为True时, 展示更多内容</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">listPrint</span>(<span class="params">obj, iden, ps = <span class="string">&#x27;&#x27;</span></span>):</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;\n&quot;</span>.join(<span class="string">&#x27; &#x27;</span> * iden + ps + <span class="built_in">str</span>(i) <span class="keyword">for</span> i <span class="keyword">in</span> obj))</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">printrst</span>(<span class="params">resp</span>):</span></span><br><span class="line">    <span class="keyword">if</span> resp <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span> <span class="keyword">and</span> resp.status_code == <span class="number">200</span>:</span><br><span class="line">        respJson = json.loads(resp.text)</span><br><span class="line">        <span class="keyword">if</span> advancedmode:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot; &lt;0&gt; Result:&quot;</span>)</span><br><span class="line">            <span class="keyword">if</span> <span class="string">&quot;translation&quot;</span> <span class="keyword">in</span> respJson:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot;       Normal:&quot;</span>)</span><br><span class="line">                listPrint(respJson[<span class="string">&quot;translation&quot;</span>], <span class="number">9</span>)</span><br><span class="line">            <span class="keyword">if</span> <span class="string">&quot;basic&quot;</span> <span class="keyword">in</span> respJson <span class="keyword">and</span> <span class="string">&quot;explains&quot;</span> <span class="keyword">in</span> respJson[<span class="string">&quot;basic&quot;</span>]:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot;       Basic:&quot;</span>)</span><br><span class="line">                listPrint(respJson[<span class="string">&quot;basic&quot;</span>][<span class="string">&quot;explains&quot;</span>], <span class="number">9</span>)</span><br><span class="line">            <span class="keyword">if</span> <span class="string">&quot;web&quot;</span> <span class="keyword">in</span> respJson:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot;       From web:&quot;</span>)</span><br><span class="line">                index = <span class="number">1</span></span><br><span class="line">                <span class="keyword">for</span> i <span class="keyword">in</span> respJson[<span class="string">&quot;web&quot;</span>]:</span><br><span class="line">                    <span class="built_in">print</span>(<span class="string">&quot;         %d. %s:&quot;</span> % (index, i[<span class="string">&quot;key&quot;</span>]))</span><br><span class="line">                    listPrint(i[<span class="string">&quot;value&quot;</span>], <span class="number">14</span>)</span><br><span class="line">                    index += <span class="number">1</span></span><br><span class="line">            <span class="comment"># print</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot; &lt;0&gt; Result:&quot;</span>)</span><br><span class="line">            listPrint(respJson[<span class="string">&quot;translation&quot;</span>], <span class="number">7</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Request error, status code: %s&quot;</span> % (resp.status_code <span class="keyword">if</span> resp != <span class="literal">None</span> <span class="keyword">else</span> <span class="string">&quot;???&quot;</span>))</span><br></pre></td></tr></table></figure>
-<p>既然都有advancedMode了, 所以得让用户有办法打开关闭它, 模拟简单的命令行吧, 如果输入的内容是以 $ 开头的, 则判定为命令, 并运行这个命令</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">runcmd</span>(<span class="params">cmd</span>):</span></span><br><span class="line">    cmdline = cmd.split(<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">    cmdname = cmdline[<span class="number">0</span>].lower()</span><br><span class="line">    <span class="keyword">if</span> cmdname == <span class="string">&#x27;$&#x27;</span>:</span><br><span class="line">        <span class="keyword">global</span> advancedmode</span><br><span class="line">        advancedmode = <span class="keyword">not</span> advancedmode</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot; &lt;$&gt; AdvancedMode: %s&quot;</span> % advancedmode)</span><br><span class="line">    <span class="keyword">elif</span> cmdname == <span class="string">&#x27;$help&#x27;</span>:</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(cmdline) == <span class="number">1</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot; &lt;$&gt; Help document, type &#x27;$help command&#x27; for more information.&quot;</span>)</span><br><span class="line">            listPrint((</span><br><span class="line">                <span class="string">&quot;$      : Switch Advanced Mode.&quot;</span>,</span><br><span class="line">                <span class="string">&quot;$help  : Display help document.&quot;</span></span><br><span class="line">                <span class="string">&quot;&quot;</span></span><br><span class="line">            ), <span class="number">7</span>)</span><br><span class="line">        <span class="keyword">elif</span> <span class="built_in">len</span>(cmdline) == <span class="number">2</span>:</span><br><span class="line">            <span class="keyword">if</span> cmdline[<span class="number">1</span>] == <span class="string">&#x27;$&#x27;</span>:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot; &lt;$&gt; Switch Advanced Mode.&quot;</span>)</span><br><span class="line">                listPrint((</span><br><span class="line">                    <span class="string">&quot;Advanced Mode: %s&quot;</span> % advancedmode,</span><br><span class="line">                    <span class="string">&quot;If advanced mode is enabled, more information will be shown. default value is disabled.&quot;</span></span><br><span class="line">                ), <span class="number">7</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot; &lt;$&gt; Help document: unknown command.&quot;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot; &lt;$&gt; Help document: unknown usage.&quot;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot; &lt;$&gt; Unknown command.&quot;</span>)   <span class="comment"># 更多指令, 你来添加吧, 例如切换语言</span></span><br></pre></td></tr></table></figure>
-<p>最后是主程序</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Null.Translator, by Null, type &#x27;$help&#x27; for help. ref: Youdao AI translation api.&quot;</span>)</span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        text = <span class="built_in">input</span>(<span class="string">&quot;\n&gt;&gt;&gt; &quot;</span>)   <span class="comment"># 模拟像Python那样的提示符, 很酷炫的有木有</span></span><br><span class="line">        <span class="keyword">if</span> text != <span class="string">&#x27;&#x27;</span>:</span><br><span class="line">            <span class="keyword">if</span> text.startswith(<span class="string">&#x27;$&#x27;</span>):</span><br><span class="line">                runcmd(text)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                resp = translate(text)</span><br><span class="line">                printrst(resp)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            exit()     <span class="comment"># 如果输入为空, 则退出, 方便退出程序. (表示懒得挪鼠标 滑稽)</span></span><br></pre></td></tr></table></figure>
-<p>(最后, 上面所有的代码片, 拼在一起, 就能运行, 懒得拼的话, 就点击下面的下载链接下载吧)</p>
-<p>再多说一句, 那个API返回的数据辣么多, 想实现什么功能自己随便实现啦~</p>
-<h3 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接:"></a>下载链接:</h3><p>CSDN站内下载: <a target="_blank" rel="noopener" href="https://download.csdn.net/download/m0_46555380/15031403">Null.Translator</a></p>
-<p><br/><br/><br/><br/></p>
-<h3 id="预告"><a href="#预告" class="headerlink" title="预告:"></a>预告:</h3><p>这可不就是一个文本转语音API嘛! 薅有道羊毛真不戳<br><img src="https://img-blog.csdnimg.cn/20210204050132590.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="哈哈"></p>
-
+          <p>xaml 与 CS 是相关联的, xaml 也完全可以转换为对应的 CS 代码</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/02/15/202102151126/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -273,7 +264,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202102030302/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/15/202102151127/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -286,7 +277,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/11/202102030302/" class="post-title-link" itemprop="url">[C#] Stream 支持写入读取触发事件的类库</a>
+          <a href="/2021/02/15/202102151127/" class="post-title-link" itemprop="url">[.NET] WPF Triggers 触发器, EventTrigger, Trigger</a>
         </h2>
 
         <div class="post-meta-container">
@@ -296,10 +287,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-05-11 10:39:28 / Modified: 11:46:44" itemprop="dateCreated datePublished" datetime="2021-05-11T10:39:28+08:00">2021-05-11</time>
+      <time title="Created: 2021-02-15 00:00:00" itemprop="dateCreated datePublished" datetime="2021-02-15T00:00:00+08:00">2021-02-15</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-05-11 18:51:11" itemprop="dateModified" datetime="2021-05-11T18:51:11+08:00">2021-05-11</time>
+      </span>
 
   
 </div>
@@ -311,19 +308,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h3 id="实现了"><a href="#实现了" class="headerlink" title="实现了 :"></a>实现了 :</h3><ol>
-<li>你可以将这个流类的实例提供给某些东西, 在它操作这个流时, 你可以通过事件来接收到消息, 并加以处理, 例如拒绝写入, 或在写入前判断写入的内容. 你可以稍微改动一下这个类以适应你的需求.</li>
-<li>应用场景: 例如你使用了 IronPython 库, 并使用它执行了一些操作, 你希望 IronPython 每次 print 时, 你都能获取到内容, 则, 你可以使用这个触发流(TriggerStream)类, 将 IronPython 引擎的标准输出流设置为触发流的实例, 这样, 每当 IronPython 有内容输出时, 你都能获取到内容. 例如这个项目: <a target="_blank" rel="noopener" href="https://github.com/SlimeNull/Null.TextEditor">使用IronPython来制作一个支持py脚本操作内容的简易文本编辑器</a></li>
-<li>应用场景: 例如, 你运行了一个 Process, 并且希望实时获取它的输出内容, 而不是运行完之后一次性获取所有内容, 同理, 你可以设置它的标准输出流为触发流实例, 然后每次它输出内容你都能接收到.<h3 id="源代码"><a href="#源代码" class="headerlink" title="源代码 :"></a>源代码 :</h3></li>
-</ol>
-<p><strong>1. 首先是仅仅包含触发器, 而不会有任何存储行为的类</strong></p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.IO;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Null.Library.TriggerStream</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">WriteStreamEventArgs</span> : <span class="title">EventArgs</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">byte</span>[] Buffer;</span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">int</span> Offset, Count;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">bool</span> Denied = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">TriggerStream</span> : <span class="title">Stream</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">override</span> <span class="built_in">bool</span> CanRead =&gt; <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">override</span> <span class="built_in">bool</span> CanSeek =&gt; <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">override</span> <span class="built_in">bool</span> CanWrite =&gt; <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">override</span> <span class="built_in">long</span> Length =&gt; <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">override</span> <span class="built_in">long</span> Position &#123; <span class="keyword">get</span> =&gt; <span class="number">0</span>; <span class="keyword">set</span> &#123;  &#125; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">Flush</span>(<span class="params"></span>)</span> &#123; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="built_in">int</span> <span class="title">Read</span>(<span class="params"><span class="built_in">byte</span>[] buffer, <span class="built_in">int</span> offset, <span class="built_in">int</span> count</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="built_in">long</span> <span class="title">Seek</span>(<span class="params"><span class="built_in">long</span> offset, SeekOrigin origin</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">SetLength</span>(<span class="params"><span class="built_in">long</span> <span class="keyword">value</span></span>)</span> &#123; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">Write</span>(<span class="params"><span class="built_in">byte</span>[] buffer, <span class="built_in">int</span> offset, <span class="built_in">int</span> count</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (PreviewWrite != <span class="literal">null</span>)</span><br><span class="line">                PreviewWrite.Invoke(<span class="keyword">this</span>, <span class="keyword">new</span> WriteStreamEventArgs()</span><br><span class="line">                &#123;</span><br><span class="line">                    Buffer = buffer,</span><br><span class="line">                    Offset = offset,</span><br><span class="line">                    Count = count,</span><br><span class="line">                &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">event</span> EventHandler&lt;WriteStreamEventArgs&gt; PreviewWrite;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>很明显能够看出, 上面的这个, 仅有事件触发, 而Seek, Read, Position等方法及属性, 都是直接使用的空或者返回合适的固定值.</p>
-<p><strong>2. 然后是带有存储功能的(使用MemoryStream)类</strong></p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.IO;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Null.Library.EventedStream</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">ReadStreamEventArgs</span> : <span class="title">EventArgs</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">byte</span>[] Buffer;</span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">int</span> Offset, Count;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">bool</span> Denied = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">WriteStreamEventArgs</span> : <span class="title">EventArgs</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">byte</span>[] Buffer;</span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">int</span> Offset, Count;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">bool</span> Denied = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">FlushStreamEventArgs</span> : <span class="title">EventArgs</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">bool</span> Denied = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">SetStreamLengthEventArgs</span> : <span class="title">EventArgs</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">long</span> Value;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">bool</span> Denied = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">SeekStreamEventArgs</span> : <span class="title">EventArgs</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">long</span> Offset;</span><br><span class="line">        <span class="keyword">public</span> SeekOrigin SeekOrigin;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">bool</span> Denied = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">EventedStream</span> : <span class="title">Stream</span>, <span class="title">IDisposable</span></span><br><span class="line">    &#123;</span><br><span class="line">        MemoryStream baseMemory = <span class="keyword">new</span> MemoryStream();</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">override</span> <span class="built_in">bool</span> CanRead =&gt; baseMemory.CanRead;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">override</span> <span class="built_in">bool</span> CanSeek =&gt; baseMemory.CanSeek;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">override</span> <span class="built_in">bool</span> CanWrite =&gt; baseMemory.CanWrite;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">override</span> <span class="built_in">long</span> Length =&gt; baseMemory.Length;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">override</span> <span class="built_in">long</span> Position &#123; <span class="keyword">get</span> =&gt; baseMemory.Position; <span class="keyword">set</span> =&gt; baseMemory.Position = <span class="keyword">value</span>; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">Flush</span>(<span class="params"></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (PreviewFlush != <span class="literal">null</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                FlushStreamEventArgs args = <span class="keyword">new</span> FlushStreamEventArgs();</span><br><span class="line">                PreviewFlush.Invoke(<span class="keyword">this</span>, args);</span><br><span class="line">                <span class="keyword">if</span> (args.Denied)</span><br><span class="line">                    <span class="keyword">return</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            baseMemory.Flush();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="built_in">int</span> <span class="title">Read</span>(<span class="params"><span class="built_in">byte</span>[] buffer, <span class="built_in">int</span> offset, <span class="built_in">int</span> count</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (PreviewRead != <span class="literal">null</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                ReadStreamEventArgs args = <span class="keyword">new</span> ReadStreamEventArgs()</span><br><span class="line">                &#123;</span><br><span class="line">                    Buffer = buffer,</span><br><span class="line">                    Offset = offset,</span><br><span class="line">                    Count = count</span><br><span class="line">                &#125;;</span><br><span class="line">                PreviewRead.Invoke(<span class="keyword">this</span>, args);</span><br><span class="line">                <span class="keyword">if</span> (args.Denied)</span><br><span class="line">                    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> baseMemory.Read(buffer, offset, count);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="built_in">long</span> <span class="title">Seek</span>(<span class="params"><span class="built_in">long</span> offset, SeekOrigin origin</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (PreviewSeek != <span class="literal">null</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                SeekStreamEventArgs args = <span class="keyword">new</span> SeekStreamEventArgs()</span><br><span class="line">                &#123;</span><br><span class="line">                    Offset = offset,</span><br><span class="line">                    SeekOrigin = origin</span><br><span class="line">                &#125;;</span><br><span class="line">                PreviewSeek.Invoke(<span class="keyword">this</span>, args);</span><br><span class="line">                <span class="keyword">if</span> (args.Denied)</span><br><span class="line">                    <span class="keyword">return</span> Position;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> baseMemory.Seek(offset, origin);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">SetLength</span>(<span class="params"><span class="built_in">long</span> <span class="keyword">value</span></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (PreviewSetLength != <span class="literal">null</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                SetStreamLengthEventArgs args = <span class="keyword">new</span> SetStreamLengthEventArgs()</span><br><span class="line">                &#123;</span><br><span class="line">                    Value = <span class="keyword">value</span></span><br><span class="line">                &#125;;</span><br><span class="line">                PreviewSetLength.Invoke(<span class="keyword">this</span>, args);</span><br><span class="line">                <span class="keyword">if</span> (args.Denied)</span><br><span class="line">                    <span class="keyword">return</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            baseMemory.SetLength(<span class="keyword">value</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">Write</span>(<span class="params"><span class="built_in">byte</span>[] buffer, <span class="built_in">int</span> offset, <span class="built_in">int</span> count</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (PreviewWrite != <span class="literal">null</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                WriteStreamEventArgs args = <span class="keyword">new</span> WriteStreamEventArgs()</span><br><span class="line">                &#123;</span><br><span class="line">                    Buffer = buffer,</span><br><span class="line">                    Offset = offset,</span><br><span class="line">                    Count = count</span><br><span class="line">                &#125;;</span><br><span class="line">                PreviewWrite.Invoke(<span class="keyword">this</span>, args);</span><br><span class="line">                <span class="keyword">if</span> (args.Denied)</span><br><span class="line">                    <span class="keyword">return</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            baseMemory.Write(buffer, offset, count);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">new</span> <span class="keyword">void</span> <span class="title">Dispose</span>(<span class="params"></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            baseMemory.Dispose();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">event</span> EventHandler&lt;FlushStreamEventArgs&gt; PreviewFlush;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">event</span> EventHandler&lt;SetStreamLengthEventArgs&gt; PreviewSetLength;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">event</span> EventHandler&lt;SeekStreamEventArgs&gt; PreviewSeek;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">event</span> EventHandler&lt;WriteStreamEventArgs&gt; PreviewWrite;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">event</span> EventHandler&lt;ReadStreamEventArgs&gt; PreviewRead;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="原理"><a href="#原理" class="headerlink" title="原理 :"></a>原理 :</h3><p>倒也简单, 直接继承基类, 然后实现方法即可.</p>
-<h3 id="提示"><a href="#提示" class="headerlink" title="提示 :"></a>提示 :</h3><p>如果你要同时使用这两个,,, 别忘记稍微移动下事件参数使它们在同一个文件中, 并使两个事件流类using事件参数的命名空间, 否则, 在不完全指定命名空间的状况下, 会出现不明确引用的错误.</p>
-
+          <p>通过触发器来实现某种特定情况下才会对控件应用的样式, 例如鼠标悬停时改变颜色</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/02/15/202102151127/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -349,7 +342,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202102030643/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/15/202102151607/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -362,7 +355,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/11/202102030643/" class="post-title-link" itemprop="url">[项目实例] 使用 IronPython 库来创建一个支持使用Python脚本操作的简易文本编辑器</a>
+          <a href="/2021/02/15/202102151607/" class="post-title-link" itemprop="url">[.NET] WPF DoubleAnimation 动画, 一篇文章悟透!</a>
         </h2>
 
         <div class="post-meta-container">
@@ -372,10 +365,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-05-11 10:39:28 / Modified: 11:46:40" itemprop="dateCreated datePublished" datetime="2021-05-11T10:39:28+08:00">2021-05-11</time>
+      <time title="Created: 2021-02-15 00:00:00" itemprop="dateCreated datePublished" datetime="2021-02-15T00:00:00+08:00">2021-02-15</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-05-11 18:18:05" itemprop="dateModified" datetime="2021-05-11T18:18:05+08:00">2021-05-11</time>
+      </span>
 
   
 </div>
@@ -387,32 +386,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤 :"></a>步骤 :</h2><ol>
-<li><p>打开 nuget 包管理器, 工具 -&gt; NuGet 包管理器 -&gt; 管理解决方案的 NuGet 程序包.<br><img src="https://img-blog.csdnimg.cn/20210203030753805.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="nuget包管理器"></p>
-</li>
-<li><p>在 nuget 包管理器中找到 IronPython, 安装到你的项目.<br><img src="https://img-blog.csdnimg.cn/20210203030547151.png" alt="nuget中的IronPython"></p>
-</li>
-<li><p>using 所需的命名空间, Microsoft.Scripting, Microsoft.Scripting.Hosting, Microsoft.Win32, IronPython.Hosting.</p>
-</li>
-<li><p>创建 Python 引擎:</p>
- <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ScriptEngine engine = Python.CreateEngine();</span><br></pre></td></tr></table></figure></li>
-<li><p>创建定义域(Scope), 它用来存储变量:</p>
- <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ScriptScope scope = engine.CreateScope();</span><br></pre></td></tr></table></figure></li>
-<li><p>在 Scope 中设置与获取变量值:</p>
- <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scope.SetVariable(<span class="string">&quot;name&quot;</span>, <span class="string">&quot;value&quot;</span>);   <span class="comment">// 其中, name是变量名, &quot;value&quot;可以是任意类型, 表示变量值</span></span><br></pre></td></tr></table></figure>
-<p> 获取变量也差不多, 是GetVariable.</p>
-</li>
-<li><p>设置引擎的标准输出流以捕获内容:</p>
- <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">TriggerStream stream = <span class="keyword">new</span> TriggerStream();  <span class="comment">// TriggerStream是一个能够在写入时触发事件的, 继承了Stream的类.</span></span><br><span class="line">engine.Runtime.IO.SetOutput(stream, Encoding.Default);  <span class="comment">// 这样, 我们可以通过TriggerStream的写入事件来获取写入的内容</span></span><br></pre></td></tr></table></figure>
-<p> 提示: 了解 TriggerStream, 请查看这篇文章: <a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_46555380/article/details/113578296">支持事件的Stream</a>, 关于为什么使用 Encoding.Default 而不使用 UTF-8, 是因为在Windows里面, 都是用的 ANSI. 而Default就是获取ANSI的编码(在中国是GBK)</p>
-</li>
-<li><p>执行 Python 代码:</p>
- <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ScriptSource thisSrc = engine.CreateScriptSourceFromString(<span class="string">&quot;print(&#x27;hello world&#x27;)&quot;</span>, SourceCodeKind.File)</span><br><span class="line">thisSrc.Execute(scope);   <span class="comment">// 代码在这个定义域种执行</span></span><br></pre></td></tr></table></figure>
-<p> SourceCodeKind.File指这个字符串是来自文件的代码, 也就是说你可以在里面加换行加缩进以定义一个语句块之类的. 还有一个就是SourceCodeKind.Expression, 指一个表达式.</p>
-</li>
-</ol>
-<h2 id="项目"><a href="#项目" class="headerlink" title="项目 :"></a>项目 :</h2><p>项目已经在 GitHub 开源, 地址: <a target="_blank" rel="noopener" href="https://github.com/SlimeNull/Null.TextEditor">SlimeNull/Null.TextEditor</a><br>想直接下载成品? 希望你能下载成功: <a target="_blank" rel="noopener" href="https://github.com/SlimeNull/Null.TextEditor/raw/main/TextEditor/bin/Release/Null.TextEditor.exe">Release/Null.TextEditor.exe</a></p>
-
+          <p>WPF 的异步动画, 支持加速度与减速度的设置, 递增, 重复执行</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/02/15/202102151607/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -438,7 +420,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202012310108/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/12/202102120155/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -451,7 +433,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/11/202012310108/" class="post-title-link" itemprop="url">[C#] TOC Tiny - 基于 TCP 套接字的简易网络聊天室</a>
+          <a href="/2021/02/12/202102120155/" class="post-title-link" itemprop="url">[Linux] Linux 指令与全称</a>
         </h2>
 
         <div class="post-meta-container">
@@ -461,10 +443,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-05-11 10:31:38 / Modified: 11:47:06" itemprop="dateCreated datePublished" datetime="2021-05-11T10:31:38+08:00">2021-05-11</time>
+      <time title="Created: 2021-02-12 00:00:00" itemprop="dateCreated datePublished" datetime="2021-02-12T00:00:00+08:00">2021-02-12</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-05-11 18:14:03" itemprop="dateModified" datetime="2021-05-11T18:14:03+08:00">2021-05-11</time>
+      </span>
 
   
 </div>
@@ -476,20 +464,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="简介"><a href="#简介" class="headerlink" title="简介:"></a>简介:</h2><ul>
-<li>之前开了一个大坑, 额, 其实就是带有注册登录, 然后完美解决粘包, 心跳包, 还有并发量等问题的坑, 但是太难填了(我太菜了), 于是我就开了一个新项目, 砍掉登陆注册功能, 直接作为聊天室开放…<h2 id="预览"><a href="#预览" class="headerlink" title="预览:"></a>预览:</h2><img src="https://img-blog.csdnimg.cn/20201231004509995.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="客户端连接界面"><br><img src="https://img-blog.csdnimg.cn/20201231004532309.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="客户端主页面"><br><img src="https://img-blog.csdnimg.cn/20201231004603771.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="添加有颜文字"><br><img src="https://img-blog.csdnimg.cn/20201231004652925.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="服务端"></li>
-</ul>
-<p><strong>难题是如何解决的</strong>:</p>
-<ol>
-<li>首先是传输协议, 我这里的数据传输, 无论是什么数据, 都是一个TransPackage实例, 里面有基本的结构, 就是Name, Content, ClientGuid, PackageType这四个字段(除此之外就没了). 然后把它们弄成字符串, 然后弄成字符数组, 然后发送.</li>
-<li>关于粘包, 也就是两个包黏在一起, 我这里使用的是自己封装好的事件驱动的套接字, 粘包问题发生时, 就是在一次收到消息时, 收到了两个或以上的包, 而每个包都是一个Json数据, Json数据的特点呢, 就是很容易能分开, 例如你Object并列, 没有分隔符, 也能明确的知道这是两个Object, 于是我又为我自己造的轮子 <a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_46555380/article/details/109348146">CHO.Json</a> 优化了一波, 使它支持这个功能</li>
-<li>关于并发, 其实这个问题在你发现TCP时全双工的时候就不需要考虑了, 因为是聊天室, 所以也不必担心什么. 之所以我考虑这个, 是因为我在很久之前写的聊天小程序, 由于我把TCP当成半双工用, 导致不能太过频繁的处理消息, 否则就可能会嗝屁, 但这次有我封装好的事件套接字, 就方便多了</li>
-</ol>
-<h2 id="更新记录"><a href="#更新记录" class="headerlink" title="更新记录:"></a>更新记录:</h2><p>最新版已经支持发送图片, 以及对图片的查看(旋转缩放移动) </p>
-<h2 id="下载链接："><a href="#下载链接：" class="headerlink" title="下载链接："></a>下载链接：</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://download.csdn.net/download/m0_46555380/13987649">CSDN下载</a></li>
-</ul>
-
+          <p>Linux 部分指令的全称与描述</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/02/12/202102120155/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -515,7 +498,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202101051732/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/11/202102111021/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -528,7 +511,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/11/202101051732/" class="post-title-link" itemprop="url">[Web] 浅谈 Get 与 Post 请求</a>
+          <a href="/2021/02/11/202102111021/" class="post-title-link" itemprop="url">[Win32] MCI 详解与封装类, MCI 播放音乐, 获取播放状态, 获取音频长度, 进度调整</a>
         </h2>
 
         <div class="post-meta-container">
@@ -538,10 +521,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-05-11 10:31:38 / Modified: 11:47:02" itemprop="dateCreated datePublished" datetime="2021-05-11T10:31:38+08:00">2021-05-11</time>
+      <time title="Created: 2021-02-11 00:00:00" itemprop="dateCreated datePublished" datetime="2021-02-11T00:00:00+08:00">2021-02-11</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-05-11 18:09:51" itemprop="dateModified" datetime="2021-05-11T18:09:51+08:00">2021-05-11</time>
+      </span>
 
   
 </div>
@@ -553,161 +542,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h4 id="HTTP请求"><a href="#HTTP请求" class="headerlink" title="HTTP请求:"></a>HTTP请求:</h4><blockquote>
-<p>前端与后端的数据传递是通过 HTTP 请求实现的, 浏览器(前端)向服务器(后端)发送一个 HTTP 请求, 后端对请求进行处理, 然后再给浏览器发一个响应, 这就是 HTTP 的基本概念.</p>
-<p>get 和 post 是HTTP请求的两种方式, 最明显的区别是传递参数.</p>
-<p>如果你不大了解 HTTP 请求, 可以先查看文章末对 HTTP 的简述.</p>
-</blockquote>
-<h4 id="Get"><a href="#Get" class="headerlink" title="Get:"></a>Get:</h4><ul>
-<li><p>关于 Get 请求</p>
-<ul>
-<li><p>get 一般用来获取数据, 因为其本意就是获取. 浏览器访问一个页面时, 发送的第一个请求就是 Get.</p>
-</li>
-<li><p>get 的参数将直接写明在请求 url 中, 这意味着, 任何人可以直接通过浏览器上方的地址来清除的看到, 例如你要下载一个东西, 文件名叫 ‘idea’, 将文件名作为filename参数传递过去, 那么这个请求类似于这样:</p>
- <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://xxx.com/download/?filename=idea</span><br></pre></td></tr></table></figure></li>
-</ul>
-<ol start="3">
-<li><p>在url中, 写一个’’?’表示后面的内容是参数, 然后以 参数名=参数值 的格式表示参数, 如果要传多个参数, 则使用 ‘&amp;’ 连接它们</p>
-</li>
-<li><p>服务端接收到你的请求后, 可以根据参数来做出对应处理, 然后发送合适的响应.</p>
-</li>
-</ol>
-</li>
-<li><p>一个例子:</p>
-<ul>
-<li><p>在浏览器新建选项卡, 在url中输入一个地址, 发送的是一个get请求, 所以我们可以直接通过这个来测试.</p>
-</li>
-<li><p>hitokoto 是一个提供’一句话’的网站, 提供了接口以供开发这调用, 其中一个是:</p>
-<table>
-<thead>
-<tr>
-<th>地址</th>
-<th>协议</th>
-<th>方法</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>v1.hitokoto.cn</td>
-<td>HTTPS</td>
-<td>ANY</td>
-</tr>
-</tbody></table>
-<p> 其中一个参数是:</p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>值</th>
-<th>可选</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>encode</td>
-<td>text / json / js</td>
-<td>是</td>
-<td>返回的编码</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<p> 方法是Any, 即, 同时支持 get 与 post, 那么我们尝试使它返回一个格式为文本的结果, 对应的 url 是:</p>
- <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://v1.hitokoto.cn/?encode=text</span><br></pre></td></tr></table></figure>
-<p> hitokoto 服务器返回了我们所需要的值:</p>
-<p> <img src="https://img-blog.csdnimg.cn/20210105165205507.png" alt="hitokoto返回的纯文本数据"></p>
-<p> 那么, 如果是json呢? 试试看吧:</p>
- <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://v1.hitokoto.cn/?encode=json</span><br></pre></td></tr></table></figure>
-<p> hitokoto 服务器又返回了我们所需要的值:</p>
-<p> <img src="https://img-blog.csdnimg.cn/20210105165331960.png#pic_center" alt="hitokoto返回的json数据"></p>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="Post"><a href="#Post" class="headerlink" title="Post:"></a>Post:</h4><ul>
-<li><p>关于 Post 请求</p>
-<ul>
-<li>Post 有 ‘邮递,布置’ 的意思, 一般用来将数据提交给服务端.</li>
-<li>看完 Get, 你也知道了 Get 的一个特点: 参数直接暴露在 url 中, 直接被别人看到, 肯定是不大妥当的, 假如你要向服务器提交你的密码, 让别人看到, 那就不好了, 而 Post 相对 Get 来说, 就稍微安全点了, 因为参数在这个HTTP请求体中.<br/></li>
-</ul>
-<p>一个POST请求的概述:<br><img src="https://img-blog.csdnimg.cn/20210110114706246.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="一个POST请求的概述:"><br>它的响应内容:<img src="https://img-blog.csdnimg.cn/20210110114759960.png" alt="一个POST请求的响应内容"><br>由此可知, POST可以大致认为, 只是将参数放到了请求体中, 相对来说, 严谨一些.</p>
-</li>
-<li><p>一个例子:</p>
-<p>因为大多数浏览器不能直接发送 post 请求, 所以我们通过 python 与一个测试网页来测试:</p>
-<ul>
-<li><p>有道有一个翻译接口示例, 支持 post 请求</p>
-<p>地址: ‘<a target="_blank" rel="noopener" href="https://aidemo.youdao.com/trans&#39;">https://aidemo.youdao.com/trans&#39;</a></p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>介绍</th>
-<th>值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>q</td>
-<td>翻译文本</td>
-<td>要进行翻译的文本</td>
-</tr>
-<tr>
-<td>from</td>
-<td>从哪种语言翻译</td>
-<td>auto / zh-CHS / en / 其他</td>
-</tr>
-<tr>
-<td>to</td>
-<td>翻译到哪种语言</td>
-<td>auto / zh-CHS / en / 其他</td>
-</tr>
-</tbody></table>
-<ul>
-<li>Python:</li>
-</ul>
-<ol>
-<li><p>Python 可以通过 requests 包来发送 post 请求.</p>
-</li>
-<li><p>编写代码:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;https://aidemo.youdao.com/trans&quot;</span></span><br><span class="line">args = &#123;<span class="string">&quot;q&quot;</span>: <span class="string">&quot;翻译这段话&quot;</span>, <span class="string">&quot;from&quot;</span>: <span class="string">&quot;auto&quot;</span>, <span class="string">&quot;to&quot;</span>: <span class="string">&quot;auto&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line">resp = requests.post(url, args)  <span class="comment"># 发送请求, 并将响应赋值到resp</span></span><br><span class="line"><span class="built_in">print</span>(resp.text)                 <span class="comment"># 打印响应解码后的文本</span></span><br></pre></td></tr></table></figure></li>
-<li><p>运行后, 可以看到, 返回了我们需要的数据:</p>
-<p><img src="https://img-blog.csdnimg.cn/20210105165515493.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70#pic_center" alt="python发送post请求"></p>
-</li>
-</ol>
-</li>
-</ul>
-</li>
-</ul>
-<pre><code>- 编写一个简单的网页来测试:
-
- 1. 在HTML中, 可以通过 form 表单, 可以发送 get 和 post 请求.
- 
- 2. 编写代码:
- 
-    <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>Post Request Demo<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;https://aidemo.youdao.com/trans&quot;</span> <span class="attr">method</span>=<span class="string">&quot;post&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;kwd&quot;</span>&gt;</span>关键字:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">&quot;kwd&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;q&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;输入关键词&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;hidden&quot;</span> <span class="attr">name</span>=<span class="string">&quot;from&quot;</span> <span class="attr">value</span>=<span class="string">&quot;auto&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;hidden&quot;</span> <span class="attr">name</span>=<span class="string">&quot;to&quot;</span> <span class="attr">value</span>=<span class="string">&quot;auto&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">value</span>=<span class="string">&quot;请求&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
- 
- 3. 效果:
- 
-    ![post请求测试demo](https://img-blog.csdnimg.cn/20210105165549904.png#pic_center)
-</code></pre>
-<p>​<br>​     4. 输入 “白嫖有道翻译API真棒” 并按下请求按钮:<br>​<br>        返回了我们所需要的数据:</p>
-<pre><code>    ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210105165649711.png#pic_center)
-</code></pre>
-<h4 id="指正"><a href="#指正" class="headerlink" title="指正:"></a>指正:</h4><blockquote>
-<p>可能会有人告诉你, get 比 post 安全, 但事实上, 这仅仅是针对门外汉, 你只需要打开浏览器调试功能, 就可以看到这个页面的一切请求以及请求的各种详细内容, post 的参数也能看到.<br>所以说, 说 post 安全, 只是指它的参数不能直接在 url 中看到, 但只要你想看, 只需要打开调试…</p>
-</blockquote>
-<h3 id="HTTP-概述"><a href="#HTTP-概述" class="headerlink" title="HTTP 概述:"></a>HTTP 概述:</h3><blockquote>
-<p>一个HTTP数据包有头和体两部分, 头中包含了一些摘要数据, 这些数据以键值对的形式存放, 例如指定可接收的数据类型, 指定编码, 压缩算法, 数据长度等. 体中是这个包的主要内容, 例如传输文件时, 文件内容就位于体中. 如果想要详细的了解HTTP数据的内容, 不妨在浏览器中按下F12, 打开调试, 进入 ‘网络(Network)’ 选项卡, 刷新页面, 然后观察一个个的数据包.</p>
-</blockquote>
-
+          <p>MCI 打开文件, 播放, 暂停, 停止音频, 设定播放进度, 获取播放进度</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/02/11/202102111021/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -733,7 +576,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202101200452/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/09/202102090304/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -746,7 +589,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/11/202101200452/" class="post-title-link" itemprop="url">[Android] Android 入门 - 1.初识IDE</a>
+          <a href="/2021/02/09/202102090304/" class="post-title-link" itemprop="url">[C#] WinForm 与 WPF 获取命令行参数</a>
         </h2>
 
         <div class="post-meta-container">
@@ -756,10 +599,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-05-11 10:31:38 / Modified: 11:46:52" itemprop="dateCreated datePublished" datetime="2021-05-11T10:31:38+08:00">2021-05-11</time>
+      <time title="Created: 2021-02-09 00:00:00" itemprop="dateCreated datePublished" datetime="2021-02-09T00:00:00+08:00">2021-02-09</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-05-11 18:03:37" itemprop="dateModified" datetime="2021-05-11T18:03:37+08:00">2021-05-11</time>
+      </span>
 
   
 </div>
@@ -771,54 +620,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <ul>
-<li>我也是初学 Android Studio (甚至不到一个星期), 也察觉到了… 关于这方面的图文资料居然那么少, 全都是视频教程, 为了想要节省时间的同学着想, 我挺身而出了.</li>
-<li>不是适合所有人哦~ 你得懂一些英文, 你需要有Java基础, 不需要技术多厉害, 会写Hello world就行.但是如果你不满足条件, 推荐你去B站找视频教程.<h2 id="下载IDE"><a href="#下载IDE" class="headerlink" title="下载IDE"></a>下载IDE</h2></li>
-<li>下载肯定简单咯, 直接去官网吧: <a target="_blank" rel="noopener" href="https://developer.android.google.cn/studio">链接地址</a>, 然后, 额, 我相信你的英文水平足以支持你找到下载按钮的, </li>
-</ul>
-<h2 id="安装IDE"><a href="#安装IDE" class="headerlink" title="安装IDE"></a>安装IDE</h2><ul>
-<li>安装也差不多是傻瓜式安装了, 因为本人也是刚入门, 所以, 差不多是一路同意接受确认. 噢需要提到的是, Android Studio 支持使用 Java 或者 Kotlin 来编写程序, Kotlin 是编程语言哦, 这个知道就好.</li>
-</ul>
-<h2 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h2><ul>
-<li>打开Android后, 点击Create a project, 然后你看到的是这个:<br><img src="https://img-blog.csdnimg.cn/202101200242537.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="新建项目"></li>
-<li>看到了吗? 这是模板, 也就是给你的安卓程序创建最开始的一个页面, 不过作为我们初学者, 使用 Empty Activity 就好了~ Activity 的话, 其实就是相当于 Android 程序中的一个页面咯, 那么我们继续(Next), 你会看到项目配置:<br><img src="https://img-blog.csdnimg.cn/20210120024550603.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="配置项目"></li>
-<li>能看懂吧, 名字, 包名, 保存路径, <strong>语言</strong>, 是的, 在 Language 那里需要选择你要使用的编程语言, 例如我这里使用Java. 然后, 包名的命名, 你可以这么命名: “域名.你的名字.项目名”, 然后 Minimum SDK, 最低版本的SDK, 这个决定了你能够使用的功能(因为不同版本的SDK功能会有差异)以及程序的兼容性(例如使用了高版本SDK的程序无法在Android版本较低的手机上运行), 其他内容的话, 我相信你能看懂.<br><img src="https://img-blog.csdnimg.cn/20210120025320263.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="新项目"></li>
-<li>锵锵~ 新项目创建完成了~<h2 id="菜单栏"><a href="#菜单栏" class="headerlink" title="菜单栏"></a>菜单栏</h2></li>
-<li>额, 讲到这里, 用过IDEA的童鞋肯定会直接芜湖起飞的, 因为, Android Studio有JetBrains内味儿, 说不熟悉是假的, 不过,,, 既然都有Java基础了, 这点英文应该彳亍口巴? 常用的也就那么点了, 像是换配色, 更换快捷键, 你可以在网上搜索, 然后慢慢的, 你就会用了.<h2 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h2></li>
-<li>呐, 这是最初的项目了, 先莫得慌张, 我们得先知道左侧那一堆东西是干啥用的.<br><img src="https://img-blog.csdnimg.cn/20210120025602149.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
-<li>首先看到的就是 MainActivity, 对吧, 前面说了 Activity 是一个界面, 这个, 就是主界面了. 接下来, 我们展开这些目录, 然后看看所有的东西<br><img src="https://img-blog.csdnimg.cn/20210120030951809.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="项目结构"></li>
-<li>大概就是这些内容了, 对于入门教程, 你只需要关心layout文件夹(存放布局文件)以及java源代码文件夹.</li>
-</ul>
-<h2 id="编辑界面"><a href="#编辑界面" class="headerlink" title="编辑界面"></a>编辑界面</h2><ul>
-<li>首先就是打开我们主页面(MainActivity)的布局文件, MainActivity.xml<br><img src="https://img-blog.csdnimg.cn/20210120031145459.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="打开文件"></li>
-<li>可视化编辑页面出现了<br><img src="https://img-blog.csdnimg.cn/20210120031801701.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="可视化设计器"></li>
-<li>然后, 点击右上角的Split(被我用红色线框标注了的按钮), 切换到拆分设计模式, 然后, 左侧代码, 右侧是布局预览, 可以边写代码边查看效果.<img src="https://img-blog.csdnimg.cn/20210120032751745.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="布局"></li>
-<li>一般的, 我们还是使用代码来编辑界面的, 具体这些内容是什么意思, 我们下篇文章再讲 (咕咕咕?)</li>
-</ul>
-<h2 id="界面代码"><a href="#界面代码" class="headerlink" title="界面代码"></a>界面代码</h2><ul>
-<li>打开 MainActivity.java, 额, 如图所示<br><img src="https://img-blog.csdnimg.cn/20210120033608524.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
-<li>喏, 然后就是最基本的解释了. <img src="https://img-blog.csdnimg.cn/20210120034206180.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="Activity的代码"><h2 id="创建AVD"><a href="#创建AVD" class="headerlink" title="创建AVD"></a>创建AVD</h2></li>
-<li>AVD, 即Android virtual device, 类似于虚拟机的玩意儿, 虚拟的安卓机, 可以用来运行你的程序, 所以在运行我们的程序之前, 必须得创建一个AVD, 点击AVD管理器<br><img src="https://img-blog.csdnimg.cn/20210120040302878.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="打开AVD管理器"></li>
-<li>这就是AVD管理器了, 那么创建你的第一个虚拟设备吧~<br><img src="https://img-blog.csdnimg.cn/20210120040412778.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="AVD管理器"></li>
-<li>在这里选择你想要使用的设备配置, 然后继续<br><img src="https://img-blog.csdnimg.cn/20210120041407170.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="创建AVD"></li>
-<li>接下来就是选择系统镜像了, 默认是没有下载的, 你需要下载一个你想要使用的系统镜像, 点击系统镜像名称后的下载按钮以下载它 <img src="https://img-blog.csdnimg.cn/20210120041643674.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="安卓系统镜像"></li>
-<li>等待他下载吧, 1GB也不是很大.<br><img src="https://img-blog.csdnimg.cn/20210120041738934.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="组件安装"></li>
-<li>下载完成后, 选择你想要使用的系统镜像, 然后继续<br><img src="https://img-blog.csdnimg.cn/20210120041947977.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="继续"></li>
-<li>最后是验证配置信息 <img src="https://img-blog.csdnimg.cn/20210120042310230.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="验证配置"></li>
-<li>哦对了, 有一条需要注意,  展开高级配置, 然后找到 Performance, Boot option, 看到了吗? Cold boot 和 Quick boot, 这俩类似于电脑的快速启动, 如果使用 Cold boot, 每一次启动这个虚拟设备, 都跟手机开机一样, 如果使用Quick boot, 那启动这个虚拟设备, 就是从上次退出时保存的状态启动, 宛如电脑从休眠状态启动. (如果你还是不懂, 就去搜索一下什么是休眠). 之说注意这一点, 是因为, 如果你这个设备死机了, 并且你使用的是Quick boot, 那你关闭虚拟设备再打开虚拟设备, 还是死机的状态… 所及建议改为Cold boot.</li>
-<li>万事具备后, 就点Finish吧.<br><img src="https://img-blog.csdnimg.cn/20210120043315170.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="创建完成"></li>
-<li>哦对了, 原生安卓玩起来真的超级舒服哦~ </li>
-</ul>
-<h2 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h2><ul>
-<li>点击运行按钮即可编译项目并在指定的设备上运行程序<br><img src="https://img-blog.csdnimg.cn/20210120043723490.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="运行程序"></li>
-<li>需要知道的是, 运行了的虚拟设备是已经开启了调试功能的, 在你查看完运行结果后, 不必关闭虚拟设备, 虚拟设备随时为你的调试工作待命! 同时, 你也可以用你的手机进行调试, 使用数据线连接手机和电脑, 然后打开手机的调试功能, 在 Android Studio 中, 运行按钮左侧的选择设备中, 能够找到你的手机.<br><img src="https://img-blog.csdnimg.cn/20210120044806943.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="运行程序"></li>
-</ul>
-<h2 id="原生安卓"><a href="#原生安卓" class="headerlink" title="原生安卓"></a>原生安卓</h2><ul>
-<li>原生安卓, 可能有些人不大会用吧(例如笔者), 这里就说一点吧, 查看所有已安装的程序, 只需要在主屏幕从导航键或任意空白处向上滑动, 就能彳亍了<br><img src="https://img-blog.csdnimg.cn/2021012004442282.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="查看所有应用程序"><h2 id="结束了"><a href="#结束了" class="headerlink" title="结束了"></a>结束了</h2></li>
-<li>哈, 彳亍了口巴, 通过这篇文章, 绝对能消除你对Android Studio的恐惧了, 关于更多教程, 会继续更新的, 敬请关注~</li>
-<li>有什么建议, 或者需要改正的地方, 可以通过评论或私信指出哦, 别忘了点个赞~</li>
-</ul>
-
+          <p>使用 Environment.GetCommandLineArgs() 即可, 但是需要去除第一个元素, 因为第一个元素时文件自身路径</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/02/09/202102090304/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -844,7 +654,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202101290507/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/09/202102090805/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -857,7 +667,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/11/202101290507/" class="post-title-link" itemprop="url">[踩坑记录] ASP.NET Core System.Data.SqlTypes.SqlNullValueException: 数据为空。不能对空值调用此方法</a>
+          <a href="/2021/02/09/202102090805/" class="post-title-link" itemprop="url">[C#/C/C++] GetShortPathName详解, 长路径转换为短路径</a>
         </h2>
 
         <div class="post-meta-container">
@@ -867,10 +677,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-05-11 10:31:38 / Modified: 11:46:47" itemprop="dateCreated datePublished" datetime="2021-05-11T10:31:38+08:00">2021-05-11</time>
+      <time title="Created: 2021-02-09 00:00:00" itemprop="dateCreated datePublished" datetime="2021-02-09T00:00:00+08:00">2021-02-09</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-05-11 18:04:18" itemprop="dateModified" datetime="2021-05-11T18:04:18+08:00">2021-05-11</time>
+      </span>
 
   
 </div>
@@ -882,13 +698,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="问题是出在这里的"><a href="#问题是出在这里的" class="headerlink" title="问题是出在这里的:"></a>问题是出在这里的:</h2><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">SoftwareInfo result = <span class="keyword">new</span> SoftwareInfo(</span><br><span class="line">reader.GetString(<span class="number">1</span>),              <span class="comment">// reader 是 MySqlDataReader 实例</span></span><br><span class="line">reader.GetString(<span class="number">7</span>))</span><br><span class="line">&#123;</span><br><span class="line">    ID = reader.GetInt32(<span class="number">0</span>),</span><br><span class="line">    Label = reader.GetString(<span class="number">2</span>),</span><br><span class="line">    Coder = reader.GetString(<span class="number">3</span>),</span><br><span class="line">    DownloadCount = reader.GetInt32(<span class="number">4</span>),</span><br><span class="line">    Stars = reader.GetFloat(<span class="number">5</span>),</span><br><span class="line">    Introduction = reader.GetString(<span class="number">6</span>)</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> result;</span><br></pre></td></tr></table></figure>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案:"></a>解决方案:</h2><p><strong>第一种:</strong> 添加 Null 检查, 在调用 GetString, GetInt32, GetFloat 这类包含具体的类型转换的函数前, 先调用 IsDBNull 检查这条数据是不是 Null.</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">SoftwareInfo currentInfo = <span class="keyword">new</span> SoftwareInfo(</span><br><span class="line">reader.GetString(<span class="number">1</span>),</span><br><span class="line">reader.GetString(<span class="number">7</span>))</span><br><span class="line">&#123;</span><br><span class="line">    ID = reader.GetInt32(<span class="number">0</span>),</span><br><span class="line">    Label = reader.IsDBNull(<span class="number">2</span>) ? <span class="literal">null</span> : reader.GetString(<span class="number">2</span>),</span><br><span class="line">    Coder = reader.IsDBNull(<span class="number">3</span>) ? <span class="literal">null</span> : reader.GetString(<span class="number">3</span>),</span><br><span class="line">    DownloadCount = reader.IsDBNull(<span class="number">4</span>) ? <span class="number">0</span> : reader.GetInt32(<span class="number">4</span>),</span><br><span class="line">    Stars = reader.IsDBNull(<span class="number">5</span>) ? <span class="number">0</span> : reader.IsDBNull(<span class="number">5</span>) ? <span class="number">0</span> : reader.GetFloat(<span class="number">5</span>),</span><br><span class="line">    Introduction = reader.IsDBNull(<span class="number">6</span>) ? <span class="literal">null</span> : reader.GetString(<span class="number">6</span>)</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> currentInfo;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p><strong>第二种:</strong> 直接指定数据库的字段不可为 Null, 从根本上杜绝空值</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> tablename modify columnname <span class="keyword">not</span> <span class="keyword">null</span>;</span><br></pre></td></tr></table></figure>
-<h2 id="原因"><a href="#原因" class="headerlink" title="原因:"></a>原因:</h2><p>如果数据是 Null, 就无法调用包含具体类型的方法, 因为它们内部涉及到类型转换.</p>
-
+          <p>借助 WinApi 即可实现长路径转换为短路径</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/02/09/202102090805/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -914,7 +732,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202012302233/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/06/202102060026/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -927,7 +745,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/11/202012302233/" class="post-title-link" itemprop="url">[C#] 控制台动态输入 - 在输入的过程中就能获取, 设置或移动已经输入的内容</a>
+          <a href="/2021/02/06/202102060026/" class="post-title-link" itemprop="url">[踩坑记录] 某功能在C#7.3中不可用,请使用 8.0 或更高的语言版本 (通用解决方案)</a>
         </h2>
 
         <div class="post-meta-container">
@@ -937,10 +755,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-05-11 10:29:31 / Modified: 11:47:10" itemprop="dateCreated datePublished" datetime="2021-05-11T10:29:31+08:00">2021-05-11</time>
+      <time title="Created: 2021-02-06 00:00:00" itemprop="dateCreated datePublished" datetime="2021-02-06T00:00:00+08:00">2021-02-06</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-05-11 18:01:55" itemprop="dateModified" datetime="2021-05-11T18:01:55+08:00">2021-05-11</time>
+      </span>
 
   
 </div>
@@ -952,44 +776,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="简介："><a href="#简介：" class="headerlink" title="简介："></a>简介：</h2><ul>
-<li>这是一个类库，正如标题所说，它具有这两个最基本而又强大的功能，有时候，我们可能会需要在ReadLine的过程中就访问已经输入了的内容，但.NET又没有提供这样的功能。<blockquote>
-<p>其实在之前已经写过一个文章，也是动态输入，但是太烂了地址：<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_46555380/article/details/105337734">旧的动态输入</a></p>
-</blockquote>
-<h2 id="功能："><a href="#功能：" class="headerlink" title="功能："></a>功能：</h2></li>
-</ul>
-<ol>
-<li>在ReadLine的时候就读取已经输入了的内容，提供了完整的封装</li>
-<li>移动已经输入了的内容，你可以在输入时就将输入内容移动到控制台的任意位置</li>
-<li>光标移动，插入和覆盖模式，HOME和END键的处理。</li>
-<li>字符输入事件，在用户按下后，会有两个事件触发，可以通过这两个事件来过滤用户输入内容，例如，仅允许输入数字，只需要判断事件参数即可。 </li>
-<li>密码输入模式，与Linux的密码输入一致，不会显示任何内容，但功能按键以及输入事件仍然可用</li>
-<li>历史记录功能，它模拟的是Linux系统的命令行输入历史记录功能，比Windows的历史记录功能好那么一丢丢。</li>
-<li>（后续会增加更多功能，如果我需要或者你需要的话。<h2 id="原理："><a href="#原理：" class="headerlink" title="原理："></a>原理：</h2></li>
-</ol>
-<ul>
-<li>其实就是对 Console.ReadKey() 的妙用<h2 id="使用方式："><a href="#使用方式：" class="headerlink" title="使用方式："></a>使用方式：</h2></li>
-</ul>
-<ol>
-<li>实例化一个DynamicScanner对象。</li>
-<li>调用DynamicScanner的ReadLine()方法或者QuietReadLine()方法</li>
-<li>读取正在输入的内容，请使用类实例的InputtingString属性</li>
-<li>获取已输入内容的起始位置以及末端位置, 可使用StartLeft, StartTop, EndLeft, EndTop属性</li>
-<li>CharInput事件是当字符输入并且已经录入后触发的，PreviewCharInput是字符已经输入，但是并未录入的事件，CharInput要求返回值指定是否停止输入，PreviewCharInput要求返回值指定是否取消录入</li>
-</ol>
-<blockquote>
-<p>如果代码有部分可以优化的部分，或者你有好的点子，欢迎私信我哦~<br>2021 / 1 / 5: 更新了源代码, 优化了一个小细节: 当此次输入为空时, 不保存历史记录</p>
-</blockquote>
-<h2 id="源代码："><a href="#源代码：" class="headerlink" title="源代码："></a>源代码：</h2><ul>
-<li>创建一个名为Null.DynamicScanner.cs的文件，粘贴以下内容，添加到你的项目中，即可使用<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Null.Library</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">DynamicScanner</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">int</span> startTop, startLeft, endTop, endLeft, currentTop, currentLeft, tempEndTop, tempEndLeft;</span><br><span class="line">        <span class="built_in">int</span> inputIndex, historyIndex;</span><br><span class="line">        <span class="built_in">bool</span> insertMode = <span class="literal">true</span>, inputting = <span class="literal">false</span>, cursorVisible;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">readonly</span> <span class="built_in">object</span> printting = <span class="literal">false</span>;                <span class="comment">// 用于互斥锁</span></span><br><span class="line">        ConsoleKeyInfo readedKey;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">readonly</span> List&lt;List&lt;<span class="built_in">char</span>&gt;&gt; inputHistory;</span><br><span class="line">        <span class="keyword">private</span> List&lt;<span class="built_in">char</span>&gt; inputtingChars;</span><br><span class="line">        <span class="keyword">private</span> <span class="built_in">string</span> promptText = <span class="built_in">string</span>.Empty;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="built_in">delegate</span> <span class="built_in">bool</span> <span class="title">CharInputEventHandler</span>(<span class="params">DynamicScanner sender, ConsoleKeyInfo c</span>)</span>;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="built_in">delegate</span> <span class="built_in">bool</span> <span class="title">PreviewCharInputEventHandler</span>(<span class="params">DynamicScanner sender, ConsoleKeyInfo c</span>)</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">event</span> CharInputEventHandler CharInput;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">event</span> PreviewCharInputEventHandler PreviewCharInput;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">DynamicScanner</span>(<span class="params"></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            inputHistory = <span class="keyword">new</span> List&lt;List&lt;<span class="built_in">char</span>&gt;&gt;();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">string</span> InputtingString</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">get</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> inputtingChars == <span class="literal">null</span> ? <span class="built_in">string</span>.Empty : <span class="keyword">new</span> <span class="built_in">string</span>(inputtingChars.ToArray());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">int</span> StartTop &#123; <span class="keyword">get</span> =&gt; startTop; &#125;</span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">int</span> StartLeft &#123; <span class="keyword">get</span> =&gt; startLeft; &#125;</span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">int</span> EndTop &#123; <span class="keyword">get</span> =&gt; endTop; &#125;</span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">int</span> EndLeft &#123; <span class="keyword">get</span> =&gt; endLeft; &#125;</span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">int</span> CurrentTop &#123; <span class="keyword">get</span> =&gt; currentTop; &#125;</span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">int</span> CurrentLeft &#123; <span class="keyword">get</span> =&gt; currentLeft; &#125;</span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">bool</span> IsInputting &#123; <span class="keyword">get</span> =&gt; inputting; &#125;</span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">string</span> PromptText &#123; <span class="keyword">get</span> =&gt; promptText; <span class="keyword">set</span> =&gt; promptText = <span class="keyword">value</span>; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">bool</span> <span class="title">IsControlKey</span>(<span class="params">ConsoleKey k</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> k == ConsoleKey.Enter ||</span><br><span class="line">                k == ConsoleKey.UpArrow ||</span><br><span class="line">                k == ConsoleKey.DownArrow ||</span><br><span class="line">                k == ConsoleKey.LeftArrow ||</span><br><span class="line">                k == ConsoleKey.RightArrow ||</span><br><span class="line">                k == ConsoleKey.Insert ||</span><br><span class="line">                k == ConsoleKey.Backspace ||</span><br><span class="line">                k == ConsoleKey.Delete ||</span><br><span class="line">                k == ConsoleKey.Home ||</span><br><span class="line">                k == ConsoleKey.End;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">InitReadLine</span>(<span class="params"></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            startTop = Console.CursorTop;</span><br><span class="line">            startLeft = Console.CursorLeft;</span><br><span class="line">            inputIndex = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (inputHistory.Count == <span class="number">0</span> || inputHistory[inputHistory.Count - <span class="number">1</span>].Count != <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                historyIndex = inputHistory.Count;</span><br><span class="line">                inputHistory.Add(<span class="keyword">new</span> List&lt;<span class="built_in">char</span>&gt;());</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                historyIndex = inputHistory.Count - <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            inputtingChars = inputHistory[historyIndex];</span><br><span class="line"></span><br><span class="line">            inputting = <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="built_in">bool</span> <span class="title">DealInputChar</span>(<span class="params"></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">switch</span> (readedKey.Key)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">case</span> ConsoleKey.Enter:</span><br><span class="line">                    Console.WriteLine();</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">                <span class="keyword">case</span> ConsoleKey.UpArrow:</span><br><span class="line">                    <span class="keyword">if</span> (historyIndex &gt; <span class="number">0</span>)</span><br><span class="line">                    &#123;</span><br><span class="line">                        historyIndex--;</span><br><span class="line">                        UpdateInputState();</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> ConsoleKey.DownArrow:</span><br><span class="line">                    <span class="keyword">if</span> (historyIndex &lt; inputHistory.Count - <span class="number">1</span>)</span><br><span class="line">                    &#123;</span><br><span class="line">                        historyIndex++;</span><br><span class="line">                        UpdateInputState();</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> ConsoleKey.LeftArrow:</span><br><span class="line">                    <span class="keyword">if</span> (inputIndex &gt; <span class="number">0</span>)</span><br><span class="line">                    &#123;</span><br><span class="line">                        inputIndex--;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> ConsoleKey.RightArrow:</span><br><span class="line">                    <span class="keyword">if</span> (inputIndex &lt; inputtingChars.Count)</span><br><span class="line">                    &#123;</span><br><span class="line">                        inputIndex++;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> ConsoleKey.Insert:</span><br><span class="line">                    insertMode = !insertMode;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> ConsoleKey.Backspace:</span><br><span class="line">                    <span class="keyword">if</span> (inputIndex &gt; <span class="number">0</span>)</span><br><span class="line">                    &#123;</span><br><span class="line">                        inputtingChars.RemoveAt(inputIndex - <span class="number">1</span>);</span><br><span class="line">                        inputIndex--;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> ConsoleKey.Delete:</span><br><span class="line">                    <span class="keyword">if</span> (inputIndex &lt; inputtingChars.Count)</span><br><span class="line">                    &#123;</span><br><span class="line">                        inputtingChars.RemoveAt(inputIndex);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> ConsoleKey.Home:</span><br><span class="line">                    inputIndex = <span class="number">0</span>;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> ConsoleKey.End:</span><br><span class="line">                    inputIndex = inputtingChars.Count;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="literal">default</span>:</span><br><span class="line">                    <span class="keyword">if</span> (inputIndex == inputtingChars.Count)</span><br><span class="line">                    &#123;</span><br><span class="line">                        inputtingChars.Add(readedKey.KeyChar);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">else</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="keyword">if</span> (insertMode)</span><br><span class="line">                        &#123;</span><br><span class="line">                            inputtingChars.Insert(inputIndex, readedKey.KeyChar);</span><br><span class="line">                        &#125;</span><br><span class="line">                        <span class="keyword">else</span></span><br><span class="line">                        &#123;</span><br><span class="line">                            inputtingChars[inputIndex] = readedKey.KeyChar;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                    inputIndex++;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">PrintInputString</span>(<span class="params"></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">lock</span>(printting)</span><br><span class="line">            &#123;</span><br><span class="line">                cursorVisible = Console.CursorVisible;</span><br><span class="line">                Console.CursorVisible = <span class="literal">false</span>;</span><br><span class="line">                Console.SetCursorPosition(startLeft, startTop);</span><br><span class="line"></span><br><span class="line">                Console.Write(promptText);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (inputIndex == inputtingChars.Count)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; inputtingChars.Count; i++)</span><br><span class="line">                    &#123;</span><br><span class="line">                        Console.Write(inputtingChars[i]);</span><br><span class="line">                    &#125;</span><br><span class="line">                    currentLeft = Console.CursorLeft;</span><br><span class="line">                    currentTop = Console.CursorTop;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; inputtingChars.Count; i++)</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="keyword">if</span> (inputIndex == i)</span><br><span class="line">                        &#123;</span><br><span class="line">                            currentLeft = Console.CursorLeft;</span><br><span class="line">                            currentTop = Console.CursorTop;</span><br><span class="line">                        &#125;</span><br><span class="line">                        Console.Write(inputtingChars[i]);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                tempEndLeft = Console.CursorLeft;</span><br><span class="line">                tempEndTop = Console.CursorTop;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">while</span> (Console.CursorTop &lt; endTop || Console.CursorLeft &lt; endLeft)</span><br><span class="line">                &#123;</span><br><span class="line">                    Console.Write(<span class="string">&#x27; &#x27;</span>);</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                endLeft = tempEndLeft;</span><br><span class="line">                endTop = tempEndTop;</span><br><span class="line"></span><br><span class="line">                Console.SetCursorPosition(currentLeft, currentTop);</span><br><span class="line">                Console.CursorVisible = cursorVisible;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">UpdateInputState</span>(<span class="params"></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            inputtingChars = inputHistory[historyIndex];</span><br><span class="line">            inputIndex = inputtingChars.Count;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ClearDisplayBuffer</span>(<span class="params"></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">lock</span>(printting)</span><br><span class="line">            &#123;</span><br><span class="line">                cursorVisible = Console.CursorVisible;</span><br><span class="line">                Console.CursorVisible = <span class="literal">false</span>;</span><br><span class="line">                Console.SetCursorPosition(startLeft, startTop);</span><br><span class="line">                <span class="keyword">while</span> (Console.CursorTop &lt; endTop || Console.CursorLeft &lt; endLeft)</span><br><span class="line">                &#123;</span><br><span class="line">                    Console.Write(<span class="string">&#x27; &#x27;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                Console.SetCursorPosition(startLeft, startTop);</span><br><span class="line">                Console.CursorVisible = cursorVisible;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">DisplayTo</span>(<span class="params"><span class="built_in">int</span> cursorLeft, <span class="built_in">int</span> cursorTop</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">lock</span>(printting)</span><br><span class="line">            &#123;</span><br><span class="line">                cursorVisible = Console.CursorVisible;</span><br><span class="line">                Console.CursorVisible = <span class="literal">false</span>;</span><br><span class="line">                Console.SetCursorPosition(cursorLeft, cursorTop);</span><br><span class="line">                startLeft = cursorLeft; startTop = cursorTop;</span><br><span class="line"></span><br><span class="line">                Console.Write(promptText);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (inputIndex == inputtingChars.Count)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; inputtingChars.Count; i++)</span><br><span class="line">                    &#123;</span><br><span class="line">                        Console.Write(inputtingChars[i]);</span><br><span class="line">                    &#125;</span><br><span class="line">                    currentLeft = Console.CursorLeft;</span><br><span class="line">                    currentTop = Console.CursorTop;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; inputtingChars.Count; i++)</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="keyword">if</span> (inputIndex == i)</span><br><span class="line">                        &#123;</span><br><span class="line">                            currentLeft = Console.CursorLeft;</span><br><span class="line">                            currentTop = Console.CursorTop;</span><br><span class="line">                        &#125;</span><br><span class="line">                        Console.Write(inputtingChars[i]);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                endLeft = Console.CursorLeft;</span><br><span class="line">                endTop = Console.CursorTop;</span><br><span class="line">                Console.CursorVisible = cursorVisible;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">SetInputStart</span>(<span class="params"><span class="built_in">int</span> cursorLeft, <span class="built_in">int</span> cursorTop</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">lock</span>(printting)</span><br><span class="line">            &#123;</span><br><span class="line">                cursorVisible = Console.CursorVisible;</span><br><span class="line">                Console.CursorVisible = <span class="literal">false</span>;</span><br><span class="line">                Console.SetCursorPosition(startLeft, startTop);</span><br><span class="line">                <span class="keyword">while</span> (Console.CursorTop &lt; endTop || Console.CursorLeft &lt; endLeft)</span><br><span class="line">                &#123;</span><br><span class="line">                    Console.Write(<span class="string">&#x27; &#x27;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                Console.SetCursorPosition(cursorLeft, cursorTop);</span><br><span class="line">                startLeft = cursorLeft; startTop = cursorTop;</span><br><span class="line"></span><br><span class="line">                Console.Write(promptText);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (inputIndex == inputtingChars.Count)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; inputtingChars.Count; i++)</span><br><span class="line">                    &#123;</span><br><span class="line">                        Console.Write(inputtingChars[i]);</span><br><span class="line">                    &#125;</span><br><span class="line">                    currentLeft = Console.CursorLeft;</span><br><span class="line">                    currentTop = Console.CursorTop;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; inputtingChars.Count; i++)</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="keyword">if</span> (inputIndex == i)</span><br><span class="line">                        &#123;</span><br><span class="line">                            currentLeft = Console.CursorLeft;</span><br><span class="line">                            currentTop = Console.CursorTop;</span><br><span class="line">                        &#125;</span><br><span class="line">                        Console.Write(inputtingChars[i]);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                endLeft = Console.CursorLeft;</span><br><span class="line">                endTop = Console.CursorTop;</span><br><span class="line">                Console.CursorVisible = cursorVisible;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="built_in">string</span> <span class="title">ReadLine</span>(<span class="params"></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            InitReadLine();</span><br><span class="line">            PrintInputString();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">while</span> (<span class="literal">true</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                readedKey = Console.ReadKey(<span class="literal">true</span>);</span><br><span class="line">                <span class="keyword">if</span> (PreviewCharInput != <span class="literal">null</span> &amp;&amp; PreviewCharInput.Invoke(<span class="keyword">this</span>, readedKey))</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (DealInputChar())</span><br><span class="line">                &#123;</span><br><span class="line">                    inputting = <span class="literal">false</span>;</span><br><span class="line">                    <span class="keyword">return</span> InputtingString;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                PrintInputString();</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (CharInput != <span class="literal">null</span> &amp;&amp; CharInput.Invoke(<span class="keyword">this</span>, readedKey))</span><br><span class="line">                &#123;</span><br><span class="line">                    inputting = <span class="literal">false</span>;</span><br><span class="line">                    <span class="keyword">return</span> InputtingString;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="built_in">string</span> <span class="title">QuietReadLine</span>(<span class="params"></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            InitReadLine();</span><br><span class="line">            PrintInputString();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">while</span> (<span class="literal">true</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                readedKey = Console.ReadKey(<span class="literal">true</span>);</span><br><span class="line">                <span class="keyword">if</span> (PreviewCharInput != <span class="literal">null</span> &amp;&amp; PreviewCharInput.Invoke(<span class="keyword">this</span>, readedKey))</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (DealInputChar())</span><br><span class="line">                &#123;</span><br><span class="line">                    inputting = <span class="literal">false</span>;</span><br><span class="line">                    <span class="keyword">return</span> InputtingString;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (CharInput != <span class="literal">null</span> &amp;&amp; CharInput.Invoke(<span class="keyword">this</span>, readedKey))</span><br><span class="line">                &#123;</span><br><span class="line">                    inputting = <span class="literal">false</span>;</span><br><span class="line">                    <span class="keyword">return</span> InputtingString;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h2 id="使用实例："><a href="#使用实例：" class="headerlink" title="使用实例："></a>使用实例：</h2></li>
-<li>这是一个可以过滤输入的使用实例, 它仅允许用户输入数字, 并且支持使用WSAD按键控制已输入内容在控制台中的移动<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> Null.Library;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">LibraryTest</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] args</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            DynamicScanner scanner = <span class="keyword">new</span> DynamicScanner();</span><br><span class="line">            scanner.PreviewCharInput += Scanner_PreviewCharInput;</span><br><span class="line">            scanner.CharInput += Scanner_CharInput;</span><br><span class="line">            <span class="keyword">while</span>(<span class="literal">true</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">string</span> temp = scanner.ReadLine();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="built_in">bool</span> <span class="title">Scanner_CharInput</span>(<span class="params">DynamicScanner sender, ConsoleKeyInfo c</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            Console.Title = <span class="string">$&quot;Length: <span class="subst">&#123;sender.InputtingString.Length&#125;</span>, Inputed: <span class="subst">&#123;sender.InputtingString&#125;</span>&quot;</span>;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="built_in">bool</span> <span class="title">Scanner_PreviewCharInput</span>(<span class="params">DynamicScanner sender, ConsoleKeyInfo c</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (c.KeyChar &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; c.KeyChar &lt;= <span class="string">&#x27;9&#x27;</span> || DynamicScanner.IsControlKey(c.Key))</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;       <span class="comment">// 表示不取消, 即:录入这个字符</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">switch</span> (c.Key)       <span class="comment">// 通过WSAD按键可以控制输入内容移动</span></span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">case</span> ConsoleKey.W:</span><br><span class="line">                        sender.SetInputStart(sender.StartLeft, sender.StartTop - <span class="number">1</span>);</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    <span class="keyword">case</span> ConsoleKey.S:</span><br><span class="line">                        sender.SetInputStart(sender.StartLeft, sender.StartTop + <span class="number">1</span>);</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    <span class="keyword">case</span> ConsoleKey.A:</span><br><span class="line">                        sender.SetInputStart(sender.StartLeft - <span class="number">1</span>, sender.StartTop);</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    <span class="keyword">case</span> ConsoleKey.D:</span><br><span class="line">                        sender.SetInputStart(sender.StartLeft + <span class="number">1</span>, sender.StartTop);</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<br/><br/><br/><br/><br/><blockquote>
-<p>如果你觉得这些内容对你有帮助， 请一定要点个赞，或者收藏它，这是对我莫大的鼓励<br>也欢迎私信我，交个朋友也是非常棒的~</p>
-</blockquote>
-</li>
-</ul>
-
+          <p>使用自动修复或者手动编辑项目文件指定语言版本</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/02/06/202102060026/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1015,7 +810,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202012180116/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/06/202102060124/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -1028,7 +823,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/11/202012180116/" class="post-title-link" itemprop="url">[Linux] 执行但不阻塞 以‘后台‘模式启动程序或脚本</a>
+          <a href="/2021/02/06/202102060124/" class="post-title-link" itemprop="url">[踩坑记录] C# 源代码被误删, 通过反编译之前编译好的文件来拯救这一切, 三款反编译工具对比</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1038,10 +833,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-05-11 10:28:39 / Modified: 11:47:15" itemprop="dateCreated datePublished" datetime="2021-05-11T10:28:39+08:00">2021-05-11</time>
+      <time title="Created: 2021-02-06 00:00:00" itemprop="dateCreated datePublished" datetime="2021-02-06T00:00:00+08:00">2021-02-06</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-05-11 18:02:43" itemprop="dateModified" datetime="2021-05-11T18:02:43+08:00">2021-05-11</time>
+      </span>
 
   
 </div>
@@ -1053,14 +854,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="1-使用-‘-amp-’-符号："><a href="#1-使用-‘-amp-’-符号：" class="headerlink" title="1. 使用 ‘&amp;’ 符号："></a>1. 使用 ‘&amp;’ 符号：</h2><ul>
-<li>例如启动一个脚本，执行 ‘./idea.sh’ 以启动idea，但终端会被阻塞，若终端被关闭，idea也就被关闭。</li>
-<li>此时，执行 ‘./idea.sh &amp;’ 可以使 idea 脱离当前终端运行，即便当前终端被关闭，idea也不会受影响。<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./idea.sh     # 会阻塞当前终端进程</span><br><span class="line">./idea.sh &amp;   # 不会阻塞</span><br></pre></td></tr></table></figure>
-<h2 id="2-使用-‘nohup’-指令："><a href="#2-使用-‘nohup’-指令：" class="headerlink" title="2. 使用 ‘nohup’ 指令："></a>2. 使用 ‘nohup’ 指令：</h2></li>
-<li>参考 <a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-comm-nohup.html">菜鸟教程 - nohup指令</a></li>
-</ul>
-<p>参考文章：<a target="_blank" rel="noopener" href="https://blog.p2hp.com/archives/5528">Linux后台执行命令(非阻塞式)</a></p>
-
+          <p>结果是 ILSpy 效果最棒, dotPeek 启动速度慢, dnSpy反编译效果差</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/02/06/202102060124/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1086,7 +888,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/11/202012172339/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/04/202102040502/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -1099,7 +901,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/11/202012172339/" class="post-title-link" itemprop="url">[Linux] Ubuntu 新手引导 - 中文输入法配置</a>
+          <a href="/2021/02/04/202102040502/" class="post-title-link" itemprop="url">[项目实例] 手把手教你使用Python写一个功能非常强大的翻译程序</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1109,10 +911,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-05-11 10:27:20 / Modified: 11:47:20" itemprop="dateCreated datePublished" datetime="2021-05-11T10:27:20+08:00">2021-05-11</time>
+      <time title="Created: 2021-02-04 00:00:00" itemprop="dateCreated datePublished" datetime="2021-02-04T00:00:00+08:00">2021-02-04</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-05-11 17:47:20" itemprop="dateModified" datetime="2021-05-11T17:47:20+08:00">2021-05-11</time>
+      </span>
 
   
 </div>
@@ -1124,49 +932,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="选择输入法框架："><a href="#选择输入法框架：" class="headerlink" title="选择输入法框架："></a>选择输入法框架：</h2><ol>
-<li>Linux中，有多个输入法框架可供使用，在 Ubuntu 中，默认预装了 ibus 这款输入法引擎，常用的中文输入法引擎有两种，ibus 与 fcitx。两者都还彳亍，懒得下载的话，就直接用ibus吧。</li>
-<li>配置使用的输入法框架：打开终端，执行 ‘im-config’，在弹出的窗口中，选择ok，yes，然后选择 ibus，于是，你就成功使用了ibus框架。同理，选择 fcitx 则是使用 fcitx 框架，至于安装 fcitx，见文章末。<h2 id="选择输入法引擎："><a href="#选择输入法引擎：" class="headerlink" title="选择输入法引擎："></a>选择输入法引擎：</h2></li>
-<li>关键的时刻到咯，那么对于ibus，常用的输入法有：rime，sunpinyin，googlepinyin(谷歌拼音)，我的话，推荐rime和sunpinyin。</li>
-<li>对于fcitx嘛，常用的有sogoupinyin(搜狗拼音)，rime，sunpinyin，googlepinyin，搜狗的话，其实还是很棒的(没有广告，毕竟谁会往Linux系统软件中投放广告呢,,,)，然后rime和sunpinyin，也都蛮棒咯。</li>
-<li>至于安装，见文章末。<h2 id="添加输入法引擎："><a href="#添加输入法引擎：" class="headerlink" title="添加输入法引擎："></a>添加输入法引擎：</h2></li>
-<li>ibus的话，打开终端，执行 ‘ibus-setup’，然后在 ‘Input method’ 选项卡中就可以添加了。（什么？不会操作？建议重修英文）</li>
-<li>fcitx的话，更简单了，打开 Ubuntu 应用列表(我指屏幕左下角的按钮)，搜索fcitx，打开fcitx configuration，然后，你懂得，添加输入法就好。实在不会，参考这篇文章吧 <a target="_blank" rel="noopener" href="https://editor.csdn.net/md/?articleId=110823818">在Kali中配置中文输入法</a></li>
-<li>最后一点，如果你在添加输入法引擎的时候，找不到自己安装的输入法，先确认自己的输入法框架是否选择正确了，也就是在 ‘im-config’ 中查看，二就是尝试重启。<h2 id="添加输入法源："><a href="#添加输入法源：" class="headerlink" title="添加输入法源："></a>添加输入法源：</h2></li>
-<li>重启计算机以保证上面的更改生效，否则无法添加输入法源。</li>
-<li>打开Settings（设置）</li>
-<li>找到 Region &amp; Language (地区和语言)。</li>
-<li>在 Input Source (输入源) 中点击 ‘+’ 添加输入源，选择自己安装的输入法。它一般位于 Chinese (汉语) 组中，例如 ‘Chinese (SunPinyin)’<blockquote>
-<p>再次强调，如果你找不到，就尝试重启</p>
-</blockquote>
-</li>
-</ol>
-<p><img src="https://img-blog.csdnimg.cn/20201217231817146.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NTU1Mzgw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="享受打字："><a href="#享受打字：" class="headerlink" title="享受打字："></a>享受打字：</h2><ul>
-<li>如果你走的是 ibus 线，那么现在，你现在可以通过 Super + Space(空格) 来切换输入方式了。</li>
-<li>如果你走的是 fcitx 线，则是通过 Ctrl + Space(空格) 来切换输入法，并且你可以在 fcitx configuration 中设置甚至添加更换输入法的快捷键。<blockquote>
-<p>在 Ubuntu 中， Super 键对应着 Windows 徽标键</p>
-</blockquote>
-</li>
-</ul>
-<p><br/><br/></p>
-<h5 id="安装输入法框架："><a href="#安装输入法框架：" class="headerlink" title="安装输入法框架："></a>安装输入法框架：</h5><ul>
-<li>哦？不会安装了吗？让我来帮助你吧。</li>
-<li>安装 ibus 使用 ‘sudo apt install ibus’ 指令即可。</li>
-<li>安装 fcitx 使用 ‘sudo apt install fcitx’ 即可。<blockquote>
-<p>下载速度慢？ 如果不是网络问题的话，就尝试更换软件安装源吧。这个在网络上可以很容易的搜索到。个人建议 阿里云镜像 以及 华为云镜像。</p>
-</blockquote>
-<h5 id="安装输入法引擎："><a href="#安装输入法引擎：" class="headerlink" title="安装输入法引擎："></a>安装输入法引擎：</h5></li>
-<li>其实这件事情也蛮简单的，因为 apt 可以搜索软件，通过 ‘apt search ibus’ 就可以搜索到关于 ibus 的软件，其中不乏有许多 ibus 的输入法引擎</li>
-<li>输入法引擎的命名方式很简单，就是 框架名-引擎名，例如 ibus-rime，直接 ‘sudo apt install ibus-rime’ 即可安装适用于 ibus 的 rime 输入法。本文章提到的其他输入法引擎也是如此(只有sogoupinyin需要在<a target="_blank" rel="noopener" href="https://pinyin.sogou.com/linux/">SogouPinyin官网</a>下载)</li>
-</ul>
-<h5 id="其他小问题："><a href="#其他小问题：" class="headerlink" title="其他小问题："></a>其他小问题：</h5><ul>
-<li>不知为何，Ubuntu中 ibus 有点问题，它无法设置为候选词水平显示，网络上也找不到解决方式，如果你介意这一点，那么就使用fcitx框架吧。</li>
-</ul>
-<h5 id="作者说"><a href="#作者说" class="headerlink" title="作者说:"></a><em>作者说:</em></h5><ul>
-<li>如果可以的话，为此文章点赞，并且加入到写文章的行列，国内IT圈环境需要我们做出贡献！</li>
-</ul>
-
+          <p>分析有道翻译的API, 然后用来做翻译小程序</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/02/04/202102040502/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1203,14 +977,14 @@
   </span>
   <span class="author" itemprop="copyrightHolder">SlimeNull</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
 
     </div>
   </footer>
 
   
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   
