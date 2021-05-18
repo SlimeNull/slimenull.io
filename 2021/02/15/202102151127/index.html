@@ -475,7 +475,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <blockquote>
             
               
-                <p>本文永久链接是：<a href=http://example.com/2021/02/15/202102151127/>http://example.com/2021/02/15/202102151127/</a></p>
+                <p>本文永久链接是：<a href=http://slimenull.github.io/2021/02/15/202102151127/>http://slimenull.github.io/2021/02/15/202102151127/</a></p>
               
             
           </blockquote>
@@ -514,7 +514,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2021/02/15/202102151127/&title=[.NET] WPF Triggers 触发器, EventTrigger, Trigger - SlimeNull's Blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://slimenull.github.io/2021/02/15/202102151127/&title=[.NET] WPF Triggers 触发器, EventTrigger, Trigger - SlimeNull's Blog&summary="
           
           >
           
@@ -526,7 +526,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2021/02/15/202102151127/&title=[.NET] WPF Triggers 触发器, EventTrigger, Trigger - SlimeNull's Blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://slimenull.github.io/2021/02/15/202102151127/&title=[.NET] WPF Triggers 触发器, EventTrigger, Trigger - SlimeNull's Blog&summary="
           
           >
           
@@ -538,7 +538,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2021/02/15/202102151127/&title=[.NET] WPF Triggers 触发器, EventTrigger, Trigger - SlimeNull's Blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://slimenull.github.io/2021/02/15/202102151127/&title=[.NET] WPF Triggers 触发器, EventTrigger, Trigger - SlimeNull's Blog&summary="
           
           >
           
@@ -576,10 +576,35 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         </a>
       
       
-        <a class='next' href='/2021/02/15/202102151607/'>
-          <p class='title'>[.NET] WPF DoubleAnimation 动画, 一篇文章悟透!<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>完全理解 DoubleAnimation! 仅需这一篇文章.
-介绍首先, DoubleAnimation可以用来创建一些简单的动画, 这些动画仅限于使用Double值的属性, 例如控件的位置, ...</p>
+        <a class='next' href='/2021/02/12/202102120155/'>
+          <p class='title'>[Linux] Linux 指令与全称<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+
+
+指令
+全称
+*描述
+
+
+
+su
+switch user
+切换用户
+
+
+cat
+concatenate
+
+
+
+uname
+unix name
+unix 名称
+
+
+df
+disk free
+磁...</p>
         </a>
       
     </div>
@@ -1536,7 +1561,7 @@ function setSearchService() {
       // 请求 PV 并自增
       var pvCtn = document.querySelector('#lc-sv');
       if (pvCtn || enableIncr) {
-        var pvGetter = this.getRecord(Counter, 'http://example.com' + '/#lc-sv', 'Visits').then((record) => {
+        var pvGetter = this.getRecord(Counter, 'http://slimenull.github.io' + '/#lc-sv', 'Visits').then((record) => {
           incrArr.push(this.buildIncrement(record.objectId))
           var eles = document.querySelectorAll('#lc-sv #number');
           if (eles.length > 0) {
@@ -1554,7 +1579,7 @@ function setSearchService() {
       // 请求 UV 并自增
       var uvCtn = document.querySelector('#lc-uv');
       if (uvCtn || enableIncr) {
-        var uvGetter = this.getRecord(Counter, 'http://example.com' + '/#lc-uv', 'Visitors').then((record) => {
+        var uvGetter = this.getRecord(Counter, 'http://slimenull.github.io' + '/#lc-uv', 'Visitors').then((record) => {
           var vuv = this.validUV();
           vuv && incrArr.push(this.buildIncrement(record.objectId))
           var eles = document.querySelectorAll('#lc-uv #number');
@@ -1576,7 +1601,7 @@ function setSearchService() {
         for (i = 0; i < allPV.length; i++) {
           let pv = allPV[i];
           let title = pv.getAttribute('data-title');
-          var url = 'http://example.com' + pv.getAttribute('data-path');
+          var url = 'http://slimenull.github.io' + pv.getAttribute('data-path');
           if (url) {
             var viewGetter = this.getRecord(Counter, url, title).then((record) => {
               // 是当前页面就自增

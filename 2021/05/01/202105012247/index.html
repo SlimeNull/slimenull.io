@@ -491,7 +491,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <blockquote>
             
               
-                <p>本文永久链接是：<a href=http://example.com/2021/05/01/202105012247/>http://example.com/2021/05/01/202105012247/</a></p>
+                <p>本文永久链接是：<a href=http://slimenull.github.io/2021/05/01/202105012247/>http://slimenull.github.io/2021/05/01/202105012247/</a></p>
               
             
           </blockquote>
@@ -533,7 +533,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2021/05/01/202105012247/&title=[Web] 25行 CSS 代码实现轮播图 - SlimeNull's Blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://slimenull.github.io/2021/05/01/202105012247/&title=[Web] 25行 CSS 代码实现轮播图 - SlimeNull's Blog&summary="
           
           >
           
@@ -545,7 +545,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2021/05/01/202105012247/&title=[Web] 25行 CSS 代码实现轮播图 - SlimeNull's Blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://slimenull.github.io/2021/05/01/202105012247/&title=[Web] 25行 CSS 代码实现轮播图 - SlimeNull's Blog&summary="
           
           >
           
@@ -557,7 +557,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2021/05/01/202105012247/&title=[Web] 25行 CSS 代码实现轮播图 - SlimeNull's Blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://slimenull.github.io/2021/05/01/202105012247/&title=[Web] 25行 CSS 代码实现轮播图 - SlimeNull's Blog&summary="
           
           >
           
@@ -596,13 +596,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         </a>
       
       
-        <a class='next' href='/2021/04/18/202104181107/'>
-          <p class='title'>[C#] C# 与 Java 的一些差异, 快速了解 Java 的基础知识<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>
-这篇文章, 可以帮助你借助 C# 的知识快速入门 Java, 并且详细介绍 C# 与 Java 的重要差异
-
-1. 数据类型
-在 C# 中, 基本的数据类型都有别名, 例如字符串 String...</p>
+        <a class='next' href='/2021/04/18/202104180238/'>
+          <p class='title'>[C#] 计算 MD5 SHA1 SHA256 SHA384 SHA512 CRC32<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>直接贴代码了, 复制即可用, 源码部分来自网络.
+如果要计算字符串的 MD5 值, 直接 Encoding.UTF8.GetBytes() 然后就可以了
+12345678910111213141...</p>
         </a>
       
     </div>
@@ -1559,7 +1557,7 @@ function setSearchService() {
       // 请求 PV 并自增
       var pvCtn = document.querySelector('#lc-sv');
       if (pvCtn || enableIncr) {
-        var pvGetter = this.getRecord(Counter, 'http://example.com' + '/#lc-sv', 'Visits').then((record) => {
+        var pvGetter = this.getRecord(Counter, 'http://slimenull.github.io' + '/#lc-sv', 'Visits').then((record) => {
           incrArr.push(this.buildIncrement(record.objectId))
           var eles = document.querySelectorAll('#lc-sv #number');
           if (eles.length > 0) {
@@ -1577,7 +1575,7 @@ function setSearchService() {
       // 请求 UV 并自增
       var uvCtn = document.querySelector('#lc-uv');
       if (uvCtn || enableIncr) {
-        var uvGetter = this.getRecord(Counter, 'http://example.com' + '/#lc-uv', 'Visitors').then((record) => {
+        var uvGetter = this.getRecord(Counter, 'http://slimenull.github.io' + '/#lc-uv', 'Visitors').then((record) => {
           var vuv = this.validUV();
           vuv && incrArr.push(this.buildIncrement(record.objectId))
           var eles = document.querySelectorAll('#lc-uv #number');
@@ -1599,7 +1597,7 @@ function setSearchService() {
         for (i = 0; i < allPV.length; i++) {
           let pv = allPV[i];
           let title = pv.getAttribute('data-title');
-          var url = 'http://example.com' + pv.getAttribute('data-path');
+          var url = 'http://slimenull.github.io' + pv.getAttribute('data-path');
           if (url) {
             var viewGetter = this.getRecord(Counter, url, title).then((record) => {
               // 是当前页面就自增
