@@ -469,13 +469,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   
   <h2 id="音波"><a href="#音波" class="headerlink" title="音波:"></a>音波:</h2><p>首先是初中物理知识, 声音是物体的振动造成的, 所以从时间上看, 这个物体的位置不断变动, 下面这个图象, 就是音波了</p>
-<p><img src="C:\Users\Null\AppData\Roaming\Typora\typora-user-images\image-20210506192326369.png" class="lazyload" data-srcset="C:\Users\Null\AppData\Roaming\Typora\typora-user-images\image-20210506192326369.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210506191216912"></p>
+<p><img src="C:\Users\Null\Desktop\MyBlogs\source_posts\assets\202105061954\1-1622014907706.png" class="lazyload" data-srcset="C:\Users\Null\Desktop\MyBlogs\source_posts\assets\202105061954\1-1622014907706.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210506191216912"></p>
 <h2 id="采样"><a href="#采样" class="headerlink" title="采样:"></a>采样:</h2><p>因为计算机无法存储整个音波, 只能存储音波上一个个的点, 而这一个个的点, 就是采样:</p>
-<p><img src="C:\Users\Null\AppData\Roaming\Typora\typora-user-images\image-20210506191916062.png" class="lazyload" data-srcset="C:\Users\Null\AppData\Roaming\Typora\typora-user-images\image-20210506191916062.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210506191916062"></p>
+<p><img src="C:\Users\Null\Desktop\MyBlogs\source_posts\assets\202105061954\2-1622014914637.png" class="lazyload" data-srcset="C:\Users\Null\Desktop\MyBlogs\source_posts\assets\202105061954\2-1622014914637.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210506191916062"></p>
 <h2 id="采样率"><a href="#采样率" class="headerlink" title="采样率:"></a>采样率:</h2><p>采样率就是采样的密集程度, 如果太过密集, 那么占用的存储空间就会大很多, 但如果采样率小了, 那么这些采样与原波形的形状就有所不同了.</p>
-<p><img src="C:\Users\Null\AppData\Roaming\Typora\typora-user-images\image-20210506193034097.png" class="lazyload" data-srcset="C:\Users\Null\AppData\Roaming\Typora\typora-user-images\image-20210506193034097.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210506193034097"></p>
+<p><img src="C:\Users\Null\Desktop\MyBlogs\source_posts\assets\202105061954\3-1622014913192.png" class="lazyload" data-srcset="C:\Users\Null\Desktop\MyBlogs\source_posts\assets\202105061954\3-1622014913192.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210506193034097"></p>
 <h2 id="样本大小"><a href="#样本大小" class="headerlink" title="样本大小:"></a>样本大小:</h2><p>样本大小表示计算机应该用多大的存储空间来存储一个样本, 有 8bit, 16bit, 32bit, 常用的是 16bit 和32bit, 样本大小还决定了这个样本能表示的值的范围, 例如 16 bit 的样本只能表示 -32768 到 32767 之间的整数, 如果音频的某个部分超出了这个范围, 那么显然这个采样就不精准了, 如下图, 波峰处就出现了误差.</p>
-<p><img src="C:\Users\Null\AppData\Roaming\Typora\typora-user-images\image-20210506194019619.png" class="lazyload" data-srcset="C:\Users\Null\AppData\Roaming\Typora\typora-user-images\image-20210506194019619.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210506194019619"></p>
+<p><img src="C:\Users\Null\Desktop\MyBlogs\source_posts\assets\202105061954\4-1622014911802.png" class="lazyload" data-srcset="C:\Users\Null\Desktop\MyBlogs\source_posts\assets\202105061954\4-1622014911802.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210506194019619"></p>
 <h2 id="样本编码"><a href="#样本编码" class="headerlink" title="样本编码"></a>样本编码</h2><p>样本编码指计算机用什么样的格式来存储这个样本, 对于 8bit, 16bit 的样本, 一般是用整数, 对于 32bit 的样本, 则是用浮点数更多.</p>
 
   
@@ -517,10 +517,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-12T09:41:53+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-26T15:41:58+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2021年5月12日</p>
+    <p>更新于：2021年5月26日</p>
   </a>
 </div>
 

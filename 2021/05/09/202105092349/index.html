@@ -428,7 +428,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='new-meta-item category'>
     <a class='notlink'>
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/NET/">.NET</a><span class="sep"></span><a class="category-link" href="/categories/NET/C/">C#</a><span class="sep"></span><a class="category-link" href="/categories/NET/C/%E7%AC%94%E8%AE%B0/">笔记</a>
+      <a class="category-link" href="/categories/NET/">.NET</a><span class="sep"></span><a class="category-link" href="/categories/NET/%E7%AC%94%E8%AE%B0/">笔记</a>
     </a>
   </div>
 
@@ -468,7 +468,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
   
-  <h2 id="预览"><a href="#预览" class="headerlink" title="预览:"></a>预览:</h2><p><img src="202105092349.assets/UcHdk86FDq.gif" class="lazyload" data-srcset="202105092349.assets/UcHdk86FDq.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="UcHdk86FDq"></p>
+  <h2 id="预览"><a href="#预览" class="headerlink" title="预览:"></a>预览:</h2><p><img src="/assets/202105092349/UcHdk86FDq.gif" class="lazyload" data-srcset="/assets/202105092349/UcHdk86FDq.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="UcHdk86FDq"></p>
 <h2 id="捕捉声卡输出"><a href="#捕捉声卡输出" class="headerlink" title="捕捉声卡输出:"></a>捕捉声卡输出:</h2><p>实现音频可视化, 第一步就是获得音频采样, 这里我们选择使用计算机正在播放的音频作为采样源进行处理:</p>
 <p>NAudio 中, 可以借助 WasapiLoopbackCapture 来进行捕捉:</p>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">WasapiLoopbackCapture cap = <span class="keyword">new</span> WasapiLoopbackCapture();</span><br><span class="line">cap.DataAvailable += (sender, e) =&gt;      <span class="comment">// 录制数据可用时触发此事件, 参数中包含音频数据</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">float</span>[] allSamples = Enumerable      <span class="comment">// 提取数据中的采样</span></span><br><span class="line">        .Range(<span class="number">0</span>, e.BytesRecorded / <span class="number">4</span>)   <span class="comment">// 除以四是因为, 缓冲区内每 4 个字节构成一个浮点数, 一个浮点数是一个采样</span></span><br><span class="line">        .Select(i =&gt; BitConverter.ToSingle(e.Buffer, i * <span class="number">4</span>))  <span class="comment">// 转换为 float</span></span><br><span class="line">        .ToArray();    <span class="comment">// 转换为数组</span></span><br><span class="line">    <span class="comment">// 获取采样后, 在这里进行详细处理</span></span><br><span class="line">&#125;</span><br><span class="line">cap.StartRecording();   <span class="comment">// 开始录制</span></span><br></pre></td></tr></table></figure>
@@ -574,10 +574,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-18T17:53:12+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-26T15:41:43+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2021年5月18日</p>
+    <p>更新于：2021年5月26日</p>
   </a>
 </div>
 
@@ -652,6 +652,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
     <div class="prev-next">
+      
+        <a class='prev' href='/2021/05/26/202105261555/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>[Web] JS MouseDown 事件与判断鼠标是否在某个元素中</p>
+          <p class='content'>创建事件监听器:对于创建全局的事件监听器(EventListener), 我们可以使用 document 对象.
+1234document.addEventListener(&quot;mous...</p>
+        </a>
       
       
         <a class='next' href='/2021/05/06/202105061949/'>

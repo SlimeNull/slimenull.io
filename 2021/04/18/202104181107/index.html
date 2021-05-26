@@ -472,11 +472,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>这篇文章, 可以帮助你借助 C# 的知识快速入门 Java, 并且详细介绍 C# 与 Java 的重要差异</p>
 </blockquote>
 <h2 id="1-数据类型"><a href="#1-数据类型" class="headerlink" title="1. 数据类型"></a>1. 数据类型</h2><ol>
-<li>在 C# 中, 基本的数据类型都有别名, 例如字符串 String, 可以简写为 string, Int32 可以简写为 int, 但是在 Java 中, 不存在这些. 使用字符串, 必须要首字母大写, 使用布尔值必须要用 boolean.</li>
-<li>在 C# 中, String 数据基本数据类型, 而在 Java 中, 严格来讲, 它不属于基本数据类型. Java 中的基本数据类型更像是 C# 中的值类型, 只有 int, char, boolean 这些直接存储的数据类型才是基本数据类型. <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String str = <span class="string">&quot;这是一个字符串&quot;</span>;          <span class="comment">// 正确</span></span><br></pre></td></tr></table></figure></li>
-<li>在 C# 中, int 就是 int, 它与其他复杂的数据类型例如 StringBuilder 差异并不大, 但是在 Java 中, int, char, boolean 这类基本数据类型不可以作为泛型参数来使用, 例如你不能创建一个存储 int 的 List, 如果要创建存储 int 的 List, 你需要使用 int 的包装类 Integer, 创建 ArrayList&lt;Integer&gt;.  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> v = <span class="keyword">new</span> ArrayList&lt;<span class="keyword">int</span>&gt;();        <span class="comment">// 错误</span></span><br><span class="line"><span class="keyword">var</span> v = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();    <span class="comment">// 正确</span></span><br></pre></td></tr></table></figure></li>
-<li>Java 不存在值类型, 只有基本数据类型和引用对象类型, 两者用法不同.</li>
-<li>Java 的基本数据类型不存在成员, 例如在 C# 中, int 有静态常量 MaxValue, 但是 Java 中的 int 没有, 如果要获取整数的最大值, 需要使用 int 的包装类 Integer <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> v = <span class="keyword">int</span>.MAX_VALUE;      <span class="comment">// 错误</span></span><br><span class="line"><span class="keyword">int</span> v = Integer.MAX_VALUE;  <span class="comment">// 正确</span></span><br></pre></td></tr></table></figure></li>
+<li><p>在 C# 中, 基本的数据类型都有别名, 例如字符串 String, 可以简写为 string, Int32 可以简写为 int, 但是在 Java 中, 不存在这些. 使用字符串, 必须要首字母大写, 使用布尔值必须要用 boolean.</p>
+</li>
+<li><p>在 C# 中, String 数据基本数据类型, 而在 Java 中, 严格来讲, 它不属于基本数据类型. Java 中的基本数据类型更像是 C# 中的值类型, 只有 int, char, boolean 这些直接存储的数据类型才是基本数据类型.</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String str = <span class="string">&quot;这是一个字符串&quot;</span>;          <span class="comment">// 正确</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在 C# 中, int 就是 int, 它与其他复杂的数据类型例如 StringBuilder 差异并不大, 但是在 Java 中, int, char, boolean 这类基本数据类型不可以作为泛型参数来使用, 例如你不能创建一个存储 int 的 List, 如果要创建存储 int 的 List, 你需要使用 int 的包装类 Integer, 创建 ArrayList&lt;Integer&gt;. </p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> v = <span class="keyword">new</span> ArrayList&lt;<span class="keyword">int</span>&gt;();        <span class="comment">// 错误</span></span><br><span class="line"><span class="keyword">var</span> v = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();    <span class="comment">// 正确</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Java 不存在值类型, 只有基本数据类型和引用对象类型, 两者用法不同.</p>
+</li>
+<li><p>Java 的基本数据类型不存在成员, 例如在 C# 中, int 有静态常量 MaxValue, 但是 Java 中的 int 没有, 如果要获取整数的最大值, 需要使用 int 的包装类 Integer</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> v = <span class="keyword">int</span>.MAX_VALUE;      <span class="comment">// 错误</span></span><br><span class="line"><span class="keyword">int</span> v = Integer.MAX_VALUE;  <span class="comment">// 正确</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Java 中比较字符串是否相等需要使用实例方法 String.equals(String), 在 C# 中直接使用等于号 ‘==’ 比较即可. 当然, 如果要比较引用是否相同(比较内存地址), 在 C# 中可以使用 object.ReferenceEquals(object, object)</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String a = <span class="string">&quot;qwq&quot;</span>;</span><br><span class="line">String b = <span class="keyword">new</span> Scanner(System.in).nextLine();</span><br><span class="line">System.out.println(<span class="string">&quot;输入的字符串与 &#x27;qwq&#x27; 相等: &quot;</span> + a.equals(b).toString());</span><br></pre></td></tr></table></figure>
+
+</li>
 </ol>
 <h2 id="2-枚举"><a href="#2-枚举" class="headerlink" title="2. 枚举"></a>2. 枚举</h2><ol>
 <li>在 C# 中, 枚举是特殊的值类型, 本质是 int, 定义起来非常简单, 在 Java 中, 如果要自定义每一个枚举成员所对应的 int 值, 则定义起来非常繁琐: <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">   <span class="keyword">public</span> <span class="class"><span class="keyword">enum</span> <span class="title">ColumnAlignment</span> </span>&#123;</span><br><span class="line">    Left(<span class="number">1</span>), Right(<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">       <span class="keyword">private</span> <span class="keyword">int</span> value;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">ColumnAlignment</span><span class="params">(<span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">       	<span class="keyword">this</span>.value = value;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">value</span><span class="params">()</span></span>&#123;</span><br><span class="line">       	<span class="keyword">return</span> <span class="keyword">this</span>.value;</span><br><span class="line">       &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
@@ -538,10 +550,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-12T10:01:33+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-26T11:17:41+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2021年5月12日</p>
+    <p>更新于：2021年5月26日</p>
   </a>
 </div>
 

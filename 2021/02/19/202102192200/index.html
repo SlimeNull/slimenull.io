@@ -459,9 +459,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
   
-  <p><img src="202102192200.assets/xPIFuHhf59.gif" class="lazyload" data-srcset="202102192200.assets/xPIFuHhf59.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="xPIFuHhf59"><br>欸嘿, 这就是程序图了, 通过鼠标拖拽可以移动, 鼠标滚轮可以缩放, 右下角还可以选择要绘制的函数. 项目仓库链接在文章末尾</p>
+  <p><img src="/assets/202102192200/xPIFuHhf59.gif" class="lazyload" data-srcset="/assets/202102192200/xPIFuHhf59.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="xPIFuHhf59"><br>欸嘿, 这就是程序图了, 通过鼠标拖拽可以移动, 鼠标滚轮可以缩放, 右下角还可以选择要绘制的函数. 项目仓库链接在文章末尾</p>
 <h2 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理:"></a>基本原理:</h2><p>Graphics 绘图, 不用我说了吧? 如果你不是很懂, 留言, 我会专门写一篇文章来介绍 Graphics.</p>
-<p>带入求值, 没啥难的. 线是一个个点连起来的, 也就是:<br><img src="https://img-blog.csdnimg.cn/20210219052221569.png" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/20210219052221569.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="><br>然后, 标尺, 也是一个个线呗, 那个数字的话, 就是这个:<br><img src="https://img-blog.csdnimg.cn/20210219052448721.png" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/20210219052448721.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="><br>填充小三角的话, 就是这个:<br><img src="https://img-blog.csdnimg.cn/20210219052539913.png" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/20210219052539913.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<p>带入求值, 没啥难的. 线是一个个点连起来的, 也就是:<br><img src="/assets/202102192200/1.png" class="lazyload" data-srcset="/assets/202102192200/1.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="><br>然后, 标尺, 也是一个个线呗, 那个数字的话, 就是这个:<br><img src="/assets/202102192200/2.png" class="lazyload" data-srcset="/assets/202102192200/2.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="><br>填充小三角的话, 就是这个:<br><img src="/assets/202102192200/3.png" class="lazyload" data-srcset="/assets/202102192200/3.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <h2 id="关于优化"><a href="#关于优化" class="headerlink" title="关于优化:"></a>关于优化:</h2><p>首先是计算问题, 保证仅仅计算需要显示的区域, 区域外的坐标不予以计算, 以节省资源.</p>
 <p>然后是闪屏问题, 使用BufferedGraphics, 既能解决闪屏问题, 又不会像Bitmap缓冲那样闪屏.</p>
 <blockquote>
@@ -514,10 +514,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-11T18:53:41+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-26T15:47:03+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2021年5月11日</p>
+    <p>更新于：2021年5月26日</p>
   </a>
 </div>
 

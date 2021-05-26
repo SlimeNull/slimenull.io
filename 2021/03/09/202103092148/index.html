@@ -461,31 +461,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <h2 id="概述"><a href="#概述" class="headerlink" title="概述:"></a>概述:</h2><p>.NET Core 不支持委托的 BeginInvoke 方法, 使用别的方法, 例如 Task 来替代它!</p>
 <h2 id="这件事"><a href="#这件事" class="headerlink" title="这件事:"></a>这件事:</h2><p>首先是… 报了一堆 “平台不支持的” 错误.</p>
-<div align="center">
-<img src="https://img-blog.csdnimg.cn/20210309213418546.png" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/20210309213418546.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
-</div>
-
+<p><img src="202103092148/1.png" class="lazyload" data-srcset="202103092148/1.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <p>堆栈显示也看不出来是哪里的问题, 但我看到了 Threading 这玩意儿…:</p>
-<div align="center">
-<img src="https://img-blog.csdnimg.cn/20210309213525619.png" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/20210309213525619.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
-</div>
-
+<p><img src="202103092148/2.png" class="lazyload" data-srcset="202103092148/2.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <p>最后通过 “死亡断点” 发现是这里出的问题, 这是一个异步操作的回调函数.</p>
-<div align="center">
-<img src="https://img-blog.csdnimg.cn/20210309213723524.png" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/20210309213723524.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
-</div>
-
+<p><img src="202103092148/3.png" class="lazyload" data-srcset="202103092148/3.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <p>进一步调试, 发现是这里, 这里又会 Invoke 一个事件:</p>
-<div align="center">
-<img src="https://img-blog.csdnimg.cn/20210309213924137.png" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/20210309213924137.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
-<img src="https://img-blog.csdnimg.cn/20210309214018874.png" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/20210309214018874.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
-</div>
-
+<p><img src="202103092148/4.png" class="lazyload" data-srcset="202103092148/4.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<p><img src="202103092148/5.png" class="lazyload" data-srcset="202103092148/5.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <p>好家伙, 又是一个事件… 然后我看了看订阅了这个事件的地方…</p>
-<div align="center">
-<img src="https://img-blog.csdnimg.cn/20210309214243836.png" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/20210309214243836.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/>
-</div>
-
+<p><img src="202103092148/6.png" class="lazyload" data-srcset="202103092148/6.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
 <p>乍一看,,,, 没啥毛病! 但问题确实出在这里! (我实在是太菜了)<br>最后… 我思考了下, 我在 Invoke 调用的委托里面, 整了异步的操作…… 于是我试着将 BeginInvoke 换成 Invoke, 然后…. 问题解决了!!!</p>
 <p>后来又双叒叕遇到了这个问题,,, 然后仔细搜索了下资料. 懂了. 原来 .NET Core 不支持委托的 BeginInvoke 方法. 而事件的本质就是多播委托!</p>
 
@@ -528,10 +513,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-11T18:35:27+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-26T11:23:52+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2021年5月11日</p>
+    <p>更新于：2021年5月26日</p>
   </a>
 </div>
 

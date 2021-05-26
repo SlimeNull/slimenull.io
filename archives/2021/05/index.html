@@ -412,9 +412,55 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
         
+          
+        
       
     
     
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2021/05/26/202105261555/">
+        [Web] JS MouseDown 事件与判断鼠标是否在某个元素中
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        创建事件监听器:对于创建全局的事件监听器(EventListener), 我们可以使用 document 对象.
+1234document.addEventListener(&quot;mousedown&quot;, function(e)&#123;    // e 参数为鼠标按下的事件, 具体有什么成员, 可以在浏览器调试器里面直接 console.log(e) 查看    // 这里...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-05-26</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/05/26/202105261555/'>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
       
         
           <div class='post-wrapper'>
@@ -442,7 +488,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <time>2021-05-09</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/NET/">.NET</a><span class="sep"></span><a class="category-link" href="/categories/NET/C/">C#</a><span class="sep"></span><a class="category-link" href="/categories/NET/C/%E7%AC%94%E8%AE%B0/">笔记</a>
+          <a class="category-link" href="/categories/NET/">.NET</a><span class="sep"></span><a class="category-link" href="/categories/NET/%E7%AC%94%E8%AE%B0/">笔记</a>
         
       </div>
       
@@ -486,7 +532,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <time>2021-05-06</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/NET/">.NET</a><span class="sep"></span><a class="category-link" href="/categories/NET/C/">C#</a><span class="sep"></span><a class="category-link" href="/categories/NET/C/%E7%AC%94%E8%AE%B0/">笔记</a>
+          <a class="category-link" href="/categories/NET/">.NET</a><span class="sep"></span><a class="category-link" href="/categories/NET/%E7%AC%94%E8%AE%B0/">笔记</a>
         
       </div>
       
@@ -574,7 +620,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <time>2021-05-05</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/Python/%E6%95%99%E7%A8%8B/">教程</a><span class="sep"></span><a class="category-link" href="/categories/Python/%E6%95%99%E7%A8%8B/%E7%BF%BB%E8%AF%91/">翻译</a>
+          <a class="category-link" href="/categories/Python/">Python</a><span class="sep"></span><a class="category-link" href="/categories/Python/%E6%95%99%E7%A8%8B/">教程</a>
         
       </div>
       
@@ -734,23 +780,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <ul class="entry navigation">
         
           <li><a class="flat-box"
-            title="/categories/NET/" href="/categories/NET/"
-            id="categoriesNET"
-            ><div class='name'>.NET</div><div class='badge'>(4)</div></a></li>
+            title="/categories/C/" href="/categories/C/"
+            id="categoriesC"
+            ><div class='name'>C#</div><div class='badge'>(1)</div></a></li>
         
           <li><a class="flat-box child"
-            title="/categories/NET/C/" href="/categories/NET/C/"
-            id="categoriesNETC"
-            ><div class='name'>C#</div><div class='badge'>(4)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/NET/C/%E5%BA%93/" href="/categories/NET/C/%E5%BA%93/"
-            id="categoriesNETCE5BA93"
+            title="/categories/C/%E5%BA%93/" href="/categories/C/%E5%BA%93/"
+            id="categoriesCE5BA93"
             ><div class='name'>库</div><div class='badge'>(1)</div></a></li>
         
+          <li><a class="flat-box"
+            title="/categories/NET/" href="/categories/NET/"
+            id="categoriesNET"
+            ><div class='name'>.NET</div><div class='badge'>(3)</div></a></li>
+        
           <li><a class="flat-box child"
-            title="/categories/NET/C/%E7%AC%94%E8%AE%B0/" href="/categories/NET/C/%E7%AC%94%E8%AE%B0/"
-            id="categoriesNETCE7AC94E8AEB0"
+            title="/categories/NET/%E7%AC%94%E8%AE%B0/" href="/categories/NET/%E7%AC%94%E8%AE%B0/"
+            id="categoriesNETE7AC94E8AEB0"
             ><div class='name'>笔记</div><div class='badge'>(3)</div></a></li>
         
           <li><a class="flat-box"
@@ -762,11 +808,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             title="/categories/Python/%E6%95%99%E7%A8%8B/" href="/categories/Python/%E6%95%99%E7%A8%8B/"
             id="categoriesPythonE69599E7A88B"
             ><div class='name'>教程</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/Python/%E6%95%99%E7%A8%8B/%E7%BF%BB%E8%AF%91/" href="/categories/Python/%E6%95%99%E7%A8%8B/%E7%BF%BB%E8%AF%91/"
-            id="categoriesPythonE69599E7A88BE7BFBBE8AF91"
-            ><div class='name'>翻译</div><div class='badge'>(1)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/Web/" href="/categories/Web/"
@@ -810,7 +851,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-      <a href="/tags/NET/" style="font-size: 19px; color: #777">.NET</a> <a href="/tags/C/" style="font-size: 24px; color: #555">C#</a> <a href="/tags/C-%E7%B1%BB%E5%BA%93/" style="font-size: 14px; color: #999">C# 类库</a> <a href="/tags/CRC32/" style="font-size: 14px; color: #999">CRC32</a> <a href="/tags/CSS/" style="font-size: 14px; color: #999">CSS</a> <a href="/tags/HTML/" style="font-size: 14px; color: #999">HTML</a> <a href="/tags/JS/" style="font-size: 14px; color: #999">JS</a> <a href="/tags/Java/" style="font-size: 14px; color: #999">Java</a> <a href="/tags/Linq/" style="font-size: 14px; color: #999">Linq</a> <a href="/tags/MD5/" style="font-size: 14px; color: #999">MD5</a> <a href="/tags/NAudio/" style="font-size: 19px; color: #777">NAudio</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/SHA1/" style="font-size: 14px; color: #999">SHA1</a> <a href="/tags/SHA256/" style="font-size: 14px; color: #999">SHA256</a> <a href="/tags/SHA384/" style="font-size: 14px; color: #999">SHA384</a> <a href="/tags/SHA512/" style="font-size: 14px; color: #999">SHA512</a> <a href="/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 14px; color: #999">基础知识</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 19px; color: #777">笔记</a> <a href="/tags/%E7%BF%BB%E8%AF%91/" style="font-size: 14px; color: #999">翻译</a> <a href="/tags/%E8%BD%AE%E6%92%AD%E5%9B%BE/" style="font-size: 14px; color: #999">轮播图</a> <a href="/tags/%E9%9F%B3%E9%A2%91/" style="font-size: 14px; color: #999">音频</a> <a href="/tags/%E9%9F%B3%E9%A2%91%E5%8F%AF%E8%A7%86%E5%8C%96/" style="font-size: 14px; color: #999">音频可视化</a> <a href="/tags/%E9%9F%B3%E9%A2%91%E5%A4%84%E7%90%86/" style="font-size: 14px; color: #999">音频处理</a>
+      <a href="/tags/NET/" style="font-size: 19px; color: #777">.NET</a> <a href="/tags/C/" style="font-size: 24px; color: #555">C#</a> <a href="/tags/C-%E7%B1%BB%E5%BA%93/" style="font-size: 14px; color: #999">C# 类库</a> <a href="/tags/CSS/" style="font-size: 14px; color: #999">CSS</a> <a href="/tags/HTML/" style="font-size: 14px; color: #999">HTML</a> <a href="/tags/JS/" style="font-size: 14px; color: #999">JS</a> <a href="/tags/Java/" style="font-size: 14px; color: #999">Java</a> <a href="/tags/JavaScript/" style="font-size: 14px; color: #999">JavaScript</a> <a href="/tags/Linq/" style="font-size: 14px; color: #999">Linq</a> <a href="/tags/NAudio/" style="font-size: 19px; color: #777">NAudio</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/Web/" style="font-size: 14px; color: #999">Web</a> <a href="/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 14px; color: #999">基础知识</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 19px; color: #777">笔记</a> <a href="/tags/%E7%BF%BB%E8%AF%91/" style="font-size: 14px; color: #999">翻译</a> <a href="/tags/%E8%BD%AE%E6%92%AD%E5%9B%BE/" style="font-size: 14px; color: #999">轮播图</a> <a href="/tags/%E9%9F%B3%E9%A2%91/" style="font-size: 14px; color: #999">音频</a> <a href="/tags/%E9%9F%B3%E9%A2%91%E5%8F%AF%E8%A7%86%E5%8C%96/" style="font-size: 14px; color: #999">音频可视化</a> <a href="/tags/%E9%9F%B3%E9%A2%91%E5%A4%84%E7%90%86/" style="font-size: 14px; color: #999">音频处理</a>
     </div>
   </section>
 

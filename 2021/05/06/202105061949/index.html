@@ -428,7 +428,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='new-meta-item category'>
     <a class='notlink'>
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/NET/">.NET</a><span class="sep"></span><a class="category-link" href="/categories/NET/C/">C#</a><span class="sep"></span><a class="category-link" href="/categories/NET/C/%E7%AC%94%E8%AE%B0/">笔记</a>
+      <a class="category-link" href="/categories/NET/">.NET</a><span class="sep"></span><a class="category-link" href="/categories/NET/%E7%AC%94%E8%AE%B0/">笔记</a>
     </a>
   </div>
 
@@ -502,7 +502,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ol>
 <h2 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h2><p>对于刚刚所说的音频录制, 采样的格式有一点需要注意, 将数据转换为一个 float 数组后, 其中还需要区分音频通道, 例如一般音乐是双通道, WaveFormat 的 Channel 为 2, 那么在 float 数组中, 每两个采样为一组, 一组采样中每一个采样都是一个通道在当前时间内的采样.</p>
 <p>以双通道距离, 下图中, 采样数据中每一个圆圈都表示一个 float 值, 那么每两个采样时间点相同, 而各个通道的采样就是每一组中每一个采样 </p>
-<p><img src="C:\Users\Null\AppData\Roaming\Typora\typora-user-images\image-20210506143322578.png" class="lazyload" data-srcset="C:\Users\Null\AppData\Roaming\Typora\typora-user-images\image-20210506143322578.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210506143322578"></p>
+<p><img src="/assets/202105061949/1.png" class="lazyload" data-srcset="/assets/202105061949/1.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210506143322578"></p>
 <p>所以对于我们刚刚进行的音乐可视化, 严格意义上来讲, 还需要区分通道</p>
 <p>对于采样的大小, BitsPerSample, 可以是 8, 16, 32, 其中 8 和 16 都是整数存储采样, 32 是浮点数存储采样.</p>
 <p>另外, 对于音乐可视化部分的傅里叶变换结果, 我们只需要其中一部分, 取前 256 个足矣. (我也不知道它这个运算结果是如何分布的)</p>
@@ -549,10 +549,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-12T10:03:20+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-26T15:42:19+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2021年5月12日</p>
+    <p>更新于：2021年5月26日</p>
   </a>
 </div>
 
