@@ -5,16 +5,6 @@ document.addEventListener("keydown", (e) => {
 document.addEventListener("mousedown", (e) => {
     let menumain = document.getElementById("rightmenu-content");
     let menubase = menumain.parentElement;
-    let
-        menuX = menubase.offsetLeft + menumain.offsetLeft,
-        menuY = menubase.offsetTop + menumain.offsetTop,
-        menuRight = menuX + menumain.offsetWidth,
-        menuBottom = menuY + menumain.offsetHeight,
-        mouseX = e.screenX,
-        mouseY = e.screenY;
-    if (mouseX < menuX ||
-        mouseY < menuY ||
-        mouseX > menuRight ||
-        mouseY > menuBottom)
+    if (!menumain.contains(e.target))
         menubase.style.display = "none";
 });
